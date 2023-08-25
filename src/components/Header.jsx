@@ -16,7 +16,7 @@ const Header = () => {
                     <div className="divbarra">
                         
                         <Link to="/" className="logo" onClick={() => setmenu(false)}>
-                            <img src="/logo4.png" alt="" />
+                            <img src="/logo.png" alt="" />
                         </Link>
                         
                         <svg xmlns="http://www.w3.org/2000/svg" className={`${menu ? 'hidden' : 'block'} menuicono icon cursor-pointer icon-tabler icon-tabler-menu-2`} width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round" onClick={() => setmenu(!menu)}>

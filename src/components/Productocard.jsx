@@ -13,12 +13,12 @@ const Productocard = ({producto}) => {
     <>
         <div className="productocard cursor-pointer" onClick={() => navegar(`/${titulourl}`)}>
             <div className="div-imagen-prodcard">
-              <img src={imagenes[0].url} className="cursor-pointer" alt={`Imagen ${titulo}`} onClick={() => navegar(`/${titulourl}`)}/>
+              <img src={imagenes[0].url} className="cursor-pointer" alt={`Imagen ${titulo}`} />
             </div>
             <div className="contenidocard">
-                <p className="titulo cursor-pointer hover:underline" onClick={() => navegar(`/${titulourl}`)}>{titulo}</p>
-                <p className="precio cursor-pointer" onClick={() => navegar(`/${titulourl}`)}>{`$${precio.toLocaleString('es-CO')}`}</p>
-                <Link to={`/${titulo}`} className="informacion">Ver Información</Link>
+                <p className="titulo cursor-pointer hover:underline" >{titulo}</p>
+                <p className="precio cursor-pointer" >{`$${precio.toLocaleString('es-CO')}`}</p>
+                <Link className="informacion">Ver Información</Link>
             </div>
         </div>
     </>

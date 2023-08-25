@@ -13,7 +13,8 @@ const Producto = () => {
   const {setpagina} = usePagina()
 
   useEffect(() => {
-    setpagina('otra')
+    setpagina('otra');
+    window.scrollTo(0,0);
   }, [])
 
   //Buscar la informacion del producto

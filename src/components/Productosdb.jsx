@@ -826,6 +826,170 @@ const productosdb = [
         edad: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
+    },
+    {
+        id: 35,
+        titulo: "Lego Mario Bros",
+        precio: 17000,
+        descripcion: `¡Embárcate en una emocionante aventura de construcción con el set Lego Super Mario: Desierto de los Ladrillos! Con 207 piezas, este set te sumergirá en el mundo icónico de Mario Bros mientras exploras el emocionante nivel del desierto.
+
+        Recrea tus escenas favoritas del juego con los bloques Lego y crea un desierto lleno de desafíos y diversión interactiva. Utiliza las piezas especiales y los elementos de acción para construir un emocionante recorrido que incluye dunas de arena, cactus y obstáculos únicos. ¡Pero cuidado con los enemigos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto35a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "didacticos",
+        genero: "ninos"
+    },
+    {
+        id: 36,
+        titulo: "Maleta Doctora con Accesorios Sonido y Luces",
+        precio: 17000,
+        descripcion: `¡Bienvenidos a la Maleta Doctora Sonido y Luces Este set de juego emocionante trae la diversión de la medicina a tus manos. Con un estetoscopio que emite luces y sonidos realistas para escuchar los latidos del corazón, y un celular interactivo que te sumerge en situaciones médicas emocionantes, este set ofrece una experiencia de juego única.
+
+        Además, el set incluye elementos como un termómetro, jeringas y otros accesorios para explorar y aprender mientras te diviertes. Los niños pueden sumergirse en un mundo de juego de roles, donde se convierten en médicos valientes que cuidan de sus amigos de juguete.
+        
+        Con la Maleta de Doctora con Estetoscopio y Celular de Luces y Sonido, la diversión y el aprendizaje se combinan de manera emocionante en cada juego. ¡Prepárate para un emocionante diagnóstico y tratamiento imaginario en cada rincón de tu hogar!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto36a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto36b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Morado",
+        edad: "+3",
+        categoria: "doctor-cocina",
+        genero: "ninas"
+    },
+    {
+        id: 37,
+        titulo: "Cartas UNO H2O!",
+        precio: 17000,
+        descripcion: `¡Sumérgete en la diversión acuática con el emocionante juego de cartas UNO H2O! Inspirado en la clásica y querida experiencia de UNO, esta versión presenta un emocionante giro relacionado con el agua que brinda un nuevo nivel de entretenimiento para toda la familia.
+
+        Las cartas UNO H2O están diseñadas para resistir el agua, lo que significa que puedes disfrutar de tus juegos favoritos incluso en la piscina, en la playa o bajo la lluvia. ¡No hay límites para dónde y cuándo puedes jugar! Ya sea que estés chapoteando en la piscina o disfrutando de un día soleado en la playa, estas cartas te acompañarán con risas y diversión sin preocupaciones!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto37a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Transparente",
+        edad: "+6",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 38,
+        titulo: "Cartas DOS !",
+        precio: 17000,
+        descripcion: `¡El emocionante juego de cartas DOS te sumerge en una carrera llena de diversión por deshacerte de tus cartas antes que tus oponentes! Cada jugador busca emparejar sus cartas con las que están en la mesa, ya sea con el mismo número o sumando para obtener el mismo número. El juego contiene un total de 108 cartas en diferentes colores y números, además de cartas especiales con habilidades únicas.
+
+        Para empezar, se reparten 7 cartas a cada jugador y se colocan dos cartas boca arriba en la mesa. El objetivo es formar parejas y descartar cartas, y el jugador activo hará parejas hasta que no pueda formar más. Las cartas emparejadas se retiran y forman un mazo de descarte. Si el jugador no puede hacer parejas, debe robar una carta del mazo.
+        
+        Las cartas especiales, como el comodín '2' y los comodines numéricos, añaden estrategia al juego. El jugador que tenga solo dos cartas debe gritar "¡DOS!" para advertir a los demás. Si no lo hace y otro jugador lo dice primero, debe robar cartas adicionales. El juego continúa hasta que alguien alcanza 200 puntos.`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto38a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 39,
+        titulo: "Cartas UNO !",
+        precio: 17000,
+        descripcion: `¡Explora un mundo lleno de emoción y estrategia con el juego de cartas UNO! Este clásico juego de cartas es una experiencia emocionante y divertida que ha entretenido a familias y amigos durante generaciones.
+
+        Las cartas UNO presentan una mezcla colorida de números y colores vibrantes, cada uno con un propósito único en el juego. El objetivo es simple pero desafiante: deshacerte de todas tus cartas antes que los demás jugadores. Pero cuidado, ¡las cartas especiales pueden cambiar el rumbo del juego en un abrir y cerrar de ojos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto39a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 40,
+        titulo: "Set Minecraft con Accesorios",
+        precio: 17000,
+        descripcion: `¡Sumérgete en el mundo pixelado de Minecraft con el emocionante set de construcción! Este set te trae algunos de los personajes más emblemáticos del juego directamente a tus manos como el Creeper, el temible Zombie, el enigmático Enderman y el imponente Golem de Hierro. ¡Pero eso no es todo! El personaje principal, reconocible por su atuendo único, también está incluido, listo para enfrentar los desafíos que tú le diseñes. Cada figura ha sido meticulosamente diseñada para capturar la esencia de Minecraft, con detalles que harán que los fanáticos del juego se sientan como si estuvieran dentro del mundo del juego!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto40a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "accion",
+        genero: "unisex"
+    },
+    {
+        id: 41,
+        titulo: "Pistola Lanza Dardos e Hidrogel + 200 Bolas Hidrogel",
+        precio: 17000,
+        descripcion: `¡Prepárate para la acción emocionante con la Pistola Lanza Dardos e Hidrogel de Última Generación! Este conjunto todo en uno te sumerge en una experiencia de juego llena de adrenalina y diversión.
+
+        La pistola lanza dardos ofrece precisión y potencia en cada disparo. Con 6 dardos incluidos, estarás listo para enfrentar cualquier desafío y alcanzar tus objetivos con precisión. Pero eso no es todo, la verdadera innovación radica en las 200 bolas de hidrogel que también puedes disparar. Estas bolas, que se expanden al contacto con el agua, añaden una dimensión emocionante a tus batallas imaginarias.
+        
+        El set incluso incluye un recipiente especialmente diseñado para guardar las bolas de hidrogel mientras juegas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto41a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto41b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Azul, Verde",
+        edad: "+12",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
+        id: 42,
+        titulo: "Juego Jenga + Dados",
+        precio: 17000,
+        descripcion: `¡Eleva la emoción del clásico juego de Jenga con Dados Numéricos! En esta emocionante variante, los dados añaden un elemento de sorpresa y estrategia mientras intentas mantener la torre en pie.
+
+        En lugar de retirar bloques físicos, los dados numéricos te indican qué bloque retirar según el número que rueden. ¿Serás lo suficientemente hábil para retirar el bloque correcto sin derribar la torre? Cada lanzamiento de dados añade una dosis de incertidumbre y anticipación, ya que el destino de la torre está en tus manos y en los números que obtengas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto42a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Beige",
+        edad: "+6",
+        categoria: "didacticos",
+        genero: "unisex"
     }
 ];
 

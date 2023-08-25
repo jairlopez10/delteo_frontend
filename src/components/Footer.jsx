@@ -6,7 +6,7 @@ const Footer = () => {
       <footer className=" bg-black flex justify-center">
         
         <Link to="/" className="logo" onClick={() => setmenu(false)}>
-            <img src="/logo4.png" alt="" />
+            <img src="/logo.png" alt="" />
         </Link>
       </footer>
     </>
