@@ -140,9 +140,14 @@ const Catalogo = () => {
             <select name="categoria" id="categoria" onChange={(e) => setcategoria(e.target.value)}>
               <option value="" >{categoria === "" ? "Categoria" : "Todas las categorias"}</option>
               <option value="dinosaurios">Dinosaurios</option>
+              <option value="carros-impulso">Carros de Pila e Impulso</option>
+              <option value="carros-control">Carros de Control Remoto</option>
+              <option value="didacticos">Didacticos</option>
+              <option value="mascotas">Perros & Gatos</option>
               <option value="munecas">Muñecas</option>
               <option value="punteria">Punteria</option>
               <option value="maquillaje">Maquillaje y Belleza</option>
+              <option value="doctor-cocina">Doctor y Cocina</option>
               <option value="educativo">Interactivo y Educativo</option>
               <option value="accion">Figuras de accion</option>
             </select>

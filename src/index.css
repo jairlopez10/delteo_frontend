@@ -22,7 +22,7 @@ h1, h2, h3, h4 {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  color: aqua;
+  color: rgb(9, 255, 0);
 }
 
 h1 {
@@ -65,7 +65,7 @@ img, picture {
 
 header {
   background-image: url("/fondo.jpg");
-  background-image: linear-gradient( rgba(0, 0, 0, .7) 0%,  rgba(0, 0, 0, .6) 100%), url('/fondo.jpg');
+  background-image: linear-gradient( rgba(0, 0, 0, .7) 0%,  rgba(0, 0, 0, .6) 100%), url('/fondo.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -83,6 +83,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .divbarra {
@@ -97,6 +98,20 @@ header {
   font-weight: bold;
   color: white;
   font-size: 6rem;
+}
+
+.logo {
+  font-family: 'Kalam', cursive;
+  font-weight: bold;
+  color: white;
+  width: 16rem;
+  
+}
+
+@media(min-width: 768px){
+  .logo{
+    width: 30rem;
+  }
 }
 
 .navegacion {
@@ -135,7 +150,7 @@ header {
 
 .cincuenta {
   font-size: 5rem;
-  color: aqua;
+  color: rgb(9, 255, 0);
 }
 
 .footercontent {
@@ -148,6 +163,7 @@ footer {
   background-color: #1a1a1a;
   border-radius: 2rem 2rem 0 0;
   margin-top: 2rem;
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -286,13 +302,13 @@ footer {
 }
 
 .range {
-  accent-color: aqua;
+  accent-color: rgb(9, 255, 0);
   width: 90%;
   margin-top: .5rem;
 }
 
 .range:hover {
-  accent-color: rgba(0, 255, 255, 0.226);
+  accent-color: rgba(9, 255, 0, 0.582);
   cursor: pointer;
 }
 
@@ -473,6 +489,11 @@ footer {
   margin-top: 1rem;
   padding: .5rem;
   cursor: pointer;
+}
+
+.boton-ordenar:hover {
+  background-color: #2bca65;
+  transition: all .5s;
 }
 
 .boton-ordenar p {
