@@ -990,6 +990,138 @@ const productosdb = [
         edad: "+6",
         categoria: "didacticos",
         genero: "unisex"
+    },
+    {
+        id: 43,
+        titulo: "Cartas de Poker Asequibles",
+        precio: 17000,
+        descripcion: `¡Introduce una dosis de diversión en tus partidas con este set de Cartas de Poker asequibles! Este set incluye dos barajas completas, lo que te brinda la oportunidad de disfrutar de una variedad de juegos de cartas sin invertir mucho.
+
+        Cada carta está fabricada con plástico de calidad, lo que asegura su durabilidad y permite que sigan siendo funcionales en varias sesiones de juego. Aunque no son las cartas más lujosas del mercado, cumplen su propósito y son ideales para juegos casuales y reuniones entre amigos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto43a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicas",
+        edad: "+6",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 44,
+        titulo: "Cartas de Poker Intermedio",
+        precio: 17000,
+        descripcion: `¡Potencia tus partidas de cartas con este juego de Cartas de Poker de Plástico de Nivel Intermedio! Este set, que incluye dos barajas completas, te brinda una experiencia de juego que equilibra calidad y accesibilidad.
+
+        Cada carta ha sido confeccionada con plástico de nivel intermedio, lo que asegura su durabilidad y resistencia a lo largo de múltiples partidas. Estas cartas están diseñadas para un rendimiento sólido y constante, perfecto para disfrutar de noches de juego en casa o reuniones sociales!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto44a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicas",
+        edad: "+6",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 45,
+        titulo: "Cartas de Poker Alta",
+        precio: 17000,
+        descripcion: `¡Potencia tus partidas de cartas con este juego de Cartas de Poker de Plástico de Nivel Intermedio! Este set, que incluye dos barajas completas, te brinda una experiencia de juego que equilibra calidad y accesibilidad.
+
+        Cada carta ha sido confeccionada con plástico de nivel intermedio, lo que asegura su durabilidad y resistencia a lo largo de múltiples partidas. Estas cartas están diseñadas para un rendimiento sólido y constante, perfecto para disfrutar de noches de juego en casa o reuniones sociales!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto45a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicas",
+        edad: "+6",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 46,
+        titulo: "Pistola Nerf Avengers + 6 Dardos",
+        precio: 17000,
+        descripcion: `¡Vive la emoción de los Vengadores con la Pistola Nerf Estilo Avengers inspirada en Spider-Man y Capitán América! Este set incluye 6 dardos y un tablero de disparo para una acción heroica llena de diversión y aventuras. Con detalles auténticos y diseño de superhéroes, estarás listo para enfrentar desafíos imaginarios con estilo. ¡Prepárate para un juego lleno de emoción y adrenalina mientras te conviertes en un verdadero defensor de la justicia!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto46a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto46b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto46c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto46d.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicas",
+        edad: "+6",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 47,
+        titulo: "Gato Tom Repetidor con Luces y Sonido",
+        precio: 17000,
+        descripcion: `¡Conoce a tu nuevo compañero parlante, el Gato Tom Repetidor con Luces y Sonido! Este adorable gato interactivo te proporcionará horas de risas y entretenimiento mientras repite todo lo que dices con su propio toque único.
+
+        Este juguete ingenioso no solo imita tus palabras, sino que también añade luces y sonidos para una experiencia de juego aún más emocionante. Sus expresiones y movimientos hacen que las conversaciones con Tom sean divertidas y realistas, como si estuvieras hablando con un amigo peludo de verdad!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto47a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto47b.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicas",
+        edad: "+3",
+        categoria: "mascotas",
+        genero: "unisex"
+    },
+    {
+        id: 48,
+        titulo: "Pez con Movimiento, Luces y Sonido",
+        precio: 17000,
+        descripcion: `¡Sumérgete en la diversión acuática con el increíble Pez Interactivo con Luces y Sonido! Este juguete cautivador te transportará a un mundo submarino lleno de emoción y asombro.
+
+        Observa cómo este pez cobra vida con movimientos realistas en su cuerpo, imitando el suave aleteo y la gracia de los peces reales. Sus ojos brillantes con luces añaden un toque mágico mientras exploras aventuras submarinas. Además, el sonido realista completa la experiencia, creando una atmósfera inmersiva!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto48a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto48b.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Amarillo",
+        edad: "+3",
+        categoria: "mascotas",
+        genero: "unisex"
     }
 ];
 
