@@ -797,7 +797,7 @@ const productosdb = [
         status: "disponible",
         colores: "Amarillo",
         edad: "+3",
-        categoria: "didacticos",
+        categoria: "carros-impulso",
         genero: "unisex"
     },
     {
