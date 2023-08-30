@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import usePagina from "../hooks/usePagina"
 import productosdb from "../components/Productosdb";
 import Productocard from "../components/Productocard";
@@ -6,19 +6,26 @@ import { Link } from "react-router-dom";
 
 const Catalogo = () => {
 
+  const productosavailable = productosdb.filter(producto => {
+    if(producto.status === "disponible"){
+      return producto;
+    }
+  })
+
   const { pagina, setpagina } = usePagina();
   const [seccionfiltro, setseccionfiltro] = useState(false);
   const [categoria, setcategoria] = useState('');
   const [genero, setgenero] = useState('');
   const [edad, setedad] = useState('');
   const [ordenar, setordenar] = useState('');
-  const [preciomax, setpreciomax] = useState(70000);
-  const [productosmostrar, setproductosmostrar] = useState(productosdb);
-  const [productosfiltrados, setproductosfiltrados] = useState(productosdb);
+  const [preciomax, setpreciomax] = useState(150000);
+  const [productosmostrar, setproductosmostrar] = useState(productosavailable);
+  const [productosfiltrados, setproductosfiltrados] = useState(productosavailable);
   const [numpagina, setnumpagina] = useState(1);
+  const tituloproductosref = useRef(null);
 
   const MIN = 5000;
-  const MAX = 70000;
+  const MAX = 150000;
   const STEP = 5000;
   const numproductospag = 8;
 
@@ -83,8 +90,10 @@ const Catalogo = () => {
     setpagina('inicio');
   }, [])
 
+
+
   useEffect(() => {
-    let newlist = productosdb.filter(filtrarcategoria).filter(filtrargenero).filter(filtraredad).filter(filtrarpreciomax);
+    let newlist = productosavailable.filter(filtrarcategoria).filter(filtrargenero).filter(filtraredad).filter(filtrarpreciomax);
 
     if(ordenar !== ""){
       if (ordenar === 'asc'){
@@ -99,13 +108,18 @@ const Catalogo = () => {
 
   useEffect(() => {
     definirproductospagina();
+
+    if(tituloproductosref.current){
+      tituloproductosref.current.scrollIntoView({ behavior: 'smooth'})
+    }
+
   }, [productosfiltrados, numpagina])
 
 
   return (
     <>
       <div className="seccionproductos contenedor">
-        <h1 className="tituloproductos">Productos</h1>
+        <h1 className="tituloproductos" ref={tituloproductosref}>Productos</h1>
         <div className="flex items-center justify-center gap-2 md:hidden cursor-pointer w-min mb-4 filtrodiv" onClick={() => setseccionfiltro(!seccionfiltro)}>
           <svg xmlns="http://www.w3.org/2000/svg" className=" icon icon-tabler icon-tabler-adjustments-horizontal" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#3d3d3d" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -124,18 +138,15 @@ const Catalogo = () => {
         <div className="productos">
           <div className={`${seccionfiltro ? 'flex' : 'hidden'} md:flex seccionfiltros`}>
             <select name="genero" id="genero" onChange={(e) => setgenero(e.target.value)}>
-              <option value="">Genero</option>
+              <option value="">{genero === "" ? "Genero" : "Todos los generos"}</option>
+              <option value="unisex">Unisex</option>
               <option value="ninas">Niñas</option>
               <option value="ninos">Niños</option>
-              <option value="unisex">Unisex</option>
             </select>
             <select name="edad" id="edad" onChange={e => setedad(e.target.value)}>
               <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
-              <option value="1">Entre 0-1 año</option>
-              <option value="2">Entre 1-2 años</option>
-              <option value="3">Entre 2-3 años</option>
-              <option value="7">Entre 4-7 años</option>
-              <option value="12">Entre 8-12 años</option>
+              <option value="+3">Mas de 2 años</option>
+              <option value="+6">Mas de 5 años</option>
             </select>
             <select name="categoria" id="categoria" onChange={(e) => setcategoria(e.target.value)}>
               <option value="" >{categoria === "" ? "Categoria" : "Todas las categorias"}</option>
@@ -152,7 +163,7 @@ const Catalogo = () => {
               <option value="accion">Figuras de accion</option>
             </select>
             <select name="ordenar" id="ordenar" onChange={e => setordenar(e.target.value)}>
-              <option value="">Ordenar</option>
+              <option value="">{ordenar === "" ? "Ordenar" : "Mayor Relevancia"}</option>
               <option value="asc">Precio menor a mayor</option>
               <option value="des">Precio mayor a menor</option>
             </select>
@@ -189,6 +200,7 @@ const Catalogo = () => {
                       const paginadores = document.querySelectorAll('.paginador');
                       paginadores.forEach(pagin => pagin.classList.remove('paginador-activo'))
                       e.target.classList.add('paginador-activo');
+                      
                     }}>{pag}</button>
                   ))}
                 </div>
