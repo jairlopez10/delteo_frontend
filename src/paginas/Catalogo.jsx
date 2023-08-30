@@ -109,12 +109,7 @@ const Catalogo = () => {
   useEffect(() => {
     definirproductospagina();
 
-    if(tituloproductosref.current){
-      tituloproductosref.current.scrollIntoView({ behavior: 'smooth'})
-    }
-
   }, [productosfiltrados, numpagina])
-
 
   return (
     <>
@@ -197,6 +192,12 @@ const Catalogo = () => {
                       //Cambiar la pagina
                       setnumpagina(pag);
 
+                      //Hacer scroll al inicio de los productos
+                      if(tituloproductosref.current){
+                        tituloproductosref.current.scrollIntoView({ behavior: 'smooth'})
+                      }
+                      
+                      //Cambiar el color del paginador
                       const paginadores = document.querySelectorAll('.paginador');
                       paginadores.forEach(pagin => pagin.classList.remove('paginador-activo'))
                       e.target.classList.add('paginador-activo');
