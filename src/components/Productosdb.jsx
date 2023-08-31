@@ -30,7 +30,7 @@ const productosdb = [
     {
         id: 2,
         titulo: "Computador Interactivo con Pantalla y Mouse Unisex",
-        precio: 37999,
+        precio: 39999,
         descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo Todo en Uno, equipado con mouse y pantalla digital! Diseñado para preescolares, este juguete cautivante es más que un juego.
 
         Explora números del 1 al 10, el abecedario y palabras esenciales con diversión interactiva. Con canciones animadas y actividades intuitivas de suma y resta, cada momento se convierte en una lección emocionante.
