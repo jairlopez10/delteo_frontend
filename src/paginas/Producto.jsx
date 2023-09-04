@@ -89,7 +89,7 @@ const Producto = () => {
             </div>
             <p className="precio-prod">{`$${producto.precio.toLocaleString('es-CO')} / Und`}</p>
             <p className="colores">Colores: <span>{producto.colores}</span></p>
-            <div className="boton-ordenar" onClick={() => window.open(`https://wa.me/573246767492?text=Hola!%20Estoy%20interesado%20en%20el%20producto%20que%20vi%20en%20${window.location.href}`)}>
+            <div className="boton-ordenar" onClick={() => window.open(`https://wa.me/573054392872?text=Hola!%20Estoy%20interesado%20en%20el%20producto%20que%20vi%20en%20${window.location.href}`)}>
               <img src="/wa.webp" alt="" />
               <p>Comprar Ahora</p>
             </div>
