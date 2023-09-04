@@ -1,6 +1,5 @@
 
 const Multimedia = ({multimedia, setmultiactual}) => {
-
     
 
   return (

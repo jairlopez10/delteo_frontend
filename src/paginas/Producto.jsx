@@ -12,6 +12,15 @@ const Producto = () => {
   titulo = titulo.replace(/-/g, " ")
   const {setpagina} = usePagina()
 
+  const imagenespr = document.querySelectorAll(".imagen-prod-pag");
+
+  imagenespr.forEach(imgpro => {
+    imgpro.addEventListener('contextmenu', (e) => {
+      e.preventDefault()
+      console.log('Evitando')
+    })
+  })
+
   useEffect(() => {
     setpagina('otra');
     window.scrollTo(0,0);
@@ -22,6 +31,15 @@ const Producto = () => {
 
   const [multiactual, setmultiactual] = useState(producto.imagenes[0])
   const [descripcion, setdescripcion] = useState(true);
+
+  useEffect(() => {
+    const imagenprincipal = document.querySelector(".imagen-principal-producto")
+
+    imagenprincipal.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    })
+    
+  }, [multiactual])
 
   useEffect(() => {
     if(window.innerWidth <= 1024){
@@ -40,7 +58,7 @@ const Producto = () => {
               </>
             ) : (
               <>
-                <video className="imagen-principal-producto" autoPlay loop controls>
+                <video className="imagen-principal-producto" autoPlay loop controls controlsList="nodownload">
                   <source src={multiactual.url} />
                 </video>
               </>

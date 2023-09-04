@@ -23,7 +23,7 @@ const Catalogo = () => {
   const [productosfiltrados, setproductosfiltrados] = useState(productosavailable);
   const [numpagina, setnumpagina] = useState(1);
   const tituloproductosref = useRef(null);
-
+ 
   const MIN = 5000;
   const MAX = 150000;
   const STEP = 5000;
