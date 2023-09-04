@@ -4,7 +4,7 @@ const Slogan = () => {
     <>
         <div className="slogan">
             <div className="div-imagen-promo">
-              <img src="/slimepromo.png" className="imagenpromo" alt="" />
+              <img src="/slimepromo.webp" className="imagenpromo" alt="" />
             </div>
             <div className="contenido-slogan">
               <h3><span className="cincuenta">Slime Gratis</span> en tu primera compra !</h3>
