@@ -6,11 +6,20 @@ import usePagina from "../hooks/usePagina";
 
 const Producto = () => {
   
+  const {setpagina} = usePagina()
   const params = useParams();
   let titulo = params.titulo;
+
+  useEffect(() => {
+    setpagina('otra');
+    window.scrollTo(0,0);
+    //Cambia el nombre del titulo de la pagina
+    document.title = titulo;
+  }, [])
+  
   //Remplaza las - por espacios para buscar el titulo
   titulo = titulo.replace(/-/g, " ")
-  const {setpagina} = usePagina()
+  
 
   const imagenespr = document.querySelectorAll(".imagen-prod-pag");
 
@@ -21,10 +30,7 @@ const Producto = () => {
     })
   })
 
-  useEffect(() => {
-    setpagina('otra');
-    window.scrollTo(0,0);
-  }, [])
+  
 
   //Buscar la informacion del producto
   const producto = productosdb.find(product => product.titulo === titulo);
