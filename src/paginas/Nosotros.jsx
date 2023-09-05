@@ -7,10 +7,7 @@ const Nosotros = () => {
 
   useEffect(() => {
     setpagina('nosotros')
-    gtag('config', 'G-EQEQV05377', {
-      page_title: 'Nosotros',
-      page_location: 'https://www.jugueteriajammy.com/nosotros'
-    })
+    document.title = 'Jammy | Nosotros'
   }, [])
 
   return (
