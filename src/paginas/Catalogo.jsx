@@ -88,6 +88,7 @@ const Catalogo = () => {
 
   useEffect(() => {
     setpagina('inicio');
+    document.title = "Jammy | Jugueteria"
   }, [])
 
 
