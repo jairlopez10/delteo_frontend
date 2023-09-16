@@ -143,6 +143,7 @@ const Catalogo = () => {
               <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
               <option value="+3">Mas de 2 años</option>
               <option value="+6">Mas de 5 años</option>
+              <option value="+11">Mas de 11 años</option>
             </select>
             <select name="categoria" id="categoria" onChange={(e) => setcategoria(e.target.value)}>
               <option value="" >{categoria === "" ? "Categoria" : "Todas las categorias"}</option>

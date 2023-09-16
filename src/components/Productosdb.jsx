@@ -115,26 +115,45 @@ const productosdb = [
         genero: "unisex"
     },
     {
-        id: 31,
-        titulo: "Mesa Proyector + Tanque de Agua + 8 Rompecabezas + 12 Marcadores + Sellos",
-        precio: 87999,
-        descripcion: `¡Despierta la creatividad y la diversión con nuestro Set de Mesa Proyector y Actividades Todo en Uno! Este conjunto emocionante ofrece una amplia gama de experiencias interactivas y creativas, perfectas para horas de entretenimiento y aprendizaje.
+        id: 50,
+        titulo: "Lanzador Hidrogel MP5 Automatica Recargable + Gafas + 6.000 Orvis Hidrogel",
+        precio: 84999,
+        descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
 
-        Con el proyector integrado, los niños podrán sumergirse en un mundo de imágenes y sonidos sorprendentes y emocionantes. El set incluye 12 marcadores que les permitirán crear obras maestras únicas, así como un tablero borrable para dar rienda suelta a su creatividad una y otra vez. Ademas, para una pausa refrescante, el set también incluye un tanque de agua con una copa para servirla, añadiendo un toque de realismo y diversión. Los 8 rompecabezas, 2 sellos con tinta y 4 discos de proyección ofrecen una amplia variedad de actividades para mantener a los niños comprometidos y estimulados!`,
+        Esta pistola lanzadora automática, con su diseño estilo MP5, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 6000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
+        
+        La seguridad es una prioridad, y es por eso que este set incluye gafas de protección para mantener tus ojos a salvo mientras te sumerges en la acción. Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego seguro y responsable`,
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto31a.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto31b.mp4" 
+                url: "/producto50a.webp" 
             }
         ],
         status: "disponible",
-        colores: "Amarillo",
-        edad: "+3",
-        categoria: "didacticos",
+        colores: "Unicolor",
+        edad: "+11",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
+        id: 51,
+        titulo: "Lanzador Hidrogel Automatica Recargable + 1.500 Orvis Hidrogel",
+        precio: 69999,
+        descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
+
+        La pistola lanzadora automática es fácil de usar, con la capacidad de disparar ráfagas de bolas de hidrogel con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar desafíos y mantener la diversión durante horas.
+        
+        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones. Estas pequeñas esferas se expanden al contacto con el agua, lo que agrega un elemento de emoción y realismo a tus batallas simuladas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto51a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+11",
+        categoria: "punteria",
         genero: "unisex"
     },
     {
@@ -195,6 +214,29 @@ const productosdb = [
         colores: "Amarillo",
         edad: "+3",
         categoria: "carros-impulso",
+        genero: "unisex"
+    },
+    {
+        id: 31,
+        titulo: "Mesa Proyector + Tanque de Agua + 8 Rompecabezas + 12 Marcadores + Sellos",
+        precio: 87999,
+        descripcion: `¡Despierta la creatividad y la diversión con nuestro Set de Mesa Proyector y Actividades Todo en Uno! Este conjunto emocionante ofrece una amplia gama de experiencias interactivas y creativas, perfectas para horas de entretenimiento y aprendizaje.
+
+        Con el proyector integrado, los niños podrán sumergirse en un mundo de imágenes y sonidos sorprendentes y emocionantes. El set incluye 12 marcadores que les permitirán crear obras maestras únicas, así como un tablero borrable para dar rienda suelta a su creatividad una y otra vez. Ademas, para una pausa refrescante, el set también incluye un tanque de agua con una copa para servirla, añadiendo un toque de realismo y diversión. Los 8 rompecabezas, 2 sellos con tinta y 4 discos de proyección ofrecen una amplia variedad de actividades para mantener a los niños comprometidos y estimulados!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto31a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto31b.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Amarillo",
+        edad: "+3",
+        categoria: "didacticos",
         genero: "unisex"
     },
     {
@@ -291,6 +333,27 @@ const productosdb = [
         colores: "Amarillo",
         edad: "+3",
         categoria: "mascotas",
+        genero: "unisex"
+    },
+    {
+        id: 52,
+        titulo: "Lanzador Hidrogel M416 Automatica Recargable + 1.500 Orvis Hidrogel",
+        precio: 139999,
+        descripcion: `¡Entra en la acción con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un M416! Este emocionante juguete te lleva a un mundo lleno de emociones y diversión mientras te sumerges en batallas simuladas y aventuras imaginativas.
+
+        La pistola lanzadora automática, con su diseño estilo M416, te permite disparar ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar cualquier desafío y mantener la emoción durante horas.
+        
+        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto52a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+11",
+        categoria: "punteria",
         genero: "unisex"
     },
     {
@@ -474,7 +537,7 @@ const productosdb = [
                 url: "/producto20e.mp4"
             }
         ],
-        status: "disponible",
+        status: "Out Stock",
         colores: "Rosado, Morado, Azul",
         edad: "+3",
         categoria: "mascotas",
@@ -785,7 +848,7 @@ const productosdb = [
     {
         id: 25,
         titulo: "Slime con Sorpresa de Mario Bros",
-        precio: 3999,
+        precio: 7999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de Mario Bros! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
         Dentro del frasco, encontrarás una textura de slime suave y colorida que brinda una experiencia táctil única y relajante. Pero eso no es todo: ¡sumérgete en la emoción cuando descubras una sorpresa especial de Mario Bros en su interior! Este juguete también funciona como un llamativo llavero que podrás llevar contigo a donde quieras.`,
@@ -804,7 +867,7 @@ const productosdb = [
     {
         id: 24,
         titulo: "Slime con Sorpresa de los Vengadores",
-        precio: 3999,
+        precio: 7999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de los Vengadores! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
         Dentro del frasco, encontrarás una textura de slime suave y colorida que brinda una experiencia táctil única y relajante. Pero eso no es todo: ¡sumérgete en la emoción cuando descubras una sorpresa especial de los Vengadores en su interior! Este juguete también funciona como un llamativo llavero que podrás llevar contigo a donde quieras.`,
@@ -823,7 +886,7 @@ const productosdb = [
     {
         id: 26,
         titulo: "Slime con Sorpresa de Paw Patrol",
-        precio: 3999,
+        precio: 7999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de Paw Patrol! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
         Dentro del frasco, encontrarás una textura de slime suave y colorida que brinda una experiencia táctil única y relajante. Pero eso no es todo: ¡sumérgete en la emoción cuando descubras una sorpresa especial de Paw Patrol en su interior! Este juguete también funciona como un llamativo llavero que podrás llevar contigo a donde quieras.`,
@@ -842,7 +905,7 @@ const productosdb = [
     {
         id: 29,
         titulo: "Slime con Sorpresa de Princesas Disney",
-        precio: 3999,
+        precio: 7999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de Princesas de Disney! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
         Dentro del frasco, encontrarás una textura de slime suave y colorida que brinda una experiencia táctil única y relajante. Pero eso no es todo: ¡sumérgete en la emoción cuando descubras una sorpresa especial de Princesas de Disney en su interior! Este juguete también funciona como un llamativo llavero que podrás llevar contigo a donde quieras.`,
@@ -861,7 +924,7 @@ const productosdb = [
     {
         id: 27,
         titulo: "Slime con Sorpresa de Princesas Grande",
-        precio: 11999,
+        precio: 14999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de Princesas! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
         Dentro del frasco, encontrarás una textura de slime suave y colorida que brinda una experiencia táctil única y relajante. Pero eso no es todo: ¡sumérgete en la emoción cuando descubras una sorpresa especial de Princesas en su interior! Este juguete también funciona como un llamativo llavero que podrás llevar contigo a donde quieras.`,
@@ -880,7 +943,7 @@ const productosdb = [
     {
         id: 28,
         titulo: "Slime con Sorpresa de Vengadores Grande",
-        precio: 11999,
+        precio: 14999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de Vengadores! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
         Dentro del frasco, encontrarás una textura de slime suave y colorida que brinda una experiencia táctil única y relajante. Pero eso no es todo: ¡sumérgete en la emoción cuando descubras una sorpresa especial de Vengadores en su interior! Este juguete también funciona como un llamativo llavero que podrás llevar contigo a donde quieras.`,
