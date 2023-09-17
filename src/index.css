@@ -159,6 +159,15 @@ header {
   animation: transitionaparece 1.3s .1s linear;
 }
 
+.contenido-slogan p {
+  font-size: 2.5rem;
+}
+
+.contenido-slogan p span {
+  color: rgb(9, 255, 0);
+}
+
+
 .slogan h3 {
   font-size: 2.5rem;
   color: white;

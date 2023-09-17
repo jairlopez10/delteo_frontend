@@ -8,7 +8,7 @@ const Slogan = () => {
             </div>
             <div className="contenido-slogan">
               <h3><span className="cincuenta">Slime Gratis</span> en tu primera compra !</h3>
-              <p>*Aprovecha esta oferta limitada</p>
+              <p>Aprovecha esta oferta <span className=" text-yellow-500">limitada</span></p>
               
             </div>
             

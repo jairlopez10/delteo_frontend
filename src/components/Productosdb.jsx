@@ -1,6 +1,27 @@
 
 const productosdb = [
     {
+        id: 50,
+        titulo: "Lanzador Hidrogel MP5 Automatica Recargable + Gafas + 6.000 Orvis Hidrogel",
+        precio: 94999,
+        descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
+
+        Esta pistola lanzadora automática, con su diseño estilo MP5, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 6000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
+        
+        La seguridad es una prioridad, y es por eso que este set incluye gafas de protección para mantener tus ojos a salvo mientras te sumerges en la acción. Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego seguro y responsable`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto50a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+11",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
         id: 6,
         titulo: "Dinosaurio Rex con Movimiento, Luces, Sonido",
         precio: 32999,
@@ -92,62 +113,18 @@ const productosdb = [
         genero: "ninos"
     },
     {
-        id: 47,
-        titulo: "Gato Tom Repetidor con Luces y Sonido",
-        precio: 36999,
-        descripcion: `¡Conoce a tu nuevo compañero parlante, el Gato Tom Repetidor con Luces y Sonido! Este adorable gato interactivo te proporcionará horas de risas y entretenimiento mientras repite todo lo que dices con su propio toque único.
+        id: 52,
+        titulo: "Lanzador Hidrogel M416 Automatica Recargable + 1.500 Orvis Hidrogel",
+        precio: 139999,
+        descripcion: `¡Entra en la acción con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un M416! Este emocionante juguete te lleva a un mundo lleno de emociones y diversión mientras te sumerges en batallas simuladas y aventuras imaginativas.
 
-        Este juguete ingenioso no solo imita tus palabras, sino que también añade luces y sonidos para una experiencia de juego aún más emocionante. Sus expresiones y movimientos hacen que las conversaciones con Tom sean divertidas y realistas, como si estuvieras hablando con un amigo peludo de verdad!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto47a.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto47b.mp4" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicas",
-        edad: "+3",
-        categoria: "mascotas",
-        genero: "unisex"
-    },
-    {
-        id: 50,
-        titulo: "Lanzador Hidrogel MP5 Automatica Recargable + Gafas + 6.000 Orvis Hidrogel",
-        precio: 84999,
-        descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
-
-        Esta pistola lanzadora automática, con su diseño estilo MP5, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 6000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
+        La pistola lanzadora automática, con su diseño estilo M416, te permite disparar ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar cualquier desafío y mantener la emoción durante horas.
         
-        La seguridad es una prioridad, y es por eso que este set incluye gafas de protección para mantener tus ojos a salvo mientras te sumerges en la acción. Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego seguro y responsable`,
+        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones!`,
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto50a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+11",
-        categoria: "punteria",
-        genero: "unisex"
-    },
-    {
-        id: 51,
-        titulo: "Lanzador Hidrogel Automatica Recargable + 1.500 Orvis Hidrogel",
-        precio: 69999,
-        descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
-
-        La pistola lanzadora automática es fácil de usar, con la capacidad de disparar ráfagas de bolas de hidrogel con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar desafíos y mantener la diversión durante horas.
-        
-        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones. Estas pequeñas esferas se expanden al contacto con el agua, lo que agrega un elemento de emoción y realismo a tus batallas simuladas!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto51a.webp" 
+                url: "/producto52a.webp" 
             }
         ],
         status: "disponible",
@@ -219,7 +196,7 @@ const productosdb = [
     {
         id: 31,
         titulo: "Mesa Proyector + Tanque de Agua + 8 Rompecabezas + 12 Marcadores + Sellos",
-        precio: 87999,
+        precio: 109999,
         descripcion: `¡Despierta la creatividad y la diversión con nuestro Set de Mesa Proyector y Actividades Todo en Uno! Este conjunto emocionante ofrece una amplia gama de experiencias interactivas y creativas, perfectas para horas de entretenimiento y aprendizaje.
 
         Con el proyector integrado, los niños podrán sumergirse en un mundo de imágenes y sonidos sorprendentes y emocionantes. El set incluye 12 marcadores que les permitirán crear obras maestras únicas, así como un tablero borrable para dar rienda suelta a su creatividad una y otra vez. Ademas, para una pausa refrescante, el set también incluye un tanque de agua con una copa para servirla, añadiendo un toque de realismo y diversión. Los 8 rompecabezas, 2 sellos con tinta y 4 discos de proyección ofrecen una amplia variedad de actividades para mantener a los niños comprometidos y estimulados!`,
@@ -263,6 +240,27 @@ const productosdb = [
         edad: "+6",
         categoria: "carros-control",
         genero: "ninos"
+    },
+    {
+        id: 51,
+        titulo: "Lanzador Hidrogel Automatica Recargable + 1.500 Orvis Hidrogel",
+        precio: 69999,
+        descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
+
+        La pistola lanzadora automática es fácil de usar, con la capacidad de disparar ráfagas de bolas de hidrogel con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar desafíos y mantener la diversión durante horas.
+        
+        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones. Estas pequeñas esferas se expanden al contacto con el agua, lo que agrega un elemento de emoción y realismo a tus batallas simuladas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto51a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+11",
+        categoria: "punteria",
+        genero: "unisex"
     },
     {
         id: 23,
@@ -336,24 +334,26 @@ const productosdb = [
         genero: "unisex"
     },
     {
-        id: 52,
-        titulo: "Lanzador Hidrogel M416 Automatica Recargable + 1.500 Orvis Hidrogel",
-        precio: 139999,
-        descripcion: `¡Entra en la acción con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un M416! Este emocionante juguete te lleva a un mundo lleno de emociones y diversión mientras te sumerges en batallas simuladas y aventuras imaginativas.
+        id: 47,
+        titulo: "Gato Tom Repetidor con Luces y Sonido",
+        precio: 36999,
+        descripcion: `¡Conoce a tu nuevo compañero parlante, el Gato Tom Repetidor con Luces y Sonido! Este adorable gato interactivo te proporcionará horas de risas y entretenimiento mientras repite todo lo que dices con su propio toque único.
 
-        La pistola lanzadora automática, con su diseño estilo M416, te permite disparar ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar cualquier desafío y mantener la emoción durante horas.
-        
-        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones!`,
+        Este juguete ingenioso no solo imita tus palabras, sino que también añade luces y sonidos para una experiencia de juego aún más emocionante. Sus expresiones y movimientos hacen que las conversaciones con Tom sean divertidas y realistas, como si estuvieras hablando con un amigo peludo de verdad!`,
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto52a.webp" 
+                url: "/producto47a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto47b.mp4" 
             }
         ],
         status: "disponible",
-        colores: "Unicolor",
-        edad: "+11",
-        categoria: "punteria",
+        colores: "Unicas",
+        edad: "+3",
+        categoria: "mascotas",
         genero: "unisex"
     },
     {
