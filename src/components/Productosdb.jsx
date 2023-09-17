@@ -92,26 +92,26 @@ const productosdb = [
         genero: "unisex"
     },
     {
-        id: 30,
-        titulo: "Bumble Bee Bailarin, Luces y Sonido",
-        precio: 34999,
-        descripcion: `¡Lleva la diversión a un nivel vibrante con nuestro Bumble Bee Bailarín! Este juguete encantador combina movimiento, luces y sonidos en una experiencia llena de alegría y entretenimiento.
+        id: 53,
+        titulo: "Spiderman Bailarin, Luces y Sonido",
+        precio: 39999,
+        descripcion: `¡Experimenta la emoción de Spider-Man en una nueva dimensión con el Spider-Man Bailarín con Luces y Sonido! Este juguete te llevará directamente al mundo del famoso superhéroe arácnido mientras se mueve, brilla y suena al ritmo de la acción.
 
-        Observa con asombro mientras el Bumble Bee cobra vida con movimientos animados y cautivadores. Sus luces brillantes iluminan su camino mientras realiza sus pasos de baile únicos, y su sonido alegre añade una banda sonora emocionante a cada movimiento.
+        Spider-Man cobra vida con movimientos de baile divertidos y realistas que te harán sonreír. Sus luces brillantes añaden un toque de magia y emoción mientras iluminan el camino hacia la diversión. Además, con sonidos auténticos, te sentirás como si estuvieras en el corazón de una verdadera batalla contra villanos.
         
-        Este Bumble Bee Bailarín es impulsado por 3 pilas AA.`,
+        Este Spider-Man bailarín es fácil de activar con solo colocar 3 pilas AA!`,
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto30a.webp" 
+                url: "/producto53a.webp" 
             },
             {
                 tipo: "video",
-                url: "/producto30b.mp4" 
+                url: "/producto53b.mp4" 
             }
         ],
         status: "disponible",
-        colores: "Amarillo",
+        colores: "Rojo",
         edad: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
@@ -138,41 +138,29 @@ const productosdb = [
         genero: "unisex"
     },
     {
-        id: 32,
-        titulo: "Computador Interactivo Unisex",
-        precio: 28999,
-        descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo, diseñado para preescolares, este juguete cautivante es más que un juego.
+        id: 1,
+        titulo: "Kit de Uñas X12 con Brillos",
+        precio: 9999,
+        descripcion: `¡Fusionamos diversión y creatividad en nuestro kit de uñas encantadoras! Diseñado especialmente para niñas de 3 a 7 años, este kit les brinda la oportunidad de explorar su lado artístico mientras se divierten.
 
-        Explora números del 1 al 10, el abecedario y palabras esenciales, operaciones matematicas con diversión interactiva. Con canciones animadas y actividades intuitivas de suma y resta, cada momento se convierte en una lección emocionante.
+        Con 12 uñas en colores vibrantes y diseños encantadores, cada uña es una pequeña obra maestra lista para ser creada. Desde delicadas flores hasta brillantes estrellas, ¡serán princesitas creativas!
         
-        Colores vibrantes y personajes adorables hacen que el aprendizaje sea divertido. Este computador educativo es una herramienta valiosa que fomenta el desarrollo cognitivo. ¡Cada toque en las teclas crea un futuro de conocimiento!`,
+        El kit incluye un tubito de pegamento suave y seguro para que las uñas permanezcan en su lugar durante todas las aventuras. Y para el toque final mágico, nuestro frasquito de brillo añade destellos y colores chispeantes a cada creación.`,
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto32a.webp" 
+                url: "/producto1a.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto32b.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto32c.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto32d.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto32e.mp4" 
+                url: "/producto1b.webp"
             }
         ],
         status: "disponible",
-        colores: "Rosado, Azul",
+        colores: "Rosado",
         edad: "+3",
-        categoria: "educativo",
-        genero: "unisex"
+        categoria: "maquillaje",
+        genero: "ninas"
     },
     {
         id: 33,
@@ -196,6 +184,56 @@ const productosdb = [
         edad: "+3",
         categoria: "carros-impulso",
         genero: "unisex"
+    },
+    {
+        id: 54,
+        titulo: "Iron Man Bailarin, Luces y Sonido",
+        precio: 39999,
+        descripcion: `¡Lleva la acción de Iron Man a tu casa con el Iron Man Bailarín con Luces y Sonido! Este emocionante juguete te permite experimentar la elegancia tecnológica de Tony Stark mientras se mueve, se ilumina y suena al ritmo de la aventura.
+
+        Iron Man cobra vida con movimientos de baile sorprendentes y auténticos, que te harán sentir como si estuvieras en medio de una batalla épica. Sus luces brillantes agregan un toque de magia y realismo a la experiencia, mientras que los sonidos te transportan al mundo del genio multimillonario y su traje tecnológico.
+        
+        Este Iron Man bailarín es fácil de activar, solo necesitas 3 pilas AA!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto54a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto54b.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Amarillo",
+        edad: "+3",
+        categoria: "carros-impulso",
+        genero: "ninos"
+    },
+    {
+        id: 30,
+        titulo: "Bumble Bee Bailarin, Luces y Sonido",
+        precio: 39999,
+        descripcion: `¡Lleva la diversión a un nivel vibrante con nuestro Bumble Bee Bailarín! Este juguete encantador combina movimiento, luces y sonidos en una experiencia llena de alegría y entretenimiento.
+
+        Observa con asombro mientras el Bumble Bee cobra vida con movimientos animados y cautivadores. Sus luces brillantes iluminan su camino mientras realiza sus pasos de baile únicos, y su sonido alegre añade una banda sonora emocionante a cada movimiento.
+        
+        Este Bumble Bee Bailarín es impulsado por 3 pilas AA.`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto30a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto30b.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Amarillo",
+        edad: "+3",
+        categoria: "carros-impulso",
+        genero: "ninos"
     },
     {
         id: 31,
@@ -317,7 +355,7 @@ const productosdb = [
     {
         id: 48,
         titulo: "Pez con Movimiento, Luces y Sonido",
-        precio: 40999,
+        precio: 39999,
         descripcion: `¡Sumérgete en la diversión acuática con el increíble Pez Interactivo con Luces y Sonido! Este juguete cautivador te transportará a un mundo submarino lleno de emoción y asombro.
 
         Observa cómo este pez cobra vida con movimientos realistas en su cuerpo, imitando el suave aleteo y la gracia de los peces reales. Sus ojos brillantes con luces añaden un toque mágico mientras exploras aventuras submarinas. Además, el sonido realista completa la experiencia, creando una atmósfera inmersiva!`,
@@ -335,6 +373,43 @@ const productosdb = [
         colores: "Amarillo",
         edad: "+3",
         categoria: "mascotas",
+        genero: "unisex"
+    },
+    {
+        id: 32,
+        titulo: "Computador Interactivo Unisex",
+        precio: 29999,
+        descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo, diseñado para preescolares, este juguete cautivante es más que un juego.
+
+        Explora números del 1 al 10, el abecedario y palabras esenciales, operaciones matematicas con diversión interactiva. Con canciones animadas y actividades intuitivas de suma y resta, cada momento se convierte en una lección emocionante.
+        
+        Colores vibrantes y personajes adorables hacen que el aprendizaje sea divertido. Este computador educativo es una herramienta valiosa que fomenta el desarrollo cognitivo. ¡Cada toque en las teclas crea un futuro de conocimiento!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto32a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto32b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto32c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto32d.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto32e.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosado, Azul",
+        edad: "+3",
+        categoria: "educativo",
         genero: "unisex"
     },
     {
@@ -459,31 +534,6 @@ const productosdb = [
         genero: "unisex"
     },
     {
-        id: 1,
-        titulo: "Kit de Uñas X12 con Brillos",
-        precio: 9999,
-        descripcion: `¡Fusionamos diversión y creatividad en nuestro kit de uñas encantadoras! Diseñado especialmente para niñas de 3 a 7 años, este kit les brinda la oportunidad de explorar su lado artístico mientras se divierten.
-
-        Con 12 uñas en colores vibrantes y diseños encantadores, cada uña es una pequeña obra maestra lista para ser creada. Desde delicadas flores hasta brillantes estrellas, ¡serán princesitas creativas!
-        
-        El kit incluye un tubito de pegamento suave y seguro para que las uñas permanezcan en su lugar durante todas las aventuras. Y para el toque final mágico, nuestro frasquito de brillo añade destellos y colores chispeantes a cada creación.`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto1a.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto1b.webp"
-            }
-        ],
-        status: "disponible",
-        colores: "Rosado",
-        edad: "+3",
-        categoria: "maquillaje",
-        genero: "ninas"
-    },
-    {
         id: 34,
         titulo: "Carro Loco con Movimiento, Luces y Sonido",
         precio: 28999,
@@ -569,7 +619,7 @@ const productosdb = [
     {
         id: 3,
         titulo: "Computador Interactivo 130 Actividades",
-        precio: 96999,
+        precio: 99999,
         descripcion: `Descubre un mundo de aprendizaje interactivo con nuestro Computador Interactivo 130 Actividades. Diseñado para inspirar y enseñar, este juguete educativo es una experiencia completa.
 
         Desde letras y música hasta un reloj funcional, los niños explorarán un abanico de habilidades. Rellena palabras, deletrea, sumérgete en matemáticas y disfruta de juegos educativos, todo con el uso del mouse y el teclado interactivo. Este computador, con conexión a corriente, brinda horas de diversión y aprendizaje sin fin.
