@@ -433,7 +433,7 @@ footer {
 }
 
 .paginador-activo {
-  background-color: rgba(0, 255, 255, 0.568);
+  background-color: rgba(9, 255, 0, 0.697);
 }
 
 @media(min-width: 768px) {

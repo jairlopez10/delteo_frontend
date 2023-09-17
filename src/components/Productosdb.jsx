@@ -3,7 +3,7 @@ const productosdb = [
     {
         id: 50,
         titulo: "Lanzador Hidrogel MP5 Automatica Recargable + Gafas + 6.000 Orvis Hidrogel",
-        precio: 94999,
+        precio: 89999,
         descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
 
         Esta pistola lanzadora automática, con su diseño estilo MP5, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 6000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
@@ -13,6 +13,10 @@ const productosdb = [
             {
                 tipo: "imagen",
                 url: "/producto50a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto50b.mp4"
             }
         ],
         status: "disponible",
