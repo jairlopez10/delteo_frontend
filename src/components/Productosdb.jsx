@@ -3,6 +3,7 @@ const productosdb = [
     {
         id: 50,
         titulo: "Lanzador Hidrogel MP5 Automatica Recargable + Gafas + 6.000 Orvis Hidrogel",
+        preciomayorista: 62999,
         precio: 89999,
         descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
 
@@ -27,7 +28,8 @@ const productosdb = [
     },
     {
         id: 6,
-        titulo: "Dinosaurio Rex con Movimiento, Luces, Sonido",
+        titulo: "Dinosaurio Rex con Movimiento Luces Sonido",
+        preciomayorista: 29999,
         precio: 32999,
         descripcion: `¡Transporta a tu pequeño a la era de los dinosaurios con nuestro Dinosaurio Rex! Este magnífico amigo prehistórico está lleno de emocionantes luces brillantes, sonidos realistas y un movimiento fascinante en su cuerpo, garras y cola, este dinosaurio cobra vida en las manos de tu hijo. Cada paso es una aventura asombrosa mientras el dinosaurio camina y se balancea con autenticidad, creando momentos de maravilla y diversión.
         
@@ -43,7 +45,7 @@ const productosdb = [
             },
             {
                 tipo: "video",
-                url: "producto6c.mp4"
+                url: "/producto6c.mp4"
             }
         ],
         status: "disponible",
@@ -54,7 +56,8 @@ const productosdb = [
     },
     {
         id: 2,
-        titulo: "Computador Interactivo con Pantalla y Mouse Unisex",
+        titulo: "Computador Interactivo con Pantalla y Mouse",
+        preciomayorista: 37000,
         precio: 39999,
         descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo Todo en Uno, equipado con mouse y pantalla digital! Diseñado para preescolares, este juguete cautivante es más que un juego.
 
@@ -74,26 +77,27 @@ const productosdb = [
             },
             {
                 tipo: "imagen",
-                url: "producto2c.webp"
+                url: "/producto2c.webp"
             },
             {
                 tipo: "imagen",
-                url: "producto2e.webp"
+                url: "/producto2e.webp"
             },
             {
                 tipo: "video",
-                url: "producto2d.mp4"
+                url: "/producto2d.mp4"
             }
         ],
         status: "disponible",
         colores: "Rosado, Azul, Rojo",
         edad: "+3",
         categoria: "educativo",
-        genero: "unisex"
+        genero: "ninas"
     },
     {
         id: 53,
         titulo: "Spiderman Bailarin, Luces y Sonido",
+        preciomayorista: 29999,
         precio: 39999,
         descripcion: `¡Experimenta la emoción de Spider-Man en una nueva dimensión con el Spider-Man Bailarín con Luces y Sonido! Este juguete te llevará directamente al mundo del famoso superhéroe arácnido mientras se mueve, brilla y suena al ritmo de la acción.
 
@@ -119,6 +123,7 @@ const productosdb = [
     {
         id: 52,
         titulo: "Lanzador Hidrogel M416 Automatica Recargable + 1.500 Orvis Hidrogel",
+        preciomayorista: 84999,
         precio: 139999,
         descripcion: `¡Entra en la acción con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un M416! Este emocionante juguete te lleva a un mundo lleno de emociones y diversión mientras te sumerges en batallas simuladas y aventuras imaginativas.
 
@@ -140,6 +145,7 @@ const productosdb = [
     {
         id: 1,
         titulo: "Kit de Uñas X12 con Brillos",
+        preciomayorista: 4499,
         precio: 9999,
         descripcion: `¡Fusionamos diversión y creatividad en nuestro kit de uñas encantadoras! Diseñado especialmente para niñas de 3 a 7 años, este kit les brinda la oportunidad de explorar su lado artístico mientras se divierten.
 
@@ -165,6 +171,7 @@ const productosdb = [
     {
         id: 33,
         titulo: "Patito Burbujeante Bailarin",
+        preciomayorista: 32999,
         precio: 42999,
         descripcion: `¡Conoce a nuestro Patito Bailarín Burbujeante, el compañero de diversión definitivo para tus pequeños! Este encantador juguete combina la magia de la música, el baile y las burbujas para brindar horas interminables de entretenimiento.
 
@@ -188,6 +195,7 @@ const productosdb = [
     {
         id: 54,
         titulo: "Iron Man Bailarin, Luces y Sonido",
+        preciomayorista: 29999,
         precio: 39999,
         descripcion: `¡Lleva la acción de Iron Man a tu casa con el Iron Man Bailarín con Luces y Sonido! Este emocionante juguete te permite experimentar la elegancia tecnológica de Tony Stark mientras se mueve, se ilumina y suena al ritmo de la aventura.
 
@@ -213,6 +221,7 @@ const productosdb = [
     {
         id: 30,
         titulo: "Bumble Bee Bailarin, Luces y Sonido",
+        preciomayorista: 29999,
         precio: 39999,
         descripcion: `¡Lleva la diversión a un nivel vibrante con nuestro Bumble Bee Bailarín! Este juguete encantador combina movimiento, luces y sonidos en una experiencia llena de alegría y entretenimiento.
 
@@ -238,6 +247,7 @@ const productosdb = [
     {
         id: 31,
         titulo: "Mesa Proyector + Tanque de Agua + 8 Rompecabezas + 12 Marcadores + Sellos",
+        preciomayorista: 88999,
         precio: 109999,
         descripcion: `¡Despierta la creatividad y la diversión con nuestro Set de Mesa Proyector y Actividades Todo en Uno! Este conjunto emocionante ofrece una amplia gama de experiencias interactivas y creativas, perfectas para horas de entretenimiento y aprendizaje.
 
@@ -261,6 +271,7 @@ const productosdb = [
     {
         id: 15,
         titulo: "Carro a Control Remoto Estilo Ferrari",
+        preciomayorista: 28999,
         precio: 53999,
         descripcion: `¡Experimenta la emoción de la velocidad con nuestro Carro a Control Remoto Ferrari! Este vehículo de alta calidad captura la elegancia y la potencia de un Ferrari, ofreciéndote una experiencia de conducción excepcional.
 
@@ -286,6 +297,7 @@ const productosdb = [
     {
         id: 51,
         titulo: "Lanzador Hidrogel Automatica Recargable + 1.500 Orvis Hidrogel",
+        preciomayorista: 49999,
         precio: 69999,
         descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
 
@@ -307,6 +319,7 @@ const productosdb = [
     {
         id: 23,
         titulo: "Excavadora con Movimiento, Luces y Sonido",
+        preciomayorista: 32999,
         precio: 37999,
         descripcion: `¡Embárcate en una emocionante expedición con nuestra Camioneta Jeep a Control Remoto Estilo Safari! Este vehículo excepcional combina la emoción de la aventura con el estilo icónico de un safari, brindándote una experiencia de juego llena de diversión y imaginación.
 
@@ -332,6 +345,7 @@ const productosdb = [
     {
         id: 18,
         titulo: "Maleta Doctor@ Azul & Rosado",
+        preciomayorista: 17999,
         precio: 23999,
         descripcion: `¡Inspira el juego creativo y el aprendizaje con nuestra Maleta de Doctor para Niñ@s! Este emocionante conjunto brinda a los pequeños médicos y médicas en ciernes la oportunidad de explorar el emocionante mundo de la medicina y el cuidado de la salud.
 
@@ -355,6 +369,7 @@ const productosdb = [
     {
         id: 48,
         titulo: "Pez con Movimiento, Luces y Sonido",
+        preciomayorista: 32999,
         precio: 39999,
         descripcion: `¡Sumérgete en la diversión acuática con el increíble Pez Interactivo con Luces y Sonido! Este juguete cautivador te transportará a un mundo submarino lleno de emoción y asombro.
 
@@ -378,6 +393,7 @@ const productosdb = [
     {
         id: 32,
         titulo: "Computador Interactivo Unisex",
+        preciomayorista: 22999,
         precio: 29999,
         descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo, diseñado para preescolares, este juguete cautivante es más que un juego.
 
@@ -415,6 +431,7 @@ const productosdb = [
     {
         id: 47,
         titulo: "Gato Tom Repetidor con Luces y Sonido",
+        preciomayorista: 29999,
         precio: 36999,
         descripcion: `¡Conoce a tu nuevo compañero parlante, el Gato Tom Repetidor con Luces y Sonido! Este adorable gato interactivo te proporcionará horas de risas y entretenimiento mientras repite todo lo que dices con su propio toque único.
 
@@ -438,6 +455,7 @@ const productosdb = [
     {
         id: 10,
         titulo: "Carro Lanza Vapor, Movimiento, Luces y Sonido",
+        preciomayorista: 24999,
         precio: 30999,
         descripcion: `¡Desata la emoción con nuestro Carro de Pila Nitro Xtreme! Este vehículo de próxima generación combina estilo y rendimiento en una experiencia única.
 
@@ -467,6 +485,7 @@ const productosdb = [
     {
         id: 17,
         titulo: "Coche Plastico + Muñeca Baby + Tetero",
+        preciomayorista: 36999,
         precio: 47999,
         descripcion: `¡Lleva la diversión en movimiento a un nivel superior con nuestro Coche Paseador de Plástico con Muñeca y Tetero Incluidos! Este conjunto encantador combina la emoción del juego con la imaginación, permitiendo a los niños crear sus propias historias mientras se embarcan en emocionantes aventuras.
 
@@ -486,6 +505,7 @@ const productosdb = [
     {
         id: 8,
         titulo: "Barbie +6 Vestidos + 2 Hijas + Pony",
+        preciomayorista: 27999,
         precio: 34999,
         descripcion: `¡Crea mágicas historias con nuestro Set de Barbie Familia y Amigos! Este encantador conjunto incluye una Barbie radiante con una selección de 6 elegantes vestidos, ¡siempre lista para cualquier ocasión!
 
@@ -507,6 +527,7 @@ const productosdb = [
     {
         id: 11,
         titulo: "Perro con Sensor de Movimiento, Ladra",
+        preciomayorista: 39999,
         precio: 47999,
         descripcion: `¡Trae a casa la alegría con nuestro Perro Interactivo Ladra y Juega! Este adorable compañero peludo está listo para llenar tu hogar de risas y diversión.
 
@@ -536,6 +557,7 @@ const productosdb = [
     {
         id: 34,
         titulo: "Carro Loco con Movimiento, Luces y Sonido",
+        preciomayorista: 22999,
         precio: 28999,
         descripcion: `¡Presentamos el Carro Loco de Pila, la máxima aventura sobre ruedas para los pequeños exploradores! Este carro innovador lleva la diversión a un nivel completamente nuevo con su capacidad de girar las llantas delanteras a 360 grados, lo que significa giros emocionantes y maniobras sorprendentes en todas direcciones.
 
@@ -563,6 +585,7 @@ const productosdb = [
     {
         id: 20,
         titulo: "Perro Colores con Movimiento y Sonido",
+        preciomayorista: 1000,
         precio: 18999,
         descripcion: `¡Trae a casa la alegría y la compañía con nuestro Perro con Movimiento! Este adorable compañero peludo está listo para llenar tu hogar de risas y diversión.
 
@@ -600,6 +623,7 @@ const productosdb = [
     {
         id: 12,
         titulo: "Pista de Carros Neon Xtreme",
+        preciomayorista: 81999,
         precio: 92999,
         descripcion: `¡Sumérgete en la emoción de la velocidad y la luz con nuestra Pista de Carros Neon Xtreme! Esta pista asombrosa lleva la diversión al siguiente nivel con su diseño iluminado que brilla intensamente en la oscuridad.
 
@@ -619,6 +643,7 @@ const productosdb = [
     {
         id: 3,
         titulo: "Computador Interactivo 130 Actividades",
+        preciomayorista: 84999,
         precio: 99999,
         descripcion: `Descubre un mundo de aprendizaje interactivo con nuestro Computador Interactivo 130 Actividades. Diseñado para inspirar y enseñar, este juguete educativo es una experiencia completa.
 
@@ -648,6 +673,7 @@ const productosdb = [
     {
         id: 4,
         titulo: "Barbie +10 Vestidos con Hija, Bicicleta y Accesorios",
+        preciomayorista: 1000,
         precio: 23000,
         descripcion: `¡Diversión sin fin espera con este set único de Barbie con 10 vestidos impresionantes, para que ella pueda deslumbrar en cualquier ocasión. Pero eso no es todo, ¡también viene con su hija lista para un emocionante paseo en bicicleta!
 
@@ -667,6 +693,7 @@ const productosdb = [
     {
         id: 5,
         titulo: "Pistola de Burbujas Dinosaurio Rex",
+        preciomayorista: 1000,
         precio: 49000,
         descripcion: `¡Diversión prehistórica te espera con nuestra Pistola de Burbujas Dinosaurio Rex! Este juguete único combina la emoción de las burbujas con el estilo del legendario tiranosaurio rex.
 
@@ -693,6 +720,7 @@ const productosdb = [
     {
         id: 7,
         titulo: "Dinosaurio Huevo Sorpresa, Luces, Movimiento y Sonido",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Sumérgete en una emocionante expedición prehistórica con nuestro Dinosaurio Huevo Sorpresa con luces brillantes, sonidos realistas y movimientos cautivadores que cobran vida en su cuerpo y cabeza. Pero aquí está la verdadera maravilla: este dinosaurio también tiene una sorpresa bajo la manga (o en este caso, bajo sus patas). ¡Bota huevos de plástico en cada paso, creando momentos de anticipación y emoción!
 
@@ -716,6 +744,7 @@ const productosdb = [
     {
         id: 9,
         titulo: "Coleccion de 4 Carros de Impulso y Choque",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Prepárate para la emoción con nuestro Set de 4 Carros Saltarines de Impulso! Este conjunto es la definición de diversión y acción en cada vuelta.
 
@@ -741,6 +770,7 @@ const productosdb = [
     {
         id: 13,
         titulo: "Gimnasio de Actividades para Bebe",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Estimula el crecimiento y la diversión con nuestro Gimnasio de Bebés Sonidos y Juguetes! Este espacio de juego interactivo está diseñado para ofrecer a tu bebé una experiencia llena de aprendizaje y entretenimiento.
 
@@ -760,6 +790,7 @@ const productosdb = [
     {
         id: 14,
         titulo: "Carro a Control Remoto con Efecto Vapor",
+        preciomayorista: 74999,
         precio: 134999,
         descripcion: `¡Acelera hacia la diversión con nuestro Carro a Control Remoto con Efecto Vapor! Este impresionante vehículo combina la emoción de la velocidad con un toque de magia gracias a su capacidad para lanzar vapor de agua, ¡simulando un efecto de nitro!
 
@@ -789,6 +820,7 @@ const productosdb = [
     {
         id: 16,
         titulo: "Carro a Control Remoto (Bidireccional)",
+        preciomayorista: 11999,
         precio: 26999,
         descripcion: `¡Experimenta la emoción de la velocidad y el lujo con nuestro Carro a Control Remoto Estilo Ferrari! Este vehículo excepcional captura la elegancia y la potencia en un diseño compacto y emocionante.
 
@@ -812,6 +844,7 @@ const productosdb = [
     {
         id: 42,
         titulo: "Juego Jenga + Dados",
+        preciomayorista: 12999,
         precio: 18999,
         descripcion: `¡Eleva la emoción del clásico juego de Jenga con Dados Numéricos! En esta emocionante variante, los dados añaden un elemento de sorpresa y estrategia mientras intentas mantener la torre en pie.
 
@@ -831,6 +864,7 @@ const productosdb = [
     {
         id: 19,
         titulo: "Dragon a Control Remoto con Vapor y Huevos",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Desata la magia y la emoción con nuestro Dragón Control Remoto Interactivo! Este majestuoso ser escamoso trae consigo una experiencia llena de asombro y aventura.
 
@@ -852,6 +886,7 @@ const productosdb = [
     {
         id: 21,
         titulo: "Trailer Dinosaurio con Vapor + Dinosaurios + Herramientas",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Embárcate en una emocionante aventura prehistórica con nuestro Trailer Dinosaurio! Este conjunto único combina la diversión del juego de dinosaurios con un toque de magia y acción.
 
@@ -881,6 +916,7 @@ const productosdb = [
     {
         id: 22,
         titulo: "Camioneta Jeep a Control Remoto Safari",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Embárcate en una emocionante expedición con nuestra Camioneta Jeep a Control Remoto Estilo Safari! Este vehículo excepcional combina la emoción de la aventura con el estilo icónico de un safari, brindándote una experiencia de juego llena de diversión y imaginación.
 
@@ -902,6 +938,7 @@ const productosdb = [
     {
         id: 25,
         titulo: "Slime con Sorpresa de Mario Bros",
+        preciomayorista: 3499,
         precio: 7999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de Mario Bros! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
@@ -921,6 +958,7 @@ const productosdb = [
     {
         id: 24,
         titulo: "Slime con Sorpresa de los Vengadores",
+        preciomayorista: 3499,
         precio: 7999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de los Vengadores! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
@@ -940,6 +978,7 @@ const productosdb = [
     {
         id: 26,
         titulo: "Slime con Sorpresa de Paw Patrol",
+        preciomayorista: 3499,
         precio: 7999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de Paw Patrol! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
@@ -959,6 +998,7 @@ const productosdb = [
     {
         id: 29,
         titulo: "Slime con Sorpresa de Princesas Disney",
+        preciomayorista: 3499,
         precio: 7999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de Princesas de Disney! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
@@ -978,6 +1018,7 @@ const productosdb = [
     {
         id: 27,
         titulo: "Slime con Sorpresa de Princesas Grande",
+        preciomayorista: 5999,
         precio: 14999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de Princesas! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
@@ -997,6 +1038,7 @@ const productosdb = [
     {
         id: 28,
         titulo: "Slime con Sorpresa de Vengadores Grande",
+        preciomayorista: 5999,
         precio: 14999,
         descripcion: `¡Doble diversión en un solo frasco con nuestro Frasco de Slime con Sorpresa de Vengadores! Este emocionante paquete combina la satisfacción sensorial del slime con la emoción de desenterrar una sorpresa especial.
 
@@ -1016,6 +1058,7 @@ const productosdb = [
     {
         id: 35,
         titulo: "Lego Mario Bros",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Embárcate en una emocionante aventura de construcción con el set Lego Super Mario: Desierto de los Ladrillos! Con 207 piezas, este set te sumergirá en el mundo icónico de Mario Bros mientras exploras el emocionante nivel del desierto.
 
@@ -1035,6 +1078,7 @@ const productosdb = [
     {
         id: 36,
         titulo: "Maleta Doctora con Accesorios Sonido y Luces",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Bienvenidos a la Maleta Doctora Sonido y Luces Este set de juego emocionante trae la diversión de la medicina a tus manos. Con un estetoscopio que emite luces y sonidos realistas para escuchar los latidos del corazón, y un celular interactivo que te sumerge en situaciones médicas emocionantes, este set ofrece una experiencia de juego única.
 
@@ -1060,6 +1104,7 @@ const productosdb = [
     {
         id: 37,
         titulo: "Cartas UNO H2O!",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Sumérgete en la diversión acuática con el emocionante juego de cartas UNO H2O! Inspirado en la clásica y querida experiencia de UNO, esta versión presenta un emocionante giro relacionado con el agua que brinda un nuevo nivel de entretenimiento para toda la familia.
 
@@ -1079,6 +1124,7 @@ const productosdb = [
     {
         id: 38,
         titulo: "Cartas DOS !",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡El emocionante juego de cartas DOS te sumerge en una carrera llena de diversión por deshacerte de tus cartas antes que tus oponentes! Cada jugador busca emparejar sus cartas con las que están en la mesa, ya sea con el mismo número o sumando para obtener el mismo número. El juego contiene un total de 108 cartas en diferentes colores y números, además de cartas especiales con habilidades únicas.
 
@@ -1100,6 +1146,7 @@ const productosdb = [
     {
         id: 39,
         titulo: "Cartas UNO !",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Explora un mundo lleno de emoción y estrategia con el juego de cartas UNO! Este clásico juego de cartas es una experiencia emocionante y divertida que ha entretenido a familias y amigos durante generaciones.
 
@@ -1119,6 +1166,7 @@ const productosdb = [
     {
         id: 40,
         titulo: "Set Minecraft con Accesorios",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Sumérgete en el mundo pixelado de Minecraft con el emocionante set de construcción! Este set te trae algunos de los personajes más emblemáticos del juego directamente a tus manos como el Creeper, el temible Zombie, el enigmático Enderman y el imponente Golem de Hierro. ¡Pero eso no es todo! El personaje principal, reconocible por su atuendo único, también está incluido, listo para enfrentar los desafíos que tú le diseñes. Cada figura ha sido meticulosamente diseñada para capturar la esencia de Minecraft, con detalles que harán que los fanáticos del juego se sientan como si estuvieran dentro del mundo del juego!`,
         imagenes: [
@@ -1136,6 +1184,7 @@ const productosdb = [
     {
         id: 41,
         titulo: "Pistola Lanza Dardos e Hidrogel + 200 Bolas Hidrogel",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Prepárate para la acción emocionante con la Pistola Lanza Dardos e Hidrogel de Última Generación! Este conjunto todo en uno te sumerge en una experiencia de juego llena de adrenalina y diversión.
 
@@ -1161,6 +1210,7 @@ const productosdb = [
     {
         id: 43,
         titulo: "Cartas de Poker Asequibles",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Introduce una dosis de diversión en tus partidas con este set de Cartas de Poker asequibles! Este set incluye dos barajas completas, lo que te brinda la oportunidad de disfrutar de una variedad de juegos de cartas sin invertir mucho.
 
@@ -1180,6 +1230,7 @@ const productosdb = [
     {
         id: 44,
         titulo: "Cartas de Poker Intermedio",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Potencia tus partidas de cartas con este juego de Cartas de Poker de Plástico de Nivel Intermedio! Este set, que incluye dos barajas completas, te brinda una experiencia de juego que equilibra calidad y accesibilidad.
 
@@ -1199,6 +1250,7 @@ const productosdb = [
     {
         id: 45,
         titulo: "Cartas de Poker Alta",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Potencia tus partidas de cartas con este juego de Cartas de Poker de Plástico de Nivel Intermedio! Este set, que incluye dos barajas completas, te brinda una experiencia de juego que equilibra calidad y accesibilidad.
 
@@ -1218,6 +1270,7 @@ const productosdb = [
     {
         id: 46,
         titulo: "Pistola Nerf Avengers + 6 Dardos",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Vive la emoción de los Vengadores con la Pistola Nerf Estilo Avengers inspirada en Spider-Man y Capitán América! Este set incluye 6 dardos y un tablero de disparo para una acción heroica llena de diversión y aventuras. Con detalles auténticos y diseño de superhéroes, estarás listo para enfrentar desafíos imaginarios con estilo. ¡Prepárate para un juego lleno de emoción y adrenalina mientras te conviertes en un verdadero defensor de la justicia!`,
         imagenes: [
@@ -1247,6 +1300,7 @@ const productosdb = [
     {
         id: 49,
         titulo: "Maleta Tocador",
+        preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Vive la emoción de los Vengadores con la Pistola Nerf Estilo Avengers inspirada en Spider-Man y Capitán América! Este set incluye 6 dardos y un tablero de disparo para una acción heroica llena de diversión y aventuras. Con detalles auténticos y diseño de superhéroes, estarás listo para enfrentar desafíos imaginarios con estilo. ¡Prepárate para un juego lleno de emoción y adrenalina mientras te conviertes en un verdadero defensor de la justicia!`,
         imagenes: [

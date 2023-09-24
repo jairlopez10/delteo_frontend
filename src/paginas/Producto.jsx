@@ -9,12 +9,19 @@ const Producto = () => {
   const {setpagina} = usePagina()
   const params = useParams();
   let titulo = params.titulo;
+  let tipocliente = params.tipocliente;
 
   useEffect(() => {
-    setpagina('otra');
+    if(tipocliente === "m"){
+      setpagina('mayoristaproducto');
+      document.title = `${titulo} (${tipocliente})`
+    } else {
+      setpagina('otra');
+      document.title = titulo;
+    }
     window.scrollTo(0,0);
     //Cambia el nombre del titulo de la pagina
-    document.title = titulo;
+    
   }, [])
   
   //Remplaza las - por espacios para buscar el titulo
@@ -90,7 +97,7 @@ const Producto = () => {
                   <path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
                   <path d="M3 9l4 0" />
                 </svg>
-                <p>Envios a todo Colombia</p>
+                <p>Entregas a todo Colombia (contra entrega)</p>
               </div>
               <div className="flex gap-2 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="icono-incluido icon icon-tabler icon-tabler-shield-check" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -111,7 +118,7 @@ const Producto = () => {
                 <p>Stock <span className=" text-green-600">disponible</span></p>
               </div>
             </div>
-            <p className="precio-prod">{`$${producto.precio.toLocaleString('es-CO')} / Und`}</p>
+            <p className="precio-prod">{`$${tipocliente === "m" ? producto.preciomayorista.toLocaleString('es-CO') : producto.precio.toLocaleString('es-CO')} / Und`}</p>
             <p className="colores">Colores: <span>{producto.colores}</span></p>
             <div className="boton-ordenar" onClick={() => window.open(`https://wa.me/573054392872?text=Hola!%20Estoy%20interesado%20en%20el%20producto%20que%20vi%20en%20${window.location.href}`)}>
               <img src="/wa.webp" alt="" />

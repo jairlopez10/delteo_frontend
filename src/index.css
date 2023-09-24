@@ -721,5 +721,62 @@ footer {
   }
 }
 
+/* ---------------------------------------------- Catalogo MAYORISTA ------------------------------------*/
+
+.seccionbeneficios {
+  padding-bottom: 2rem;
+}
+
+.divmayorista {
+  display: flex;
+  justify-content: center;
+}
+
+.sloganmayorista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  width: 85%;
+}
+
+.beneficio {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.beneficio-mayorista-icono {
+  width: 4rem;
+  height: 4rem;
+}
+
+.beneficio p {
+  color: black;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+
+@media (min-width: 768px) {
+  .beneficio {
+    flex-direction: column;
+  }
+  .sloganmayorista {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    width: 90%;
+  }
+  .beneficio-mayorista-icono {
+    height: 15rem;
+    width: 100%;
+  }
+  .beneficio p {
+    font-size: 2.5rem;
+  }
+}
 
 

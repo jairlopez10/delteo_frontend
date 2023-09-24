@@ -15,7 +15,7 @@ const Header = () => {
                 <div className="contenidoheader contenedor">
                     <div className="divbarra">
                         
-                        <Link to="/" className="logo" onClick={() => setmenu(false)}>
+                        <Link to={pagina === "mayorista" || pagina === "mayoristaproducto" ? "/catalogomayorista" : "/"} className="logo" onClick={() => setmenu(false)}>
                             <img src="/logo.png" alt="" />
                         </Link>
                         
@@ -33,11 +33,11 @@ const Header = () => {
                     </div>
                     
                     <nav className={`navegacion ${menu ? 'flex' : 'hidden'} md:flex`}>
-                        <Link to="/" className="links" onClick={() => setmenu(false)}>Catalogo</Link>
-                        <Link to="/nosotros" className="links" onClick={() => setmenu(false)}>Nosotros</Link>
+                        <Link to={pagina === "mayorista" || pagina === "mayoristaproducto" ? "/catalogomayorista" : "/"} className="links" onClick={() => setmenu(false)}>Catalogo</Link>
+                        <Link to="/nosotros" className={`${pagina === "mayorista" || pagina === "mayoristaproducto" ? "hidden" : ""} links`} onClick={() => setmenu(false)}>Nosotros</Link>
                     </nav>
                 </div>
-                {pagina === 'inicio' ? <Slogan /> : ""}
+                {pagina === 'inicio' || pagina === "mayorista" ? <Slogan /> : ""}
             </div>
         </header>
     </>

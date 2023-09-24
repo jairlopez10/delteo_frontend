@@ -3,7 +3,7 @@ import usePagina from "../hooks/usePagina"
 import productosdb from "../components/Productosdb";
 import Productocard from "../components/Productocard";
 
-const Catalogo = () => {
+const Catalogomayorista = () => {
 
   const productosavailable = productosdb.filter(producto => {
     if(producto.status === "disponible"){
@@ -17,14 +17,14 @@ const Catalogo = () => {
   const [genero, setgenero] = useState('');
   const [edad, setedad] = useState('');
   const [ordenar, setordenar] = useState('');
-  const [preciomax, setpreciomax] = useState(150000);
+  const [preciomax, setpreciomax] = useState(97500);
   const [productosmostrar, setproductosmostrar] = useState(productosavailable);
   const [productosfiltrados, setproductosfiltrados] = useState(productosavailable);
   const [numpagina, setnumpagina] = useState(1);
   const tituloproductosref = useRef(null);
  
-  const MIN = 5000;
-  const MAX = 150000;
+  const MIN = 2500;
+  const MAX = 97500;
   const STEP = 5000;
   const numproductospag = 8;
 
@@ -82,12 +82,12 @@ const Catalogo = () => {
   }
 
   const filtrarpreciomax = (product) => {
-    if (product.precio <= preciomax) return product;
+    if (product.preciomayorista <= preciomax) return product;
   }
 
   useEffect(() => {
-    setpagina('inicio');
-    document.title = "Jammy | Jugueteria"
+    setpagina('mayorista');
+    document.title = "Jammy | Catalogo Mayorista"
   }, [])
 
 
@@ -97,9 +97,9 @@ const Catalogo = () => {
 
     if(ordenar !== ""){
       if (ordenar === 'asc'){
-        newlist.sort(((a,b) => a.precio - b.precio));
+        newlist.sort(((a,b) => a.preciomayorista - b.preciomayorista));
       } else {
-        newlist.sort(((a,b) => b.precio - a.precio));
+        newlist.sort(((a,b) => b.preciomayorista - a.preciomayorista));
       }
     }
     setproductosfiltrados(newlist);
@@ -113,7 +113,8 @@ const Catalogo = () => {
 
   return (
     <>
-      <div className="seccionproductos contenedor">
+
+    <div className="seccionproductos contenedor">
         <h1 className="tituloproductos mb-8" ref={tituloproductosref}>Productos</h1>
         <div className="flex items-center justify-center gap-2 md:hidden cursor-pointer w-min mb-4 filtrodiv" onClick={() => setseccionfiltro(!seccionfiltro)}>
           <svg xmlns="http://www.w3.org/2000/svg" className=" icon icon-tabler icon-tabler-adjustments-horizontal" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#3d3d3d" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -216,11 +217,11 @@ const Catalogo = () => {
       </div>
       
       <img src="/wa.webp" alt="img WA" className="whatsapp" onClick={() => {
-        window.open("https://wa.me/573054392872?text=Hola%20Jammy,%20quisiera%20saber%20mas%20informacion%20por%20favor%20", '_blank');
+        window.open("https://wa.me/573054392872?text=Hola%20Jugueteria%20Jammy,%20quisiera%20saber%20mas%20informacion%20al%20por%20mayor%20por%20favor", '_blank');
       }}/>
       
     </>
   )
 }
 
-export default Catalogo
+export default Catalogomayorista

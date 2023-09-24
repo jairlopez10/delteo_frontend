@@ -4,6 +4,7 @@ import Catalogo from './paginas/Catalogo'
 import Nosotros from './paginas/Nosotros'
 import { Paginaprovider } from './context/Paginaprovider'
 import Producto from './paginas/Producto'
+import Catalogomayorista from './paginas/Catalogomayorista'
 
 function App() {
   
@@ -14,7 +15,8 @@ function App() {
           <Route path='/' element={<Layout />}>
             <Route index element={<Catalogo />} />
             <Route path='/nosotros' element={<Nosotros />}/>
-            <Route path='/:titulo' element={<Producto />}/>
+            <Route path='/:titulo/:tipocliente' element={<Producto />}/>
+            <Route path='/catalogomayorista' element={<Catalogomayorista />}/>
           </Route>
         </Routes>
       </Paginaprovider>
