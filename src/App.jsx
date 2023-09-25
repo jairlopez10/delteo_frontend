@@ -16,7 +16,7 @@ function App() {
             <Route index element={<Catalogo />} />
             <Route path='/nosotros' element={<Nosotros />}/>
             <Route path='/:titulo/:tipocliente' element={<Producto />}/>
-            <Route path='/catalogomayorista' element={<Catalogomayorista />}/>
+            <Route path='/mayorista' element={<Catalogomayorista />}/>
           </Route>
         </Routes>
       </Paginaprovider>
