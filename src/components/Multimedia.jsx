@@ -10,9 +10,7 @@ const Multimedia = ({multimedia, setmultiactual}) => {
             </>
         ) : (
             <>
-                <video className="imagen-prod-pag cursor-pointer" onClick={() => setmultiactual(multimedia)}>
-                    <source src={multimedia.url} />
-                </video>
+                <img src="/video3.webp" alt="imagenvideo" className="imagen-prod-pag cursor-pointer" onClick={() => setmultiactual(multimedia)}/>
             </>
         )}
     </>
