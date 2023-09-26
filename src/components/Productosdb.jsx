@@ -169,6 +169,58 @@ const productosdb = [
         genero: "ninas"
     },
     {
+        id: 59,
+        titulo: "Maleta Tocador + Accesorios",
+        preciomayorista: 28999,
+        precio: 42999,
+        descripcion: `¡Lleva la diversión y la belleza a un nivel superior con la Maleta Tocador para Niñas! Este juguete es perfecto para que las pequeñas exploren su creatividad y se sumerjan en el emocionante mundo de la moda y el maquillaje.
+
+        Dentro de esta maleta mágica, encontrarán 3 esmaltes de uñas para crear manicuras encantadoras, 1 peinilla para peinar y arreglar su cabello, y 1 secador de juguete para simular el secado y el estilismo del cabello.
+        
+        Pero eso no es todo, también podrán disfrutar de 3 anillos, 3 pulseras y 1 collar para añadir un toque de glamour a su estilo. Con 2 labiales de juguete en tonos divertidos, podrán experimentar con colores y expresar su personalidad!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto59a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto59b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosado",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 58,
+        titulo: "Carro Control Sensor + Control Remoto + Vapor de Agua",
+        preciomayorista: 84999,
+        precio: 119999,
+        descripcion: `¡Prepárate para una experiencia de conducción única con el Carro Control Sensor, Este vehículo te ofrece lo mejor de ambos mundos, combinando tecnología avanzada con la diversión clásica de los carros a control remoto.
+
+        El control de sensor de movimiento te permite dirigir el carro simplemente moviendo la mano, lo que añade un nivel de interacción y emoción sin precedentes. ¡Es como si estuvieras controlando el carro con gestos mágicos! Además, el control convencional también está incluido para una experiencia de conducción tradicional.
+        
+        Este carro está equipado con luces brillantes que iluminan tu camino y sonidos realistas que te sumergen en una experiencia de conducción auténtica. Pero eso no es todo, ¡también lanza vapor de agua, creando efectos visuales impresionantes que emulan el escape de un vehículo real!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto58a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto58b.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rojo",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
         id: 33,
         titulo: "Patito Burbujeante Bailarin",
         preciomayorista: 32999,
@@ -365,6 +417,29 @@ const productosdb = [
         edad: "+3",
         categoria: "doctor-cocina",
         genero: "unisex"
+    },
+    {
+        id: 55,
+        titulo: "Carro Loco Control Bateria Recargable",
+        preciomayorista: 38999,
+        precio: 56999,
+        descripcion: `
+        ¡Prepárate para la diversión extrema con el Carro Loco a Control Remoto! Este vehículo todo terreno te brinda una experiencia emocionante y llena de acción con luces y sonidos que te dejarán asombrado.
+        
+        Con su control remoto intuitivo, puedes llevar este carro loco a donde quieras con facilidad. Su batería recargable te proporciona horas de diversión ininterrumpida, lo que significa que no tendrás que preocuparte por quedarte sin energía en medio de la diversión.
+        
+        Las luces brillantes y los sonidos realistas añaden un toque extra de emoción a tus aventuras. Ya sea que estés conduciendo en interiores o explorando terrenos al aire libre, este carro loco está diseñado para emocionar y deleitar!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto55a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Grafiti",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
     },
     {
         id: 48,
@@ -933,6 +1008,62 @@ const productosdb = [
         colores: "Safari",
         edad: "+6",
         categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 56,
+        titulo: "Carro Abre Puertas Control Remoto",
+        preciomayorista: 61999,
+        precio: 72999,
+        descripcion: `¡Experimenta la elegancia y la diversión de la carretera con el Carro a Control Remoto Estilo Mini Cooper! Este vehículo de juguete te ofrece una experiencia de conducción realista con un toque de lujo y estilo.
+
+        El diseño detallado y auténtico de este carro estilo Mini Cooper te hará sentir como si estuvieras al volante de un vehículo de lujo. Pero la diversión no se detiene ahí. Con el control remoto incluido, puedes abrir y cerrar las puertas del carro, añadiendo un nivel adicional de realismo y juego interactivo.
+        
+        Las luces brillantes y los sonidos realistas hacen que tu experiencia de conducción sea aún más emocionante. Puedes encender los faros para iluminar tu camino y escuchar los sonidos del motor mientras te desplazas por la pista!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto56a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto56b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rojo, Amarillo",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 57,
+        titulo: "Carro Tanque Lanza Granadas",
+        preciomayorista: 33999,
+        precio: 44999,
+        descripcion: `¡Prepárate para una aventura de combate épica con el Tanque de Pila Lanzagranadas de Juguete! Este formidable vehículo de batalla te llevará a emocionantes misiones y batallas imaginarias.
+
+        El tanque cuenta con un lanzagranadas de juguete que agrega un nivel adicional de emoción al juego. ¡Lanza las granadas hacia tus objetivos y observa cómo avanzas hacia la victoria! Las luces brillantes y los sonidos realistas completan la experiencia de combate, creando una atmósfera inmersiva.
+        
+        Este tanque es perfecto para recrear escenarios de guerra, participar en batallas estratégicas y disfrutar de aventuras llenas de acción!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto57a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto57b.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto57c.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Verde, Gris",
+        edad: "+3",
+        categoria: "carros-impulso",
         genero: "ninos"
     },
     {
