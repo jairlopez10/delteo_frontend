@@ -171,8 +171,8 @@ const productosdb = [
     {
         id: 59,
         titulo: "Maleta Tocador + Accesorios",
-        preciomayorista: 28999,
-        precio: 42999,
+        preciomayorista: 26999,
+        precio: 39999,
         descripcion: `¡Lleva la diversión y la belleza a un nivel superior con la Maleta Tocador para Niñas! Este juguete es perfecto para que las pequeñas exploren su creatividad y se sumerjan en el emocionante mundo de la moda y el maquillaje.
 
         Dentro de esta maleta mágica, encontrarán 3 esmaltes de uñas para crear manicuras encantadoras, 1 peinilla para peinar y arreglar su cabello, y 1 secador de juguete para simular el secado y el estilismo del cabello.
@@ -271,6 +271,32 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 61,
+        titulo: "Maleta Cocina + Accesorios",
+        preciomayorista: 26999,
+        precio: 39999,
+        descripcion: `¡La Maleta Cocina es el sueño de todo chef! Este juguete versátil y emocionante permite a los pequeños cocineros llevar la diversión de la cocina a donde quieran.
+
+        Esta maleta se convierte en una cocina completamente equipada en cuestión de segundos, lo que la hace perfecta para llevar a fiestas de juegos, a casa de amigos o a cualquier lugar donde la imaginación culinaria esté lista para despegar.
+        
+        Dentro de la maleta cocina, encontrarás una variedad de accesorios esenciales para preparar deliciosas comidas, incluyendo tenedores, cuchillos, cucharas, vasos y hasta un surtido de vegetales para cortar y cocinar. Además, algunas ollas y sartenes están listas para recibir ingredientes imaginarios.`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto61a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto61b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosada",
+        edad: "+3",
+        categoria: "doctor-cocina",
+        genero: "ninas"
+    },
+    {
         id: 30,
         titulo: "Bumble Bee Bailarin, Luces y Sonido",
         preciomayorista: 29999,
@@ -295,6 +321,32 @@ const productosdb = [
         edad: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
+    },
+    {
+        id: 60,
+        titulo: "Maleta Tocador con Luz y Sonido",
+        preciomayorista: 70999,
+        precio: 86999,
+        descripcion: `¡La Maleta Tocador de Luces, Sonido y Accesorios es el sueño de toda niña hecho realidad! Este versátil y encantador juguete proporciona horas de diversión creativa mientras permite a las pequeñas explorar el mundo de la moda y la belleza.
+
+        Esta maleta única se transforma en un tocador brillante y mágico con solo un par de pasos. Cuando se abre, revela un mundo de luces brillantes y sonidos encantadores que hacen que la experiencia sea aún más emocionante. El espejo incorporado agrega un toque de autenticidad a la diversión.
+        
+        Dentro de la maleta tocador, encontrarás una gama de accesorios que incluyen un secador, un cepillo, 3 pulseras, 3 esmaltes de uñas en colores deslumbrantes, 1 collar y 4 anillos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto60a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto60b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosada",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
     },
     {
         id: 31,
@@ -1446,6 +1498,8 @@ const productosdb = [
         categoria: "punteria",
         genero: "ninos"
     }
+
+
 ];
 
 
