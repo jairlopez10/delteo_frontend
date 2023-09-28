@@ -145,7 +145,7 @@ const productosdb = [
     {
         id: 1,
         titulo: "Kit de Uñas X12 con Brillos",
-        preciomayorista: 4499,
+        preciomayorista: 3499,
         precio: 9999,
         descripcion: `¡Fusionamos diversión y creatividad en nuestro kit de uñas encantadoras! Diseñado especialmente para niñas de 3 a 7 años, este kit les brinda la oportunidad de explorar su lado artístico mientras se divierten.
 
@@ -155,11 +155,19 @@ const productosdb = [
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto1a.webp"
+                url: "/producto1b.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto1b.webp"
+                url: "/producto1c.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto1d.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto1a.webp"
             }
         ],
         status: "disponible",
@@ -221,6 +229,61 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 62,
+        titulo: "Maleta Veterinaria Mascota",
+        preciomayorista: 42999,
+        precio: 59999,
+        descripcion: `
+        ¡La Maleta Veterinaria es la elección perfecta para los amantes de los animales y los futuros veterinarios! Este juguete transformable permite a los niños explorar el emocionante mundo de cuidar y curar a sus amigos peludos.
+        
+        Dentro de la maleta veterinaria, encontrarás una gama de accesorios esenciales para cuidar al adorable perro de juguete. Esto incluye un plato de comida, un peine para acicalar al peludo amigo, 2 cajas de comida, tijeras para cortar su pelaje, shampoo para mantenerlo limpio y un lavabo para darle un buen baño!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto62a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto62b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto62c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto62d.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosada, Azul",
+        edad: "+3",
+        categoria: "mascotas",
+        genero: "unisex"
+    },
+    {
+        id: 51,
+        titulo: "Lanzador Hidrogel Automatica Recargable + 1.500 Orvis Hidrogel",
+        preciomayorista: 49999,
+        precio: 69999,
+        descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
+
+        La pistola lanzadora automática es fácil de usar, con la capacidad de disparar ráfagas de bolas de hidrogel con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar desafíos y mantener la diversión durante horas.
+        
+        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones. Estas pequeñas esferas se expanden al contacto con el agua, lo que agrega un elemento de emoción y realismo a tus batallas simuladas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto51a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+11",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
         id: 33,
         titulo: "Patito Burbujeante Bailarin",
         preciomayorista: 32999,
@@ -279,7 +342,7 @@ const productosdb = [
 
         Esta maleta se convierte en una cocina completamente equipada en cuestión de segundos, lo que la hace perfecta para llevar a fiestas de juegos, a casa de amigos o a cualquier lugar donde la imaginación culinaria esté lista para despegar.
         
-        Dentro de la maleta cocina, encontrarás una variedad de accesorios esenciales para preparar deliciosas comidas, incluyendo tenedores, cuchillos, cucharas, vasos y hasta un surtido de vegetales para cortar y cocinar. Además, algunas ollas y sartenes están listas para recibir ingredientes imaginarios.`,
+        Dentro de la maleta cocina, encontrarás una variedad de accesorios esenciales para preparar deliciosas comidas, incluyendo tenedores, cuchillos, cucharas, vasos y hasta un surtido de vegetales para cortar y cocinar. Además, algunas ollas y sartenes están listas para recibir ingredientes imaginarios!`,
         imagenes: [
             {
                 tipo: "imagen",
@@ -373,6 +436,62 @@ const productosdb = [
         genero: "unisex"
     },
     {
+        id: 56,
+        titulo: "Carro Abre Puertas Control Remoto",
+        preciomayorista: 61999,
+        precio: 72999,
+        descripcion: `¡Experimenta la elegancia y la diversión de la carretera con el Carro a Control Remoto Estilo Mini Cooper! Este vehículo de juguete te ofrece una experiencia de conducción realista con un toque de lujo y estilo.
+
+        El diseño detallado y auténtico de este carro estilo Mini Cooper te hará sentir como si estuvieras al volante de un vehículo de lujo. Pero la diversión no se detiene ahí. Con el control remoto incluido, puedes abrir y cerrar las puertas del carro, añadiendo un nivel adicional de realismo y juego interactivo.
+        
+        Las luces brillantes y los sonidos realistas hacen que tu experiencia de conducción sea aún más emocionante. Puedes encender los faros para iluminar tu camino y escuchar los sonidos del motor mientras te desplazas por la pista!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto56a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto56b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rojo, Amarillo",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 63,
+        titulo: "Maleta Tocador 3 en 1",
+        preciomayorista: 36999,
+        precio: 54999,
+        descripcion: `¡Lleva la diversión y la belleza a un nivel superior con la Maleta Tocador 3 en 1! Este juguete es perfecto para que las pequeñas exploren su creatividad y se sumerjan en el emocionante mundo de la moda y el maquillaje.
+
+        Dentro de esta maleta mágica, encontrarán 3 esmaltes de uñas para crear manicuras encantadoras, 1 peinilla para peinar y arreglar su cabello, y 1 secador de juguete para simular el secado y el estilismo del cabello.
+        
+        Pero eso no es todo, también podrán disfrutar de 3 anillos, 3 pulseras y 1 collar para añadir un toque de glamour a su estilo. Con 2 labiales de juguete en tonos divertidos, podrán experimentar con colores y expresar su personalidad!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto63a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto63b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto63c.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosada",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
         id: 15,
         titulo: "Carro a Control Remoto Estilo Ferrari",
         preciomayorista: 28999,
@@ -399,26 +518,57 @@ const productosdb = [
         genero: "ninos"
     },
     {
-        id: 51,
-        titulo: "Lanzador Hidrogel Automatica Recargable + 1.500 Orvis Hidrogel",
-        preciomayorista: 49999,
-        precio: 69999,
-        descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
-
-        La pistola lanzadora automática es fácil de usar, con la capacidad de disparar ráfagas de bolas de hidrogel con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar desafíos y mantener la diversión durante horas.
+        id: 55,
+        titulo: "Carro Loco Control Bateria Recargable",
+        preciomayorista: 38999,
+        precio: 56999,
+        descripcion: `
+        ¡Prepárate para la diversión extrema con el Carro Loco a Control Remoto! Este vehículo todo terreno te brinda una experiencia emocionante y llena de acción con luces y sonidos que te dejarán asombrado.
         
-        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones. Estas pequeñas esferas se expanden al contacto con el agua, lo que agrega un elemento de emoción y realismo a tus batallas simuladas!`,
+        Con su control remoto intuitivo, puedes llevar este carro loco a donde quieras con facilidad. Su batería recargable te proporciona horas de diversión ininterrumpida, lo que significa que no tendrás que preocuparte por quedarte sin energía en medio de la diversión.
+        
+        Las luces brillantes y los sonidos realistas añaden un toque extra de emoción a tus aventuras. Ya sea que estés conduciendo en interiores o explorando terrenos al aire libre, este carro loco está diseñado para emocionar y deleitar!`,
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto51a.webp" 
+                url: "/producto55a.webp" 
             }
         ],
         status: "disponible",
-        colores: "Unicolor",
-        edad: "+11",
-        categoria: "punteria",
-        genero: "unisex"
+        colores: "Grafiti",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 64,
+        titulo: "Maleta Cocina 3 en 1",
+        preciomayorista: 36999,
+        precio: 54999,
+        descripcion: `¡La Maleta Cocina 3 en 1 es el sueño de todo chef! Este juguete versátil y emocionante permite a los pequeños cocineros llevar la diversión de la cocina a donde quieran.
+
+        Esta maleta se convierte en una cocina completamente equipada en cuestión de segundos, lo que la hace perfecta para llevar a fiestas de juegos, a casa de amigos o a cualquier lugar donde la imaginación culinaria esté lista para despegar.
+        
+        Dentro de la maleta cocina, encontrarás una variedad de accesorios esenciales para preparar deliciosas comidas, incluyendo tenedores, cuchillos, cucharas, vasos y hasta un surtido de vegetales para cortar y cocinar. Además, algunas ollas y sartenes están listas para recibir ingredientes imaginarios!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto64a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto64b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto64c.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosada",
+        edad: "+3",
+        categoria: "doctor-cocina",
+        genero: "ninas"
     },
     {
         id: 23,
@@ -444,77 +594,6 @@ const productosdb = [
         colores: "Amarilla",
         edad: "+3",
         categoria: "carros-impulso",
-        genero: "unisex"
-    },
-    {
-        id: 18,
-        titulo: "Maleta Doctor@ Azul & Rosado",
-        preciomayorista: 17999,
-        precio: 23999,
-        descripcion: `¡Inspira el juego creativo y el aprendizaje con nuestra Maleta de Doctor para Niñ@s! Este emocionante conjunto brinda a los pequeños médicos y médicas en ciernes la oportunidad de explorar el emocionante mundo de la medicina y el cuidado de la salud.
-
-        La maleta está diseñada con colores vibrantes y detalles realistas que capturan la atención y fomentan la imaginación. Dentro de ella, encontrarás herramientas esenciales para el juego de roles médicos, como un estetoscopio de juguete, un termómetro y otros accesorios que les permiten a los niñ@s asumir el papel de médico o enfermero mientras atienden a sus pacientes imaginarios!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto18a.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto18b.webp"
-            }
-        ],
-        status: "disponible",
-        colores: "Azul, Rosada",
-        edad: "+3",
-        categoria: "doctor-cocina",
-        genero: "unisex"
-    },
-    {
-        id: 55,
-        titulo: "Carro Loco Control Bateria Recargable",
-        preciomayorista: 38999,
-        precio: 56999,
-        descripcion: `
-        ¡Prepárate para la diversión extrema con el Carro Loco a Control Remoto! Este vehículo todo terreno te brinda una experiencia emocionante y llena de acción con luces y sonidos que te dejarán asombrado.
-        
-        Con su control remoto intuitivo, puedes llevar este carro loco a donde quieras con facilidad. Su batería recargable te proporciona horas de diversión ininterrumpida, lo que significa que no tendrás que preocuparte por quedarte sin energía en medio de la diversión.
-        
-        Las luces brillantes y los sonidos realistas añaden un toque extra de emoción a tus aventuras. Ya sea que estés conduciendo en interiores o explorando terrenos al aire libre, este carro loco está diseñado para emocionar y deleitar!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto55a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Grafiti",
-        edad: "+6",
-        categoria: "carros-control",
-        genero: "ninos"
-    },
-    {
-        id: 48,
-        titulo: "Pez con Movimiento, Luces y Sonido",
-        preciomayorista: 32999,
-        precio: 39999,
-        descripcion: `¡Sumérgete en la diversión acuática con el increíble Pez Interactivo con Luces y Sonido! Este juguete cautivador te transportará a un mundo submarino lleno de emoción y asombro.
-
-        Observa cómo este pez cobra vida con movimientos realistas en su cuerpo, imitando el suave aleteo y la gracia de los peces reales. Sus ojos brillantes con luces añaden un toque mágico mientras exploras aventuras submarinas. Además, el sonido realista completa la experiencia, creando una atmósfera inmersiva!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto48a.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto48b.mp4" 
-            }
-        ],
-        status: "disponible",
-        colores: "Amarillo",
-        edad: "+3",
-        categoria: "mascotas",
         genero: "unisex"
     },
     {
@@ -553,6 +632,54 @@ const productosdb = [
         colores: "Rosado, Azul",
         edad: "+3",
         categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 18,
+        titulo: "Maleta Doctor@ Azul & Rosado",
+        preciomayorista: 17999,
+        precio: 23999,
+        descripcion: `¡Inspira el juego creativo y el aprendizaje con nuestra Maleta de Doctor para Niñ@s! Este emocionante conjunto brinda a los pequeños médicos y médicas en ciernes la oportunidad de explorar el emocionante mundo de la medicina y el cuidado de la salud.
+
+        La maleta está diseñada con colores vibrantes y detalles realistas que capturan la atención y fomentan la imaginación. Dentro de ella, encontrarás herramientas esenciales para el juego de roles médicos, como un estetoscopio de juguete, un termómetro y otros accesorios que les permiten a los niñ@s asumir el papel de médico o enfermero mientras atienden a sus pacientes imaginarios!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto18a.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto18b.webp"
+            }
+        ],
+        status: "disponible",
+        colores: "Azul, Rosada",
+        edad: "+3",
+        categoria: "doctor-cocina",
+        genero: "unisex"
+    },
+    {
+        id: 48,
+        titulo: "Pez con Movimiento, Luces y Sonido",
+        preciomayorista: 32999,
+        precio: 39999,
+        descripcion: `¡Sumérgete en la diversión acuática con el increíble Pez Interactivo con Luces y Sonido! Este juguete cautivador te transportará a un mundo submarino lleno de emoción y asombro.
+
+        Observa cómo este pez cobra vida con movimientos realistas en su cuerpo, imitando el suave aleteo y la gracia de los peces reales. Sus ojos brillantes con luces añaden un toque mágico mientras exploras aventuras submarinas. Además, el sonido realista completa la experiencia, creando una atmósfera inmersiva!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto48a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto48b.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Amarillo",
+        edad: "+3",
+        categoria: "mascotas",
         genero: "unisex"
     },
     {
@@ -1063,32 +1190,6 @@ const productosdb = [
         genero: "ninos"
     },
     {
-        id: 56,
-        titulo: "Carro Abre Puertas Control Remoto",
-        preciomayorista: 61999,
-        precio: 72999,
-        descripcion: `¡Experimenta la elegancia y la diversión de la carretera con el Carro a Control Remoto Estilo Mini Cooper! Este vehículo de juguete te ofrece una experiencia de conducción realista con un toque de lujo y estilo.
-
-        El diseño detallado y auténtico de este carro estilo Mini Cooper te hará sentir como si estuvieras al volante de un vehículo de lujo. Pero la diversión no se detiene ahí. Con el control remoto incluido, puedes abrir y cerrar las puertas del carro, añadiendo un nivel adicional de realismo y juego interactivo.
-        
-        Las luces brillantes y los sonidos realistas hacen que tu experiencia de conducción sea aún más emocionante. Puedes encender los faros para iluminar tu camino y escuchar los sonidos del motor mientras te desplazas por la pista!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto56a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto56b.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Rojo, Amarillo",
-        edad: "+6",
-        categoria: "carros-control",
-        genero: "ninos"
-    },
-    {
         id: 57,
         titulo: "Carro Tanque Lanza Granadas",
         preciomayorista: 33999,
@@ -1114,6 +1215,30 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Verde, Gris",
+        edad: "+3",
+        categoria: "carros-impulso",
+        genero: "ninos"
+    },
+    {
+        id: 66,
+        titulo: "Camion + 3 Carritos de Plants VS Zombies",
+        preciomayorista: 30999,
+        precio: 44999,
+        descripcion: `¡Prepárate para la diversión de la construcción con el Camión de Carritos Estilo Plantas vs. Zombies! Este juego de construcción te lleva al emocionante mundo de Plantas vs. Zombies mientras creas tu propio escenario de batalla.
+
+        El camión es la herramienta perfecta para transportar y desplegar a tus carritos de construcción, cada uno con el estilo único de Plantas vs. Zombies. Puedes llevarlos a la acción y construir tu propio escenario de batalla, ¡donde las plantas defensoras se enfrentarán a los traviesos zombies!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto66a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto66b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
         edad: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
@@ -1497,8 +1622,37 @@ const productosdb = [
         edad: "+6",
         categoria: "punteria",
         genero: "ninos"
-    }
+    },
+    {
+        id: 65,
+        titulo: "Carros Impulso Grafiti",
+        preciomayorista: 7199,
+        precio: 9999,
+        descripcion: `¡Prepárate para la acción con el Carro de Impulso Estilo Cuatrimoto y Camión Destructor Grafiti! Este diminuto vehículo de carreras te ofrece emocionantes aventuras en la palma de tu mano.
 
+        A pesar de su tamaño compacto, este carro es un verdadero titán en la pista. Su diseño estilo cuatrimoto y camión destructor grafiti le da una apariencia única y audaz que lo distingue de los demás. Sus ruedas resistentes y su capacidad de impulso le permiten desafiar cualquier terreno y superar obstáculos.
+        
+        Lánzalo con fuerza y observa cómo alcanza velocidades impresionantes en distancias cortas. Este carro es perfecto para carreras de alta velocidad en espacios reducidos, como tu escritorio, una mesa o incluso la palma de tu mano!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto65c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto65a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto65b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Grafiti",
+        edad: "+3",
+        categoria: "carros-impulso",
+        genero: "ninos"
+    },
 
 ];
 
