@@ -707,7 +707,27 @@ footer {
   padding-right: 3rem;
 }
 
+.imagenredsocial {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.divconta p {
+  font-size: 3.5rem;
+  color: #2bca65;
+}
+
+.imagenredsocial:hover {
+  transform: rotate(20deg);
+  transition: all 1s;
+}
+
 @media (min-width: 768px) {
+  .imagenredsocial {
+    width: 8rem;
+    height: 8rem;
+  }
   .contenido-nosotros {
     width: 80%;
   }
