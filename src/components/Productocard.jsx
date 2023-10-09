@@ -25,7 +25,7 @@ const Productocard = ({producto}) => {
 
   return (
     <>
-        <div className="productocard cursor-pointer" onClick={() => navegar(`/${titulourl}/${tipocliente}`)}>
+        <div className="productocard cursor-pointer" onClick={() => window.open(`/${titulourl}/${tipocliente}`)}>
             <div className="div-imagen-prodcard">
               <img src={imagenes[0].url} className="cursor-pointer" alt={`Imagen ${titulo}`} />
             </div>
