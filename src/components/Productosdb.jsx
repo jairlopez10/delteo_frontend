@@ -1941,7 +1941,7 @@ const productosdb = [
             },
             {
                 tipo: "imagen",
-                url: "/producto78a.webp" 
+                url: "/producto78b.webp" 
             }
         ],
         status: "disponible",
@@ -1967,7 +1967,7 @@ const productosdb = [
             },
             {
                 tipo: "imagen",
-                url: "/producto79a.webp" 
+                url: "/producto79b.webp" 
             }
         ],
         status: "disponible",
