@@ -3,8 +3,8 @@ const productosdb = [
     {
         id: 50,
         titulo: "Lanzador Hidrogel MP5 Automatica Recargable + Gafas + 6.000 Orvis Hidrogel",
-        preciomayorista: 60999,
-        precio: 74999,
+        preciomayorista: 66999,
+        precio: 79999,
         descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
 
         Esta pistola lanzadora automática, con su diseño estilo MP5, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 6000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
@@ -1649,6 +1649,329 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Grafiti",
+        edad: "+3",
+        categoria: "carros-impulso",
+        genero: "ninos"
+    },
+    {
+        id: 67,
+        titulo: "Cubo Rubik 3X3 Fino",
+        preciomayorista: 4500,
+        precio: 9999,
+        descripcion: `¡Eleva el desafío con el Cubo Rubik 3x3 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
+
+        El material fino proporciona un giro suave y rápido en cada movimiento, lo que te permite avanzar a través de las complejas combinaciones de colores con facilidad y destreza. Cada giro es satisfactorio y preciso, lo que agrega una capa adicional de emoción a la resolución del cubo!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto67a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 68,
+        titulo: "Cubo Rubik 2X2 Fino",
+        preciomayorista: 4700,
+        precio: 10999,
+        descripcion: `¡Eleva el desafío con el Cubo Rubik 2x2 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
+
+        El material fino proporciona un giro suave y rápido en cada movimiento, lo que te permite avanzar a través de las complejas combinaciones de colores con facilidad y destreza. Cada giro es satisfactorio y preciso, lo que agrega una capa adicional de emoción a la resolución del cubo!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto68a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 69,
+        titulo: "Kit Guitarra + Parlante + Microfono",
+        preciomayorista: 4700,
+        precio: 10999,
+        descripcion: `
+        ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
+        
+        La guitarra eléctrica es fácil de tocar y tiene un diseño atractivo, mientras que el parlante y el micrófono amplifican el sonido, permitiendo a las niñas tocar y cantar con estilo. También pueden conectar sus dispositivos favoritos para tocar junto a sus canciones preferidas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto69a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "ninas"
+    },
+    {
+        id: 69,
+        titulo: "Kit Guitarra + Parlante + Microfono",
+        preciomayorista: 4700,
+        precio: 10999,
+        descripcion: `
+        ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
+        
+        La guitarra eléctrica es fácil de tocar y tiene un diseño atractivo, mientras que el parlante y el micrófono amplifican el sonido, permitiendo a las niñas tocar y cantar con estilo. También pueden conectar sus dispositivos favoritos para tocar junto a sus canciones preferidas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto69a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "ninas"
+    },
+    {
+        id: 70,
+        titulo: "Cry Baby Sorpresa Huevo",
+        preciomayorista: 4700,
+        precio: 10999,
+        descripcion: `
+        ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
+        
+        La guitarra eléctrica es fácil de tocar y tiene un diseño atractivo, mientras que el parlante y el micrófono amplifican el sonido, permitiendo a las niñas tocar y cantar con estilo. También pueden conectar sus dispositivos favoritos para tocar junto a sus canciones preferidas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto70a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto70b.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto70c.mp4" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 71,
+        titulo: "Tetris Hello Kitty & Spiderman",
+        preciomayorista: 10500,
+        precio: 14999,
+        descripcion: `¡Lleva la diversión de Hello Kitty y Spider-Man a un nuevo nivel con estos emocionantes Tetris en forma de tus personajes favoritos!
+
+        Tetris de Hello Kitty: Este encantador Tetris presenta los adorables personajes de Hello Kitty en un juego de rompecabezas clásico. Coloca las piezas de Tetris de manera estratégica para completar filas y acumular puntos.
+        
+        Tetris de Spider-Man: Únete a Spider-Man en una emocionante aventura de Tetris. Coloca las icónicas formas de Tetris de manera inteligente para ayudar a Spider-Man a derrotar a los villanos y salvar la ciudad. `,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto71a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto71b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosado, Rojo",
+        edad: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 72,
+        titulo: "Burbujero + Silbato de Personajes",
+        preciomayorista: 1699,
+        precio: 3599,
+        descripcion: `
+        ¡Prepárate para una doble dosis de diversión con estos increíbles Burbujeros Silbato! Estos juguetes versátiles ofrecen horas de entretenimiento en una sola mano.
+        
+        Estos burbujeros están diseñados para hacer burbujas espectaculares con un simple soplido. Llena la cámara de burbujas con tu solución de burbujas favorita, sopla suavemente y observa cómo se crean burbujas gigantes y brillantes que flotan en el aire, añadiendo una dosis de magia a cualquier día.
+        
+        Pero eso no es todo, ¡estos burbujeros son también silbatos! Conviértelos en tu herramienta para llamar la atención o simplemente para jugar y hacer ruidos divertidos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto72a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rojo, Verde, Azul, Amarillo",
+        edad: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 73,
+        titulo: "Cry Baby Bailarin y Llora",
+        preciomayorista: 1699,
+        precio: 3599,
+        descripcion: `¡Conoce a la Muñeca Cry Baby, la compañera de juegos emocionalmente expresiva que hará que los corazones de los niños se derritan con ternura y diversión!
+
+        Esta encantadora muñeca es más que una simple compañía. Cuando se le quita el chupo, la Muñeca Cry Baby reacciona de manera conmovedora. Comienza a moverse y bailar al ritmo de una dulce melodía mientras lágrimas de "tristeza" caen de sus ojos. ¡Es una experiencia mágica que los niños adorarán!
+        
+        Su vestimenta y detalles están diseñados con gran atención, lo que hace que esta muñeca sea aún más especial!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto73a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 74,
+        titulo: "Registradora + Carrito Mercado + Accesorios",
+        preciomayorista: 71999,
+        precio: 84999,
+        descripcion: `
+        ¡Sumérgete en la diversión de las compras con la Registradora de Juguete con Carrito de Mercado! Esta registradora cuenta con luces y sonidos realistas que hacen que las compras simuladas sean emocionantes. Incluye un carrito de mercado, elementos de mercado, una tarjeta de crédito y un lector de códigos de barras. Los niños pueden jugar como cajeros, clientes o dueños de tiendas, fomentando la creatividad y las habilidades matemáticas. ¡Prepárate para horas de juego y aprendizaje mientras exploras el mundo de las compras y el comercio!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto74a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto74b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "doctor-cocina",
+        genero: "ninas"
+    },
+    {
+        id: 75,
+        titulo: "Maleta Constructor + Accesorios",
+        preciomayorista: 41999,
+        precio: 58999,
+        descripcion: `¡Lleva la emoción de la construcción a cualquier lugar con la Maleta Constructora 2 en 1! Este innovador juguete es perfecto para los jóvenes constructores que desean llevar su taller a donde quieran.
+
+        La maleta se abre para revelar un taller completo con herramientas, tornillos y todo lo que los niños necesitan para construir sus propias creaciones. Incluso incluye una sierra de juguete para proyectos de "corte". Los niños pueden explorar su creatividad y aprender sobre la construcción mientras juegan.
+        
+        Cuando terminan de jugar, el taller se cierra y se convierte en una maleta que pueden cargar en la espalda como una mochila. Es perfecta para llevarla a casa de un amigo, al parque o a cualquier lugar donde la imaginación de los niños los lleve!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto75a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto75b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "construccion",
+        genero: "ninos"
+    },
+    {
+        id: 76,
+        titulo: "Maquillaje Luna Juguete",
+        preciomayorista: 21999,
+        precio: 39999,
+        descripcion: `¡Deja que la creatividad brille como la luna con este Maquillaje para Niñas en Forma de Luna! Este set de maquillaje es una manera mágica de permitir que las jóvenes artistas exploren el mundo del maquillaje de manera segura y divertida.
+
+        El maquillaje en forma de luna tiene un diseño encantador que hará que las niñas se sientan como auténticas artistas del maquillaje. Incluye una paleta de colores suaves y brillantes que les permite crear looks mágicos y creativos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto76a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 77,
+        titulo: "Maquillaje Unicornio Juguete",
+        preciomayorista: 20999,
+        precio: 36999,
+        descripcion: `¡Deja que la creatividad de un Unicornio con este Maquillaje para Niñas en Forma de Unicornio! Este set de maquillaje es una manera mágica de permitir que las jóvenes artistas exploren el mundo del maquillaje de manera segura y divertida.
+
+        El maquillaje en forma de luna tiene un diseño encantador que hará que las niñas se sientan como auténticas artistas del maquillaje. Incluye una paleta de colores suaves y brillantes que les permite crear looks mágicos y creativos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto77a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 78,
+        titulo: "Pista Carros Estilo Cocodrilo",
+        preciomayorista: 59999,
+        precio: 79999,
+        descripcion: `¡Prepárate para una emocionante aventura en la Pista de Carros Cocodrilo! Esta pista de carreras es el lugar perfecto para que los amantes de la velocidad y la acción pongan a prueba sus habilidades.
+
+        La pista incluye un carro de impulso que está listo para la carrera. Coloca el carro en la pista y dale un fuerte impulso para que comience a moverse a toda velocidad. La pista en sí tiene dos vueltas de 360 grados que agregarán emoción y giros alocados a la carrera.
+        
+        Pero eso no es todo, el desafío principal de la pista es el enorme obstáculo en forma de cabeza de cocodrilo que se interpone en el camino de los carros. Los pilotos deben navegar hábilmente alrededor del cocodrilo para evitar chocar y mantenerse en la pista!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto78a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto78a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "carros-impulso",
+        genero: "ninos"
+    },
+    {
+        id: 79,
+        titulo: "Pista Carros Estilo Tiburon",
+        preciomayorista: 59999,
+        precio: 79999,
+        descripcion: `¡Prepárate para una emocionante aventura en la Pista de Carros Tiburon! Esta pista de carreras es el lugar perfecto para que los amantes de la velocidad y la acción pongan a prueba sus habilidades.
+
+        La pista incluye un carro de impulso que está listo para la carrera. Coloca el carro en la pista y dale un fuerte impulso para que comience a moverse a toda velocidad. La pista en sí tiene dos vueltas de 360 grados que agregarán emoción y giros alocados a la carrera.
+        
+        Pero eso no es todo, el desafío principal de la pista es el enorme obstáculo en forma de cabeza de Tiburon que se interpone en el camino de los carros. Los pilotos deben navegar hábilmente alrededor del tiburon para evitar chocar y mantenerse en la pista!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto79a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto79a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
         edad: "+3",
         categoria: "carros-impulso",
         genero: "ninos"

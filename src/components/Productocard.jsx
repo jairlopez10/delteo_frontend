@@ -31,8 +31,16 @@ const Productocard = ({producto}) => {
             </div>
             <div className="contenidocard">
                 <p className="titulo cursor-pointer hover:underline" >{titulo}</p>
-                <p className="precio cursor-pointer" >{`$${precioshow.toLocaleString('es-CO')}`}</p>
-                <Link className="informacion">Ver Información</Link>
+                <p className="precio cursor-pointer" >{tipocliente === "d" ? "" : "Precio Mayorista:"} <span className={`${tipocliente === "d" ? "" : "preciocard"}`}>{`$${precioshow.toLocaleString('es-CO')}`}</span></p>
+                {tipocliente === "m" ? (
+                  <>
+                    <p className="precio cursor-pointer" >Precio Venta Sugerido: <span className="preciocard">{`$${precio.toLocaleString('es-CO')}`}</span></p>
+                  </>
+                ) : (
+                  <>
+                  </>
+                )}
+                <Link className="informacion">Ver Más</Link>
             </div>
         </div>
     </>

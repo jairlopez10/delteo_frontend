@@ -305,6 +305,10 @@ footer {
   text-align: center;
 }
 
+.preciocard {
+  color: #09ff00;
+}
+
 .filtrotext {
   font-size: 2rem;
 }
@@ -316,6 +320,7 @@ footer {
 .productoscards {
   display: grid;
   gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .productocard {
@@ -341,9 +346,8 @@ footer {
 
 .productocard img {
   border-radius: 1rem;
-  height: 25rem;
+  height: 15rem;
   object-fit: contain;
-  width: 100%;
 }
 
 .div-imagen-prodcard {
@@ -437,7 +441,9 @@ footer {
 }
 
 @media(min-width: 768px) {
-
+  .productocard img {
+    height: 25rem;
+  }
   .whatsapp {
     height: 7rem;
     width: 7rem;
