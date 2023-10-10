@@ -17,16 +17,16 @@ const Catalogomayorista = () => {
   const [genero, setgenero] = useState('');
   const [edad, setedad] = useState('');
   const [ordenar, setordenar] = useState('');
-  const [preciomax, setpreciomax] = useState(97500);
+  const [preciomax, setpreciomax] = useState(163000);
   const [productosmostrar, setproductosmostrar] = useState(productosavailable);
   const [productosfiltrados, setproductosfiltrados] = useState(productosavailable);
   const [numpagina, setnumpagina] = useState(1);
   const tituloproductosref = useRef(null);
  
   const MIN = 2500;
-  const MAX = 97500;
+  const MAX = 163000;
   const STEP = 5000;
-  const numproductospag = 8;
+  const numproductospag = 12;
 
   const definirpaginadores = () => {
 

@@ -26,7 +26,7 @@ const Catalogo = () => {
   const MIN = 5000;
   const MAX = 150000;
   const STEP = 5000;
-  const numproductospag = 8;
+  const numproductospag = 12;
 
   const definirpaginadores = () => {
 

@@ -3,8 +3,8 @@ const productosdb = [
     {
         id: 50,
         titulo: "Lanzador Hidrogel MP5 Automatica Recargable + Gafas + 6.000 Orvis Hidrogel",
-        preciomayorista: 66999,
-        precio: 79999,
+        preciomayorista: 71999,
+        precio: 84999,
         descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
 
         Esta pistola lanzadora automática, con su diseño estilo MP5, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 6000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
@@ -30,7 +30,7 @@ const productosdb = [
         id: 6,
         titulo: "Dinosaurio Rex con Movimiento Luces Sonido",
         preciomayorista: 29999,
-        precio: 32999,
+        precio: 36999,
         descripcion: `¡Transporta a tu pequeño a la era de los dinosaurios con nuestro Dinosaurio Rex! Este magnífico amigo prehistórico está lleno de emocionantes luces brillantes, sonidos realistas y un movimiento fascinante en su cuerpo, garras y cola, este dinosaurio cobra vida en las manos de tu hijo. Cada paso es una aventura asombrosa mientras el dinosaurio camina y se balancea con autenticidad, creando momentos de maravilla y diversión.
         
         La interacción es clave: los niños adorarán activar los sonidos y movimientos con solo tocar un botón. Y para potenciar la diversión, este dinosaurio es fácil de alimentar. Simplemente coloca 3 pilas AA y estarás listo para la acción!`,
@@ -53,46 +53,6 @@ const productosdb = [
         edad: "+3",
         categoria: "dinosaurios",
         genero: "ninos"
-    },
-    {
-        id: 2,
-        titulo: "Computador Interactivo con Pantalla y Mouse",
-        preciomayorista: 37000,
-        precio: 39999,
-        descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo Todo en Uno, equipado con mouse y pantalla digital! Diseñado para preescolares, este juguete cautivante es más que un juego.
-
-        Explora números del 1 al 10, el abecedario y palabras esenciales con diversión interactiva. Con canciones animadas y actividades intuitivas de suma y resta, cada momento se convierte en una lección emocionante.
-        
-        Colores vibrantes y personajes adorables hacen que el aprendizaje sea divertido. Los botones grandes y el mouse fácil de usar garantizan una inmersión sin complicaciones.
-        
-        Este computador educativo es una herramienta valiosa que fomenta el desarrollo cognitivo. ¡Cada toque en las teclas crea un futuro de conocimiento!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto2a.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2b.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2c.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2e.webp"
-            },
-            {
-                tipo: "video",
-                url: "/producto2d.mp4"
-            }
-        ],
-        status: "disponible",
-        colores: "Rosado, Azul, Rojo",
-        edad: "+3",
-        categoria: "educativo",
-        genero: "ninas"
     },
     {
         id: 53,
@@ -121,10 +81,36 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 59,
+        titulo: "Maleta Tocador + Accesorios",
+        preciomayorista: 26999,
+        precio: 39999,
+        descripcion: `¡Lleva la diversión y la belleza a un nivel superior con la Maleta Tocador para Niñas! Este juguete es perfecto para que las pequeñas exploren su creatividad y se sumerjan en el emocionante mundo de la moda y el maquillaje.
+
+        Dentro de esta maleta mágica, encontrarán 3 esmaltes de uñas para crear manicuras encantadoras, 1 peinilla para peinar y arreglar su cabello, y 1 secador de juguete para simular el secado y el estilismo del cabello.
+        
+        Pero eso no es todo, también podrán disfrutar de 3 anillos, 3 pulseras y 1 collar para añadir un toque de glamour a su estilo. Con 2 labiales de juguete en tonos divertidos, podrán experimentar con colores y expresar su personalidad!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto59a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto59b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosado",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
         id: 52,
         titulo: "Lanzador Hidrogel M416 Automatica Recargable + 1.500 Orvis Hidrogel",
-        preciomayorista: 74999,
-        precio: 99999,
+        preciomayorista: 89999,
+        precio: 114999,
         descripcion: `¡Entra en la acción con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un M416! Este emocionante juguete te lleva a un mundo lleno de emociones y diversión mientras te sumerges en batallas simuladas y aventuras imaginativas.
 
         La pistola lanzadora automática, con su diseño estilo M416, te permite disparar ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar cualquier desafío y mantener la emoción durante horas.
@@ -168,32 +154,6 @@ const productosdb = [
             {
                 tipo: "imagen",
                 url: "/producto1a.webp"
-            }
-        ],
-        status: "disponible",
-        colores: "Rosado",
-        edad: "+3",
-        categoria: "maquillaje",
-        genero: "ninas"
-    },
-    {
-        id: 59,
-        titulo: "Maleta Tocador + Accesorios",
-        preciomayorista: 26999,
-        precio: 39999,
-        descripcion: `¡Lleva la diversión y la belleza a un nivel superior con la Maleta Tocador para Niñas! Este juguete es perfecto para que las pequeñas exploren su creatividad y se sumerjan en el emocionante mundo de la moda y el maquillaje.
-
-        Dentro de esta maleta mágica, encontrarán 3 esmaltes de uñas para crear manicuras encantadoras, 1 peinilla para peinar y arreglar su cabello, y 1 secador de juguete para simular el secado y el estilismo del cabello.
-        
-        Pero eso no es todo, también podrán disfrutar de 3 anillos, 3 pulseras y 1 collar para añadir un toque de glamour a su estilo. Con 2 labiales de juguete en tonos divertidos, podrán experimentar con colores y expresar su personalidad!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto59a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto59b.webp" 
             }
         ],
         status: "disponible",
@@ -652,7 +612,7 @@ const productosdb = [
                 url: "/producto18b.webp"
             }
         ],
-        status: "disponible",
+        status: "Out Stock",
         colores: "Azul, Rosada",
         edad: "+3",
         categoria: "doctor-cocina",
@@ -1114,6 +1074,46 @@ const productosdb = [
         edad: "+6",
         categoria: "didacticos",
         genero: "unisex"
+    },
+    {
+        id: 2,
+        titulo: "Computador Interactivo con Pantalla y Mouse",
+        preciomayorista: 37000,
+        precio: 39999,
+        descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo Todo en Uno, equipado con mouse y pantalla digital! Diseñado para preescolares, este juguete cautivante es más que un juego.
+
+        Explora números del 1 al 10, el abecedario y palabras esenciales con diversión interactiva. Con canciones animadas y actividades intuitivas de suma y resta, cada momento se convierte en una lección emocionante.
+        
+        Colores vibrantes y personajes adorables hacen que el aprendizaje sea divertido. Los botones grandes y el mouse fácil de usar garantizan una inmersión sin complicaciones.
+        
+        Este computador educativo es una herramienta valiosa que fomenta el desarrollo cognitivo. ¡Cada toque en las teclas crea un futuro de conocimiento!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto2a.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2b.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2c.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2e.webp"
+            },
+            {
+                tipo: "video",
+                url: "/producto2d.mp4"
+            }
+        ],
+        status: "disponible",
+        colores: "Rosado, Azul, Rojo",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "ninas"
     },
     {
         id: 19,
@@ -1656,8 +1656,8 @@ const productosdb = [
     {
         id: 67,
         titulo: "Cubo Rubik 3X3 Fino",
-        preciomayorista: 4500,
-        precio: 9999,
+        preciomayorista: 4799,
+        precio: 10999,
         descripcion: `¡Eleva el desafío con el Cubo Rubik 3x3 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
 
         El material fino proporciona un giro suave y rápido en cada movimiento, lo que te permite avanzar a través de las complejas combinaciones de colores con facilidad y destreza. Cada giro es satisfactorio y preciso, lo que agrega una capa adicional de emoción a la resolución del cubo!`,
@@ -1676,8 +1676,8 @@ const productosdb = [
     {
         id: 68,
         titulo: "Cubo Rubik 2X2 Fino",
-        preciomayorista: 4700,
-        precio: 10999,
+        preciomayorista: 4999,
+        precio: 11999,
         descripcion: `¡Eleva el desafío con el Cubo Rubik 2x2 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
 
         El material fino proporciona un giro suave y rápido en cada movimiento, lo que te permite avanzar a través de las complejas combinaciones de colores con facilidad y destreza. Cada giro es satisfactorio y preciso, lo que agrega una capa adicional de emoción a la resolución del cubo!`,
@@ -1696,8 +1696,8 @@ const productosdb = [
     {
         id: 69,
         titulo: "Kit Guitarra + Parlante + Microfono",
-        preciomayorista: 4700,
-        precio: 10999,
+        preciomayorista: 135900,
+        precio: 159900,
         descripcion: `
         ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
         
@@ -1708,28 +1708,7 @@ const productosdb = [
                 url: "/producto69a.webp" 
             }
         ],
-        status: "Out Stock",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "educativo",
-        genero: "ninas"
-    },
-    {
-        id: 69,
-        titulo: "Kit Guitarra + Parlante + Microfono",
-        preciomayorista: 4700,
-        precio: 10999,
-        descripcion: `
-        ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
-        
-        La guitarra eléctrica es fácil de tocar y tiene un diseño atractivo, mientras que el parlante y el micrófono amplifican el sonido, permitiendo a las niñas tocar y cantar con estilo. También pueden conectar sus dispositivos favoritos para tocar junto a sus canciones preferidas!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto69a.webp" 
-            }
-        ],
-        status: "Out Stock",
+        status: "disponible",
         colores: "Unicolor",
         edad: "+3",
         categoria: "educativo",
@@ -1738,8 +1717,8 @@ const productosdb = [
     {
         id: 70,
         titulo: "Cry Baby Sorpresa Huevo",
-        preciomayorista: 4700,
-        precio: 10999,
+        preciomayorista: 69900,
+        precio: 84900,
         descripcion: `
         ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
         
@@ -1758,7 +1737,7 @@ const productosdb = [
                 url: "/producto70c.mp4" 
             }
         ],
-        status: "Out Stock",
+        status: "disponible",
         colores: "Unicolor",
         edad: "+3",
         categoria: "munecas",
@@ -1816,8 +1795,8 @@ const productosdb = [
     {
         id: 73,
         titulo: "Cry Baby Bailarin y Llora",
-        preciomayorista: 1699,
-        precio: 3599,
+        preciomayorista: 64900,
+        precio: 79900,
         descripcion: `¡Conoce a la Muñeca Cry Baby, la compañera de juegos emocionalmente expresiva que hará que los corazones de los niños se derritan con ternura y diversión!
 
         Esta encantadora muñeca es más que una simple compañía. Cuando se le quita el chupo, la Muñeca Cry Baby reacciona de manera conmovedora. Comienza a moverse y bailar al ritmo de una dulce melodía mientras lágrimas de "tristeza" caen de sus ojos. ¡Es una experiencia mágica que los niños adorarán!
@@ -1829,7 +1808,7 @@ const productosdb = [
                 url: "/producto73a.webp" 
             }
         ],
-        status: "Out Stock",
+        status: "disponible",
         colores: "Unicolor",
         edad: "+3",
         categoria: "munecas",

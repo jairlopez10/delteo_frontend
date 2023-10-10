@@ -118,7 +118,17 @@ const Producto = () => {
                 <p>Stock <span className=" text-green-600">disponible</span></p>
               </div>
             </div>
-            <p className="precio-prod">{`$${tipocliente === "m" ? producto.preciomayorista.toLocaleString('es-CO') : producto.precio.toLocaleString('es-CO')} / Und`}</p>
+            {tipocliente === "m" ? (
+              <>
+                <p className="precio-prod">{`Precio: $${producto.preciomayorista.toLocaleString('es-CO')} / Und`}</p>
+                <p className="precio-prod">{`Precio Sugerido: $${producto.precio.toLocaleString('es-CO')} / Und`}</p>
+              </>
+            ) : (
+              <>
+                <p className="precio-prod">{`$${producto.precio.toLocaleString('es-CO')} / Und`}</p>
+              </>
+            )}
+            
             <p className="colores">Colores: <span>{producto.colores}</span></p>
             <div className="boton-ordenar" onClick={() => window.open(`https://wa.me/573054392872?text=Hola!%20Estoy%20interesado%20en%20el%20producto%20que%20vi%20en%20${window.location.href}`)}>
               <img src="/wa.webp" alt="" />
