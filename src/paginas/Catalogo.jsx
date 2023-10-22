@@ -156,6 +156,8 @@ const Catalogo = () => {
               <option value="maquillaje">Maquillaje y Belleza</option>
               <option value="doctor-cocina">Doctor y Cocina</option>
               <option value="educativo">Interactivo y Educativo</option>
+              <option value="construccion">Construcción</option>
+              <option value="peluches">Peluches</option>
             </select>
             <select name="ordenar" id="ordenar" onChange={e => setordenar(e.target.value)}>
               <option value="">{ordenar === "" ? "Ordenar" : "Mayor Relevancia"}</option>

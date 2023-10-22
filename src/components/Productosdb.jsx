@@ -1955,6 +1955,163 @@ const productosdb = [
         categoria: "carros-impulso",
         genero: "ninos"
     },
+    {
+        id: 105,
+        titulo: "Shakira Mediana",
+        preciomayorista: 28900,
+        precio: 39900,
+        referencia: "XW155-35",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto105a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 114,
+        titulo: "Kit Maquillaje con Secador de Uñas",
+        preciomayorista: 35000,
+        precio: 41900,
+        referencia: "3028-7",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto114a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 115,
+        titulo: "Peluche Minie Mouse",
+        preciomayorista: 28900  ,
+        precio: 39900,
+        referencia: "HD028-40",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto115a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "peluches",
+        genero: "ninas"
+    },
+    {
+        id: 116,
+        titulo: "Peluche Mario Bros",
+        preciomayorista: 29900,
+        precio: 39900,
+        referencia: "8901",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto116a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "peluches",
+        genero: "ninas"
+    },
+    {
+        id: 108,
+        titulo: "Kit de Belleza 52 Piezas",
+        preciomayorista: 68900,
+        precio: 120000,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto108a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto108b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 148,
+        titulo: "Vengadores X4 Blister",
+        preciomayorista: 29900,
+        precio: 39900,
+        referencia: "63215",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto148a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "ninos"
+    },
+    {
+        id: 131,
+        titulo: "Playdoh de Pulpo",
+        preciomayorista: 37900,
+        precio: 44900,
+        referencia: "2902B",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto131a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 100,
+        titulo: "Frozen con Microfono Alumbra Cabello",
+        preciomayorista: 59900,
+        precio: 64900,
+        referencia: "SR9878-1",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto100a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+
 
 ];
 
