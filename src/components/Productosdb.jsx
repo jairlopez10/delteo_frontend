@@ -24,7 +24,7 @@ const productosdb = [
         colores: "Unicolor",
         edad: "+11",
         categoria: "punteria",
-        genero: "unisex"
+        genero: "ninos"
     },
     {
         id: 6,
@@ -126,7 +126,7 @@ const productosdb = [
         colores: "Unicolor",
         edad: "+11",
         categoria: "punteria",
-        genero: "unisex"
+        genero: "ninos"
     },
     {
         id: 1,
@@ -190,7 +190,7 @@ const productosdb = [
     },
     {
         id: 62,
-        titulo: "Maleta Veterinaria Mascota",
+        titulo: "Maleta Veterinaria Mascota (Rosada y Azul)",
         preciomayorista: 42999,
         precio: 59999,
         descripcion: `
@@ -241,7 +241,7 @@ const productosdb = [
         colores: "Unicolor",
         edad: "+11",
         categoria: "punteria",
-        genero: "unisex"
+        genero: "ninos"
     },
     {
         id: 33,
@@ -2110,6 +2110,44 @@ const productosdb = [
         edad: "+3",
         categoria: "munecas",
         genero: "ninas"
+    },
+    {
+        id: 168,
+        titulo: "Peluche Chimuelo",
+        preciomayorista: 13500,
+        precio: 19990,
+        referencia: "845212",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto168a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "peluches",
+        genero: "unisex"
+    },
+    {
+        id: 167,
+        titulo: "Boquitoqui de Personajes",
+        preciomayorista: 7199,
+        precio: 16000,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto167a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Avengers, Mickey Mouse, Cars, Frozen",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "unisex"
     },
 
 

@@ -71,9 +71,17 @@ const Catalogo = () => {
 
   const filtrargenero = (product) => {
     if (genero === "") return product;
-    if (product.genero === genero) {
-      return product;
+    if(genero === 'unisex'){
+      if (product.genero === genero) {
+        return product;
+      }
+    } else {
+      //Niña o niño
+      if (product.genero === genero || product.genero === 'unisex'){
+        return product;
+      }
     }
+    
   }
 
   const filtraredad = (product) => {
@@ -138,27 +146,28 @@ const Catalogo = () => {
               <option value="ninas">Niñas</option>
               <option value="ninos">Niños</option>
             </select>
-            <select name="edad" id="edad" onChange={e => setedad(e.target.value)}>
-              <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
-              <option value="+3">Mas de 2 años</option>
-              <option value="+6">Mas de 5 años</option>
-              <option value="+11">Mas de 11 años</option>
-            </select>
             <select name="categoria" id="categoria" onChange={(e) => setcategoria(e.target.value)}>
               <option value="" >{categoria === "" ? "Categoria" : "Todas las categorias"}</option>
-              <option value="dinosaurios">Dinosaurios</option>
               <option value="carros-impulso">Carros de Pila e Impulso</option>
               <option value="carros-control">Carros de Control Remoto</option>
               <option value="didacticos">Didacticos</option>
-              <option value="mascotas">Perros & Gatos</option>
-              <option value="munecas">Muñecas</option>
+              <option value="mascotas">Mascotas y Animales</option>
+              <option value="munecas">Muñecas & Bebes</option>
               <option value="punteria">Punteria</option>
               <option value="maquillaje">Maquillaje y Belleza</option>
               <option value="doctor-cocina">Doctor y Cocina</option>
               <option value="educativo">Interactivo y Educativo</option>
               <option value="construccion">Construcción</option>
               <option value="peluches">Peluches</option>
+              <option value="dinosaurios">Dinosaurios</option>
             </select>
+            <select name="edad" id="edad" onChange={e => setedad(e.target.value)}>
+              <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
+              <option value="+3">Entre 2-5 años</option>
+              <option value="+6">Entre 6-8 Años</option>
+              <option value="+11">Mas 11 Años</option>
+            </select>
+            
             <select name="ordenar" id="ordenar" onChange={e => setordenar(e.target.value)}>
               <option value="">{ordenar === "" ? "Ordenar" : "Mayor Relevancia"}</option>
               <option value="asc">Precio menor a mayor</option>
