@@ -2208,7 +2208,7 @@ const productosdb = [
     },
     {
         id: 179,
-        titulo: "Organeta Vaca",
+        titulo: "Organeta Vaca con Luz y Sonido",
         preciomayorista: 19900,
         precio: 28900,
         referencia: "",
@@ -2227,7 +2227,7 @@ const productosdb = [
     },
     {
         id: 180,
-        titulo: "Organeta Gusano",
+        titulo: "Organeta Gusano con Luz y Sonido",
         preciomayorista: 20900,
         precio: 29900,
         referencia: "3019",
@@ -2246,7 +2246,7 @@ const productosdb = [
     },
     {
         id: 182,
-        titulo: "Organeta Granja",
+        titulo: "Organeta Granja con Luz y Sonido",
         preciomayorista: 17900,
         precio: 25900,
         referencia: "",
@@ -2265,7 +2265,7 @@ const productosdb = [
     },
     {
         id: 186,
-        titulo: "Organeta Perro",
+        titulo: "Organeta Perro con Luz y Sonido",
         preciomayorista: 32900,
         precio: 42900,
         referencia: "5577",
@@ -2284,7 +2284,7 @@ const productosdb = [
     },
     {
         id: 187,
-        titulo: "Organeta Caballo",
+        titulo: "Organeta Caballo con Luz y Sonido",
         preciomayorista: 32900,
         precio: 42900,
         referencia: "5577",
