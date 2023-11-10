@@ -2,7 +2,7 @@
 const productosdb = [
     {
         id: 50,
-        titulo: "Lanzador Hidrogel MP5 Automatica Recargable + Gafas + 6.000 Orvis Hidrogel",
+        titulo: "Lanzador Hidrogel MP5 Automatica Recargable con Gafas y 6.000 Orvis Hidrogel",
         preciomayorista: 71999,
         precio: 84999,
         descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
@@ -82,7 +82,7 @@ const productosdb = [
     },
     {
         id: 59,
-        titulo: "Maleta Tocador + Accesorios",
+        titulo: "Maleta Tocador con Accesorios",
         preciomayorista: 26999,
         precio: 39999,
         descripcion: `¡Lleva la diversión y la belleza a un nivel superior con la Maleta Tocador para Niñas! Este juguete es perfecto para que las pequeñas exploren su creatividad y se sumerjan en el emocionante mundo de la moda y el maquillaje.
@@ -108,7 +108,7 @@ const productosdb = [
     },
     {
         id: 52,
-        titulo: "Lanzador Hidrogel M416 Automatica Recargable + 1.500 Orvis Hidrogel",
+        titulo: "Lanzador Hidrogel M416 Automatica Recargable con 3.000 Orvis Hidrogel",
         preciomayorista: 89999,
         precio: 114999,
         descripcion: `¡Entra en la acción con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un M416! Este emocionante juguete te lleva a un mundo lleno de emociones y diversión mientras te sumerges en batallas simuladas y aventuras imaginativas.
@@ -164,7 +164,7 @@ const productosdb = [
     },
     {
         id: 58,
-        titulo: "Carro Control Sensor + Control Remoto + Vapor de Agua",
+        titulo: "Carro Control Sensor con Control Remoto y Vapor de Agua",
         preciomayorista: 84999,
         precio: 119999,
         descripcion: `¡Prepárate para una experiencia de conducción única con el Carro Control Sensor, Este vehículo te ofrece lo mejor de ambos mundos, combinando tecnología avanzada con la diversión clásica de los carros a control remoto.
@@ -223,7 +223,7 @@ const productosdb = [
     },
     {
         id: 51,
-        titulo: "Lanzador Hidrogel Automatica Recargable + 1.500 Orvis Hidrogel",
+        titulo: "Lanzador Hidrogel Automatica Recargable con 1.500 Orvis Hidrogel",
         preciomayorista: 48999,
         precio: 56999,
         descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
@@ -295,7 +295,7 @@ const productosdb = [
     },
     {
         id: 61,
-        titulo: "Maleta Cocina + Accesorios",
+        titulo: "Maleta Cocina con Accesorios",
         preciomayorista: 26999,
         precio: 39999,
         descripcion: `¡La Maleta Cocina es el sueño de todo chef! Este juguete versátil y emocionante permite a los pequeños cocineros llevar la diversión de la cocina a donde quieran.
@@ -373,7 +373,7 @@ const productosdb = [
     },
     {
         id: 31,
-        titulo: "Mesa Proyector + Tanque de Agua + 8 Rompecabezas + 12 Marcadores + Sellos",
+        titulo: "Mesa Proyector con Tanque de Agua, 8 Rompecabezas, 12 Marcadores, Sellos",
         preciomayorista: 88999,
         precio: 109999,
         descripcion: `¡Despierta la creatividad y la diversión con nuestro Set de Mesa Proyector y Actividades Todo en Uno! Este conjunto emocionante ofrece una amplia gama de experiencias interactivas y creativas, perfectas para horas de entretenimiento y aprendizaje.
@@ -698,7 +698,7 @@ const productosdb = [
     },
     {
         id: 17,
-        titulo: "Coche Plastico + Muñeca Baby + Tetero",
+        titulo: "Coche Plastico con Muñeca Baby y Tetero",
         preciomayorista: 36999,
         precio: 47999,
         descripcion: `¡Lleva la diversión en movimiento a un nivel superior con nuestro Coche Paseador de Plástico con Muñeca y Tetero Incluidos! Este conjunto encantador combina la emoción del juego con la imaginación, permitiendo a los niños crear sus propias historias mientras se embarcan en emocionantes aventuras.
@@ -718,7 +718,7 @@ const productosdb = [
     },
     {
         id: 8,
-        titulo: "Barbie +6 Vestidos + 2 Hijas + Pony",
+        titulo: "Barbie +6 Vestidos con 2 Hijas y Pony",
         preciomayorista: 27999,
         precio: 34999,
         descripcion: `¡Crea mágicas historias con nuestro Set de Barbie Familia y Amigos! Este encantador conjunto incluye una Barbie radiante con una selección de 6 elegantes vestidos, ¡siempre lista para cualquier ocasión!
@@ -1057,7 +1057,7 @@ const productosdb = [
     },
     {
         id: 42,
-        titulo: "Juego Jenga + Dados",
+        titulo: "Juego Jenga con Dados",
         preciomayorista: 12999,
         precio: 18999,
         descripcion: `¡Eleva la emoción del clásico juego de Jenga con Dados Numéricos! En esta emocionante variante, los dados añaden un elemento de sorpresa y estrategia mientras intentas mantener la torre en pie.
@@ -1139,7 +1139,7 @@ const productosdb = [
     },
     {
         id: 21,
-        titulo: "Trailer Dinosaurio con Vapor + Dinosaurios + Herramientas",
+        titulo: "Trailer Dinosaurio con Vapor con Dinosaurios y Herramientas",
         preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Embárcate en una emocionante aventura prehistórica con nuestro Trailer Dinosaurio! Este conjunto único combina la diversión del juego de dinosaurios con un toque de magia y acción.
@@ -1221,7 +1221,7 @@ const productosdb = [
     },
     {
         id: 66,
-        titulo: "Camion + 3 Carritos de Plants VS Zombies",
+        titulo: "Camion con 3 Carritos de Plants VS Zombies",
         preciomayorista: 30999,
         precio: 44999,
         descripcion: `¡Prepárate para la diversión de la construcción con el Camión de Carritos Estilo Plantas vs. Zombies! Este juego de construcción te lleva al emocionante mundo de Plantas vs. Zombies mientras creas tu propio escenario de batalla.
@@ -1491,7 +1491,7 @@ const productosdb = [
     },
     {
         id: 41,
-        titulo: "Pistola Lanza Dardos e Hidrogel + 200 Bolas Hidrogel",
+        titulo: "Pistola Lanza Dardos e Hidrogel con 200 Bolas Hidrogel",
         preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Prepárate para la acción emocionante con la Pistola Lanza Dardos e Hidrogel de Última Generación! Este conjunto todo en uno te sumerge en una experiencia de juego llena de adrenalina y diversión.
@@ -1577,7 +1577,7 @@ const productosdb = [
     },
     {
         id: 46,
-        titulo: "Pistola Nerf Avengers + 6 Dardos",
+        titulo: "Pistola Nerf Avengers con 6 Dardos",
         preciomayorista: 1000,
         precio: 17000,
         descripcion: `¡Vive la emoción de los Vengadores con la Pistola Nerf Estilo Avengers inspirada en Spider-Man y Capitán América! Este set incluye 6 dardos y un tablero de disparo para una acción heroica llena de diversión y aventuras. Con detalles auténticos y diseño de superhéroes, estarás listo para enfrentar desafíos imaginarios con estilo. ¡Prepárate para un juego lleno de emoción y adrenalina mientras te conviertes en un verdadero defensor de la justicia!`,
@@ -1695,7 +1695,7 @@ const productosdb = [
     },
     {
         id: 69,
-        titulo: "Kit Guitarra + Parlante + Microfono",
+        titulo: "Kit Guitarra con Parlante y Microfono",
         preciomayorista: 135900,
         precio: 159900,
         descripcion: `
@@ -1771,7 +1771,7 @@ const productosdb = [
     },
     {
         id: 72,
-        titulo: "Burbujero + Silbato de Personajes",
+        titulo: "Burbujero con Silbato de Personajes",
         preciomayorista: 1699,
         precio: 3599,
         descripcion: `
@@ -1816,7 +1816,7 @@ const productosdb = [
     },
     {
         id: 74,
-        titulo: "Registradora + Carrito Mercado + Accesorios",
+        titulo: "Registradora con Carrito Mercado y Accesorios",
         preciomayorista: 71999,
         precio: 84999,
         descripcion: `
@@ -1839,7 +1839,7 @@ const productosdb = [
     },
     {
         id: 75,
-        titulo: "Maleta Constructor + Accesorios",
+        titulo: "Maleta Constructor con Accesorios",
         preciomayorista: 41999,
         precio: 58999,
         descripcion: `¡Lleva la emoción de la construcción a cualquier lugar con la Maleta Constructora 2 en 1! Este innovador juguete es perfecto para los jóvenes constructores que desean llevar su taller a donde quieran.
@@ -2133,8 +2133,8 @@ const productosdb = [
     {
         id: 167,
         titulo: "Boquitoqui de Personajes",
-        preciomayorista: 7199,
-        precio: 16000,
+        preciomayorista: 19900,
+        precio: 29900,
         referencia: "",
         descripcion: ``,
         imagenes: [
@@ -2143,10 +2143,531 @@ const productosdb = [
                 url: "/producto167a.webp" 
             }
         ],
-        status: "Out Stock",
+        status: "disponible",
         colores: "Avengers, Mickey Mouse, Cars, Frozen",
         edad: "+3",
         categoria: "munecos",
+        genero: "unisex"
+    },
+    {
+        id: 174,
+        titulo: "Lego X1 de Personajes",
+        preciomayorista: 2900,
+        precio: 5900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto174a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "unisex"
+    },
+    {
+        id: 181,
+        titulo: "Cry Baby Doctora",
+        preciomayorista: 31900,
+        precio: 39900,
+        referencia: "KQ508",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto181a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 178,
+        titulo: "Triceratops con Movimiento, Luces y Sonido",
+        preciomayorista: 31900,
+        precio: 37900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto178a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "dinosaurios",
+        genero: "unisex"
+    },
+    {
+        id: 179,
+        titulo: "Organeta Vaca",
+        preciomayorista: 19900,
+        precio: 28900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto179a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "organetas-guitarras",
+        genero: "unisex"
+    },
+    {
+        id: 180,
+        titulo: "Organeta Gusano",
+        preciomayorista: 20900,
+        precio: 29900,
+        referencia: "3019",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto180a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "organetas-guitarras",
+        genero: "unisex"
+    },
+    {
+        id: 182,
+        titulo: "Organeta Granja",
+        preciomayorista: 17900,
+        precio: 25900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto182a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "organetas-guitarras",
+        genero: "unisex"
+    },
+    {
+        id: 186,
+        titulo: "Organeta Perro",
+        preciomayorista: 32900,
+        precio: 42900,
+        referencia: "5577",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto186a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "organetas-guitarras",
+        genero: "unisex"
+    },
+    {
+        id: 187,
+        titulo: "Organeta Caballo",
+        preciomayorista: 32900,
+        precio: 42900,
+        referencia: "5577",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto187a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "organetas-guitarras",
+        genero: "unisex"
+    },
+    {
+        id: 188,
+        titulo: "Pistola con Laser Lanza Dardos e Hidrogel",
+        preciomayorista: 14900,
+        precio: 29900,
+        referencia: "M138-C",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto188a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
+        id: 359,
+        titulo: "Registradora Musical con Mercado, Dinero y Canasta",
+        preciomayorista: 75900,
+        precio: 94900,
+        referencia: "5911",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto359a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "doctor-cocina",
+        genero: "ninas"
+    },
+    {
+        id: 354,
+        titulo: "Magic Pad de Dinosaurio",
+        preciomayorista: 28900,
+        precio: 34900,
+        referencia: "TB25",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto354a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 355,
+        titulo: "Magic Pad Conejo",
+        preciomayorista: 24500,
+        precio: 30900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto355a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 218,
+        titulo: "Lego Transformer 527 Pcs",
+        preciomayorista: 64900,
+        precio: 78900,
+        referencia: "55031",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto218a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto218b.webp" 
+            } 
+        ],
+        status: "disponible",
+        colores: "Optimus Prime, Bumblee Bee",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "ninos"
+    },
+    {
+        id: 271,
+        titulo: "Lego Transformers de 816 Piezas",
+        preciomayorista: 69900,
+        precio: 84900,
+        referencia: "98271/72",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto271a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto271a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "legos",
+        genero: "ninos"
+    },
+    {
+        id: 281,
+        titulo: "Lego Avengers de 273 Piezas",
+        preciomayorista: 29900,
+        precio: 39900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto281a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "legos",
+        genero: "ninos"
+    },
+    {
+        id: 349,
+        titulo: "Cry Baby Caminadora en Caja",
+        preciomayorista: 52900,
+        precio: 65900,
+        referencia: "L0426-1",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto349a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 107,
+        titulo: "Muñeca Cry Baby Orina con Pañal y Tetero",
+        preciomayorista: 34900,
+        precio: 49900,
+        referencia: "KQ-508",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto107a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 118,
+        titulo: "Bebe Sonido con Sleeping y Canguro",
+        preciomayorista: 51900,
+        precio: 62900,
+        referencia: "XMY8024",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto118a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 248,
+        titulo: "LOL con Huevo Sorpresa Blister",
+        preciomayorista: 19900,
+        precio: 24900,
+        referencia: "2018-35-2B",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto248a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 101,
+        titulo: "Muñeca Doctora Juguetes con Luz en El Cabello",
+        preciomayorista: 57900,
+        precio: 66900,
+        referencia: "SR9885",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto101a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 135,
+        titulo: "Barbie Sirena con Luz y Sonido",
+        preciomayorista: 17900,
+        precio: 23900,
+        referencia: "SR3390",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto135a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 249,
+        titulo: "Dinosaurio para Pintar",
+        preciomayorista: 13900,
+        precio: 21900,
+        referencia: "AN808",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto249a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "ninos"
+    },
+    {
+        id: 275,
+        titulo: "Play Doh Doctor Dientes",
+        preciomayorista: 32900,
+        precio: 39900,
+        referencia: "JD1218",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto275a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 170,
+        titulo: "Baby Yoda X3 en Blister",
+        preciomayorista: 14900,
+        precio: 21900,
+        referencia: "19011",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto170a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "unisex"
+    },
+    {
+        id: 256,
+        titulo: "Peluche Iron Man",
+        preciomayorista: 32900,
+        precio: 49900,
+        referencia: "RW-2",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto256a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "peluches",
+        genero: "ninos"
+    },
+    {
+        id: 160,
+        titulo: "Play Doh X12",
+        preciomayorista: 37900,
+        precio: 44900,
+        referencia: "JD1204",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto160a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 223,
+        titulo: "Peluche Sonic",
+        preciomayorista: 24900,
+        precio: 31900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto223a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "peluches",
         genero: "unisex"
     },
 
