@@ -146,19 +146,22 @@ const Catalogomayorista = () => {
               <option value="+11">Mas de 11 años</option>
             </select>
             <select name="categoria" id="categoria" onChange={(e) => setcategoria(e.target.value)}>
-              <option value="" >{categoria === "" ? "Categoria" : "Todas las categorias"}</option>
-              <option value="dinosaurios">Dinosaurios</option>
+            <option value="" >{categoria === "" ? "Categoria" : "Todas las categorias"}</option>
               <option value="carros-impulso">Carros de Pila e Impulso</option>
               <option value="carros-control">Carros de Control Remoto</option>
               <option value="didacticos">Didacticos</option>
-              <option value="mascotas">Perros & Gatos</option>
-              <option value="munecas">Muñecas</option>
+              <option value="mascotas">Mascotas y Animales</option>
+              <option value="munecas">Muñecas & Bebes</option>
+              <option value="munecos">Muñecos & Figuras de Acción</option>
               <option value="punteria">Punteria</option>
               <option value="maquillaje">Maquillaje y Belleza</option>
               <option value="doctor-cocina">Doctor y Cocina</option>
               <option value="educativo">Interactivo y Educativo</option>
               <option value="construccion">Construcción</option>
               <option value="peluches">Peluches</option>
+              <option value="dinosaurios">Dinosaurios</option>
+              <option value="organetas-guitarras">Organetas & Guitarras</option>
+              <option value="legos">Legos & Armables</option>
             </select>
             <select name="ordenar" id="ordenar" onChange={e => setordenar(e.target.value)}>
               <option value="">{ordenar === "" ? "Ordenar" : "Mayor Relevancia"}</option>
