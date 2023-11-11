@@ -11,10 +11,10 @@ const Productocard = ({producto}) => {
     let precioshow
 
     if (pagina === "inicio") {
-      precioshow = precio
+      precioshow = preciomayorista
       tipocliente = "d";
     } else {
-      precioshow = preciomayorista
+      precioshow = precio
       tipocliente = "m"
     }
      
