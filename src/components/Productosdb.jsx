@@ -83,7 +83,7 @@ const productosdb = [
     {
         id: 59,
         titulo: "Maleta Tocador con Accesorios",
-        preciomayorista: 26999,
+        preciomayorista: 29900,
         precio: 39999,
         descripcion: `¡Lleva la diversión y la belleza a un nivel superior con la Maleta Tocador para Niñas! Este juguete es perfecto para que las pequeñas exploren su creatividad y se sumerjan en el emocionante mundo de la moda y el maquillaje.
 
@@ -110,7 +110,7 @@ const productosdb = [
         id: 52,
         titulo: "Lanzador Hidrogel M416 Automatica Recargable con 3.000 Orvis Hidrogel",
         preciomayorista: 89999,
-        precio: 114999,
+        precio: 119900,
         descripcion: `¡Entra en la acción con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un M416! Este emocionante juguete te lleva a un mundo lleno de emociones y diversión mientras te sumerges en batallas simuladas y aventuras imaginativas.
 
         La pistola lanzadora automática, con su diseño estilo M416, te permite disparar ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar cualquier desafío y mantener la emoción durante horas.
@@ -131,8 +131,8 @@ const productosdb = [
     {
         id: 1,
         titulo: "Kit de Uñas X12 con Brillos",
-        preciomayorista: 3499,
-        precio: 9999,
+        preciomayorista: 4900,
+        precio: 9900,
         descripcion: `¡Fusionamos diversión y creatividad en nuestro kit de uñas encantadoras! Diseñado especialmente para niñas de 3 a 7 años, este kit les brinda la oportunidad de explorar su lado artístico mientras se divierten.
 
         Con 12 uñas en colores vibrantes y diseños encantadores, cada uña es una pequeña obra maestra lista para ser creada. Desde delicadas flores hasta brillantes estrellas, ¡serán princesitas creativas!
