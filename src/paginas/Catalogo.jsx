@@ -94,7 +94,7 @@ const Catalogo = () => {
   }
 
   useEffect(() => {
-    setpagina('inicio');
+    setpagina('mayorista');
     document.title = "Jammy | Jugueteria"
   }, [])
 
