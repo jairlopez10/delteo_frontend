@@ -15,7 +15,7 @@ const Header = () => {
                 <div className="contenidoheader contenedor">
                     <div className="divbarra">
                         
-                        <Link to={pagina === "mayorista" || pagina === "mayoristaproducto" ? "/mayorista" : "/"} className="logo" onClick={() => setmenu(false)}>
+                        <Link to={"/mayorista"} className="logo" onClick={() => setmenu(false)}>
                             <img src="/logo.png" alt="" />
                         </Link>
                         
