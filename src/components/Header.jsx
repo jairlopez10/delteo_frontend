@@ -34,7 +34,7 @@ const Header = () => {
                     
                     <nav className={`navegacion ${menu ? 'flex' : 'hidden'} md:flex`}>
                         <Link to={pagina === "mayorista" || pagina === "mayoristaproducto" ? "/mayorista" : "/"} className="links" onClick={() => setmenu(false)}>Catalogo</Link>
-                        <Link to="/nosotros" className={`${pagina === "mayorista" || pagina === "mayoristaproducto" ? "hidden" : ""} links`} onClick={() => setmenu(false)}>Nosotros</Link>
+                        <Link to="/nosotros" className={`${pagina === "mayorista" || pagina === "mayoristaproducto" ? "" : "hidden"} links`} onClick={() => setmenu(false)}>Nosotros</Link>
                     </nav>
                 </div>
                 {pagina === 'inicio' || pagina === "mayorista" ? <Slogan /> : ""}
