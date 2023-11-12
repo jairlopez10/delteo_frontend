@@ -454,8 +454,8 @@ const productosdb = [
     {
         id: 15,
         titulo: "Carro a Control Remoto Estilo Ferrari",
-        preciomayorista: 28999,
-        precio: 53999,
+        preciomayorista: 28990,
+        precio: 53900,
         descripcion: `¡Experimenta la emoción de la velocidad con nuestro Carro a Control Remoto Ferrari! Este vehículo de alta calidad captura la elegancia y la potencia de un Ferrari, ofreciéndote una experiencia de conducción excepcional.
 
         Con detalles auténticos y un diseño elegante que emula la estética icónica de Ferrari, este carro a control remoto es un deleite visual y funcional. Equipado con batería recargable, simplemente conéctalo para recargarlo y estar listo para dominar la pista una vez más.
@@ -479,9 +479,9 @@ const productosdb = [
     },
     {
         id: 55,
-        titulo: "Carro Loco Control Bateria Recargable",
-        preciomayorista: 38999,
-        precio: 56999,
+        titulo: "Carro Loco Grafiti Control Bateria Recargable",
+        preciomayorista: 33900,
+        precio: 39900,
         descripcion: `
         ¡Prepárate para la diversión extrema con el Carro Loco a Control Remoto! Este vehículo todo terreno te brinda una experiencia emocionante y llena de acción con luces y sonidos que te dejarán asombrado.
         
@@ -559,8 +559,8 @@ const productosdb = [
     {
         id: 32,
         titulo: "Computador Interactivo Unisex",
-        preciomayorista: 22999,
-        precio: 29999,
+        preciomayorista: 21900,
+        precio: 29900,
         descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo, diseñado para preescolares, este juguete cautivante es más que un juego.
 
         Explora números del 1 al 10, el abecedario y palabras esenciales, operaciones matematicas con diversión interactiva. Con canciones animadas y actividades intuitivas de suma y resta, cada momento se convierte en una lección emocionante.
@@ -669,8 +669,8 @@ const productosdb = [
     {
         id: 10,
         titulo: "Carro Lanza Vapor, Movimiento, Luces y Sonido",
-        preciomayorista: 24999,
-        precio: 30999,
+        preciomayorista: 24900,
+        precio: 29900,
         descripcion: `¡Desata la emoción con nuestro Carro de Pila Nitro Xtreme! Este vehículo de próxima generación combina estilo y rendimiento en una experiencia única.
 
         Con luces brillantes y sonidos realistas, este carro cobra vida en tus manos. Pero aquí está la verdadera maravilla: la parte trasera del carro emite vapor de agua, creando un efecto asombroso similar al nitro. La adrenalina se dispara cuando ves cómo este carro se desplaza con velocidad y estilo, dejando un rastro de vapor en su estela.
@@ -772,7 +772,7 @@ const productosdb = [
         id: 34,
         titulo: "Carro Loco con Movimiento, Luces y Sonido",
         preciomayorista: 22999,
-        precio: 28999,
+        precio: 29900,
         descripcion: `¡Presentamos el Carro Loco de Pila, la máxima aventura sobre ruedas para los pequeños exploradores! Este carro innovador lleva la diversión a un nivel completamente nuevo con su capacidad de girar las llantas delanteras a 360 grados, lo que significa giros emocionantes y maniobras sorprendentes en todas direcciones.
 
         Con luces brillantes y sonidos cautivadores, el Carro Loco de Pila crea un espectáculo visual y auditivo que cautivará la imaginación de tus niños!`,
@@ -857,8 +857,8 @@ const productosdb = [
     {
         id: 3,
         titulo: "Computador Interactivo 130 Actividades",
-        preciomayorista: 84999,
-        precio: 99999,
+        preciomayorista: 82900,
+        precio: 99900,
         descripcion: `Descubre un mundo de aprendizaje interactivo con nuestro Computador Interactivo 130 Actividades. Diseñado para inspirar y enseñar, este juguete educativo es una experiencia completa.
 
         Desde letras y música hasta un reloj funcional, los niños explorarán un abanico de habilidades. Rellena palabras, deletrea, sumérgete en matemáticas y disfruta de juegos educativos, todo con el uso del mouse y el teclado interactivo. Este computador, con conexión a corriente, brinda horas de diversión y aprendizaje sin fin.
@@ -1004,8 +1004,8 @@ const productosdb = [
     {
         id: 14,
         titulo: "Carro a Control Remoto con Efecto Vapor",
-        preciomayorista: 74999,
-        precio: 134999,
+        preciomayorista: 77900,
+        precio: 134900,
         descripcion: `¡Acelera hacia la diversión con nuestro Carro a Control Remoto con Efecto Vapor! Este impresionante vehículo combina la emoción de la velocidad con un toque de magia gracias a su capacidad para lanzar vapor de agua, ¡simulando un efecto de nitro!
 
         Equipado con luces brillantes y sonidos realistas, este carro se convierte en una experiencia multisensorial que cautivará a los entusiastas de todas las edades. Su diseño llamativo y su potente rendimiento hacen que cada giro sea una aventura emocionante.
@@ -1034,8 +1034,8 @@ const productosdb = [
     {
         id: 16,
         titulo: "Carro a Control Remoto (Bidireccional)",
-        preciomayorista: 11999,
-        precio: 26999,
+        preciomayorista: 14900,
+        precio: 24900,
         descripcion: `¡Experimenta la emoción de la velocidad y el lujo con nuestro Carro a Control Remoto Estilo Ferrari! Este vehículo excepcional captura la elegancia y la potencia en un diseño compacto y emocionante.
 
         Con detalles auténticos y un diseño que emula la icónica estética de Ferrari, este carro a control remoto es un deleite visual y funcional. Equipado con batería recargable, simplemente conéctalo para recargarlo y estar listo para desafiar la pista una vez más. Este carro solo se mueve hacia adelante o hacia atrás, brindando una experiencia de conducción única.`,
@@ -1078,8 +1078,8 @@ const productosdb = [
     {
         id: 2,
         titulo: "Computador Interactivo con Pantalla y Mouse",
-        preciomayorista: 37000,
-        precio: 39999,
+        preciomayorista: 34900,
+        precio: 39900,
         descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo Todo en Uno, equipado con mouse y pantalla digital! Diseñado para preescolares, este juguete cautivante es más que un juego.
 
         Explora números del 1 al 10, el abecedario y palabras esenciales con diversión interactiva. Con canciones animadas y actividades intuitivas de suma y resta, cada momento se convierte en una lección emocionante.
@@ -1223,7 +1223,7 @@ const productosdb = [
         id: 66,
         titulo: "Camion con 3 Carritos de Plants VS Zombies",
         preciomayorista: 30999,
-        precio: 44999,
+        precio: 39900,
         descripcion: `¡Prepárate para la diversión de la construcción con el Camión de Carritos Estilo Plantas vs. Zombies! Este juego de construcción te lleva al emocionante mundo de Plantas vs. Zombies mientras creas tu propio escenario de batalla.
 
         El camión es la herramienta perfecta para transportar y desplegar a tus carritos de construcción, cada uno con el estilo único de Plantas vs. Zombies. Puedes llevarlos a la acción y construir tu propio escenario de batalla, ¡donde las plantas defensoras se enfrentarán a los traviesos zombies!`,
@@ -1656,7 +1656,7 @@ const productosdb = [
     {
         id: 67,
         titulo: "Cubo Rubik 3X3 Fino",
-        preciomayorista: 4799,
+        preciomayorista: 6900,
         precio: 10999,
         descripcion: `¡Eleva el desafío con el Cubo Rubik 3x3 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
 
@@ -1676,8 +1676,8 @@ const productosdb = [
     {
         id: 68,
         titulo: "Cubo Rubik 2X2 Fino",
-        preciomayorista: 4999,
-        precio: 11999,
+        preciomayorista: 6500,
+        precio: 13900,
         descripcion: `¡Eleva el desafío con el Cubo Rubik 2x2 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
 
         El material fino proporciona un giro suave y rápido en cada movimiento, lo que te permite avanzar a través de las complejas combinaciones de colores con facilidad y destreza. Cada giro es satisfactorio y preciso, lo que agrega una capa adicional de emoción a la resolución del cubo!`,

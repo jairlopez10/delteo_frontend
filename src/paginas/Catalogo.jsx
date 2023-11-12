@@ -17,14 +17,14 @@ const Catalogo = () => {
   const [genero, setgenero] = useState('');
   const [edad, setedad] = useState('');
   const [ordenar, setordenar] = useState('');
-  const [preciomax, setpreciomax] = useState(150000);
+  const [preciomax, setpreciomax] = useState(190000);
   const [productosmostrar, setproductosmostrar] = useState(productosavailable);
   const [productosfiltrados, setproductosfiltrados] = useState(productosavailable);
   const [numpagina, setnumpagina] = useState(1);
   const tituloproductosref = useRef(null);
  
   const MIN = 5000;
-  const MAX = 150000;
+  const MAX = 190000;
   const STEP = 5000;
   const numproductospag = 12;
 
