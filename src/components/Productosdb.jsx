@@ -1718,7 +1718,7 @@ const productosdb = [
         id: 70,
         titulo: "Cry Baby Sorpresa Huevo",
         preciomayorista: 69900,
-        precio: 84900,
+        precio: 79900,
         descripcion: `
         ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
         
@@ -1772,8 +1772,8 @@ const productosdb = [
     {
         id: 72,
         titulo: "Burbujero con Silbato de Personajes",
-        preciomayorista: 1699,
-        precio: 3599,
+        preciomayorista: 1900,
+        precio: 3900,
         descripcion: `
         ¡Prepárate para una doble dosis de diversión con estos increíbles Burbujeros Silbato! Estos juguetes versátiles ofrecen horas de entretenimiento en una sola mano.
         
@@ -1793,32 +1793,10 @@ const productosdb = [
         genero: "unisex"
     },
     {
-        id: 73,
-        titulo: "Cry Baby Bailarin y Llora",
-        preciomayorista: 64900,
-        precio: 79900,
-        descripcion: `¡Conoce a la Muñeca Cry Baby, la compañera de juegos emocionalmente expresiva que hará que los corazones de los niños se derritan con ternura y diversión!
-
-        Esta encantadora muñeca es más que una simple compañía. Cuando se le quita el chupo, la Muñeca Cry Baby reacciona de manera conmovedora. Comienza a moverse y bailar al ritmo de una dulce melodía mientras lágrimas de "tristeza" caen de sus ojos. ¡Es una experiencia mágica que los niños adorarán!
-        
-        Su vestimenta y detalles están diseñados con gran atención, lo que hace que esta muñeca sea aún más especial!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto73a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecas",
-        genero: "ninas"
-    },
-    {
         id: 74,
         titulo: "Registradora con Carrito Mercado y Accesorios",
-        preciomayorista: 71999,
-        precio: 84999,
+        preciomayorista: 71900,
+        precio: 79900,
         descripcion: `
         ¡Sumérgete en la diversión de las compras con la Registradora de Juguete con Carrito de Mercado! Esta registradora cuenta con luces y sonidos realistas que hacen que las compras simuladas sean emocionantes. Incluye un carrito de mercado, elementos de mercado, una tarjeta de crédito y un lector de códigos de barras. Los niños pueden jugar como cajeros, clientes o dueños de tiendas, fomentando la creatividad y las habilidades matemáticas. ¡Prepárate para horas de juego y aprendizaje mientras exploras el mundo de las compras y el comercio!`,
         imagenes: [
@@ -1841,7 +1819,7 @@ const productosdb = [
         id: 75,
         titulo: "Maleta Constructor con Accesorios",
         preciomayorista: 41999,
-        precio: 58999,
+        precio: 54900,
         descripcion: `¡Lleva la emoción de la construcción a cualquier lugar con la Maleta Constructora 2 en 1! Este innovador juguete es perfecto para los jóvenes constructores que desean llevar su taller a donde quieran.
 
         La maleta se abre para revelar un taller completo con herramientas, tornillos y todo lo que los niños necesitan para construir sus propias creaciones. Incluso incluye una sierra de juguete para proyectos de "corte". Los niños pueden explorar su creatividad y aprender sobre la construcción mientras juegan.
@@ -1886,8 +1864,8 @@ const productosdb = [
     {
         id: 77,
         titulo: "Maquillaje Unicornio Juguete",
-        preciomayorista: 20999,
-        precio: 36999,
+        preciomayorista: 21900,
+        precio: 32900,
         descripcion: `¡Deja que la creatividad de un Unicornio con este Maquillaje para Niñas en Forma de Unicornio! Este set de maquillaje es una manera mágica de permitir que las jóvenes artistas exploren el mundo del maquillaje de manera segura y divertida.
 
         El maquillaje en forma de luna tiene un diseño encantador que hará que las niñas se sientan como auténticas artistas del maquillaje. Incluye una paleta de colores suaves y brillantes que les permite crear looks mágicos y creativos!`,
@@ -2035,7 +2013,7 @@ const productosdb = [
         id: 108,
         titulo: "Kit de Belleza 52 Piezas",
         preciomayorista: 68900,
-        precio: 120000,
+        precio: 99900,
         referencia: "",
         descripcion: ``,
         imagenes: [
@@ -2076,7 +2054,7 @@ const productosdb = [
     {
         id: 131,
         titulo: "Playdoh de Pulpo",
-        preciomayorista: 37900,
+        preciomayorista: 33900,
         precio: 44900,
         referencia: "2902B",
         descripcion: ``,
@@ -2114,8 +2092,8 @@ const productosdb = [
     {
         id: 168,
         titulo: "Peluche Chimuelo",
-        preciomayorista: 13500,
-        precio: 19990,
+        preciomayorista: 15900,
+        precio: 29900,
         referencia: "845212",
         descripcion: ``,
         imagenes: [
@@ -2152,7 +2130,7 @@ const productosdb = [
     {
         id: 174,
         titulo: "Lego X1 de Personajes",
-        preciomayorista: 2900,
+        preciomayorista: 3500,
         precio: 5900,
         referencia: "",
         descripcion: ``,
@@ -2228,8 +2206,8 @@ const productosdb = [
     {
         id: 180,
         titulo: "Organeta Gusano con Luz y Sonido",
-        preciomayorista: 20900,
-        precio: 29900,
+        preciomayorista: 19900,
+        precio: 28900,
         referencia: "3019",
         descripcion: ``,
         imagenes: [
@@ -2304,7 +2282,7 @@ const productosdb = [
     {
         id: 188,
         titulo: "Pistola con Laser Lanza Dardos e Hidrogel",
-        preciomayorista: 14900,
+        preciomayorista: 16900,
         precio: 29900,
         referencia: "M138-C",
         descripcion: ``,
@@ -2323,7 +2301,7 @@ const productosdb = [
     {
         id: 359,
         titulo: "Registradora Musical con Mercado, Dinero y Canasta",
-        preciomayorista: 75900,
+        preciomayorista: 79900,
         precio: 94900,
         referencia: "5911",
         descripcion: ``,
@@ -2341,7 +2319,7 @@ const productosdb = [
     },
     {
         id: 354,
-        titulo: "Magic Pad de Dinosaurio",
+        titulo: "Tablero Magico Digital de Dinosaurio",
         preciomayorista: 28900,
         precio: 34900,
         referencia: "TB25",
@@ -2360,7 +2338,7 @@ const productosdb = [
     },
     {
         id: 355,
-        titulo: "Magic Pad Conejo",
+        titulo: "Tablero Magicon Digital de Conejo",
         preciomayorista: 24500,
         precio: 30900,
         referencia: "",
@@ -2380,7 +2358,7 @@ const productosdb = [
     {
         id: 218,
         titulo: "Lego Transformer 527 Pcs",
-        preciomayorista: 64900,
+        preciomayorista: 66900,
         precio: 78900,
         referencia: "55031",
         descripcion: ``,
@@ -2522,7 +2500,7 @@ const productosdb = [
         id: 101,
         titulo: "Muñeca Doctora Juguetes con Luz en El Cabello",
         preciomayorista: 57900,
-        precio: 66900,
+        precio: 64900,
         referencia: "SR9885",
         descripcion: ``,
         imagenes: [
@@ -2578,8 +2556,8 @@ const productosdb = [
     {
         id: 275,
         titulo: "Play Doh Doctor Dientes",
-        preciomayorista: 32900,
-        precio: 39900,
+        preciomayorista: 28500,
+        precio: 34900,
         referencia: "JD1218",
         descripcion: ``,
         imagenes: [
