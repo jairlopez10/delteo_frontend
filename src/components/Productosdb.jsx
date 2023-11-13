@@ -3,8 +3,8 @@ const productosdb = [
     {
         id: 50,
         titulo: "Lanzador Hidrogel MP5 Automatica Recargable con Gafas y 6.000 Orvis Hidrogel",
-        preciomayorista: 71999,
-        precio: 84999,
+        preciomayorista: 71900,
+        precio: 84900,
         descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
 
         Esta pistola lanzadora automática, con su diseño estilo MP5, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 6000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
@@ -27,146 +27,50 @@ const productosdb = [
         genero: "ninos"
     },
     {
-        id: 6,
-        titulo: "Dinosaurio Rex con Movimiento Luces Sonido",
-        preciomayorista: 29999,
-        precio: 36999,
-        descripcion: `¡Transporta a tu pequeño a la era de los dinosaurios con nuestro Dinosaurio Rex! Este magnífico amigo prehistórico está lleno de emocionantes luces brillantes, sonidos realistas y un movimiento fascinante en su cuerpo, garras y cola, este dinosaurio cobra vida en las manos de tu hijo. Cada paso es una aventura asombrosa mientras el dinosaurio camina y se balancea con autenticidad, creando momentos de maravilla y diversión.
+        id: 2,
+        titulo: "Computador Interactivo con Pantalla y Mouse",
+        preciomayorista: 34900,
+        precio: 39900,
+        descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo Todo en Uno, equipado con mouse y pantalla digital! Diseñado para preescolares, este juguete cautivante es más que un juego.
+
+        Explora números del 1 al 10, el abecedario y palabras esenciales con diversión interactiva. Con canciones animadas y actividades intuitivas de suma y resta, cada momento se convierte en una lección emocionante.
         
-        La interacción es clave: los niños adorarán activar los sonidos y movimientos con solo tocar un botón. Y para potenciar la diversión, este dinosaurio es fácil de alimentar. Simplemente coloca 3 pilas AA y estarás listo para la acción!`,
+        Colores vibrantes y personajes adorables hacen que el aprendizaje sea divertido. Los botones grandes y el mouse fácil de usar garantizan una inmersión sin complicaciones.
+        
+        Este computador educativo es una herramienta valiosa que fomenta el desarrollo cognitivo. ¡Cada toque en las teclas crea un futuro de conocimiento!`,
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto6a.webp"
+                url: "/producto2a.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto6b.webp"
+                url: "/producto2b.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2c.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2e.webp"
             },
             {
                 tipo: "video",
-                url: "/producto6c.mp4"
+                url: "/producto2d.mp4"
             }
         ],
         status: "disponible",
-        colores: "Verde",
+        colores: "Rosado, Azul, Rojo",
         edad: "+3",
-        categoria: "dinosaurios",
-        genero: "ninos"
-    },
-    {
-        id: 53,
-        titulo: "Spiderman Bailarin, Luces y Sonido",
-        preciomayorista: 29999,
-        precio: 39999,
-        descripcion: `¡Experimenta la emoción de Spider-Man en una nueva dimensión con el Spider-Man Bailarín con Luces y Sonido! Este juguete te llevará directamente al mundo del famoso superhéroe arácnido mientras se mueve, brilla y suena al ritmo de la acción.
-
-        Spider-Man cobra vida con movimientos de baile divertidos y realistas que te harán sonreír. Sus luces brillantes añaden un toque de magia y emoción mientras iluminan el camino hacia la diversión. Además, con sonidos auténticos, te sentirás como si estuvieras en el corazón de una verdadera batalla contra villanos.
-        
-        Este Spider-Man bailarín es fácil de activar con solo colocar 3 pilas AA!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto53a.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto53b.mp4" 
-            }
-        ],
-        status: "disponible",
-        colores: "Rojo",
-        edad: "+3",
-        categoria: "carros-impulso",
-        genero: "ninos"
-    },
-    {
-        id: 59,
-        titulo: "Maleta Tocador con Accesorios",
-        preciomayorista: 29900,
-        precio: 39999,
-        descripcion: `¡Lleva la diversión y la belleza a un nivel superior con la Maleta Tocador para Niñas! Este juguete es perfecto para que las pequeñas exploren su creatividad y se sumerjan en el emocionante mundo de la moda y el maquillaje.
-
-        Dentro de esta maleta mágica, encontrarán 3 esmaltes de uñas para crear manicuras encantadoras, 1 peinilla para peinar y arreglar su cabello, y 1 secador de juguete para simular el secado y el estilismo del cabello.
-        
-        Pero eso no es todo, también podrán disfrutar de 3 anillos, 3 pulseras y 1 collar para añadir un toque de glamour a su estilo. Con 2 labiales de juguete en tonos divertidos, podrán experimentar con colores y expresar su personalidad!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto59a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto59b.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Rosado",
-        edad: "+3",
-        categoria: "maquillaje",
-        genero: "ninas"
-    },
-    {
-        id: 52,
-        titulo: "Lanzador Hidrogel M416 Automatica Recargable con 3.000 Orvis Hidrogel",
-        preciomayorista: 89999,
-        precio: 119900,
-        descripcion: `¡Entra en la acción con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un M416! Este emocionante juguete te lleva a un mundo lleno de emociones y diversión mientras te sumerges en batallas simuladas y aventuras imaginativas.
-
-        La pistola lanzadora automática, con su diseño estilo M416, te permite disparar ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar cualquier desafío y mantener la emoción durante horas.
-        
-        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto52a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+11",
-        categoria: "punteria",
-        genero: "ninos"
-    },
-    {
-        id: 1,
-        titulo: "Kit de Uñas X12 con Brillos",
-        preciomayorista: 4900,
-        precio: 9900,
-        descripcion: `¡Fusionamos diversión y creatividad en nuestro kit de uñas encantadoras! Diseñado especialmente para niñas de 3 a 7 años, este kit les brinda la oportunidad de explorar su lado artístico mientras se divierten.
-
-        Con 12 uñas en colores vibrantes y diseños encantadores, cada uña es una pequeña obra maestra lista para ser creada. Desde delicadas flores hasta brillantes estrellas, ¡serán princesitas creativas!
-        
-        El kit incluye un tubito de pegamento suave y seguro para que las uñas permanezcan en su lugar durante todas las aventuras. Y para el toque final mágico, nuestro frasquito de brillo añade destellos y colores chispeantes a cada creación.`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto1b.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto1c.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto1d.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto1a.webp"
-            }
-        ],
-        status: "disponible",
-        colores: "Rosado",
-        edad: "+3",
-        categoria: "maquillaje",
+        categoria: "educativo",
         genero: "ninas"
     },
     {
         id: 58,
         titulo: "Carro Control Sensor con Control Remoto y Vapor de Agua",
         preciomayorista: 84999,
-        precio: 119999,
+        precio: 109900,
         descripcion: `¡Prepárate para una experiencia de conducción única con el Carro Control Sensor, Este vehículo te ofrece lo mejor de ambos mundos, combinando tecnología avanzada con la diversión clásica de los carros a control remoto.
 
         El control de sensor de movimiento te permite dirigir el carro simplemente moviendo la mano, lo que añade un nivel de interacción y emoción sin precedentes. ¡Es como si estuvieras controlando el carro con gestos mágicos! Además, el control convencional también está incluido para una experiencia de conducción tradicional.
@@ -187,6 +91,44 @@ const productosdb = [
         edad: "+6",
         categoria: "carros-control",
         genero: "ninos"
+    },
+    {
+        id: 355,
+        titulo: "Tablero Magico Digital de Conejo Unisex",
+        preciomayorista: 24500,
+        precio: 30900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto355a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 179,
+        titulo: "Organeta Vaca con Luz y Sonido",
+        preciomayorista: 19900,
+        precio: 28900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto179a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "organetas-guitarras",
+        genero: "unisex"
     },
     {
         id: 62,
@@ -222,8 +164,301 @@ const productosdb = [
         genero: "unisex"
     },
     {
+        id: 70,
+        titulo: "Cry Baby Sorpresa Huevo",
+        preciomayorista: 69900,
+        precio: 79900,
+        descripcion: `
+        ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
+        
+        La guitarra eléctrica es fácil de tocar y tiene un diseño atractivo, mientras que el parlante y el micrófono amplifican el sonido, permitiendo a las niñas tocar y cantar con estilo. También pueden conectar sus dispositivos favoritos para tocar junto a sus canciones preferidas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto70a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto70b.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto70c.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 100,
+        titulo: "Frozen con Microfono Alumbra Cabello",
+        preciomayorista: 59900,
+        precio: 64900,
+        referencia: "SR9878-1",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto100a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 52,
+        titulo: "Lanzador Hidrogel M416 Automatica Recargable con 3.000 Orvis Hidrogel",
+        preciomayorista: 89999,
+        precio: 119900,
+        descripcion: `¡Entra en la acción con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un M416! Este emocionante juguete te lleva a un mundo lleno de emociones y diversión mientras te sumerges en batallas simuladas y aventuras imaginativas.
+
+        La pistola lanzadora automática, con su diseño estilo M416, te permite disparar ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar cualquier desafío y mantener la emoción durante horas.
+        
+        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto52a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+11",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 275,
+        titulo: "Play Doh Doctor Dientes",
+        preciomayorista: 28500,
+        precio: 34900,
+        referencia: "JD1218",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto275a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 74,
+        titulo: "Registradora con Carrito Mercado y Accesorios",
+        preciomayorista: 71900,
+        precio: 79900,
+        descripcion: `
+        ¡Sumérgete en la diversión de las compras con la Registradora de Juguete con Carrito de Mercado! Esta registradora cuenta con luces y sonidos realistas que hacen que las compras simuladas sean emocionantes. Incluye un carrito de mercado, elementos de mercado, una tarjeta de crédito y un lector de códigos de barras. Los niños pueden jugar como cajeros, clientes o dueños de tiendas, fomentando la creatividad y las habilidades matemáticas. ¡Prepárate para horas de juego y aprendizaje mientras exploras el mundo de las compras y el comercio!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto74a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto74b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "doctor-cocina",
+        genero: "ninas"
+    },
+    {
+        id: 115,
+        titulo: "Peluche Minie Mouse",
+        preciomayorista: 28900  ,
+        precio: 39900,
+        referencia: "HD028-40",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto115a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "peluches",
+        genero: "ninas"
+    },  
+    {
+        id: 349,
+        titulo: "Cry Baby Caminadora en Caja",
+        preciomayorista: 52900,
+        precio: 65900,
+        referencia: "L0426-1",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto349a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 53,
+        titulo: "Spiderman Bailarin, Luces y Sonido",
+        preciomayorista: 29999,
+        precio: 39999,
+        descripcion: `¡Experimenta la emoción de Spider-Man en una nueva dimensión con el Spider-Man Bailarín con Luces y Sonido! Este juguete te llevará directamente al mundo del famoso superhéroe arácnido mientras se mueve, brilla y suena al ritmo de la acción.
+
+        Spider-Man cobra vida con movimientos de baile divertidos y realistas que te harán sonreír. Sus luces brillantes añaden un toque de magia y emoción mientras iluminan el camino hacia la diversión. Además, con sonidos auténticos, te sentirás como si estuvieras en el corazón de una verdadera batalla contra villanos.
+        
+        Este Spider-Man bailarín es fácil de activar con solo colocar 3 pilas AA!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto53a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto53b.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rojo",
+        edad: "+3",
+        categoria: "carros-impulso",
+        genero: "ninos"
+    },
+    {
+        id: 76,
+        titulo: "Maquillaje Luna Juguete",
+        preciomayorista: 21999,
+        precio: 39999,
+        descripcion: `¡Deja que la creatividad brille como la luna con este Maquillaje para Niñas en Forma de Luna! Este set de maquillaje es una manera mágica de permitir que las jóvenes artistas exploren el mundo del maquillaje de manera segura y divertida.
+
+        El maquillaje en forma de luna tiene un diseño encantador que hará que las niñas se sientan como auténticas artistas del maquillaje. Incluye una paleta de colores suaves y brillantes que les permite crear looks mágicos y creativos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto76a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 78,
+        titulo: "Pista Carros Estilo Cocodrilo",
+        preciomayorista: 59999,
+        precio: 79999,
+        descripcion: `¡Prepárate para una emocionante aventura en la Pista de Carros Cocodrilo! Esta pista de carreras es el lugar perfecto para que los amantes de la velocidad y la acción pongan a prueba sus habilidades.
+
+        La pista incluye un carro de impulso que está listo para la carrera. Coloca el carro en la pista y dale un fuerte impulso para que comience a moverse a toda velocidad. La pista en sí tiene dos vueltas de 360 grados que agregarán emoción y giros alocados a la carrera.
+        
+        Pero eso no es todo, el desafío principal de la pista es el enorme obstáculo en forma de cabeza de cocodrilo que se interpone en el camino de los carros. Los pilotos deben navegar hábilmente alrededor del cocodrilo para evitar chocar y mantenerse en la pista!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto78a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto78b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "carros-impulso",
+        genero: "ninos"
+    },
+    {
+        id: 101,
+        titulo: "Muñeca Doctora Juguetes con Luz en El Cabello",
+        preciomayorista: 57900,
+        precio: 64900,
+        referencia: "SR9885",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto101a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    
+    {
+        id: 14,
+        titulo: "Carro a Control Remoto con Efecto Vapor",
+        preciomayorista: 77900,
+        precio: 99900,
+        descripcion: `¡Acelera hacia la diversión con nuestro Carro a Control Remoto con Efecto Vapor! Este impresionante vehículo combina la emoción de la velocidad con un toque de magia gracias a su capacidad para lanzar vapor de agua, ¡simulando un efecto de nitro!
+
+        Equipado con luces brillantes y sonidos realistas, este carro se convierte en una experiencia multisensorial que cautivará a los entusiastas de todas las edades. Su diseño llamativo y su potente rendimiento hacen que cada giro sea una aventura emocionante.
+        
+        Y lo mejor de todo, este carro es de batería recargable. Conéctalo y carga para estar listo para la acción en poco tiempo!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto14a.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto14b.webp"
+            },
+            {
+                tipo: "video",
+                url: "/producto14c.mp4"
+            }
+        ],
+        status: "disponible",
+        colores: "Rojo, Morado",
+        edad: "+3",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 69,
+        titulo: "Kit Guitarra con Parlante y Microfono",
+        preciomayorista: 135900,
+        precio: 159900,
+        descripcion: `
+        ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
+        
+        La guitarra eléctrica es fácil de tocar y tiene un diseño atractivo, mientras que el parlante y el micrófono amplifican el sonido, permitiendo a las niñas tocar y cantar con estilo. También pueden conectar sus dispositivos favoritos para tocar junto a sus canciones preferidas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto69a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "ninas"
+    },
+    {
         id: 51,
-        titulo: "Pistola Hidrogel Automatica Recargable con 1.500 Orvis Hidrogel",
+        titulo: "Pistola Hidrogel Automatica Recargable con 3.000 Orvis Hidrogel",
         preciomayorista: 49900,
         precio: 59900,
         descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
@@ -242,6 +477,197 @@ const productosdb = [
         edad: "+11",
         categoria: "punteria",
         genero: "ninos"
+    },
+    {
+        id: 114,
+        titulo: "Kit Maquillaje con Secador de Uñas",
+        preciomayorista: 35000,
+        precio: 41900,
+        referencia: "3028-7",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto114a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 131,
+        titulo: "Playdoh de Pulpo",
+        preciomayorista: 33900,
+        precio: 44900,
+        referencia: "2902B",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto131a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 15,
+        titulo: "Carro a Control Remoto Estilo Ferrari",
+        preciomayorista: 28990,
+        precio: 53900,
+        descripcion: `¡Experimenta la emoción de la velocidad con nuestro Carro a Control Remoto Ferrari! Este vehículo de alta calidad captura la elegancia y la potencia de un Ferrari, ofreciéndote una experiencia de conducción excepcional.
+
+        Con detalles auténticos y un diseño elegante que emula la estética icónica de Ferrari, este carro a control remoto es un deleite visual y funcional. Equipado con batería recargable, simplemente conéctalo para recargarlo y estar listo para dominar la pista una vez más.
+        
+        Controla cada giro y maniobra con el control remoto intuitivo, permitiendo que te conviertas en el conductor de tu propia aventura!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto15b.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto15a.webp"
+            }
+        ],
+        status: "disponible",
+        colores: "Amarillo, Rojo",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 118,
+        titulo: "Bebe Sonido con Sleeping y Canguro",
+        preciomayorista: 51900,
+        precio: 62900,
+        referencia: "XMY8024",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto118a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 6,
+        titulo: "Dinosaurio Rex con Movimiento Luces Sonido",
+        preciomayorista: 29999,
+        precio: 36999,
+        descripcion: `¡Transporta a tu pequeño a la era de los dinosaurios con nuestro Dinosaurio Rex! Este magnífico amigo prehistórico está lleno de emocionantes luces brillantes, sonidos realistas y un movimiento fascinante en su cuerpo, garras y cola, este dinosaurio cobra vida en las manos de tu hijo. Cada paso es una aventura asombrosa mientras el dinosaurio camina y se balancea con autenticidad, creando momentos de maravilla y diversión.
+        
+        La interacción es clave: los niños adorarán activar los sonidos y movimientos con solo tocar un botón. Y para potenciar la diversión, este dinosaurio es fácil de alimentar. Simplemente coloca 3 pilas AA y estarás listo para la acción!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto6a.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto6b.webp"
+            },
+            {
+                tipo: "video",
+                url: "/producto6c.mp4"
+            }
+        ],
+        status: "disponible",
+        colores: "Verde",
+        edad: "+3",
+        categoria: "dinosaurios",
+        genero: "ninos"
+    },
+    {
+        id: 77,
+        titulo: "Maquillaje Unicornio Juguete",
+        preciomayorista: 21900,
+        precio: 32900,
+        descripcion: `¡Deja que la creatividad de un Unicornio con este Maquillaje para Niñas en Forma de Unicornio! Este set de maquillaje es una manera mágica de permitir que las jóvenes artistas exploren el mundo del maquillaje de manera segura y divertida.
+
+        El maquillaje en forma de luna tiene un diseño encantador que hará que las niñas se sientan como auténticas artistas del maquillaje. Incluye una paleta de colores suaves y brillantes que les permite crear looks mágicos y creativos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto77a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 59,
+        titulo: "Maleta Tocador con Accesorios",
+        preciomayorista: 29900,
+        precio: 39999,
+        descripcion: `¡Lleva la diversión y la belleza a un nivel superior con la Maleta Tocador para Niñas! Este juguete es perfecto para que las pequeñas exploren su creatividad y se sumerjan en el emocionante mundo de la moda y el maquillaje.
+
+        Dentro de esta maleta mágica, encontrarán 3 esmaltes de uñas para crear manicuras encantadoras, 1 peinilla para peinar y arreglar su cabello, y 1 secador de juguete para simular el secado y el estilismo del cabello.
+        
+        Pero eso no es todo, también podrán disfrutar de 3 anillos, 3 pulseras y 1 collar para añadir un toque de glamour a su estilo. Con 2 labiales de juguete en tonos divertidos, podrán experimentar con colores y expresar su personalidad!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto59a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto59b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosado",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 1,
+        titulo: "Kit de Uñas X12 con Brillos",
+        preciomayorista: 4900,
+        precio: 9900,
+        descripcion: `¡Fusionamos diversión y creatividad en nuestro kit de uñas encantadoras! Diseñado especialmente para niñas de 3 a 7 años, este kit les brinda la oportunidad de explorar su lado artístico mientras se divierten.
+
+        Con 12 uñas en colores vibrantes y diseños encantadores, cada uña es una pequeña obra maestra lista para ser creada. Desde delicadas flores hasta brillantes estrellas, ¡serán princesitas creativas!
+        
+        El kit incluye un tubito de pegamento suave y seguro para que las uñas permanezcan en su lugar durante todas las aventuras. Y para el toque final mágico, nuestro frasquito de brillo añade destellos y colores chispeantes a cada creación.`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto1b.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto1c.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto1d.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto1a.webp"
+            }
+        ],
+        status: "disponible",
+        colores: "Rosado",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
     },
     {
         id: 33,
@@ -397,7 +823,7 @@ const productosdb = [
     },
     {
         id: 56,
-        titulo: "Carro Abre Puertas Control Remoto",
+        titulo: "Carro Abre Puertas Recargable Control Remoto",
         preciomayorista: 61999,
         precio: 72999,
         descripcion: `¡Experimenta la elegancia y la diversión de la carretera con el Carro a Control Remoto Estilo Mini Cooper! Este vehículo de juguete te ofrece una experiencia de conducción realista con un toque de lujo y estilo.
@@ -420,6 +846,585 @@ const productosdb = [
         edad: "+6",
         categoria: "carros-control",
         genero: "ninos"
+    },
+    {
+        id: 75,
+        titulo: "Maleta Constructor con Accesorios",
+        preciomayorista: 41999,
+        precio: 54900,
+        descripcion: `¡Lleva la emoción de la construcción a cualquier lugar con la Maleta Constructora 2 en 1! Este innovador juguete es perfecto para los jóvenes constructores que desean llevar su taller a donde quieran.
+
+        La maleta se abre para revelar un taller completo con herramientas, tornillos y todo lo que los niños necesitan para construir sus propias creaciones. Incluso incluye una sierra de juguete para proyectos de "corte". Los niños pueden explorar su creatividad y aprender sobre la construcción mientras juegan.
+        
+        Cuando terminan de jugar, el taller se cierra y se convierte en una maleta que pueden cargar en la espalda como una mochila. Es perfecta para llevarla a casa de un amigo, al parque o a cualquier lugar donde la imaginación de los niños los lleve!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto75a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto75b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "construccion",
+        genero: "ninos"
+    },
+    {
+        id: 79,
+        titulo: "Pista Carros Estilo Tiburon",
+        preciomayorista: 59999,
+        precio: 79999,
+        descripcion: `¡Prepárate para una emocionante aventura en la Pista de Carros Tiburon! Esta pista de carreras es el lugar perfecto para que los amantes de la velocidad y la acción pongan a prueba sus habilidades.
+
+        La pista incluye un carro de impulso que está listo para la carrera. Coloca el carro en la pista y dale un fuerte impulso para que comience a moverse a toda velocidad. La pista en sí tiene dos vueltas de 360 grados que agregarán emoción y giros alocados a la carrera.
+        
+        Pero eso no es todo, el desafío principal de la pista es el enorme obstáculo en forma de cabeza de Tiburon que se interpone en el camino de los carros. Los pilotos deben navegar hábilmente alrededor del tiburon para evitar chocar y mantenerse en la pista!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto79a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto79b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "carros-impulso",
+        genero: "ninos"
+    },
+    {
+        id: 105,
+        titulo: "Shakira Mediana",
+        preciomayorista: 28900,
+        precio: 39900,
+        referencia: "XW155-35",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto105a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    
+    {
+        id: 116,
+        titulo: "Peluche Mario Bros",
+        preciomayorista: 29900,
+        precio: 39900,
+        referencia: "8901",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto116a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "peluches",
+        genero: "ninas"
+    },
+    {
+        id: 108,
+        titulo: "Kit de Belleza 52 Piezas",
+        preciomayorista: 68900,
+        precio: 99900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto108a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto108b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "maquillaje",
+        genero: "ninas"
+    },
+    {
+        id: 148,
+        titulo: "Vengadores X4 Blister",
+        preciomayorista: 29900,
+        precio: 39900,
+        referencia: "63215",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto148a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "ninos"
+    },
+    
+    {
+        id: 168,
+        titulo: "Peluche Chimuelo",
+        preciomayorista: 15900,
+        precio: 29900,
+        referencia: "845212",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto168a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "peluches",
+        genero: "unisex"
+    },
+    {
+        id: 167,
+        titulo: "Boquitoqui de Personajes",
+        preciomayorista: 19900,
+        precio: 29900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto167a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Avengers, Mickey Mouse, Cars, Frozen",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "unisex"
+    },
+    {
+        id: 174,
+        titulo: "Lego X1 de Personajes",
+        preciomayorista: 3500,
+        precio: 5900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto174a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "legos",
+        genero: "unisex"
+    },
+    {
+        id: 181,
+        titulo: "Cry Baby Doctora",
+        preciomayorista: 31900,
+        precio: 39900,
+        referencia: "KQ508",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto181a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 178,
+        titulo: "Triceratops con Movimiento, Luces y Sonido",
+        preciomayorista: 31900,
+        precio: 37900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto178a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "dinosaurios",
+        genero: "unisex"
+    },
+    {
+        id: 180,
+        titulo: "Organeta Gusano con Luz y Sonido",
+        preciomayorista: 19900,
+        precio: 28900,
+        referencia: "3019",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto180a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "organetas-guitarras",
+        genero: "unisex"
+    },
+    {
+        id: 182,
+        titulo: "Organeta Granja con Luz y Sonido",
+        preciomayorista: 17900,
+        precio: 25900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto182a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "organetas-guitarras",
+        genero: "unisex"
+    },
+    {
+        id: 186,
+        titulo: "Organeta Perro con Luz y Sonido",
+        preciomayorista: 32900,
+        precio: 42900,
+        referencia: "5577",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto186a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "organetas-guitarras",
+        genero: "unisex"
+    },
+    {
+        id: 187,
+        titulo: "Organeta Caballo con Luz y Sonido",
+        preciomayorista: 32900,
+        precio: 42900,
+        referencia: "5577",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto187a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "organetas-guitarras",
+        genero: "unisex"
+    },
+    {
+        id: 188,
+        titulo: "Pistola con Laser Lanza Dardos e Hidrogel",
+        preciomayorista: 16900,
+        precio: 29900,
+        referencia: "M138-C",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto188a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
+        id: 359,
+        titulo: "Registradora Musical con Mercado, Dinero y Canasta",
+        preciomayorista: 79900,
+        precio: 94900,
+        referencia: "5911",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto359a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "doctor-cocina",
+        genero: "ninas"
+    },
+    {
+        id: 354,
+        titulo: "Tablero Magico Digital de Dinosaurio",
+        preciomayorista: 28900,
+        precio: 34900,
+        referencia: "TB25",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto354a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 218,
+        titulo: "Lego Transformer 527 Pcs",
+        preciomayorista: 66900,
+        precio: 78900,
+        referencia: "55031",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto218a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto218b.webp" 
+            } 
+        ],
+        status: "disponible",
+        colores: "Optimus Prime, Bumblee Bee",
+        edad: "+3",
+        categoria: "legos",
+        genero: "ninos"
+    },
+    {
+        id: 271,
+        titulo: "Lego Transformers de 816 Piezas",
+        preciomayorista: 69900,
+        precio: 84900,
+        referencia: "98271/72",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto271a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto271a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "legos",
+        genero: "ninos"
+    },
+    {
+        id: 281,
+        titulo: "Lego Avengers de 273 Piezas",
+        preciomayorista: 29900,
+        precio: 39900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto281a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "legos",
+        genero: "ninos"
+    },
+    {
+        id: 107,
+        titulo: "Muñeca Cry Baby Orina con Pañal y Tetero",
+        preciomayorista: 34900,
+        precio: 49900,
+        referencia: "KQ-508",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto107a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 248,
+        titulo: "LOL con Huevo Sorpresa Blister",
+        preciomayorista: 19900,
+        precio: 24900,
+        referencia: "2018-35-2B",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto248a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 135,
+        titulo: "Barbie Sirena con Luz y Sonido",
+        preciomayorista: 17900,
+        precio: 23900,
+        referencia: "SR3390",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto135a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 249,
+        titulo: "Dinosaurio para Pintar",
+        preciomayorista: 13900,
+        precio: 21900,
+        referencia: "AN808",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto249a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "ninos"
+    },
+    {
+        id: 170,
+        titulo: "Baby Yoda X3 en Blister",
+        preciomayorista: 14900,
+        precio: 21900,
+        referencia: "19011",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto170a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "unisex"
+    },
+    {
+        id: 256,
+        titulo: "Peluche Iron Man",
+        preciomayorista: 32900,
+        precio: 49900,
+        referencia: "RW-2",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto256a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "peluches",
+        genero: "ninos"
+    },
+    {
+        id: 160,
+        titulo: "Play Doh X12",
+        preciomayorista: 37900,
+        precio: 44900,
+        referencia: "JD1204",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto160a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 223,
+        titulo: "Peluche Sonic",
+        preciomayorista: 24900,
+        precio: 31900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto223a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "peluches",
+        genero: "unisex"
     },
     {
         id: 63,
@@ -451,32 +1456,7 @@ const productosdb = [
         categoria: "maquillaje",
         genero: "ninas"
     },
-    {
-        id: 15,
-        titulo: "Carro a Control Remoto Estilo Ferrari",
-        preciomayorista: 28990,
-        precio: 53900,
-        descripcion: `¡Experimenta la emoción de la velocidad con nuestro Carro a Control Remoto Ferrari! Este vehículo de alta calidad captura la elegancia y la potencia de un Ferrari, ofreciéndote una experiencia de conducción excepcional.
-
-        Con detalles auténticos y un diseño elegante que emula la estética icónica de Ferrari, este carro a control remoto es un deleite visual y funcional. Equipado con batería recargable, simplemente conéctalo para recargarlo y estar listo para dominar la pista una vez más.
-        
-        Controla cada giro y maniobra con el control remoto intuitivo, permitiendo que te conviertas en el conductor de tu propia aventura!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto15b.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto15a.webp"
-            }
-        ],
-        status: "disponible",
-        colores: "Amarillo, Rojo",
-        edad: "+6",
-        categoria: "carros-control",
-        genero: "ninos"
-    },
+    
     {
         id: 55,
         titulo: "Carro Loco Grafiti Control Bateria Recargable",
@@ -1002,36 +1982,6 @@ const productosdb = [
         genero: "unisex"
     },
     {
-        id: 14,
-        titulo: "Carro a Control Remoto con Efecto Vapor",
-        preciomayorista: 77900,
-        precio: 134900,
-        descripcion: `¡Acelera hacia la diversión con nuestro Carro a Control Remoto con Efecto Vapor! Este impresionante vehículo combina la emoción de la velocidad con un toque de magia gracias a su capacidad para lanzar vapor de agua, ¡simulando un efecto de nitro!
-
-        Equipado con luces brillantes y sonidos realistas, este carro se convierte en una experiencia multisensorial que cautivará a los entusiastas de todas las edades. Su diseño llamativo y su potente rendimiento hacen que cada giro sea una aventura emocionante.
-        
-        Y lo mejor de todo, este carro es de batería recargable. Conéctalo y carga para estar listo para la acción en poco tiempo!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto14a.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto14b.webp"
-            },
-            {
-                tipo: "video",
-                url: "/producto14c.mp4"
-            }
-        ],
-        status: "disponible",
-        colores: "Rojo, Morado",
-        edad: "+3",
-        categoria: "carros-control",
-        genero: "ninos"
-    },
-    {
         id: 16,
         titulo: "Carro a Control Remoto (Bidireccional)",
         preciomayorista: 14900,
@@ -1074,46 +2024,6 @@ const productosdb = [
         edad: "+6",
         categoria: "didacticos",
         genero: "unisex"
-    },
-    {
-        id: 2,
-        titulo: "Computador Interactivo con Pantalla y Mouse",
-        preciomayorista: 34900,
-        precio: 39900,
-        descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo Todo en Uno, equipado con mouse y pantalla digital! Diseñado para preescolares, este juguete cautivante es más que un juego.
-
-        Explora números del 1 al 10, el abecedario y palabras esenciales con diversión interactiva. Con canciones animadas y actividades intuitivas de suma y resta, cada momento se convierte en una lección emocionante.
-        
-        Colores vibrantes y personajes adorables hacen que el aprendizaje sea divertido. Los botones grandes y el mouse fácil de usar garantizan una inmersión sin complicaciones.
-        
-        Este computador educativo es una herramienta valiosa que fomenta el desarrollo cognitivo. ¡Cada toque en las teclas crea un futuro de conocimiento!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto2a.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2b.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2c.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2e.webp"
-            },
-            {
-                tipo: "video",
-                url: "/producto2d.mp4"
-            }
-        ],
-        status: "disponible",
-        colores: "Rosado, Azul, Rojo",
-        edad: "+3",
-        categoria: "educativo",
-        genero: "ninas"
     },
     {
         id: 19,
@@ -1243,6 +2153,7 @@ const productosdb = [
         categoria: "carros-impulso",
         genero: "ninos"
     },
+    
     {
         id: 25,
         titulo: "Slime con Sorpresa de Mario Bros",
@@ -1657,7 +2568,7 @@ const productosdb = [
         id: 67,
         titulo: "Cubo Rubik 3X3 Fino",
         preciomayorista: 6900,
-        precio: 10999,
+        precio: 14900,
         descripcion: `¡Eleva el desafío con el Cubo Rubik 3x3 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
 
         El material fino proporciona un giro suave y rápido en cada movimiento, lo que te permite avanzar a través de las complejas combinaciones de colores con facilidad y destreza. Cada giro es satisfactorio y preciso, lo que agrega una capa adicional de emoción a la resolución del cubo!`,
@@ -1692,56 +2603,6 @@ const productosdb = [
         edad: "+3",
         categoria: "didacticos",
         genero: "unisex"
-    },
-    {
-        id: 69,
-        titulo: "Kit Guitarra con Parlante y Microfono",
-        preciomayorista: 135900,
-        precio: 159900,
-        descripcion: `
-        ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
-        
-        La guitarra eléctrica es fácil de tocar y tiene un diseño atractivo, mientras que el parlante y el micrófono amplifican el sonido, permitiendo a las niñas tocar y cantar con estilo. También pueden conectar sus dispositivos favoritos para tocar junto a sus canciones preferidas!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto69a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "educativo",
-        genero: "ninas"
-    },
-    {
-        id: 70,
-        titulo: "Cry Baby Sorpresa Huevo",
-        preciomayorista: 69900,
-        precio: 79900,
-        descripcion: `
-        ¡Inspira a tu pequeña estrella musical con el Conjunto de Guitarra Eléctrica, Parlante y Micrófono! Este juguete musical es perfecto para que las jóvenes artistas exploren la música de manera creativa y divertida.
-        
-        La guitarra eléctrica es fácil de tocar y tiene un diseño atractivo, mientras que el parlante y el micrófono amplifican el sonido, permitiendo a las niñas tocar y cantar con estilo. También pueden conectar sus dispositivos favoritos para tocar junto a sus canciones preferidas!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto70a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto70b.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto70c.mp4" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecas",
-        genero: "ninas"
     },
     {
         id: 71,
@@ -1792,863 +2653,6 @@ const productosdb = [
         categoria: "didacticos",
         genero: "unisex"
     },
-    {
-        id: 74,
-        titulo: "Registradora con Carrito Mercado y Accesorios",
-        preciomayorista: 71900,
-        precio: 79900,
-        descripcion: `
-        ¡Sumérgete en la diversión de las compras con la Registradora de Juguete con Carrito de Mercado! Esta registradora cuenta con luces y sonidos realistas que hacen que las compras simuladas sean emocionantes. Incluye un carrito de mercado, elementos de mercado, una tarjeta de crédito y un lector de códigos de barras. Los niños pueden jugar como cajeros, clientes o dueños de tiendas, fomentando la creatividad y las habilidades matemáticas. ¡Prepárate para horas de juego y aprendizaje mientras exploras el mundo de las compras y el comercio!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto74a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto74b.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "doctor-cocina",
-        genero: "ninas"
-    },
-    {
-        id: 75,
-        titulo: "Maleta Constructor con Accesorios",
-        preciomayorista: 41999,
-        precio: 54900,
-        descripcion: `¡Lleva la emoción de la construcción a cualquier lugar con la Maleta Constructora 2 en 1! Este innovador juguete es perfecto para los jóvenes constructores que desean llevar su taller a donde quieran.
-
-        La maleta se abre para revelar un taller completo con herramientas, tornillos y todo lo que los niños necesitan para construir sus propias creaciones. Incluso incluye una sierra de juguete para proyectos de "corte". Los niños pueden explorar su creatividad y aprender sobre la construcción mientras juegan.
-        
-        Cuando terminan de jugar, el taller se cierra y se convierte en una maleta que pueden cargar en la espalda como una mochila. Es perfecta para llevarla a casa de un amigo, al parque o a cualquier lugar donde la imaginación de los niños los lleve!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto75a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto75b.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "construccion",
-        genero: "ninos"
-    },
-    {
-        id: 76,
-        titulo: "Maquillaje Luna Juguete",
-        preciomayorista: 21999,
-        precio: 39999,
-        descripcion: `¡Deja que la creatividad brille como la luna con este Maquillaje para Niñas en Forma de Luna! Este set de maquillaje es una manera mágica de permitir que las jóvenes artistas exploren el mundo del maquillaje de manera segura y divertida.
-
-        El maquillaje en forma de luna tiene un diseño encantador que hará que las niñas se sientan como auténticas artistas del maquillaje. Incluye una paleta de colores suaves y brillantes que les permite crear looks mágicos y creativos!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto76a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "maquillaje",
-        genero: "ninas"
-    },
-    {
-        id: 77,
-        titulo: "Maquillaje Unicornio Juguete",
-        preciomayorista: 21900,
-        precio: 32900,
-        descripcion: `¡Deja que la creatividad de un Unicornio con este Maquillaje para Niñas en Forma de Unicornio! Este set de maquillaje es una manera mágica de permitir que las jóvenes artistas exploren el mundo del maquillaje de manera segura y divertida.
-
-        El maquillaje en forma de luna tiene un diseño encantador que hará que las niñas se sientan como auténticas artistas del maquillaje. Incluye una paleta de colores suaves y brillantes que les permite crear looks mágicos y creativos!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto77a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "maquillaje",
-        genero: "ninas"
-    },
-    {
-        id: 78,
-        titulo: "Pista Carros Estilo Cocodrilo",
-        preciomayorista: 59999,
-        precio: 79999,
-        descripcion: `¡Prepárate para una emocionante aventura en la Pista de Carros Cocodrilo! Esta pista de carreras es el lugar perfecto para que los amantes de la velocidad y la acción pongan a prueba sus habilidades.
-
-        La pista incluye un carro de impulso que está listo para la carrera. Coloca el carro en la pista y dale un fuerte impulso para que comience a moverse a toda velocidad. La pista en sí tiene dos vueltas de 360 grados que agregarán emoción y giros alocados a la carrera.
-        
-        Pero eso no es todo, el desafío principal de la pista es el enorme obstáculo en forma de cabeza de cocodrilo que se interpone en el camino de los carros. Los pilotos deben navegar hábilmente alrededor del cocodrilo para evitar chocar y mantenerse en la pista!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto78a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto78b.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "carros-impulso",
-        genero: "ninos"
-    },
-    {
-        id: 79,
-        titulo: "Pista Carros Estilo Tiburon",
-        preciomayorista: 59999,
-        precio: 79999,
-        descripcion: `¡Prepárate para una emocionante aventura en la Pista de Carros Tiburon! Esta pista de carreras es el lugar perfecto para que los amantes de la velocidad y la acción pongan a prueba sus habilidades.
-
-        La pista incluye un carro de impulso que está listo para la carrera. Coloca el carro en la pista y dale un fuerte impulso para que comience a moverse a toda velocidad. La pista en sí tiene dos vueltas de 360 grados que agregarán emoción y giros alocados a la carrera.
-        
-        Pero eso no es todo, el desafío principal de la pista es el enorme obstáculo en forma de cabeza de Tiburon que se interpone en el camino de los carros. Los pilotos deben navegar hábilmente alrededor del tiburon para evitar chocar y mantenerse en la pista!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto79a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto79b.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "carros-impulso",
-        genero: "ninos"
-    },
-    {
-        id: 105,
-        titulo: "Shakira Mediana",
-        preciomayorista: 28900,
-        precio: 39900,
-        referencia: "XW155-35",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto105a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "maquillaje",
-        genero: "ninas"
-    },
-    {
-        id: 114,
-        titulo: "Kit Maquillaje con Secador de Uñas",
-        preciomayorista: 35000,
-        precio: 41900,
-        referencia: "3028-7",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto114a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "maquillaje",
-        genero: "ninas"
-    },
-    {
-        id: 115,
-        titulo: "Peluche Minie Mouse",
-        preciomayorista: 28900  ,
-        precio: 39900,
-        referencia: "HD028-40",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto115a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "peluches",
-        genero: "ninas"
-    },
-    {
-        id: 116,
-        titulo: "Peluche Mario Bros",
-        preciomayorista: 29900,
-        precio: 39900,
-        referencia: "8901",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto116a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "peluches",
-        genero: "ninas"
-    },
-    {
-        id: 108,
-        titulo: "Kit de Belleza 52 Piezas",
-        preciomayorista: 68900,
-        precio: 99900,
-        referencia: "",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto108a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto108b.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "maquillaje",
-        genero: "ninas"
-    },
-    {
-        id: 148,
-        titulo: "Vengadores X4 Blister",
-        preciomayorista: 29900,
-        precio: 39900,
-        referencia: "63215",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto148a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecos",
-        genero: "ninos"
-    },
-    {
-        id: 131,
-        titulo: "Playdoh de Pulpo",
-        preciomayorista: 33900,
-        precio: 44900,
-        referencia: "2902B",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto131a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "didacticos",
-        genero: "unisex"
-    },
-    {
-        id: 100,
-        titulo: "Frozen con Microfono Alumbra Cabello",
-        preciomayorista: 59900,
-        precio: 64900,
-        referencia: "SR9878-1",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto100a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecas",
-        genero: "ninas"
-    },
-    {
-        id: 168,
-        titulo: "Peluche Chimuelo",
-        preciomayorista: 15900,
-        precio: 29900,
-        referencia: "845212",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto168a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "peluches",
-        genero: "unisex"
-    },
-    {
-        id: 167,
-        titulo: "Boquitoqui de Personajes",
-        preciomayorista: 19900,
-        precio: 29900,
-        referencia: "",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto167a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Avengers, Mickey Mouse, Cars, Frozen",
-        edad: "+3",
-        categoria: "munecos",
-        genero: "unisex"
-    },
-    {
-        id: 174,
-        titulo: "Lego X1 de Personajes",
-        preciomayorista: 3500,
-        precio: 5900,
-        referencia: "",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto174a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecos",
-        genero: "unisex"
-    },
-    {
-        id: 181,
-        titulo: "Cry Baby Doctora",
-        preciomayorista: 31900,
-        precio: 39900,
-        referencia: "KQ508",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto181a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecas",
-        genero: "ninas"
-    },
-    {
-        id: 178,
-        titulo: "Triceratops con Movimiento, Luces y Sonido",
-        preciomayorista: 31900,
-        precio: 37900,
-        referencia: "",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto178a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "dinosaurios",
-        genero: "unisex"
-    },
-    {
-        id: 179,
-        titulo: "Organeta Vaca con Luz y Sonido",
-        preciomayorista: 19900,
-        precio: 28900,
-        referencia: "",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto179a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "organetas-guitarras",
-        genero: "unisex"
-    },
-    {
-        id: 180,
-        titulo: "Organeta Gusano con Luz y Sonido",
-        preciomayorista: 19900,
-        precio: 28900,
-        referencia: "3019",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto180a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "organetas-guitarras",
-        genero: "unisex"
-    },
-    {
-        id: 182,
-        titulo: "Organeta Granja con Luz y Sonido",
-        preciomayorista: 17900,
-        precio: 25900,
-        referencia: "",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto182a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "organetas-guitarras",
-        genero: "unisex"
-    },
-    {
-        id: 186,
-        titulo: "Organeta Perro con Luz y Sonido",
-        preciomayorista: 32900,
-        precio: 42900,
-        referencia: "5577",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto186a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "organetas-guitarras",
-        genero: "unisex"
-    },
-    {
-        id: 187,
-        titulo: "Organeta Caballo con Luz y Sonido",
-        preciomayorista: 32900,
-        precio: 42900,
-        referencia: "5577",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto187a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "organetas-guitarras",
-        genero: "unisex"
-    },
-    {
-        id: 188,
-        titulo: "Pistola con Laser Lanza Dardos e Hidrogel",
-        preciomayorista: 16900,
-        precio: 29900,
-        referencia: "M138-C",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto188a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "punteria",
-        genero: "unisex"
-    },
-    {
-        id: 359,
-        titulo: "Registradora Musical con Mercado, Dinero y Canasta",
-        preciomayorista: 79900,
-        precio: 94900,
-        referencia: "5911",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto359a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "doctor-cocina",
-        genero: "ninas"
-    },
-    {
-        id: 354,
-        titulo: "Tablero Magico Digital de Dinosaurio",
-        preciomayorista: 28900,
-        precio: 34900,
-        referencia: "TB25",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto354a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "educativo",
-        genero: "unisex"
-    },
-    {
-        id: 355,
-        titulo: "Tablero Magicon Digital de Conejo",
-        preciomayorista: 24500,
-        precio: 30900,
-        referencia: "",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto355a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "educativo",
-        genero: "unisex"
-    },
-    {
-        id: 218,
-        titulo: "Lego Transformer 527 Pcs",
-        preciomayorista: 66900,
-        precio: 78900,
-        referencia: "55031",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto218a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto218b.webp" 
-            } 
-        ],
-        status: "disponible",
-        colores: "Optimus Prime, Bumblee Bee",
-        edad: "+3",
-        categoria: "munecos",
-        genero: "ninos"
-    },
-    {
-        id: 271,
-        titulo: "Lego Transformers de 816 Piezas",
-        preciomayorista: 69900,
-        precio: 84900,
-        referencia: "98271/72",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto271a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto271a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "legos",
-        genero: "ninos"
-    },
-    {
-        id: 281,
-        titulo: "Lego Avengers de 273 Piezas",
-        preciomayorista: 29900,
-        precio: 39900,
-        referencia: "",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto281a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "legos",
-        genero: "ninos"
-    },
-    {
-        id: 349,
-        titulo: "Cry Baby Caminadora en Caja",
-        preciomayorista: 52900,
-        precio: 65900,
-        referencia: "L0426-1",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto349a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecas",
-        genero: "ninas"
-    },
-    {
-        id: 107,
-        titulo: "Muñeca Cry Baby Orina con Pañal y Tetero",
-        preciomayorista: 34900,
-        precio: 49900,
-        referencia: "KQ-508",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto107a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecas",
-        genero: "ninas"
-    },
-    {
-        id: 118,
-        titulo: "Bebe Sonido con Sleeping y Canguro",
-        preciomayorista: 51900,
-        precio: 62900,
-        referencia: "XMY8024",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto118a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecas",
-        genero: "ninas"
-    },
-    {
-        id: 248,
-        titulo: "LOL con Huevo Sorpresa Blister",
-        preciomayorista: 19900,
-        precio: 24900,
-        referencia: "2018-35-2B",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto248a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecas",
-        genero: "ninas"
-    },
-    {
-        id: 101,
-        titulo: "Muñeca Doctora Juguetes con Luz en El Cabello",
-        preciomayorista: 57900,
-        precio: 64900,
-        referencia: "SR9885",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto101a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecas",
-        genero: "ninas"
-    },
-    {
-        id: 135,
-        titulo: "Barbie Sirena con Luz y Sonido",
-        preciomayorista: 17900,
-        precio: 23900,
-        referencia: "SR3390",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto135a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecas",
-        genero: "ninas"
-    },
-    {
-        id: 249,
-        titulo: "Dinosaurio para Pintar",
-        preciomayorista: 13900,
-        precio: 21900,
-        referencia: "AN808",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto249a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "educativo",
-        genero: "ninos"
-    },
-    {
-        id: 275,
-        titulo: "Play Doh Doctor Dientes",
-        preciomayorista: 28500,
-        precio: 34900,
-        referencia: "JD1218",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto275a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "educativo",
-        genero: "unisex"
-    },
-    {
-        id: 170,
-        titulo: "Baby Yoda X3 en Blister",
-        preciomayorista: 14900,
-        precio: 21900,
-        referencia: "19011",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto170a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "munecos",
-        genero: "unisex"
-    },
-    {
-        id: 256,
-        titulo: "Peluche Iron Man",
-        preciomayorista: 32900,
-        precio: 49900,
-        referencia: "RW-2",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto256a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+6",
-        categoria: "peluches",
-        genero: "ninos"
-    },
-    {
-        id: 160,
-        titulo: "Play Doh X12",
-        preciomayorista: 37900,
-        precio: 44900,
-        referencia: "JD1204",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto160a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "didacticos",
-        genero: "unisex"
-    },
-    {
-        id: 223,
-        titulo: "Peluche Sonic",
-        preciomayorista: 24900,
-        precio: 31900,
-        referencia: "",
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto223a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "peluches",
-        genero: "unisex"
-    },
-
 
 ];
 
