@@ -158,7 +158,6 @@ const Catalogo = () => {
               <option value="maquillaje">Maquillaje y Belleza</option>
               <option value="doctor-cocina">Doctor y Cocina</option>
               <option value="educativo">Interactivo y Educativo</option>
-              <option value="construccion">Construcción</option>
               <option value="peluches">Peluches</option>
               <option value="dinosaurios">Dinosaurios</option>
               <option value="organetas-guitarras">Organetas & Guitarras</option>
@@ -168,7 +167,7 @@ const Catalogo = () => {
               <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
               <option value="+3">Entre 2-5 años</option>
               <option value="+6">Entre 6-8 Años</option>
-              <option value="+11">Mas 11 Años</option>
+              <option value="+8">Mas de 8 Años</option>
             </select>
             
             <select name="ordenar" id="ordenar" onChange={e => setordenar(e.target.value)}>

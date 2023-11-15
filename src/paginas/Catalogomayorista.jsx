@@ -151,7 +151,6 @@ const Catalogomayorista = () => {
               <option value="maquillaje">Maquillaje y Belleza</option>
               <option value="doctor-cocina">Doctor y Cocina</option>
               <option value="educativo">Interactivo y Educativo</option>
-              <option value="construccion">Construcción</option>
               <option value="peluches">Peluches</option>
               <option value="dinosaurios">Dinosaurios</option>
               <option value="organetas-guitarras">Organetas & Guitarras</option>
@@ -161,13 +160,12 @@ const Catalogomayorista = () => {
               <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
               <option value="+3">Mas de 2 años</option>
               <option value="+6">Mas de 5 años</option>
-              <option value="+11">Mas de 11 años</option>
+              <option value="+8">Mas de 8 años</option>
             </select>
             <select name="ordenar" id="ordenar" onChange={e => setordenar(e.target.value)}>
-            <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
-              <option value="+3">Entre 2-5 años</option>
-              <option value="+6">Entre 6-8 Años</option>
-              <option value="+11">Mas 11 Años</option>
+              <option value="">{ordenar === "" ? "Ordenar" : "Mayor Relevancia"}</option>
+              <option value="asc">Precio menor a mayor</option>
+              <option value="des">Precio mayor a menor</option>
             </select>
             <div className="preciosrange">
               <p>Rango Precios</p>

@@ -22,7 +22,7 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+11",
+        edad: "+8",
         categoria: "punteria",
         genero: "ninos"
     },
@@ -103,6 +103,10 @@ const productosdb = [
             {
                 tipo: "imagen",
                 url: "/producto355a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto355b.webp" 
             }
         ],
         status: "disponible",
@@ -229,7 +233,7 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+11",
+        edad: "+8",
         categoria: "punteria",
         genero: "ninos"
     },
@@ -474,7 +478,7 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+11",
+        edad: "+8",
         categoria: "punteria",
         genero: "ninos"
     },
@@ -798,6 +802,45 @@ const productosdb = [
         genero: "ninas"
     },
     {
+        id: 13,
+        titulo: "Gimnasio de Actividades para Bebe",
+        preciomayorista: 69999,
+        precio: 74999,
+        descripcion: `¡Estimula el crecimiento y la diversión con nuestro Gimnasio de Bebés Sonidos y Juguetes! Este espacio de juego interactivo está diseñado para ofrecer a tu bebé una experiencia llena de aprendizaje y entretenimiento.
+
+        Con sonidos suaves y alegres, el gimnasio crea un ambiente envolvente que captura la atención y curiosidad de tu bebé. Además, el arco sobre la cabeza del bebé está decorado con juguetes colgantes que invitan a la exploración. Tu bebé podrá recostarse cómodamente mientras se sumerge en el mundo de los colores, formas y texturas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto13a.webp"
+            }
+        ],
+        status: "disponible",
+        colores: "Verde",
+        edad: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 176,
+        titulo: "Sonajero Digital Musical",
+        preciomayorista: 14999,
+        precio: 19999,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto176a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
         id: 31,
         titulo: "Mesa Proyector con Tanque de Agua, 8 Rompecabezas, 12 Marcadores, Sellos",
         preciomayorista: 81900,
@@ -870,7 +913,7 @@ const productosdb = [
         status: "disponible",
         colores: "Unicolor",
         edad: "+3",
-        categoria: "construccion",
+        categoria: "didacticos",
         genero: "ninos"
     },
     {
@@ -1151,6 +1194,25 @@ const productosdb = [
         edad: "+3",
         categoria: "organetas-guitarras",
         genero: "unisex"
+    },
+    {
+        id: 277,
+        titulo: "Lanzadora Hidrogel Larga con Gafas y 1.500 Orvis",
+        preciomayorista: 76900,
+        precio: 94900,
+        referencia: "568C",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto277a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+8",
+        categoria: "punteria",
+        genero: "ninos"
     },
     {
         id: 188,
@@ -1599,6 +1661,48 @@ const productosdb = [
         genero: "unisex"
     },
     {
+        id: 280,
+        titulo: "Perro Fino Saca la Lengua con Movimiento y Sonido",
+        preciomayorista: 62999,
+        precio: 74999,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto280a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto280b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "mascotas",
+        genero: "unisex"
+    },
+    {
+        id: 313,
+        titulo: "Perro Paw Patrol con Movimiento y Sonido",
+        preciomayorista: 52999,
+        precio: 64999,
+        referencia: "YC806",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto313a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "mascotas",
+        genero: "unisex"
+    },
+    {
         id: 48,
         titulo: "Pez con Movimiento, Luces y Sonido",
         preciomayorista: 32999,
@@ -1887,8 +1991,8 @@ const productosdb = [
     {
         id: 5,
         titulo: "Pistola de Burbujas Dinosaurio Rex",
-        preciomayorista: 1000,
-        precio: 49000,
+        preciomayorista: 59999,
+        precio: 69999,
         descripcion: `¡Diversión prehistórica te espera con nuestra Pistola de Burbujas Dinosaurio Rex! Este juguete único combina la emoción de las burbujas con el estilo del legendario tiranosaurio rex.
 
         Con su diseño de dinosaurio rex en colores vibrantes, esta pistola de burbujas ofrece una experiencia mágica para niños de todas las edades. Incluye dos frascos de burbujas para que la diversión comience de inmediato. Y lo mejor de todo, ¡puedes recargarla fácilmente con jabón de la casa para que la diversión nunca termine!
@@ -1905,7 +2009,7 @@ const productosdb = [
             }
             
         ],
-        status: "Out Stock",
+        status: "disponible",
         colores: "Verde, Azul",
         edad: "+3",
         categoria: "punteria",
@@ -1962,26 +2066,6 @@ const productosdb = [
         genero: "ninos"
     },
     {
-        id: 13,
-        titulo: "Gimnasio de Actividades para Bebe",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Estimula el crecimiento y la diversión con nuestro Gimnasio de Bebés Sonidos y Juguetes! Este espacio de juego interactivo está diseñado para ofrecer a tu bebé una experiencia llena de aprendizaje y entretenimiento.
-
-        Con sonidos suaves y alegres, el gimnasio crea un ambiente envolvente que captura la atención y curiosidad de tu bebé. Además, el arco sobre la cabeza del bebé está decorado con juguetes colgantes que invitan a la exploración. Tu bebé podrá recostarse cómodamente mientras se sumerge en el mundo de los colores, formas y texturas!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto13a.webp"
-            }
-        ],
-        status: "Out Stock",
-        colores: "Verde",
-        edad: "+0",
-        categoria: "didacticos",
-        genero: "unisex"
-    },
-    {
         id: 16,
         titulo: "Carro a Control Remoto (Bidireccional)",
         preciomayorista: 14900,
@@ -2004,6 +2088,836 @@ const productosdb = [
         edad: "+3",
         categoria: "carros-control",
         genero: "ninos"
+    },
+    
+    {
+        id: 35,
+        titulo: "Lego Mario Bros",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Embárcate en una emocionante aventura de construcción con el set Lego Super Mario: Desierto de los Ladrillos! Con 207 piezas, este set te sumergirá en el mundo icónico de Mario Bros mientras exploras el emocionante nivel del desierto.
+
+        Recrea tus escenas favoritas del juego con los bloques Lego y crea un desierto lleno de desafíos y diversión interactiva. Utiliza las piezas especiales y los elementos de acción para construir un emocionante recorrido que incluye dunas de arena, cactus y obstáculos únicos. ¡Pero cuidado con los enemigos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto35a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "didacticos",
+        genero: "ninos"
+    },
+    {
+        id: 36,
+        titulo: "Maleta Doctora con Accesorios Sonido y Luces",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Bienvenidos a la Maleta Doctora Sonido y Luces Este set de juego emocionante trae la diversión de la medicina a tus manos. Con un estetoscopio que emite luces y sonidos realistas para escuchar los latidos del corazón, y un celular interactivo que te sumerge en situaciones médicas emocionantes, este set ofrece una experiencia de juego única.
+
+        Además, el set incluye elementos como un termómetro, jeringas y otros accesorios para explorar y aprender mientras te diviertes. Los niños pueden sumergirse en un mundo de juego de roles, donde se convierten en médicos valientes que cuidan de sus amigos de juguete.
+        
+        Con la Maleta de Doctora con Estetoscopio y Celular de Luces y Sonido, la diversión y el aprendizaje se combinan de manera emocionante en cada juego. ¡Prepárate para un emocionante diagnóstico y tratamiento imaginario en cada rincón de tu hogar!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto36a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto36b.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Morado",
+        edad: "+3",
+        categoria: "doctor-cocina",
+        genero: "ninas"
+    },
+    {
+        id: 37,
+        titulo: "Cartas UNO H2O!",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Sumérgete en la diversión acuática con el emocionante juego de cartas UNO H2O! Inspirado en la clásica y querida experiencia de UNO, esta versión presenta un emocionante giro relacionado con el agua que brinda un nuevo nivel de entretenimiento para toda la familia.
+
+        Las cartas UNO H2O están diseñadas para resistir el agua, lo que significa que puedes disfrutar de tus juegos favoritos incluso en la piscina, en la playa o bajo la lluvia. ¡No hay límites para dónde y cuándo puedes jugar! Ya sea que estés chapoteando en la piscina o disfrutando de un día soleado en la playa, estas cartas te acompañarán con risas y diversión sin preocupaciones!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto37a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Transparente",
+        edad: "+6",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 38,
+        titulo: "Cartas DOS !",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡El emocionante juego de cartas DOS te sumerge en una carrera llena de diversión por deshacerte de tus cartas antes que tus oponentes! Cada jugador busca emparejar sus cartas con las que están en la mesa, ya sea con el mismo número o sumando para obtener el mismo número. El juego contiene un total de 108 cartas en diferentes colores y números, además de cartas especiales con habilidades únicas.
+
+        Para empezar, se reparten 7 cartas a cada jugador y se colocan dos cartas boca arriba en la mesa. El objetivo es formar parejas y descartar cartas, y el jugador activo hará parejas hasta que no pueda formar más. Las cartas emparejadas se retiran y forman un mazo de descarte. Si el jugador no puede hacer parejas, debe robar una carta del mazo.
+        
+        Las cartas especiales, como el comodín '2' y los comodines numéricos, añaden estrategia al juego. El jugador que tenga solo dos cartas debe gritar "¡DOS!" para advertir a los demás. Si no lo hace y otro jugador lo dice primero, debe robar cartas adicionales. El juego continúa hasta que alguien alcanza 200 puntos.`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto38a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 39,
+        titulo: "Cartas UNO !",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Explora un mundo lleno de emoción y estrategia con el juego de cartas UNO! Este clásico juego de cartas es una experiencia emocionante y divertida que ha entretenido a familias y amigos durante generaciones.
+
+        Las cartas UNO presentan una mezcla colorida de números y colores vibrantes, cada uno con un propósito único en el juego. El objetivo es simple pero desafiante: deshacerte de todas tus cartas antes que los demás jugadores. Pero cuidado, ¡las cartas especiales pueden cambiar el rumbo del juego en un abrir y cerrar de ojos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto39a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
+        id: 40,
+        titulo: "Set Minecraft con Accesorios",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Sumérgete en el mundo pixelado de Minecraft con el emocionante set de construcción! Este set te trae algunos de los personajes más emblemáticos del juego directamente a tus manos como el Creeper, el temible Zombie, el enigmático Enderman y el imponente Golem de Hierro. ¡Pero eso no es todo! El personaje principal, reconocible por su atuendo único, también está incluido, listo para enfrentar los desafíos que tú le diseñes. Cada figura ha sido meticulosamente diseñada para capturar la esencia de Minecraft, con detalles que harán que los fanáticos del juego se sientan como si estuvieran dentro del mundo del juego!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto40a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "accion",
+        genero: "unisex"
+    },
+    {
+        id: 41,
+        titulo: "Pistola Lanza Dardos e Hidrogel con 200 Bolas Hidrogel",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Prepárate para la acción emocionante con la Pistola Lanza Dardos e Hidrogel de Última Generación! Este conjunto todo en uno te sumerge en una experiencia de juego llena de adrenalina y diversión.
+
+        La pistola lanza dardos ofrece precisión y potencia en cada disparo. Con 6 dardos incluidos, estarás listo para enfrentar cualquier desafío y alcanzar tus objetivos con precisión. Pero eso no es todo, la verdadera innovación radica en las 200 bolas de hidrogel que también puedes disparar. Estas bolas, que se expanden al contacto con el agua, añaden una dimensión emocionante a tus batallas imaginarias.
+        
+        El set incluso incluye un recipiente especialmente diseñado para guardar las bolas de hidrogel mientras juegas!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto41a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto41b.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Azul, Verde",
+        edad: "+12",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
+        id: 43,
+        titulo: "Cartas de Poker Asequibles",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Introduce una dosis de diversión en tus partidas con este set de Cartas de Poker asequibles! Este set incluye dos barajas completas, lo que te brinda la oportunidad de disfrutar de una variedad de juegos de cartas sin invertir mucho.
+
+        Cada carta está fabricada con plástico de calidad, lo que asegura su durabilidad y permite que sigan siendo funcionales en varias sesiones de juego. Aunque no son las cartas más lujosas del mercado, cumplen su propósito y son ideales para juegos casuales y reuniones entre amigos!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto43a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicas",
+        edad: "+6",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 44,
+        titulo: "Cartas de Poker Intermedio",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Potencia tus partidas de cartas con este juego de Cartas de Poker de Plástico de Nivel Intermedio! Este set, que incluye dos barajas completas, te brinda una experiencia de juego que equilibra calidad y accesibilidad.
+
+        Cada carta ha sido confeccionada con plástico de nivel intermedio, lo que asegura su durabilidad y resistencia a lo largo de múltiples partidas. Estas cartas están diseñadas para un rendimiento sólido y constante, perfecto para disfrutar de noches de juego en casa o reuniones sociales!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto44a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicas",
+        edad: "+6",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 45,
+        titulo: "Cartas de Poker Alta",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Potencia tus partidas de cartas con este juego de Cartas de Poker de Plástico de Nivel Intermedio! Este set, que incluye dos barajas completas, te brinda una experiencia de juego que equilibra calidad y accesibilidad.
+
+        Cada carta ha sido confeccionada con plástico de nivel intermedio, lo que asegura su durabilidad y resistencia a lo largo de múltiples partidas. Estas cartas están diseñadas para un rendimiento sólido y constante, perfecto para disfrutar de noches de juego en casa o reuniones sociales!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto45a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicas",
+        edad: "+6",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 46,
+        titulo: "Pistola Nerf Avengers con 6 Dardos",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Vive la emoción de los Vengadores con la Pistola Nerf Estilo Avengers inspirada en Spider-Man y Capitán América! Este set incluye 6 dardos y un tablero de disparo para una acción heroica llena de diversión y aventuras. Con detalles auténticos y diseño de superhéroes, estarás listo para enfrentar desafíos imaginarios con estilo. ¡Prepárate para un juego lleno de emoción y adrenalina mientras te conviertes en un verdadero defensor de la justicia!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto46a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto46b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto46c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto46d.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicas",
+        edad: "+6",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 49,
+        titulo: "Maleta Tocador",
+        preciomayorista: 1000,
+        precio: 17000,
+        descripcion: `¡Vive la emoción de los Vengadores con la Pistola Nerf Estilo Avengers inspirada en Spider-Man y Capitán América! Este set incluye 6 dardos y un tablero de disparo para una acción heroica llena de diversión y aventuras. Con detalles auténticos y diseño de superhéroes, estarás listo para enfrentar desafíos imaginarios con estilo. ¡Prepárate para un juego lleno de emoción y adrenalina mientras te conviertes en un verdadero defensor de la justicia!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto49a.webp" 
+            }
+        ],
+        status: "Out Stock",
+        colores: "Unicas",
+        edad: "+6",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    
+    {
+        id: 193,
+        titulo: "Dinosaurio Lanza Vapor y Pone Huevos",
+        preciomayorista: 58900,
+        precio: 69900,
+        referencia: "NY019B",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto193a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "dinosaurios",
+        genero: "ninos"
+    },
+    {
+        id: 361,
+        titulo: "Tanque Control Remoto y Manilla Lanza Hidrogel y Vapor de Agua Recargable",
+        preciomayorista: 119900,
+        precio: 149900,
+        referencia: "8818B",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto361a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 290,
+        titulo: "Carro Control Vengadores Recargable",
+        preciomayorista: 69900,
+        precio: 99900,
+        referencia: "8587-2A",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto290a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 288,
+        titulo: "Carro Paw Patrol Recargable Control Remoto",
+        preciomayorista: 7199,
+        precio: 38000,
+        referencia: "DY1853",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto288a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 304,
+        titulo: "Pista Electrica en 8 con 2 Carros",
+        preciomayorista: 109900,
+        precio: 129900,
+        referencia: "LVT12112",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto304a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "legos",
+        genero: "ninos"
+    },
+    {
+        id: 341,
+        titulo: "Bebe Sentidos",
+        preciomayorista: 99900,
+        precio: 119900,
+        referencia: "XMY8048",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto341a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 192,
+        titulo: "Carro Transformer a Control Remoto",
+        preciomayorista: 59999,
+        precio: 79999,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto192a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto192b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 291,
+        titulo: "Excavadora Control Remoto Recargable",
+        preciomayorista: 74999,
+        precio: 89999,
+        referencia: "8034E",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto291a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 296,
+        titulo: "Carro Control Todo Terreno Recargable (Grande)",
+        preciomayorista: 104999,
+        precio: 116999,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto296a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 221,
+        titulo: "Pista Paw Patrol con 2 Carros",
+        preciomayorista: 69999,
+        precio: 79999,
+        referencia: "G2016",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto221a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "carros-impulso",
+        genero: "unisex"
+    },
+    {
+        id: 198,
+        titulo: "Dinosaurio Lanza Ping Pong",
+        preciomayorista: 51500,
+        precio: 59999,
+        referencia: "6632B",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto198a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "dinosaurios",
+        genero: "ninos"
+    },
+    {
+        id: 298,
+        titulo: "Carro Control Mario Kart Recargable",
+        preciomayorista: 67999,
+        precio: 74999,
+        referencia: "055404",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto298a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    
+    {
+        id: 301,
+        titulo: "Carro Control Transformer Grande Recargable con Sensor",
+        preciomayorista: 89999,
+        precio: 114999,
+        referencia: "96-1K",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto301a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto301b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 269,
+        titulo: "Pista Mario Karts",
+        preciomayorista: 69999,
+        precio: 84999,
+        referencia: "111-163A",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto269a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "unisex"
+    },
+    {
+        id: 4,
+        titulo: "Barbie +10 Vestidos con Hija, Bicicleta y Accesorios",
+        preciomayorista: 54999,
+        precio: 69999,
+        descripcion: `¡Diversión sin fin espera con este set único de Barbie con 10 vestidos impresionantes, para que ella pueda deslumbrar en cualquier ocasión. Pero eso no es todo, ¡también viene con su hija lista para un emocionante paseo en bicicleta!
+
+        Explora un mundo de moda y creatividad mientras vistes a Barbie en los vestidos más elegantes y a la moda. Cada vestido está diseñado para reflejar su estilo único y personalidad. Además, el set incluye accesorios esenciales como cepillos y espejos, ¡para que Barbie y su hija estén siempre listas para el día!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto4a.webp"
+            }
+        ],
+        status: "disponible",
+        colores: "Rosado",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 270,
+        titulo: "Lego Mario Bros 3 en 1",
+        preciomayorista: 48999,
+        precio: 64999,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto270a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "legos",
+        genero: "unisex"
+    },
+    {
+        id: 219,
+        titulo: "Lego Barco Dragon de 335 Pcs",
+        preciomayorista: 45900,
+        precio: 59900,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto219a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "ninos"
+    },
+    {
+        id: 133,
+        titulo: "Barbie con Mascota",
+        preciomayorista: 29999,
+        precio: 39999,
+        referencia: "JF019",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto133a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 67,
+        titulo: "Cubo Rubik 3X3 Fino",
+        preciomayorista: 6900,
+        precio: 14900,
+        descripcion: `¡Eleva el desafío con el Cubo Rubik 3x3 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
+
+        El material fino proporciona un giro suave y rápido en cada movimiento, lo que te permite avanzar a través de las complejas combinaciones de colores con facilidad y destreza. Cada giro es satisfactorio y preciso, lo que agrega una capa adicional de emoción a la resolución del cubo!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto67a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 68,
+        titulo: "Cubo Rubik 2X2 Fino",
+        preciomayorista: 6500,
+        precio: 13900,
+        descripcion: `¡Eleva el desafío con el Cubo Rubik 2x2 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
+
+        El material fino proporciona un giro suave y rápido en cada movimiento, lo que te permite avanzar a través de las complejas combinaciones de colores con facilidad y destreza. Cada giro es satisfactorio y preciso, lo que agrega una capa adicional de emoción a la resolución del cubo!`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto68a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 268,
+        titulo: "Cubo Rubik 5x5",
+        preciomayorista: 22900,
+        precio: 34999,
+        referencia: "EQY905",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto268a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 267,
+        titulo: "Cubo Rubik 4x4",
+        preciomayorista: 16999,
+        precio: 29999,
+        referencia: "EQY769",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto267a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto267b.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 106,
+        titulo: "Mario o Luigi X1 Blister",
+        preciomayorista: 12999,
+        precio: 20999,
+        referencia: "BX-49853",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto106a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecos",
+        genero: "ninas"
+    },
+    {
+        id: 136,
+        titulo: "Muñecas Encanto X2",
+        preciomayorista: 27999,
+        precio: 34999,
+        referencia: "2048",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto136a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    {
+        id: 196,
+        titulo: "Dinosaurio Chimuelo con Ginete",
+        preciomayorista: 39999,
+        precio: 49999,
+        referencia: "3308",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto196a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "dinosaurios",
+        genero: "ninos"
+    },
+    {
+        id: 224,
+        titulo: "Twist Juego",
+        preciomayorista: 25999,
+        precio: 34999,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto224a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "educativo",
+        genero: "unisex"
+    },
+    {
+        id: 300,
+        titulo: "Carro Control Dinosaurio Recargable",
+        preciomayorista: 47999,
+        precio: 54999,
+        referencia: "008-206",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto300a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+6",
+        categoria: "carros-control",
+        genero: "ninos"
+    },
+    {
+        id: 142,
+        titulo: "Muñeca Encanto X1",
+        preciomayorista: 14999,
+        precio: 19999,
+        referencia: "",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto142a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
+    },
+    
+    {
+        id: 124,
+        titulo: "Barbie Individual Maciza",
+        preciomayorista: 7999,
+        precio: 11999,
+        referencia: "181A2",
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto124a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Amarillo, Rosado, Rojo",
+        edad: "+3",
+        categoria: "munecas",
+        genero: "ninas"
     },
     {
         id: 42,
@@ -2275,266 +3189,6 @@ const productosdb = [
         genero: "ninos"
     },
     {
-        id: 35,
-        titulo: "Lego Mario Bros",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Embárcate en una emocionante aventura de construcción con el set Lego Super Mario: Desierto de los Ladrillos! Con 207 piezas, este set te sumergirá en el mundo icónico de Mario Bros mientras exploras el emocionante nivel del desierto.
-
-        Recrea tus escenas favoritas del juego con los bloques Lego y crea un desierto lleno de desafíos y diversión interactiva. Utiliza las piezas especiales y los elementos de acción para construir un emocionante recorrido que incluye dunas de arena, cactus y obstáculos únicos. ¡Pero cuidado con los enemigos!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto35a.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicolor",
-        edad: "+6",
-        categoria: "didacticos",
-        genero: "ninos"
-    },
-    {
-        id: 36,
-        titulo: "Maleta Doctora con Accesorios Sonido y Luces",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Bienvenidos a la Maleta Doctora Sonido y Luces Este set de juego emocionante trae la diversión de la medicina a tus manos. Con un estetoscopio que emite luces y sonidos realistas para escuchar los latidos del corazón, y un celular interactivo que te sumerge en situaciones médicas emocionantes, este set ofrece una experiencia de juego única.
-
-        Además, el set incluye elementos como un termómetro, jeringas y otros accesorios para explorar y aprender mientras te diviertes. Los niños pueden sumergirse en un mundo de juego de roles, donde se convierten en médicos valientes que cuidan de sus amigos de juguete.
-        
-        Con la Maleta de Doctora con Estetoscopio y Celular de Luces y Sonido, la diversión y el aprendizaje se combinan de manera emocionante en cada juego. ¡Prepárate para un emocionante diagnóstico y tratamiento imaginario en cada rincón de tu hogar!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto36a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto36b.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Morado",
-        edad: "+3",
-        categoria: "doctor-cocina",
-        genero: "ninas"
-    },
-    {
-        id: 37,
-        titulo: "Cartas UNO H2O!",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Sumérgete en la diversión acuática con el emocionante juego de cartas UNO H2O! Inspirado en la clásica y querida experiencia de UNO, esta versión presenta un emocionante giro relacionado con el agua que brinda un nuevo nivel de entretenimiento para toda la familia.
-
-        Las cartas UNO H2O están diseñadas para resistir el agua, lo que significa que puedes disfrutar de tus juegos favoritos incluso en la piscina, en la playa o bajo la lluvia. ¡No hay límites para dónde y cuándo puedes jugar! Ya sea que estés chapoteando en la piscina o disfrutando de un día soleado en la playa, estas cartas te acompañarán con risas y diversión sin preocupaciones!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto37a.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Transparente",
-        edad: "+6",
-        categoria: "didacticos",
-        genero: "unisex"
-    },
-    {
-        id: 38,
-        titulo: "Cartas DOS !",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡El emocionante juego de cartas DOS te sumerge en una carrera llena de diversión por deshacerte de tus cartas antes que tus oponentes! Cada jugador busca emparejar sus cartas con las que están en la mesa, ya sea con el mismo número o sumando para obtener el mismo número. El juego contiene un total de 108 cartas en diferentes colores y números, además de cartas especiales con habilidades únicas.
-
-        Para empezar, se reparten 7 cartas a cada jugador y se colocan dos cartas boca arriba en la mesa. El objetivo es formar parejas y descartar cartas, y el jugador activo hará parejas hasta que no pueda formar más. Las cartas emparejadas se retiran y forman un mazo de descarte. Si el jugador no puede hacer parejas, debe robar una carta del mazo.
-        
-        Las cartas especiales, como el comodín '2' y los comodines numéricos, añaden estrategia al juego. El jugador que tenga solo dos cartas debe gritar "¡DOS!" para advertir a los demás. Si no lo hace y otro jugador lo dice primero, debe robar cartas adicionales. El juego continúa hasta que alguien alcanza 200 puntos.`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto38a.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicolor",
-        edad: "+6",
-        categoria: "didacticos",
-        genero: "unisex"
-    },
-    {
-        id: 39,
-        titulo: "Cartas UNO !",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Explora un mundo lleno de emoción y estrategia con el juego de cartas UNO! Este clásico juego de cartas es una experiencia emocionante y divertida que ha entretenido a familias y amigos durante generaciones.
-
-        Las cartas UNO presentan una mezcla colorida de números y colores vibrantes, cada uno con un propósito único en el juego. El objetivo es simple pero desafiante: deshacerte de todas tus cartas antes que los demás jugadores. Pero cuidado, ¡las cartas especiales pueden cambiar el rumbo del juego en un abrir y cerrar de ojos!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto39a.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicolor",
-        edad: "+6",
-        categoria: "didacticos",
-        genero: "unisex"
-    },
-    {
-        id: 40,
-        titulo: "Set Minecraft con Accesorios",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Sumérgete en el mundo pixelado de Minecraft con el emocionante set de construcción! Este set te trae algunos de los personajes más emblemáticos del juego directamente a tus manos como el Creeper, el temible Zombie, el enigmático Enderman y el imponente Golem de Hierro. ¡Pero eso no es todo! El personaje principal, reconocible por su atuendo único, también está incluido, listo para enfrentar los desafíos que tú le diseñes. Cada figura ha sido meticulosamente diseñada para capturar la esencia de Minecraft, con detalles que harán que los fanáticos del juego se sientan como si estuvieran dentro del mundo del juego!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto40a.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "accion",
-        genero: "unisex"
-    },
-    {
-        id: 41,
-        titulo: "Pistola Lanza Dardos e Hidrogel con 200 Bolas Hidrogel",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Prepárate para la acción emocionante con la Pistola Lanza Dardos e Hidrogel de Última Generación! Este conjunto todo en uno te sumerge en una experiencia de juego llena de adrenalina y diversión.
-
-        La pistola lanza dardos ofrece precisión y potencia en cada disparo. Con 6 dardos incluidos, estarás listo para enfrentar cualquier desafío y alcanzar tus objetivos con precisión. Pero eso no es todo, la verdadera innovación radica en las 200 bolas de hidrogel que también puedes disparar. Estas bolas, que se expanden al contacto con el agua, añaden una dimensión emocionante a tus batallas imaginarias.
-        
-        El set incluso incluye un recipiente especialmente diseñado para guardar las bolas de hidrogel mientras juegas!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto41a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto41b.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Azul, Verde",
-        edad: "+12",
-        categoria: "punteria",
-        genero: "unisex"
-    },
-    {
-        id: 43,
-        titulo: "Cartas de Poker Asequibles",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Introduce una dosis de diversión en tus partidas con este set de Cartas de Poker asequibles! Este set incluye dos barajas completas, lo que te brinda la oportunidad de disfrutar de una variedad de juegos de cartas sin invertir mucho.
-
-        Cada carta está fabricada con plástico de calidad, lo que asegura su durabilidad y permite que sigan siendo funcionales en varias sesiones de juego. Aunque no son las cartas más lujosas del mercado, cumplen su propósito y son ideales para juegos casuales y reuniones entre amigos!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto43a.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicas",
-        edad: "+6",
-        categoria: "educativo",
-        genero: "unisex"
-    },
-    {
-        id: 44,
-        titulo: "Cartas de Poker Intermedio",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Potencia tus partidas de cartas con este juego de Cartas de Poker de Plástico de Nivel Intermedio! Este set, que incluye dos barajas completas, te brinda una experiencia de juego que equilibra calidad y accesibilidad.
-
-        Cada carta ha sido confeccionada con plástico de nivel intermedio, lo que asegura su durabilidad y resistencia a lo largo de múltiples partidas. Estas cartas están diseñadas para un rendimiento sólido y constante, perfecto para disfrutar de noches de juego en casa o reuniones sociales!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto44a.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicas",
-        edad: "+6",
-        categoria: "educativo",
-        genero: "unisex"
-    },
-    {
-        id: 45,
-        titulo: "Cartas de Poker Alta",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Potencia tus partidas de cartas con este juego de Cartas de Poker de Plástico de Nivel Intermedio! Este set, que incluye dos barajas completas, te brinda una experiencia de juego que equilibra calidad y accesibilidad.
-
-        Cada carta ha sido confeccionada con plástico de nivel intermedio, lo que asegura su durabilidad y resistencia a lo largo de múltiples partidas. Estas cartas están diseñadas para un rendimiento sólido y constante, perfecto para disfrutar de noches de juego en casa o reuniones sociales!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto45a.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicas",
-        edad: "+6",
-        categoria: "educativo",
-        genero: "unisex"
-    },
-    {
-        id: 46,
-        titulo: "Pistola Nerf Avengers con 6 Dardos",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Vive la emoción de los Vengadores con la Pistola Nerf Estilo Avengers inspirada en Spider-Man y Capitán América! Este set incluye 6 dardos y un tablero de disparo para una acción heroica llena de diversión y aventuras. Con detalles auténticos y diseño de superhéroes, estarás listo para enfrentar desafíos imaginarios con estilo. ¡Prepárate para un juego lleno de emoción y adrenalina mientras te conviertes en un verdadero defensor de la justicia!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto46a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto46b.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto46c.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto46d.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicas",
-        edad: "+6",
-        categoria: "punteria",
-        genero: "ninos"
-    },
-    {
-        id: 49,
-        titulo: "Maleta Tocador",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Vive la emoción de los Vengadores con la Pistola Nerf Estilo Avengers inspirada en Spider-Man y Capitán América! Este set incluye 6 dardos y un tablero de disparo para una acción heroica llena de diversión y aventuras. Con detalles auténticos y diseño de superhéroes, estarás listo para enfrentar desafíos imaginarios con estilo. ¡Prepárate para un juego lleno de emoción y adrenalina mientras te conviertes en un verdadero defensor de la justicia!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto49a.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicas",
-        edad: "+6",
-        categoria: "punteria",
-        genero: "ninos"
-    },
-    {
         id: 65,
         titulo: "Carros Impulso Grafiti",
         preciomayorista: 7199,
@@ -2563,46 +3217,6 @@ const productosdb = [
         edad: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
-    },
-    {
-        id: 67,
-        titulo: "Cubo Rubik 3X3 Fino",
-        preciomayorista: 6900,
-        precio: 14900,
-        descripcion: `¡Eleva el desafío con el Cubo Rubik 3x3 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
-
-        El material fino proporciona un giro suave y rápido en cada movimiento, lo que te permite avanzar a través de las complejas combinaciones de colores con facilidad y destreza. Cada giro es satisfactorio y preciso, lo que agrega una capa adicional de emoción a la resolución del cubo!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto67a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "didacticos",
-        genero: "unisex"
-    },
-    {
-        id: 68,
-        titulo: "Cubo Rubik 2X2 Fino",
-        preciomayorista: 6500,
-        precio: 13900,
-        descripcion: `¡Eleva el desafío con el Cubo Rubik 2x2 Fino! Este cubo de fama mundial ha sido reinventado con un material de alta calidad y diseño de vanguardia para una experiencia de resolución aún más emocionante y ágil.
-
-        El material fino proporciona un giro suave y rápido en cada movimiento, lo que te permite avanzar a través de las complejas combinaciones de colores con facilidad y destreza. Cada giro es satisfactorio y preciso, lo que agrega una capa adicional de emoción a la resolución del cubo!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto68a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: "+3",
-        categoria: "didacticos",
-        genero: "unisex"
     },
     {
         id: 71,
@@ -2653,6 +3267,7 @@ const productosdb = [
         categoria: "didacticos",
         genero: "unisex"
     },
+
 
 ];
 
