@@ -86,7 +86,11 @@ const Catalogo = () => {
 
   const filtraredad = (product) => {
     if (edad === "") return product;
-    if (product.edad === edad) return product;
+
+    if(product.edad.includes(edad)){
+      return product;
+    }
+    
   }
 
   const filtrarpreciomax = (product) => {
@@ -146,6 +150,7 @@ const Catalogo = () => {
               <option value="ninas">Niñas</option>
               <option value="ninos">Niños</option>
             </select>
+            {/*
             <select name="categoria" id="categoria" onChange={(e) => setcategoria(e.target.value)}>
               <option value="" >{categoria === "" ? "Categoria" : "Todas las categorias"}</option>
               <option value="carros-impulso">Carros de Pila e Impulso</option>
@@ -163,13 +168,16 @@ const Catalogo = () => {
               <option value="organetas-guitarras">Organetas & Guitarras</option>
               <option value="legos">Legos & Armables</option>
             </select>
+            */
+            }
+            
             <select name="edad" id="edad" onChange={e => setedad(e.target.value)}>
               <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
+              <option value="+0">Entre 0-2 años</option>
               <option value="+3">Entre 2-5 años</option>
               <option value="+6">Entre 6-8 Años</option>
               <option value="+8">Mas de 8 Años</option>
             </select>
-            
             <select name="ordenar" id="ordenar" onChange={e => setordenar(e.target.value)}>
               <option value="">{ordenar === "" ? "Ordenar" : "Mayor Relevancia"}</option>
               <option value="asc">Precio menor a mayor</option>

@@ -22,7 +22,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+8",
+        edad: ["+8"],
+        edad2: "+8",
         categoria: "punteria",
         genero: "ninos"
     },
@@ -62,7 +63,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosado, Azul, Rojo",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "ninas"
     },
@@ -88,7 +90,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rojo",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -111,7 +114,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -130,7 +134,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+0", "+3"],
+        edad2: "+3",
         categoria: "organetas-guitarras",
         genero: "unisex"
     },
@@ -163,7 +168,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosada, Azul",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "mascotas",
         genero: "unisex"
     },
@@ -192,7 +198,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -211,7 +218,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -233,7 +241,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+8",
+        edad: ["+8"],
+        edad2: "+8",
         categoria: "punteria",
         genero: "ninos"
     },
@@ -252,7 +261,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -275,7 +285,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "doctor-cocina",
         genero: "ninas"
     },
@@ -294,7 +305,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+0", "+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "peluches",
         genero: "ninas"
     },  
@@ -313,7 +325,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -339,7 +352,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rojo",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -359,7 +373,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "maquillaje",
         genero: "ninas"
     },
@@ -385,7 +400,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -404,7 +420,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -435,7 +452,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rojo, Morado",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -456,7 +474,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "ninas"
     },
@@ -478,7 +497,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+8",
+        edad: ["+8"],
+        edad2: "+8",
         categoria: "punteria",
         genero: "ninos"
     },
@@ -497,7 +517,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "maquillaje",
         genero: "ninas"
     },
@@ -516,7 +537,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -542,7 +564,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Amarillo, Rojo",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -561,7 +584,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -589,7 +613,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Verde",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "dinosaurios",
         genero: "ninos"
     },
@@ -609,7 +634,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "maquillaje",
         genero: "ninas"
     },
@@ -635,7 +661,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosado",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "maquillaje",
         genero: "ninas"
     },
@@ -669,7 +696,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosado",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "maquillaje",
         genero: "ninas"
     },
@@ -693,7 +721,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Amarillo",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "unisex"
     },
@@ -719,7 +748,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Amarillo",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -745,7 +775,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosada",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "doctor-cocina",
         genero: "ninas"
     },
@@ -771,7 +802,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Amarillo",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -797,7 +829,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosada",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "maquillaje",
         genero: "ninas"
     },
@@ -817,7 +850,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Verde",
-        edad: "+3",
+        edad: ["+0"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -836,7 +870,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+0"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -860,7 +895,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Amarillo",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -886,7 +922,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rojo, Amarillo",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -912,7 +949,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "ninos"
     },
@@ -938,7 +976,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -957,7 +996,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "maquillaje",
         genero: "ninas"
     },
@@ -977,7 +1017,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+0", "+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "peluches",
         genero: "ninas"
     },
@@ -1000,7 +1041,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "maquillaje",
         genero: "ninas"
     },
@@ -1019,7 +1061,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecos",
         genero: "ninos"
     },
@@ -1039,7 +1082,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+0", "+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "peluches",
         genero: "unisex"
     },
@@ -1058,7 +1102,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Avengers, Mickey Mouse, Cars, Frozen",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecos",
         genero: "unisex"
     },
@@ -1077,9 +1122,10 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "legos",
-        genero: "unisex"
+        genero: "ninos"
     },
     {
         id: 181,
@@ -1096,7 +1142,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -1115,7 +1162,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3"],
+        edad2: "+3",
         categoria: "dinosaurios",
         genero: "unisex"
     },
@@ -1134,7 +1182,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+0", "+3"],
+        edad2: "+3",
         categoria: "organetas-guitarras",
         genero: "unisex"
     },
@@ -1153,7 +1202,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+0", "+3"],
+        edad2: "+3",
         categoria: "organetas-guitarras",
         genero: "unisex"
     },
@@ -1172,7 +1222,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+0", "+3"],
+        edad2: "+3",
         categoria: "organetas-guitarras",
         genero: "unisex"
     },
@@ -1191,7 +1242,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+0", "+3"],
+        edad2: "+3",
         categoria: "organetas-guitarras",
         genero: "unisex"
     },
@@ -1210,7 +1262,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+8",
+        edad: ["+8"],
+        edad2: "+8",
         categoria: "punteria",
         genero: "ninos"
     },
@@ -1229,9 +1282,10 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "punteria",
-        genero: "unisex"
+        genero: "ninos"
     },
     {
         id: 359,
@@ -1248,7 +1302,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "doctor-cocina",
         genero: "ninas"
     },
@@ -1267,7 +1322,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -1290,7 +1346,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Optimus Prime, Bumblee Bee",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "legos",
         genero: "ninos"
     },
@@ -1313,7 +1370,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "legos",
         genero: "ninos"
     },
@@ -1332,7 +1390,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "legos",
         genero: "ninos"
     },
@@ -1351,7 +1410,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -1370,7 +1430,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -1389,7 +1450,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -1408,7 +1470,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "ninos"
     },
@@ -1427,9 +1490,10 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecos",
-        genero: "unisex"
+        genero: "ninos"
     },
     {
         id: 256,
@@ -1446,7 +1510,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+0", "+3", "+6", "+8"],
+        edad2: "+6",
         categoria: "peluches",
         genero: "ninos"
     },
@@ -1465,7 +1530,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -1484,7 +1550,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+0", "+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "peluches",
         genero: "unisex"
     },
@@ -1514,7 +1581,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosada",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "maquillaje",
         genero: "ninas"
     },
@@ -1538,7 +1606,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Grafiti",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -1568,7 +1637,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosada",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "doctor-cocina",
         genero: "ninas"
     },
@@ -1594,7 +1664,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Amarilla",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "unisex"
     },
@@ -1632,7 +1703,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosado, Azul",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -1656,7 +1728,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Azul, Rosada",
-        edad: "+3",
+        edad: ["+3"],
+        edad2: "+3",
         categoria: "doctor-cocina",
         genero: "unisex"
     },
@@ -1679,7 +1752,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "mascotas",
         genero: "unisex"
     },
@@ -1698,7 +1772,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "mascotas",
         genero: "unisex"
     },
@@ -1722,7 +1797,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Amarillo",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "mascotas",
         genero: "unisex"
     },
@@ -1746,7 +1822,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicas",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "mascotas",
         genero: "unisex"
     },
@@ -1776,7 +1853,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rojo, Amarillo",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -1796,7 +1874,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosada",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -1818,7 +1897,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosado",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -1848,7 +1928,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Amarillo, Negro",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "mascotas",
         genero: "unisex"
     },
@@ -1876,7 +1957,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Azul, Naranja",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -1914,7 +1996,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Rosado, Morado, Azul",
-        edad: "+3",
+        edad: ["+3"],
+        edad2: "+3",
         categoria: "mascotas",
         genero: "unisex"
     },
@@ -1934,7 +2017,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Neon",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -1964,7 +2048,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Azul, Rosado",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -1984,7 +2069,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Rosado",
-        edad: "+3",
+        edad: ["+3"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -2011,7 +2097,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Verde, Azul",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "punteria",
         genero: "ninos"
     },
@@ -2035,7 +2122,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Amarillo, Verde",
-        edad: "+3",
+        edad: ["+3"],
+        edad2: "+3",
         categoria: "dinosaurios",
         genero: "ninos"
     },
@@ -2061,7 +2149,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Azul, Morado, Naranja, Negro",
-        edad: "+3",
+        edad: ["+3"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -2085,7 +2174,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Grafiti, Negro",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -2106,7 +2196,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+3"],
+        edad2: "+6",
         categoria: "didacticos",
         genero: "ninos"
     },
@@ -2132,7 +2223,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Morado",
-        edad: "+3",
+        edad: ["+3"],
+        edad2: "+3",
         categoria: "doctor-cocina",
         genero: "ninas"
     },
@@ -2152,7 +2244,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Transparente",
-        edad: "+6",
+        edad: ["+3"],
+        edad2: "+6",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -2174,7 +2267,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+3"],
+        edad2: "+6",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -2194,7 +2288,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+3"],
+        edad2: "+6",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -2212,34 +2307,9 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3"],
+        edad2: "+3",
         categoria: "accion",
-        genero: "unisex"
-    },
-    {
-        id: 41,
-        titulo: "Pistola Lanza Dardos e Hidrogel con 200 Bolas Hidrogel",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Prepárate para la acción emocionante con la Pistola Lanza Dardos e Hidrogel de Última Generación! Este conjunto todo en uno te sumerge en una experiencia de juego llena de adrenalina y diversión.
-
-        La pistola lanza dardos ofrece precisión y potencia en cada disparo. Con 6 dardos incluidos, estarás listo para enfrentar cualquier desafío y alcanzar tus objetivos con precisión. Pero eso no es todo, la verdadera innovación radica en las 200 bolas de hidrogel que también puedes disparar. Estas bolas, que se expanden al contacto con el agua, añaden una dimensión emocionante a tus batallas imaginarias.
-        
-        El set incluso incluye un recipiente especialmente diseñado para guardar las bolas de hidrogel mientras juegas!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto41a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto41b.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Azul, Verde",
-        edad: "+12",
-        categoria: "punteria",
         genero: "unisex"
     },
     {
@@ -2258,7 +2328,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Unicas",
-        edad: "+6",
+        edad: ["+3"],
+        edad2: "+6",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -2278,7 +2349,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Unicas",
-        edad: "+6",
+        edad: ["+3"],
+        edad2: "+6",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -2298,59 +2370,11 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Unicas",
-        edad: "+6",
+        edad: ["+3"],
+        edad2: "+6",
         categoria: "educativo",
         genero: "unisex"
     },
-    {
-        id: 46,
-        titulo: "Pistola Nerf Avengers con 6 Dardos",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Vive la emoción de los Vengadores con la Pistola Nerf Estilo Avengers inspirada en Spider-Man y Capitán América! Este set incluye 6 dardos y un tablero de disparo para una acción heroica llena de diversión y aventuras. Con detalles auténticos y diseño de superhéroes, estarás listo para enfrentar desafíos imaginarios con estilo. ¡Prepárate para un juego lleno de emoción y adrenalina mientras te conviertes en un verdadero defensor de la justicia!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto46a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto46b.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto46c.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto46d.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicas",
-        edad: "+6",
-        categoria: "punteria",
-        genero: "ninos"
-    },
-    {
-        id: 49,
-        titulo: "Maleta Tocador",
-        preciomayorista: 1000,
-        precio: 17000,
-        descripcion: `¡Vive la emoción de los Vengadores con la Pistola Nerf Estilo Avengers inspirada en Spider-Man y Capitán América! Este set incluye 6 dardos y un tablero de disparo para una acción heroica llena de diversión y aventuras. Con detalles auténticos y diseño de superhéroes, estarás listo para enfrentar desafíos imaginarios con estilo. ¡Prepárate para un juego lleno de emoción y adrenalina mientras te conviertes en un verdadero defensor de la justicia!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto49a.webp" 
-            }
-        ],
-        status: "Out Stock",
-        colores: "Unicas",
-        edad: "+6",
-        categoria: "punteria",
-        genero: "ninos"
-    },
-    
     {
         id: 193,
         titulo: "Dinosaurio Lanza Vapor y Pone Huevos",
@@ -2366,7 +2390,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "dinosaurios",
         genero: "ninos"
     },
@@ -2385,7 +2410,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -2404,7 +2430,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -2423,7 +2450,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -2442,7 +2470,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "legos",
         genero: "ninos"
     },
@@ -2461,7 +2490,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -2484,7 +2514,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -2503,7 +2534,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -2522,7 +2554,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -2541,7 +2574,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "unisex"
     },
@@ -2560,7 +2594,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "dinosaurios",
         genero: "ninos"
     },
@@ -2579,7 +2614,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -2603,7 +2639,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -2622,7 +2659,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecos",
         genero: "unisex"
     },
@@ -2642,7 +2680,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosado",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -2661,7 +2700,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "legos",
         genero: "unisex"
     },
@@ -2680,7 +2720,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecos",
         genero: "ninos"
     },
@@ -2699,7 +2740,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -2719,7 +2761,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -2739,7 +2782,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -2758,7 +2802,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -2781,7 +2826,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -2800,7 +2846,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecos",
         genero: "ninas"
     },
@@ -2819,7 +2866,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -2838,7 +2886,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "dinosaurios",
         genero: "ninos"
     },
@@ -2857,7 +2906,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+6", "+8"],
+        edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
     },
@@ -2876,7 +2926,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -2895,7 +2946,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -2915,7 +2967,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Amarillo, Rosado, Rojo",
-        edad: "+3",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
     },
@@ -2935,15 +2988,16 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Beige",
-        edad: "+6",
+        edad: ["+6", "+8"],
+        edad2: "+6",
         categoria: "didacticos",
         genero: "unisex"
     },
     {
         id: 19,
         titulo: "Dragon a Control Remoto con Vapor y Huevos",
-        preciomayorista: 1000,
-        precio: 17000,
+        preciomayorista: 74999,
+        precio: 84999,
         descripcion: `¡Desata la magia y la emoción con nuestro Dragón Control Remoto Interactivo! Este majestuoso ser escamoso trae consigo una experiencia llena de asombro y aventura.
 
         Con solo un toque en el control remoto, este dragón cobra vida. Sus movimientos fluidos y realistas te transportarán a un mundo de fantasía. Pero aquí está lo increíble: este dragón también lanza huevos por su cola y emite humo por su boca, añadiendo un toque de sorpresa y emoción a cada momento.
@@ -2955,9 +3009,10 @@ const productosdb = [
                 url: "/producto19a.webp" 
             }
         ],
-        status: "Out Stock",
+        status: "disponible",
         colores: "Naranja, Verde",
-        edad: "+6",
+        edad: ["+3", "+6"],
+        edad2: "+6",
         categoria: "dinosaurios",
         genero: "ninos"
     },
@@ -2987,7 +3042,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Cafe",
-        edad: "+3",
+        edad: ["+3"],
+        edad2: "+3",
         categoria: "dinosaurios",
         genero: "ninos"
     },
@@ -3009,7 +3065,8 @@ const productosdb = [
         ],
         status: "Out Stock",
         colores: "Safari",
-        edad: "+6",
+        edad: ["+3"],
+        edad2: "+6",
         categoria: "carros-control",
         genero: "ninos"
     },
@@ -3039,7 +3096,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Verde, Gris",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -3063,7 +3121,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Unicolor",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -3084,7 +3143,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Surtidos (Mario, Luigi)",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -3104,7 +3164,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Surtidos (Thor, Spiderman, Capitan America, Iron Man, Hulk, Batman)",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "ninos"
     },
@@ -3124,7 +3185,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Surtidos (Zuma, Marshall, Chase, Skay, Rubble)",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -3144,7 +3206,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Surtidos (Sirenita, Blanca Nieves, Rapunzel, Cenicienta, Bella)",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "ninas"
     },
@@ -3164,7 +3227,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Amarillo, Rosado, Verde, Rojo, Morado, Azul",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "ninas"
     },
@@ -3184,7 +3248,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Morado, Rojo, Rosado, Azul, Verde, Amarillo",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "ninos"
     },
@@ -3214,7 +3279,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Grafiti",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "carros-impulso",
         genero: "ninos"
     },
@@ -3240,7 +3306,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rosado, Rojo",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "unisex"
     },
@@ -3263,7 +3330,8 @@ const productosdb = [
         ],
         status: "disponible",
         colores: "Rojo, Verde, Azul, Amarillo",
-        edad: "+3",
+        edad: ["+3", "+6"],
+        edad2: "+3",
         categoria: "didacticos",
         genero: "unisex"
     },

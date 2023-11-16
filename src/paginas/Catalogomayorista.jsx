@@ -78,7 +78,10 @@ const Catalogomayorista = () => {
 
   const filtraredad = (product) => {
     if (edad === "") return product;
-    if (product.edad === edad) return product;
+
+    if(product.edad.includes(edad)){
+      return product;
+    }
   }
 
   const filtrarpreciomax = (product) => {
@@ -115,7 +118,7 @@ const Catalogomayorista = () => {
     <>
 
     <div className="seccionproductos contenedor">
-        <h1 className="tituloproductos mb-8" ref={tituloproductosref}>Productos</h1>
+        <h1 className="tituloproductos mb-8" ref={tituloproductosref}>Productos {`(PRECIOS MAYORISTAS > 6 UNIDADES)`}</h1>
         <div className="flex items-center justify-center gap-2 md:hidden cursor-pointer w-min mb-4 filtrodiv" onClick={() => setseccionfiltro(!seccionfiltro)}>
           <svg xmlns="http://www.w3.org/2000/svg" className=" icon icon-tabler icon-tabler-adjustments-horizontal" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#3d3d3d" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -139,28 +142,35 @@ const Catalogomayorista = () => {
               <option value="ninas">Niñas</option>
               <option value="ninos">Niños</option>
             </select>
-            <select name="categoria" id="categoria" onChange={(e) => setcategoria(e.target.value)}>
-            <option value="" >{categoria === "" ? "Categoria" : "Todas las categorias"}</option>
-              <option value="carros-impulso">Carros de Pila e Impulso</option>
-              <option value="carros-control">Carros de Control Remoto</option>
-              <option value="didacticos">Didacticos</option>
-              <option value="mascotas">Mascotas y Animales</option>
-              <option value="munecas">Muñecas & Bebes</option>
-              <option value="munecos">Muñecos & Figuras de Acción</option>
-              <option value="punteria">Punteria</option>
-              <option value="maquillaje">Maquillaje y Belleza</option>
-              <option value="doctor-cocina">Doctor y Cocina</option>
-              <option value="educativo">Interactivo y Educativo</option>
-              <option value="peluches">Peluches</option>
-              <option value="dinosaurios">Dinosaurios</option>
-              <option value="organetas-guitarras">Organetas & Guitarras</option>
-              <option value="legos">Legos & Armables</option>
-            </select>
+            {
+              /*
+                <select name="categoria" id="categoria" onChange={(e) => setcategoria(e.target.value)}>
+                <option value="" >{categoria === "" ? "Categoria" : "Todas las categorias"}</option>
+                  <option value="carros-impulso">Carros de Pila e Impulso</option>
+                  <option value="carros-control">Carros de Control Remoto</option>
+                  <option value="didacticos">Didacticos</option>
+                  <option value="mascotas">Mascotas y Animales</option>
+                  <option value="munecas">Muñecas & Bebes</option>
+                  <option value="munecos">Muñecos & Figuras de Acción</option>
+                  <option value="punteria">Punteria</option>
+                  <option value="maquillaje">Maquillaje y Belleza</option>
+                  <option value="doctor-cocina">Doctor y Cocina</option>
+                  <option value="educativo">Interactivo y Educativo</option>
+                  <option value="peluches">Peluches</option>
+                  <option value="dinosaurios">Dinosaurios</option>
+                  <option value="organetas-guitarras">Organetas & Guitarras</option>
+                  <option value="legos">Legos & Armables</option>
+                </select>
+
+              */
+            }
+            
             <select name="edad" id="edad" onChange={e => setedad(e.target.value)}>
               <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
-              <option value="+3">Mas de 2 años</option>
-              <option value="+6">Mas de 5 años</option>
-              <option value="+8">Mas de 8 años</option>
+              <option value="+0">Entre 0-2 años</option>
+              <option value="+3">Entre 2-5 años</option>
+              <option value="+6">Entre 6-8 Años</option>
+              <option value="+8">Mas de 8 Años</option>
             </select>
             <select name="ordenar" id="ordenar" onChange={e => setordenar(e.target.value)}>
               <option value="">{ordenar === "" ? "Ordenar" : "Mayor Relevancia"}</option>
