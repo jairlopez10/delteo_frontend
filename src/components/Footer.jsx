@@ -9,7 +9,7 @@ const Footer = () => {
     <>
       <footer className=" bg-black flex justify-center">
         
-        <Link to={pagina === "mayorista" || pagina === "mayoristaproducto" ? "/mayorista" : "/"} className="logo" onClick={() => setmenu(false)}>
+        <Link to={"/mayorista"} className="logo" onClick={() => setmenu(false)}>
             <img src="/logo.png" alt="" />
         </Link>
       </footer>
