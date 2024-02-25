@@ -483,7 +483,7 @@ const productosdb = [
         id: 51,
         titulo: "Pistola Hidrogel Automatica Recargable con 3.000 Orvis Hidrogel",
         preciomayorista: 49900,
-        precio: 59900,
+        precio: 69900,
         descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
 
         La pistola lanzadora automática es fácil de usar, con la capacidad de disparar ráfagas de bolas de hidrogel con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar desafíos y mantener la diversión durante horas.
