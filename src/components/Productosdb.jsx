@@ -4,7 +4,7 @@ const productosdb = [
         id: 50,
         titulo: "Lanzador Hidrogel MP5 Automatica Recargable con Gafas y 6.000 Orvis Hidrogel",
         preciomayorista: 71900,
-        precio: 84900,
+        precio: 104900,
         descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
 
         Esta pistola lanzadora automática, con su diseño estilo MP5, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 6000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
@@ -483,7 +483,7 @@ const productosdb = [
         id: 51,
         titulo: "Pistola Hidrogel Automatica Recargable con 3.000 Orvis Hidrogel",
         preciomayorista: 49900,
-        precio: 69900,
+        precio: 89900,
         descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
 
         La pistola lanzadora automática es fácil de usar, con la capacidad de disparar ráfagas de bolas de hidrogel con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar desafíos y mantener la diversión durante horas.
@@ -1251,7 +1251,7 @@ const productosdb = [
         id: 277,
         titulo: "Lanzadora Hidrogel Larga con Gafas y 1.500 Orvis",
         preciomayorista: 76900,
-        precio: 94900,
+        precio: 114900,
         referencia: "568C",
         descripcion: ``,
         imagenes: [
