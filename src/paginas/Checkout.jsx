@@ -106,7 +106,7 @@ const Checkout = () => {
                         <div className="div-rows-info mt-4">
                             <div className="div-row-info">
                                 <label htmlFor="departamento">Departamento:</label>
-                                <input type="tel" placeholder="Departamento" id="departamento" value={departamento} onChange={e => setDepartamento(e.target.value)} />
+                                <input type="text" placeholder="Departamento" id="departamento" value={departamento} onChange={e => setDepartamento(e.target.value)} />
                             </div>
                             <div className="div-row-info">
                                 <label htmlFor="ciudad">Ciudad:</label>
