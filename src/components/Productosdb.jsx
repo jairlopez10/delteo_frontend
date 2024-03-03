@@ -69,6 +69,33 @@ const productosdb = [
         genero: "ninas"
     },
     {
+        id: 303,
+        titulo: "Lanzador Hidrogel AK47 Automatica Recargable con Gafas y 1.000 Orvis Hidrogel",
+        preciomayorista: 69900,
+        precio: 99900,
+        descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un AK47! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
+
+        Esta pistola lanzadora automática, con su diseño estilo AK47, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 1000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
+        
+        La seguridad es una prioridad, y es por eso que este set incluye gafas de protección para mantener tus ojos a salvo mientras te sumerges en la acción. Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego seguro y responsable`,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto303a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto303b.mp4"
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 58,
         titulo: "Carro Control Sensor con Control Remoto y Vapor de Agua",
         preciomayorista: 84999,
