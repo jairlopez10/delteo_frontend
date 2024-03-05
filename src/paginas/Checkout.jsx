@@ -116,7 +116,7 @@ const Checkout = () => {
                         <div className="div-rows-info mt-4">
                             <div className="div-row-info">
                                 <label htmlFor="direccion">Dirección:</label>
-                                <input type="text" placeholder="Calle 23 #23-11 Barrio San Felipe" id="direccion" value={direccion} onChange={e => setDireccion(e.target.value)} />
+                                <input type="text" placeholder="Calle 23 #23-11 Barrio San Felipe Apto 330" id="direccion" value={direccion} onChange={e => setDireccion(e.target.value)} />
                             </div>
                         </div>
                     </div>
