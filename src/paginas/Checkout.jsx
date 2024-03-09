@@ -98,7 +98,7 @@ const Checkout = () => {
         try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/clientes`;
             await axios.post(url, pedido)
-            console.log('Enviado correctamente');
+            
         } catch (error) {
             console.log(error);
         }
