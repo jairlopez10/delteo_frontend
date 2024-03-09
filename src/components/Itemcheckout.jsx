@@ -1,7 +1,16 @@
 
-const Itemcheckout = ({item}) => {
+const Itemcheckout = ({item, carritomostrar, setCarritoMostrar}) => {
 
-    const { id, nombre, imagen, cantidad, precio } =item
+    const { id, nombre, imagen, cantidad, precio } = item
+
+    const eliminaritem = () => {
+        const nuevocarrito = carritomostrar.filter(item => item.id !== id)
+
+        setCarritoMostrar(nuevocarrito);
+
+    }
+
+
 
   return (
     <>
@@ -11,7 +20,7 @@ const Itemcheckout = ({item}) => {
                 <p className="nombre-checkout">{nombre}</p>
                 <div className="flex gap-8">
                     <p className="cantidad-checkout">{`${cantidad} Unidades`}</p>
-                    <p className="text-red-600 cursor-pointer">Eliminar</p>
+                    <p className="text-red-600 cursor-pointer" onClick={() => eliminaritem()}>Eliminar</p>
                 </div>
                 
             </div>

@@ -110,6 +110,16 @@ header {
   width: 18rem;
 }
 
+.carrito {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+}
+
+.carrito-ocultar {
+  display: none;
+}
+
 @media(min-width:500px) {
   .logo {
     width: 25rem;
@@ -120,6 +130,9 @@ header {
   .logo{
     width: 30rem;
   }
+  .carrito-ocultar {
+    display: block;
+  }
 }
 
 .navegacion {
@@ -129,6 +142,8 @@ header {
 }
 
 .links {
+  display: flex;
+  justify-content: center;
   font-weight: bold;
   font-size: 2.5rem;
   font-family: 'Kalam', cursive;
@@ -250,6 +265,7 @@ footer {
   }
   .menuicono {
     visibility: hidden;
+    display: none;
   }
 
   .logo {
@@ -479,6 +495,19 @@ footer {
 
 /* -------------------------------------- PRODUCTO ------------------------------------*/
 
+.notificacion-carrito {
+  position: fixed;
+  bottom: 3rem;
+  padding: 2rem;
+  background-color: #51c57b;
+  color: white;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  width: 95%;
+  text-align: center;
+}
+
 .titulo-producto-final {
   font-size: 2.5rem;
   font-weight: bold;
@@ -581,6 +610,43 @@ footer {
   font-weight: normal;
 }
 
+.botones-carrito {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.botones-carrito button {
+  background-color: #72727257;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 100%;
+}
+
+.botones-carrito input {
+  border: 1px solid #3d3d3d77;
+  font-size: 1.5rem;
+  width: 7rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.boton-agregar-carrito {
+  background-color: #1a1a1a;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+.boton-agregar-carrito:hover {
+  background-color: #3f3f3f;
+  transition: all .7s;
+}
+
 .titulo-descripcion {
   font-size: 3rem;
 }
@@ -633,7 +699,9 @@ footer {
   .boton-ordenar p {
     font-size: 3rem;
   }
-  
+  .notificacion-carrito {
+    width: 80%;
+  }
   .boton-ordenar img {
     width: 5rem;
     height: 5rem;
@@ -842,7 +910,7 @@ footer {
   gap: 1rem;
 }
 
-.div-row-info label, .div-row-info input {
+.div-row-info label, .div-row-info input, .div-row-info select {
   font-size: 1.7rem;
 }
 
@@ -850,7 +918,7 @@ footer {
   font-weight: bold;
 }
 
-.div-row-info input {
+.div-row-info input, .div-row-info select {
   padding: 1rem;
   border: 1px solid #afafaf;
   border-radius: 1rem;
@@ -955,6 +1023,7 @@ footer {
 .envios-fotos img {
   width: 8rem;
 }
+
 
 
 @media(min-width: 768px) {

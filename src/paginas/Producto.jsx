@@ -44,6 +44,9 @@ const Producto = () => {
 
   const [multiactual, setmultiactual] = useState(producto.imagenes[0])
   const [descripcion, setdescripcion] = useState(true);
+  const [cantidad, setCantidad] = useState(1);
+  const [alertacarrito, setAlertaCarrito] = useState(false);
+  const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem('carritojammy')) || []);
 
   useEffect(() => {
     const imagenprincipal = document.querySelector(".imagen-principal-producto")
@@ -55,14 +58,84 @@ const Producto = () => {
   }, [multiactual])
 
   useEffect(() => {
+  
+    localStorage.setItem('carritojammy', JSON.stringify(carrito))
+
+  }, [carrito])
+
+
+
+  useEffect(() => {
+
     if(window.innerWidth <= 1024){
       setdescripcion(false);
     }
+
+    
   }, [])
+
+  const cambiarcantidad = (tipo) => {
+
+    if(tipo === 'menos'){
+      if(cantidad > 1){
+        setCantidad(cantidad-1);
+      } else {
+        setCantidad(1);
+      }
+    } else {
+      if(cantidad<=0){
+        setCantidad(1)
+      } else {
+        setCantidad(cantidad+1);
+      }
+    }
+  }
+
+  const agregaralcarrito = () => {
+
+    const pedido = {
+      id: producto.id,
+      nombre: producto.titulo,
+      cantidad,
+      precio: producto.precio,
+      imagen: producto.imagenes[0].url
+    }
+
+    let nuevocarrito = []
+
+    const existe = carrito.some(item => item.id === producto.id);
+
+    if(existe){
+      nuevocarrito = carrito.map(item => {
+        if(item.id === producto.id){
+          item.cantidad = item.cantidad + cantidad;
+          return item;
+        } else {
+          return item;
+        }
+      })
+    } else {
+      nuevocarrito = [...carrito, pedido]
+    }
+    
+    setCarrito(nuevocarrito);
+
+    notificacioncarrito()
+  }
+
+  const notificacioncarrito = () => {
+    setAlertaCarrito(true);
+    setTimeout(() => {
+      setAlertaCarrito(false);
+    }, 3000);
+  }
 
   return (
     <>
       <div className="contenedor2">
+        <div className={`${alertacarrito ? 'block' : 'hidden'} notificacion-carrito`}>
+          Agregado Correctamente
+        </div>
         <div className="imagen-titulos">
           <div className="imagen-carousel">
             {multiactual.tipo === 'imagen' ? (
@@ -130,10 +203,13 @@ const Producto = () => {
             )}
             
             <p className="colores">Colores: <span>{producto.colores}</span></p>
-            <div className="boton-ordenar" onClick={() => window.open(`https://wa.me/573054392872?text=Hola!%20Estoy%20interesado%20en%20el%20producto%20que%20vi%20en%20${window.location.href}`)}>
-              <img src="/wa.webp" alt="" />
-              <p>Comprar Ahora</p>
+            <div className="botones-carrito">
+              <button onClick={() => cambiarcantidad('menos')}>-</button>
+              <input type="number" min="1" value={cantidad} onChange={e => setCantidad(e.target.value)} />
+              <button onClick={() => cambiarcantidad('mas')}>+</button>
             </div>
+            <button className="boton-agregar-carrito" onClick={() => agregaralcarrito()}>Agregar Carrito </button>
+            
             <div className="descripcion-promocion">
               <div className="descripcion">
                 <div className="boton-descripcion" onClick={() => setdescripcion(!descripcion)}>

@@ -2,6 +2,8 @@ import usePagina from "../hooks/usePagina"
 import { useEffect, useState } from "react";
 import Alerta from "../components/Alerta";
 import Itemcheckout from "../components/Itemcheckout";
+import productosdb from "../components/Productosdb";
+import axios from 'axios';
 
 const Checkout = () => {
 
@@ -10,55 +12,55 @@ const Checkout = () => {
     const [apellidos, setApellidos] = useState('');
     const [telefono, setTelefono] = useState('');
     const [email, setEmail] = useState('');
-    const [departamento, setDepartamento] = useState('');
+    const [origen, setOrigen] = useState('');
     const [ciudad, setCiudad] = useState('');
     const [direccion, setDireccion] = useState('');
     const [alerta, setAlerta] = useState({});
     const [total, setTotal] = useState(0);
+    const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem('carritojammy')) || []);
+    const [carritomostrar, setCarritoMostrar] = useState([]);
+    const [cliente, setCliente] = useState('');
 
-    const carrito = [
-        {
-            id: 50,
-            nombre: 'Lanzadora MP5 con 6000 Orvis Hidrogel',
-            imagen: '/producto50a.webp',
-            cantidad: 5,
-            precio: 104900
-        },
-        {
-            id: 2,
-            nombre: 'Organeta Vaca con Luces y Sonido',
-            imagen: '/producto179a.webp',
-            cantidad: 2,
-            precio: 39900
-        },
-        {
-            id: 179,
-            nombre: 'Huevo Cry Baby Sorpresa',
-            imagen: '/producto70a.webp',
-            cantidad: 1,
-            precio: 28900
-        },
-
-    ]
 
     useEffect(() => {
-        setpagina('otra')
 
+        //Verifica que los productos que estaban en el carrito sigan disponibles
+        const carritotemporal = carrito.map(item => {
+            if(productosdb.some(produ => produ.id === item.id && produ.status === 'disponible')){
+                return item;
+            }
+        })
+
+        setCarritoMostrar(carritotemporal);
+
+    }, [carrito])
+
+    useEffect(() => {
         //Calcular total a pagar
         let totalcarrito = 0;
-        carrito.forEach(item => {
+        carritomostrar.forEach(item => {
             totalcarrito+=(item.cantidad*item.precio)
         })
         setTotal(totalcarrito);
-        
 
+        localStorage.setItem('carritojammy', JSON.stringify(carritomostrar));
+
+
+    }, [carritomostrar])
+
+    useEffect(() => {
+        setpagina('otra')
     }, [])
 
-    const handlesubmit = (e) => {
+    useEffect(() => {
+        setCliente(nombres + ' ' + apellidos)
+    }, [nombres, apellidos]);
+
+    const handlesubmit = async (e) => {
         e.preventDefault();
 
         //Revisar si algun campo esta vacio y generar alerta
-        if([nombres, apellidos, telefono, email, departamento, ciudad, direccion].includes('')){
+        if([nombres, apellidos, telefono, email, origen, ciudad, direccion].includes('')){
             setAlerta({
                 msg: 'Todos los campos son obligatorios',
                 error: true
@@ -71,7 +73,35 @@ const Checkout = () => {
 
         }
 
-        console.log('Enviando Info')
+        let productostext = ""
+        carritomostrar.forEach(item => productostext+=item.cantidad + ' - ' + item.nombre+" || ")
+        
+
+        //Crear el pedido
+
+        const fechahoy = new Date();
+        const fecha = (fechahoy.getMonth()+1)+"/"+fechahoy.getDate()+"/"+fechahoy.getFullYear()
+
+        const pedido = {
+            cliente,
+            origen,
+            fecha,
+            productos: carritomostrar,
+            productostext,
+            ciudad,
+            direccion,
+            telefono,
+            total
+        }
+
+        //Enviar pedido
+        try {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/api/clientes`;
+            await axios.post(url, pedido)
+            console.log('Enviado correctamente');
+        } catch (error) {
+            console.log(error);
+        }
 
 
     }
@@ -105,12 +135,19 @@ const Checkout = () => {
                         </div>
                         <div className="div-rows-info mt-4">
                             <div className="div-row-info">
-                                <label htmlFor="departamento">Departamento:</label>
-                                <input type="text" placeholder="Departamento" id="departamento" value={departamento} onChange={e => setDepartamento(e.target.value)} />
+                                <label htmlFor="ciudad">Ciudad/Departamento:</label>
+                                <input type="text" placeholder="Ciudad/Departamento" id="ciudad" value={ciudad} onChange={e => setCiudad(e.target.value)}/>
                             </div>
                             <div className="div-row-info">
-                                <label htmlFor="ciudad">Ciudad:</label>
-                                <input type="text" placeholder="Ciudad" id="ciudad" value={ciudad} onChange={e => setCiudad(e.target.value)}/>
+                                <label>¿Como nos conociste?</label>
+                                <select onChange={e => setOrigen(e.target.value)} value={origen}>
+                                    <option value="" disabled>Selecciona</option>
+                                    <option value="Facebook Ads">Facebook</option>
+                                    <option value="Instagram Ads">Instagram</option>
+                                    <option value="Voz a Voz">Voz a Voz</option>
+                                </select>
+                            
+                                
                             </div>
                         </div>
                         <div className="div-rows-info mt-4">
@@ -134,10 +171,12 @@ const Checkout = () => {
                 <div className="informacion-pedido grid-item">
                     <h1 className="text-black">Tu Pedido</h1>
                     <div className="resumen-productos">
-                        {carrito.map(item => (
+                        {carritomostrar.map(item => (
                             <Itemcheckout 
                                 key={item.id}
                                 item={item}
+                                carritomostrar={carritomostrar}
+                                setCarritoMostrar={setCarritoMostrar}
                             />
                         ))}
                     </div>
@@ -157,7 +196,7 @@ const Checkout = () => {
                             <img className="" src="./truck.png" alt="" />
                             <img className="" src="./contraentrega.jpg" alt="" />
                         </div>
-                        <p className="  px-8 py-6 text-center">Pago Contra Entrega <span className=" font-bold text-green-600">GRATIS</span> entre 1-2 dias habiles y el pago se realiza en efectivo</p>
+                        <p className="  px-8 py-6 text-center"> <span className=" font-bold">PAGO CONTRA ENTREGA</span><span className=" font-bold text-green-600"> GRATIS</span> y recibe tu pedido entre 1-2 dias habiles (Pago en efectivo)</p>
                     </div>
 
                     <div className="ocultar-info-pedido">
