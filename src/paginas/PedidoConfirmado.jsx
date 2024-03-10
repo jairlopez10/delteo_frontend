@@ -25,7 +25,7 @@ const PedidoConfirmado = () => {
                 </div>
                 <div className="contacto-wa">
                 <p className="text-4xl pregunta">¿Tienes alguna pregunta?</p>
-                <button className="boton-contacto-pedido">
+                <button className="boton-contacto-pedido" onClick={() => window.open(`https://wa.me/573054392872?text=Hola!%20Acabo%20de%20realizar%20un%20pedido%20a%20nombre%20de`)}>
                     <img src="./wa.webp" alt="imagen-wa" />
                     <p>Contactanos</p>
                 </button>

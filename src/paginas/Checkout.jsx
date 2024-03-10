@@ -1,5 +1,6 @@
 import usePagina from "../hooks/usePagina"
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Alerta from "../components/Alerta";
 import Itemcheckout from "../components/Itemcheckout";
 import productosdb from "../components/Productosdb";
@@ -20,6 +21,7 @@ const Checkout = () => {
     const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem('carritojammy')) || []);
     const [carritomostrar, setCarritoMostrar] = useState([]);
     const [cliente, setCliente] = useState('');
+    const navegar = useNavigate()
 
 
     useEffect(() => {
@@ -98,6 +100,10 @@ const Checkout = () => {
         try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/clientes`;
             await axios.post(url, pedido)
+            navegar('/pedidoconfirmado')
+            localStorage.setItem('carritojammy', JSON.stringify([]));
+            setCarrito([]);
+            setCarritoMostrar([]); 
             
         } catch (error) {
             console.log(error);
