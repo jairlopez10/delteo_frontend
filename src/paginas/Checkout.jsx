@@ -21,6 +21,7 @@ const Checkout = () => {
     const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem('carritojammy')) || []);
     const [carritomostrar, setCarritoMostrar] = useState([]);
     const [cliente, setCliente] = useState('');
+    const [spinner, setSpinner] = useState(false);
     const navegar = useNavigate()
 
 
@@ -61,6 +62,8 @@ const Checkout = () => {
     const handlesubmit = async (e) => {
         e.preventDefault();
 
+        setSpinner(true);
+
         //Revisar si algun campo esta vacio y generar alerta
         if([nombres, apellidos, telefono, email, origen, ciudad, direccion].includes('')){
             setAlerta({
@@ -68,9 +71,12 @@ const Checkout = () => {
                 error: true
             })
             
+            
             setTimeout(() => {
                 setAlerta({});
             }, 3500);
+            
+
             return;
 
         }
@@ -100,6 +106,7 @@ const Checkout = () => {
         try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/clientes`;
             await axios.post(url, pedido)
+            setSpinner(false);
             navegar('/pedidoconfirmado')
             localStorage.setItem('carritojammy', JSON.stringify([]));
             setCarrito([]);
@@ -217,6 +224,10 @@ const Checkout = () => {
                     <button className={`boton-info-pedido boton-checkout`} onClick={handlesubmit}>
                         ENVIAR PEDIDO
                     </button>
+
+                    <div className={`${spinner ? 'block bgspiner' : 'hidden'}`}>
+                        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    </div>
                 </div>
             </div>
         </div>
