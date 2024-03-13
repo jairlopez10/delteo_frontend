@@ -70,7 +70,7 @@ const Checkout = () => {
                 msg: 'Todos los campos son obligatorios',
                 error: true
             })
-            
+            setSpinner(false);
             
             setTimeout(() => {
                 setAlerta({});
