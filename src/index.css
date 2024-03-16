@@ -352,9 +352,8 @@ footer {
 }
 
 .productocard .precio {
-  
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-top: 1rem;
 }
 
@@ -405,7 +404,7 @@ footer {
 }
 
 .contenidocard .titulo {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .contenidocard .informacion {
@@ -459,8 +458,14 @@ footer {
 }
 
 @media(min-width: 768px) {
+  .productocard .precio {
+    font-size: 2rem;
+  }
   .productocard img {
     height: 25rem;
+  }
+  .contenidocard .titulo {
+    font-size: 2rem;
   }
   .whatsapp {
     height: 7rem;
