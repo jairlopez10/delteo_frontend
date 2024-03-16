@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import productosdb from "../components/Productosdb"
 import Multimedia from "../components/Multimedia";
+import Accesoriosproducto from "../components/Accesoriosproducto";
 import { useState, useEffect } from "react";
 import usePagina from "../hooks/usePagina";
 
@@ -10,6 +11,7 @@ const Producto = () => {
   const params = useParams();
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
+  const idlanzadoras = [50, 303, 277, 51]
 
   useEffect(() => {
     if(tipocliente === "m"){
@@ -47,6 +49,7 @@ const Producto = () => {
   const [cantidad, setCantidad] = useState(1);
   const [alertacarrito, setAlertaCarrito] = useState(false);
   const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem('carritojammy')) || []);
+  const [lanzadoraboolean, setLanzadoraBoolean] = useState(false);
 
   useEffect(() => {
     const imagenprincipal = document.querySelector(".imagen-principal-producto")
@@ -70,6 +73,11 @@ const Producto = () => {
     if(window.innerWidth <= 1024){
       setdescripcion(false);
     }
+
+    const lanzatemporal = idlanzadoras.some(item => item === producto.id)
+    
+    lanzatemporal ? setLanzadoraBoolean(true) : setLanzadoraBoolean(false);
+
 
     
   }, [])
@@ -213,13 +221,25 @@ const Producto = () => {
             <div className="descripcion-promocion">
               <div className="descripcion">
                 <div className="boton-descripcion" onClick={() => setdescripcion(!descripcion)}>
-                  <p>Descripción</p>
+                  <p>Caracteristicas</p>
                   <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-caret-down" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1" stroke="#3d3d3d" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M6 10l6 6l6 -6h-12" />
                   </svg>
                 </div>
-                <p className={`${descripcion ? 'block' : 'hidden'} descripcion-parrafo`}>{producto.descripcion}</p>
+                <div className={`${descripcion ? 'block' : 'hidden'} descripcion-parrafo`}>
+                  {lanzadoraboolean ? (
+                    <>
+                      <Accesoriosproducto 
+                        accesorios={producto.descripcion}
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <p>{producto.descripcion}</p>
+                    </>
+                  )}
+                </div>
                 
               </div>
               

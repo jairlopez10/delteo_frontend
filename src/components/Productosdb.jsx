@@ -5,11 +5,7 @@ const productosdb = [
         titulo: "Lanzador Hidrogel MP5 Automatica Recargable con Gafas y 6.000 Orvis Hidrogel",
         preciomayorista: 71900,
         precio: 104900,
-        descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un MP5! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
-
-        Esta pistola lanzadora automática, con su diseño estilo MP5, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 6000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
-        
-        La seguridad es una prioridad, y es por eso que este set incluye gafas de protección para mantener tus ojos a salvo mientras te sumerges en la acción. Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego seguro y responsable`,
+        descripcion: ['Lanzadora', 'Gafas de protección', 'Cable USB (la lanzadora se carga directamente en la parte inferior)', '2 paquetes de orvis = 6,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Tanque de munición', 'Culata', 'Gafas de protección'],
         imagenes: [
             {
                 tipo: "imagen",
@@ -73,11 +69,7 @@ const productosdb = [
         titulo: "Lanzador Hidrogel AK47 Automatica Recargable con Gafas y 1.000 Orvis Hidrogel",
         preciomayorista: 69900,
         precio: 99900,
-        descripcion: `¡Prepárate para la batalla definitiva con la Pistola Lanzadora Automática de Bolas de Hidrogel, inspirada en el estilo de un AK47! Este set de juego te sumerge en una experiencia de combate emocionante y llena de adrenalina.
-
-        Esta pistola lanzadora automática, con su diseño estilo AK47, te ofrece la emoción de una auténtica batalla. Dispara ráfagas de bolas de hidrogel de manera continua con solo mantener presionado el gatillo. Con capacidad para 1000 bolas de hidrogel, estarás listo para enfrentar cualquier desafío y mantenerte en la acción durante horas.
-        
-        La seguridad es una prioridad, y es por eso que este set incluye gafas de protección para mantener tus ojos a salvo mientras te sumerges en la acción. Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego seguro y responsable`,
+        descripcion: ['Lanzadora', 'Silenciador', 'Gafas de protección', 'Batería', 'Cargador USB', '1 paquete de Orvis = 1,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Tanque de munición', 'Manual de instrucciones'],
         imagenes: [
             {
                 tipo: "imagen",
@@ -229,6 +221,26 @@ const productosdb = [
         edad2: "+3",
         categoria: "munecas",
         genero: "ninas"
+    },
+    {
+        id: 362,
+        titulo: "Orvis Hidrogel X 5.000 Unds",
+        preciomayorista: 5900,
+        precio: 7900,
+        referencia: "",
+        descripcion: `Orvis de hidrogel para lanzadoras, debes dejarlas minimo 3 horas en agua completamente sumergidas, luego las escurres y las agregas al cargador `,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto362a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+3",
+        categoria: "punteria",
+        genero: "ninos"
     },
     {
         id: 100,
@@ -511,11 +523,7 @@ const productosdb = [
         titulo: "Pistola Hidrogel Automatica Recargable con 3.000 Orvis Hidrogel",
         preciomayorista: 49900,
         precio: 89900,
-        descripcion: `¡Prepárate para la diversión y la acción sin fin con la Pistola Lanzadora Automática de Bolas de Hidrogel! Este emocionante juguete te permite sumergirte en emocionantes batallas simuladas y aventuras imaginativas.
-
-        La pistola lanzadora automática es fácil de usar, con la capacidad de disparar ráfagas de bolas de hidrogel con solo mantener presionado el gatillo. Con 1500 bolas de hidrogel incluidas, estarás listo para enfrentar desafíos y mantener la diversión durante horas.
-        
-        Las bolas de hidrogel son seguras y biodegradables, lo que garantiza un juego responsable y sin preocupaciones. Estas pequeñas esferas se expanden al contacto con el agua, lo que agrega un elemento de emoción y realismo a tus batallas simuladas!`,
+        descripcion: ['Lanzadora', 'Batería recargable', 'Cargador USB', 'Silenciador', 'Tanque de munición', '1 paquete de Orvis = 3,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Manual de instrucciones' ],
         imagenes: [
             {
                 tipo: "imagen",
@@ -1147,7 +1155,7 @@ const productosdb = [
                 url: "/producto174a.webp" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+3", "+6"],
         edad2: "+3",
@@ -1280,7 +1288,7 @@ const productosdb = [
         preciomayorista: 76900,
         precio: 114900,
         referencia: "568C",
-        descripcion: ``,
+        descripcion: ['Lanzadora', 'Silenciador', 'Gafas de protección', 'Batería Recargable', 'Cargador USB', 'Tanque de munición', '1 paquete de Orvis = 1,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Bípode plegable', 'Correa para colgarse la lanzadora', 'Manual de instrucciones'],
         imagenes: [
             {
                 tipo: "imagen",

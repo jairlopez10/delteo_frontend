@@ -40,6 +40,7 @@ const Productocard = ({producto}) => {
                   <>
                   </>
                 )}
+
                 <Link className="informacion">Ver Más</Link>
             </div>
         </div>
