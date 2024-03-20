@@ -126,7 +126,7 @@ const Producto = () => {
       nuevocarrito = [...carrito, pedido]
     }
 
-    fbq('track', 'AddToCart');
+    //fbq('track', 'AddToCart');
     
     setCarrito(nuevocarrito);
 
