@@ -125,6 +125,8 @@ const Producto = () => {
     } else {
       nuevocarrito = [...carrito, pedido]
     }
+
+    fbq('track', 'AddToCart');
     
     setCarrito(nuevocarrito);
 

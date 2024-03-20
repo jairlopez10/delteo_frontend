@@ -102,6 +102,8 @@ const Checkout = () => {
             total
         }
 
+        //fbq('track', 'Purchase', {currency: "USD", value: total});
+
         //Enviar pedido
         try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/clientes`;
