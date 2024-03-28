@@ -112,7 +112,11 @@ const Checkout = () => {
             navegar('/pedidoconfirmado')
             localStorage.setItem('carritojammy', JSON.stringify([]));
             setCarrito([]);
-            setCarritoMostrar([]); 
+            setCarritoMostrar([]);
+            fbq('track', 'Purchase', {
+                currency: "COP",
+                value: total
+            })
             
         } catch (error) {
             console.log(error);
