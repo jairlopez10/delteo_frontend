@@ -108,17 +108,16 @@ const Checkout = () => {
             total
         }
 
-        //fbq('track', 'Purchase', {currency: "USD", value: total});
+        fbq('track', 'Purchase', {
+            currency: "COP",
+            value: total
+        })
 
         //Enviar pedido
         try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/clientes`;
             await axios.post(url, pedido)
             setSpinner(false);
-            fbq('track', 'Purchase', {
-                currency: "COP",
-                value: total
-            })
             navegar('/pedidoconfirmado')
             localStorage.setItem('carritojammy', JSON.stringify([]));
             setCarrito([]);
