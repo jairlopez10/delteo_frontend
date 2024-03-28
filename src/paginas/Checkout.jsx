@@ -109,14 +109,15 @@ const Checkout = () => {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/clientes`;
             await axios.post(url, pedido)
             setSpinner(false);
-            navegar('/pedidoconfirmado')
-            localStorage.setItem('carritojammy', JSON.stringify([]));
-            setCarrito([]);
-            setCarritoMostrar([]);
             fbq('track', 'Purchase', {
                 currency: "COP",
                 value: total
             })
+            navegar('/pedidoconfirmado')
+            localStorage.setItem('carritojammy', JSON.stringify([]));
+            setCarrito([]);
+            setCarritoMostrar([]);
+            
             
         } catch (error) {
             console.log(error);
