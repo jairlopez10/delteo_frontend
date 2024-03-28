@@ -53,6 +53,11 @@ const Checkout = () => {
 
     useEffect(() => {
         setpagina('otra')
+        fbq('track', 'InitiateCheckout', {
+            contents: carritomostrar,
+            currency: 'COP',
+            value: total
+        })
     }, [])
 
     useEffect(() => {
