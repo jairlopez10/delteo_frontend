@@ -46,6 +46,12 @@ const Checkout = () => {
         })
         setTotal(totalcarrito);
 
+        fbq('track', 'InitiateCheckout', {
+            contents: carritomostrar,
+            currency: 'COP',
+            value: total
+        })
+
         localStorage.setItem('carritojammy', JSON.stringify(carritomostrar));
 
 
@@ -53,11 +59,6 @@ const Checkout = () => {
 
     useEffect(() => {
         setpagina('otra')
-        fbq('track', 'InitiateCheckout', {
-            contents: carritomostrar,
-            currency: 'COP',
-            value: total
-        })
     }, [])
 
     useEffect(() => {
