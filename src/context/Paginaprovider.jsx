@@ -1,5 +1,4 @@
-import { createContext } from "react";
-import { useState, useEffect } from "react";
+import { createContext, useState } from "react";
 
 const Paginacontext = createContext();
 
