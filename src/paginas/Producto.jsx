@@ -133,6 +133,10 @@ const Producto = () => {
       value: producto.precio * cantidad
     });
     
+    dataLayer.push({
+      'event': `AddToCart`
+    })
+    
     setCarrito(nuevocarrito);
 
     notificacioncarrito()

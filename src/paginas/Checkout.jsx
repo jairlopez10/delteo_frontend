@@ -59,6 +59,9 @@ const Checkout = () => {
 
     useEffect(() => {
         setpagina('otra')
+        dataLayer.push({
+            'event': `Checkout`
+        })
     }, [])
 
     useEffect(() => {
