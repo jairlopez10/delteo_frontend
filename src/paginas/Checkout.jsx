@@ -62,6 +62,7 @@ const Checkout = () => {
         dataLayer.push({
             'event': `Checkout`
         })
+        document.title = 'Jammy | Checkout'
     }, [])
 
     useEffect(() => {
