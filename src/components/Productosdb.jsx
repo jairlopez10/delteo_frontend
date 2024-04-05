@@ -24,6 +24,68 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 303,
+        titulo: "Lanzador Hidrogel AK47 Automatica Recargable con Gafas y 1.000 Orvis Hidrogel",
+        preciomayorista: 69900,
+        precio: 99900,
+        descripcion: ['Lanzadora', 'Silenciador', 'Gafas de protección', 'Batería', 'Cargador USB', '1 paquete de Orvis = 1,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Tanque de munición', 'Manual de instrucciones'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto303a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto303b.mp4"
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 277,
+        titulo: "Lanzadora Hidrogel Larga con Gafas y 1.500 Orvis",
+        preciomayorista: 76900,
+        precio: 114900,
+        referencia: "568C",
+        descripcion: ['Lanzadora', 'Silenciador', 'Gafas de protección', 'Batería Recargable', 'Cargador USB', 'Tanque de munición', '1 paquete de Orvis = 1,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Bípode plegable', 'Correa para colgarse la lanzadora', 'Manual de instrucciones'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto277a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 51,
+        titulo: "Pistola Hidrogel Automatica Recargable con 3.000 Orvis Hidrogel",
+        preciomayorista: 49900,
+        precio: 89900,
+        descripcion: ['Lanzadora', 'Batería recargable', 'Cargador USB', 'Silenciador', 'Tanque de munición', '1 paquete de Orvis = 3,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Manual de instrucciones' ],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto51a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 2,
         titulo: "Computador Interactivo con Pantalla y Mouse",
         preciomayorista: 34900,
@@ -63,29 +125,6 @@ const productosdb = [
         edad2: "+3",
         categoria: "educativo",
         genero: "ninas"
-    },
-    {
-        id: 303,
-        titulo: "Lanzador Hidrogel AK47 Automatica Recargable con Gafas y 1.000 Orvis Hidrogel",
-        preciomayorista: 69900,
-        precio: 99900,
-        descripcion: ['Lanzadora', 'Silenciador', 'Gafas de protección', 'Batería', 'Cargador USB', '1 paquete de Orvis = 1,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Tanque de munición', 'Manual de instrucciones'],
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto303a.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto303b.mp4"
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: ["+8"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "ninos"
     },
     {
         id: 58,
@@ -517,25 +556,6 @@ const productosdb = [
         edad2: "+3",
         categoria: "educativo",
         genero: "ninas"
-    },
-    {
-        id: 51,
-        titulo: "Pistola Hidrogel Automatica Recargable con 3.000 Orvis Hidrogel",
-        preciomayorista: 49900,
-        precio: 89900,
-        descripcion: ['Lanzadora', 'Batería recargable', 'Cargador USB', 'Silenciador', 'Tanque de munición', '1 paquete de Orvis = 3,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Manual de instrucciones' ],
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto51a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: ["+8"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "ninos"
     },
     {
         id: 114,
@@ -1281,26 +1301,6 @@ const productosdb = [
         edad2: "+3",
         categoria: "organetas-guitarras",
         genero: "unisex"
-    },
-    {
-        id: 277,
-        titulo: "Lanzadora Hidrogel Larga con Gafas y 1.500 Orvis",
-        preciomayorista: 76900,
-        precio: 114900,
-        referencia: "568C",
-        descripcion: ['Lanzadora', 'Silenciador', 'Gafas de protección', 'Batería Recargable', 'Cargador USB', 'Tanque de munición', '1 paquete de Orvis = 1,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Bípode plegable', 'Correa para colgarse la lanzadora', 'Manual de instrucciones'],
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto277a.webp" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: ["+8"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "ninos"
     },
     {
         id: 188,
