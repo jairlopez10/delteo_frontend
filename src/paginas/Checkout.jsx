@@ -111,10 +111,17 @@ const Checkout = () => {
             telefono,
             total
         }
-
+        
+        //Enviar evento de compra al Pixel de Facebook
         fbq('track', 'Purchase', {
             currency: "COP",
             value: total
+        })
+
+        gtag('event', 'purchase', {
+            value: total,
+            currency: 'COP',
+            items: carritomostrar
         })
 
         //Enviar pedido

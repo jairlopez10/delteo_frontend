@@ -126,6 +126,7 @@ const Producto = () => {
       nuevocarrito = [...carrito, pedido]
     }
 
+    //Enviar evento al Pixel de Facebook
     fbq('track', 'AddToCart', {
       content_ids: producto.id,
       content_name: producto.titulo,
@@ -133,9 +134,18 @@ const Producto = () => {
       value: producto.precio * cantidad
     });
     
-    dataLayer.push({
-      'event': `AddToCart`
+    //Enviar evento a Google Analytics
+    gtag('event', 'add_to_cart', {
+      currency: 'COP',
+      value: producto.precio * cantidad,
+      items: [{
+        item_id: producto.id,
+        item_name: producto.titulo,
+        quantity: cantidad,
+        price: producto.precio
+      }]
     })
+    
     
     setCarrito(nuevocarrito);
 
