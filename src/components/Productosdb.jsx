@@ -67,7 +67,7 @@ const productosdb = [
                 url: "/producto277a.webp" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
