@@ -2468,15 +2468,19 @@ const productosdb = [
         preciomayorista: 69900,
         precio: 99900,
         referencia: "8587-2A",
-        descripcion: ``,
+        descripcion: ['Carro con alcance de 25 metros', 'Bateria Recargable', 'Control remoto', 'Cargador USB', ],
         imagenes: [
             {
                 tipo: "imagen",
                 url: "/producto290a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto290b.webp" 
             }
         ],
         status: "disponible",
-        colores: "Unicolor",
+        colores: "Spiderman, Capitan America, Hulk",
         edad: ["+6", "+8"],
         edad2: "+6",
         categoria: "carros-control",

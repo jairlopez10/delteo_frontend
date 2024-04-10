@@ -11,7 +11,7 @@ const Producto = () => {
   const params = useParams();
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
-  const idlanzadoras = [50, 303, 277, 51]
+  const idlanzadoras = [50, 303, 277, 51, 290]
 
   useEffect(() => {
     if(tipocliente === "m"){
