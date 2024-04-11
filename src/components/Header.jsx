@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <>
-        <header className={`${['inicio', 'mayorista'].some(item => pagina === item) ? '' : 'radiusnormal'}`}>
+        <header className={`${['inicio', 'mayorista'].some(item => pagina === item) ? '' : 'radiusnormal fixed w-full top-0'}`}>
             <div className="divheader">
                 <div className="contenidoheader contenedor">
                     <div className="divbarra">
@@ -31,7 +31,7 @@ const Header = () => {
                             <img src="/logo.png" alt="" />
                         </Link>
 
-                        <Link to="/checkout" onClick={() => setmenu(false)} className="md:hidden">
+                        <Link to="/checkout" onClick={() => setmenu(false)} className="md:hidden flex linkcheckout">
                             <svg xmlns="http://www.w3.org/2000/svg" className="carrito icon icon-tabler icon-tabler-shopping-cart" width="84" height="84" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                 <circle cx="6" cy="19" r="2" />

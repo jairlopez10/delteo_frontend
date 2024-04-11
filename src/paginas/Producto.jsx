@@ -161,7 +161,7 @@ const Producto = () => {
 
   return (
     <>
-      <div className="contenedor2">
+      <div className="contenedor2 pt-44">
         <div className={`${alertacarrito ? 'block' : 'hidden'} notificacion-carrito`}>
           Agregado Correctamente
         </div>
@@ -199,7 +199,7 @@ const Producto = () => {
                   <path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
                   <path d="M3 9l4 0" />
                 </svg>
-                <p>Entregas a todo Colombia (contra entrega)</p>
+                <p>Envio a tu dirección <span className=" text-green-600 font-bold">GRATIS</span></p>
               </div>
               <div className="flex gap-2 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="icono-incluido icon icon-tabler icon-tabler-shield-check" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -207,7 +207,7 @@ const Producto = () => {
                   <path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" />
                   <path d="M15 19l2 2l4 -4" />
                 </svg>
-                <p>Garantia de 1 mes</p>
+                <p>Garantia de <span className=" text-green-600 font-bold">1 mes</span></p>
               </div>
               <div className="flex gap-2 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="icono-incluido icon icon-tabler icon-tabler-align-box-bottom-left" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -217,7 +217,7 @@ const Producto = () => {
                   <path d="M10 11v6" />
                   <path d="M13 13v4" />
                 </svg>
-                <p>Stock <span className=" text-green-600">disponible</span></p>
+                <p>Stock <span className=" text-green-600 font-bold">disponible</span></p>
               </div>
             </div>
             {tipocliente === "d" ? (
@@ -227,7 +227,7 @@ const Producto = () => {
               </>
             ) : (
               <>
-                <p className="precio-prod">{`$${producto.precio.toLocaleString('es-CO')} / Und`}</p>
+                <p className="precio-prod">{`$${producto.precio.toLocaleString('es-CO')}`}</p>
               </>
             )}
             

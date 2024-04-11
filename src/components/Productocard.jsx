@@ -41,7 +41,7 @@ const Productocard = ({producto}) => {
                   </>
                 )}
 
-                <Link className="informacion">Ver Más</Link>
+                {/*<Link className="informacion">Ver Más</Link>*/}
             </div>
         </div>
     </>
