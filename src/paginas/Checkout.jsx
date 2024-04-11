@@ -144,7 +144,7 @@ const Checkout = () => {
 
   return (
     <>
-        <div className="contenedor-checkout">
+        <div className="contenedor-checkout pt-60">
             <div className="pagina-checkout">
                 <div className="informacion-envio grid-item">
                     <h1 className="text-black">Dirección de Envio</h1>
