@@ -100,6 +100,7 @@ const Catalogo = () => {
   useEffect(() => {
     setpagina('mayorista');
     document.title = "Jammy | Jugueteria"
+    window.scrollTo(0,0)
   }, [])
 
 
