@@ -23,6 +23,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   font-weight: bold;
   color: rgb(9, 255, 0);
+  color: black
 }
 
 h1 {
@@ -75,13 +76,17 @@ img, picture {
 
 header {
   background-image: url("/fondo.jpg");
-  background-image: linear-gradient( rgba(0, 0, 0, .7) 0%,  rgba(0, 0, 0, .6) 100%), url('/fondo.webp');
+  background-image: linear-gradient( rgba(0, 0, 0, .7) 0%,  rgba(0, 0, 0, .97) 100%), url('/fondo.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   padding: 1rem;
-  border-radius: 0 0 9rem 9rem;
+  border-radius: 0 0 2rem 2rem;
   margin-bottom: 3rem;
+}
+
+body {
+  background-color: #f7f7f7;
 }
 
 .radiusnormal {
@@ -275,6 +280,29 @@ footer {
   .navegacion {
     flex-direction: row;
     gap: 6rem;
+  }
+}
+
+.div-banner{
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+  border-radius: 3rem;
+}
+
+@media(min-width: 768px) {
+  .div-banner {
+    flex-direction: row;
+  }
+  .banner {
+    width: 50%;
   }
 }
 

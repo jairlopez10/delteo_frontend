@@ -59,7 +59,7 @@ const Header = () => {
                     
 
                 </div>
-                {pagina === 'inicio' || pagina === "mayorista" ? <Slogan /> : ""}
+                
             </div>
         </header>
     </>

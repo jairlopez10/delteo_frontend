@@ -26,7 +26,7 @@ const Nosotros = () => {
           <div className="p-contactar">
             <p>¡Bienvenidos a la Juguetería Jammy, donde todos los sueños se hacen realidad y cada sonrisa cuenta. Somos dos ingenieros industriales de la Pontificia Universidad Javeriana, los cuales buscamos brindar asombro y alegria todos los niños de nuestros seres queridos o amigos por medio de nuestros juguetes. Nos caracterizamos por ofrecer productos innovadores, de calidad, seguros y asequibles que quizás son inimaginables. Realizamos envíos a cualquier parte del país, por lo que nos puedes contar cuál es el sueño de tu pequeño por cumplir!</p>
             <div className="flex justify-center mt-8 divconta">
-              <p className="titulo-contactanos uppercase">Contáctanos</p>
+              <p className="titulo-contactanos uppercase">Redes Sociales</p>
             </div>
             
             <div className="flex justify-around mt-12">
