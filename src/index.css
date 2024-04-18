@@ -82,7 +82,7 @@ header {
   background-position: center center;
   padding: 1.3rem 1rem;
   border-radius: 0 0 1rem 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   box-shadow: 0px 5px 15px 0px rgba(107, 106, 107, 0.3);
 }
 
@@ -284,27 +284,13 @@ footer {
   }
 }
 
-.div-banner{
-  display: flex;
-  gap: 2rem;
-  padding-bottom: 2rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.div-banner {
+  margin-bottom: 3rem;
 }
 
 .banner {
   width: 100%;
   border-radius: 3rem;
-}
-
-@media(min-width: 768px) {
-  .div-banner {
-    flex-direction: row;
-  }
-  .banner {
-    width: 50%;
-  }
 }
 
 /* --------------------------------------------- CATALOGO -------------------------------------------------*/
@@ -326,7 +312,7 @@ footer {
   padding: .5rem 1rem;
   border-radius: 1rem;
   color: #3d3d3d;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .seccionfiltros select {

@@ -21,7 +21,9 @@ const Catalogo = () => {
   const [productosmostrar, setproductosmostrar] = useState(productosavailable);
   const [productosfiltrados, setproductosfiltrados] = useState(productosavailable);
   const [numpagina, setnumpagina] = useState(1);
+  const [idbanner, setIdbanner] = useState(1);
   const tituloproductosref = useRef(null);
+  const bannersid = [1, 2, 3]
  
   const MIN = 5000;
   const MAX = 190000;
@@ -97,11 +99,27 @@ const Catalogo = () => {
     if (product.precio <= preciomax) return product;
   }
 
+  const cambiarbanners = () => {
+    setTimeout(() => {
+      if(idbanner === 2){
+        setIdbanner(1)
+      } else {
+        setIdbanner(idbanner+1)
+      }
+    }, 4000);
+  }
+
+  useEffect(() => {
+    cambiarbanners()
+  }, [idbanner])
+
   useEffect(() => {
     setpagina('mayorista');
     document.title = "Jammy | Jugueteria"
     window.scrollTo(0,0)
-  }, [])
+    cambiarbanners()
+    
+  },[])
 
 
 
@@ -129,8 +147,7 @@ const Catalogo = () => {
     <>
       <div className="seccionproductos contenedor">
         <div className="div-banner">
-          <img className="banner" src="banner1.webp" alt="" />
-          <img className="banner" src="banner2.webp" alt="" />
+          <img className="banner" src={`banner${idbanner}.webp`} alt="" />
         </div>
         <h1 className="tituloproductos mb-8" ref={tituloproductosref}>Productos</h1>
         <div className="flex items-center justify-center gap-2 md:hidden cursor-pointer w-min mb-4 filtrodiv" onClick={() => setseccionfiltro(!seccionfiltro)}>

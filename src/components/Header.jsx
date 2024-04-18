@@ -43,7 +43,7 @@ const Header = () => {
                     </div>
                     
                     <nav className={`navegacion ${menu ? 'flex' : 'hidden'} md:flex`}>
-                        <Link to={"/mayorista"} className="links" onClick={() => setmenu(false)}>Catalogo</Link>
+                        <Link to={"/mayorista"} className="links" onClick={() => setmenu(false)}>Tienda</Link>
                         <Link to="/nosotros" className={`links`} onClick={() => setmenu(false)}>Nosotros</Link>
                         <Link to="/checkout" onClick={() => setmenu(false)} className="carrito-ocultar">
                             <svg xmlns="http://www.w3.org/2000/svg" className="carrito icon icon-tabler icon-tabler-shopping-cart" width="84" height="84" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
