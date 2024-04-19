@@ -225,6 +225,10 @@ const productosdb = [
         imagenes: [
             {
                 tipo: "imagen",
+                url: "/producto62c.webp" 
+            },
+            {
+                tipo: "imagen",
                 url: "/producto62a.webp" 
             },
             {
@@ -233,14 +237,10 @@ const productosdb = [
             },
             {
                 tipo: "imagen",
-                url: "/producto62c.webp" 
-            },
-            {
-                tipo: "imagen",
                 url: "/producto62d.webp" 
             }
         ],
-        status: "No Stock",
+        status: "disponible",
         colores: "Rosada, Azul",
         edad: ["+3", "+6", "+8"],
         edad2: "+3",
