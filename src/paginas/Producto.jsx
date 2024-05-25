@@ -220,7 +220,7 @@ const Producto = () => {
                 <p>Stock <span className=" text-green-600 font-bold">disponible</span></p>
               </div>
             </div>
-            {tipocliente === "d" ? (
+            {tipocliente === "m" ? (
               <>
                 <p className="precio-prod">{`Precio: $${producto.preciomayorista.toLocaleString('es-CO')} / Und`}</p>
                 <p className="precio-prod">{`Precio Sugerido: $${producto.precio.toLocaleString('es-CO')} / Und`}</p>

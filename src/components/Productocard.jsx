@@ -10,12 +10,12 @@ const Productocard = ({producto}) => {
     let tipocliente;
     let precioshow
 
-    if (pagina === "inicio") {
+    if (pagina === "mayorista") {
       precioshow = preciomayorista
-      tipocliente = "d";
+      tipocliente = "m";
     } else {
       precioshow = precio
-      tipocliente = "m"
+      tipocliente = "d"
     }
      
     const navegar = useNavigate();
@@ -31,8 +31,8 @@ const Productocard = ({producto}) => {
             </div>
             <div className="contenidocard">
                 <p className="titulo cursor-pointer hover:underline" >{titulo}</p>
-                <p className="precio cursor-pointer" >{tipocliente === "m" ? "" : "Precio Mayorista:"} <span className={`${tipocliente === "m" ? "" : "preciocard"}`}>{`$${precioshow.toLocaleString('es-CO')}`}</span></p>
-                {tipocliente === "d" ? (
+                <p className="precio cursor-pointer" >{tipocliente === "d" ? "" : "Precio Mayorista:"} <span className={`${tipocliente === "d" ? "" : "preciocard"}`}>{`$${precioshow.toLocaleString('es-CO')}`}</span></p>
+                {tipocliente === "m" ? (
                   <>
                     <p className="precio cursor-pointer" >Precio Sugerido: <span className="preciocard">{`$${precio.toLocaleString('es-CO')}`}</span></p>
                   </>

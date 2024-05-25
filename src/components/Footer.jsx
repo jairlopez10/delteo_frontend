@@ -7,10 +7,10 @@ const Footer = () => {
 
   return (
     <>
-      <footer className=" bg-black flex justify-center">
+      <footer className="flex justify-center">
         
-        <Link to={"/mayorista"} className="logo" onClick={() => setmenu(false)}>
-            <img src="/logo.png" alt="" />
+        <Link to={"/"} className="logo" onClick={() => setmenu(false)}>
+            <img src="/lotoo.png" alt="" />
         </Link>
       </footer>
     </>

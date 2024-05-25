@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,7 +16,10 @@ html {
 }
 
 body {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1, h2, h3, h4 {
@@ -75,15 +79,14 @@ img, picture {
 /* ----------------------------------------- GLOBALES ----------------------------------------*/
 
 header {
-  background-image: url("/fondo.jpg");
-  background-image: linear-gradient( rgba(0, 0, 0, .7) 0%,  rgba(0, 0, 0, .97) 100%), url('/fondo.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-color: #004EBC;
   padding: 1.3rem 1rem;
-  border-radius: 0 0 1rem 1rem;
   margin-bottom: 2rem;
   box-shadow: 0px 5px 15px 0px rgba(107, 106, 107, 0.3);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-radius: 0 0 1rem 1rem;
 }
 
 body {
@@ -99,7 +102,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1rem;
 }
 
 .divbarra {
@@ -110,10 +112,10 @@ body {
 }
 
 .logo {
-  font-family: 'Kalam', cursive;
+  font-family: "Playfair Display", serif;
   font-weight: bold;
   color: white;
-  width: 18rem;
+  width: 15rem;
 }
 
 .carrito {
@@ -128,13 +130,13 @@ body {
 
 @media(min-width:500px) {
   .logo {
-    width: 25rem;
+    width: 20rem;
   }
 }
 
 @media(min-width: 768px){
   .logo{
-    width: 30rem;
+    width: 18rem;
   }
   .carrito-ocultar {
     display: block;
@@ -151,8 +153,8 @@ body {
   display: flex;
   justify-content: center;
   font-weight: bold;
-  font-size: 2.5rem;
-  font-family: 'Kalam', cursive;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
   text-align: center;
 }
 
@@ -216,16 +218,16 @@ body {
 }
 
 .footercontent {
-  font-family: 'Kalam', cursive;
+  font-family: "Playfair Display", serif;
   color: white;
   font-size: 6rem;
 }
 
 footer {
-  background-color: #1a1a1a;
+  background-color: #004EBC;
   border-radius: 2rem 2rem 0 0;
   margin-top: 3rem;
-  padding: 1rem;
+  padding: 1.3rem 1rem;
 }
 
 @media(min-width:500px) {
@@ -299,6 +301,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 12rem;
 }
 
 .seccionfiltros {
@@ -308,7 +311,7 @@ footer {
 }
 
 .filtrodiv {
-  background-color: #d6d6d6;
+  background-color: #E9E9E9;
   padding: .5rem 1rem;
   border-radius: 1rem;
   color: #3d3d3d;
@@ -317,8 +320,7 @@ footer {
 
 .seccionfiltros select {
   font-size: 1.7rem;
-  background-color: #acacac;
-  background-color: #1a1a1a;
+  background-color: #004EBC;
   color: white;
   border-radius: 1rem;
   padding: 1rem;
@@ -349,9 +351,14 @@ footer {
   display: grid; 
 }
 
+.tituloproductos {
+  display: flex;
+  justify-content: left;
+}
+
 .productoscards {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -360,7 +367,7 @@ footer {
   background-color: #eeeeee;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 0px 5px 15px 0px rgba(107, 106, 107, 0.4);
+  box-shadow: 0px 5px 15px 0px rgba(107, 106, 107, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -397,13 +404,13 @@ footer {
 }
 
 .range {
-  accent-color: rgb(9, 255, 0);
+  accent-color: #004EBC;
   width: 90%;
   margin-top: .5rem;
 }
 
 .range:hover {
-  accent-color: rgba(9, 255, 0, 0.582);
+  accent-color: #004EBC;
   cursor: pointer;
 }
 
@@ -461,7 +468,7 @@ footer {
 }
 
 .paginador {
-  background-color: #b9b9b9;
+  background-color: #E9E9E9;
   font-size: 2rem;
   font-weight: bold;
   padding: 1.5rem 2rem;
@@ -469,7 +476,8 @@ footer {
 }
 
 .paginador-activo {
-  background-color: rgba(9, 255, 0, 0.697);
+  background-color: #004EBC;
+  color: white;
 }
 
 @media(min-width: 768px) {
@@ -584,9 +592,10 @@ footer {
 
 .contenido-producto-final {
   border-radius: 2rem;
-  border: 1px solid #a0a0a0;
+  border: 1px solid #dadada;
   background-color: #dfdfdf;
   background-color: #ebebeb;
+  background-color: #ffffff;
   padding: 2rem;
 }
 
@@ -654,7 +663,6 @@ footer {
 }
 
 .boton-agregar-carrito {
-  background-color: #1a1a1a;
   background-color: #25d366;
   color: white;
   width: 100%;
@@ -663,6 +671,7 @@ footer {
   text-transform: uppercase;
   margin-top: 2rem;
   border-radius: 1rem;
+  font-weight: bold;
 }
 
 .boton-agregar-carrito:hover {
@@ -680,7 +689,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: .4rem 1rem;
-  background-color: #d6d6d6;
+  background-color: #fcf6f6;
   color: #3d3d3d;
   border-radius: 1rem;
   margin-top: 2rem;
@@ -689,12 +698,8 @@ footer {
 }
 
 .descripcion {
-  background-color: #d1d1d1;
+  background-color: #E9E9E9;
   border-radius: 1rem;
-}
-
-.descripcion-accesorios {
-
 }
 
 ul, li {
@@ -758,7 +763,7 @@ ul {
     width: 9rem;
   }
   .titulo-producto-final {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: normal;
   }
   
@@ -797,6 +802,10 @@ ul {
   justify-content: center;
 }
 
+.titulo-contactanos {
+  color: black;
+}
+
 .imagenes-nosotros img {
   height: 20rem;
   width: 20rem;
@@ -825,7 +834,7 @@ ul {
 
 .divconta p {
   font-size: 3.5rem;
-  color: #2bca65;
+  color: black;
 }
 
 .imagenredsocial:hover {
@@ -971,8 +980,7 @@ ul {
 }
 
 .boton-checkout {
-  background-color: #1a1a1a;
-  background-color: black;
+  background-color: #004EBC;
   width: 100%;
   padding: 1.7rem;
   font-size: 2rem;
@@ -993,7 +1001,7 @@ ul {
 }
 
 .boton-checkout:hover {
-  background-color: #2b2b2b;
+  background-color: #004099;
   transition: all .5s;
 }
 

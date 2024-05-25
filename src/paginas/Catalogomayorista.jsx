@@ -89,7 +89,7 @@ const Catalogomayorista = () => {
   }
 
   useEffect(() => {
-    setpagina('inicio');
+    setpagina('mayorista');
     document.title = "Jammy | Catalogo Mayorista"
   }, [])
 

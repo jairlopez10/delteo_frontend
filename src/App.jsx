@@ -15,10 +15,10 @@ function App() {
       <Paginaprovider>
         <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<Catalogomayorista />} />
+            <Route index element={<Catalogo />} />
             <Route path='/nosotros' element={<Nosotros />}/>
             <Route path='/:titulo/:tipocliente' element={<Producto />}/>
-            <Route path='/mayorista' element={<Catalogo />}/>
+            <Route path='/mayorista' element={<Catalogomayorista />}/>
             <Route path='/checkout' element={<Checkout />}/>
             <Route path='/pedidoconfirmado' element={<PedidoConfirmado/>}/>
           </Route>

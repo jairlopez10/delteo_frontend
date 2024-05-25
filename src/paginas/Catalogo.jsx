@@ -114,8 +114,8 @@ const Catalogo = () => {
   }, [idbanner])
 
   useEffect(() => {
-    setpagina('mayorista');
-    document.title = "Jammy | Jugueteria"
+    setpagina('inicio');
+    document.title = "Delteo | Jugueteria"
     window.scrollTo(0,0)
     cambiarbanners()
     
