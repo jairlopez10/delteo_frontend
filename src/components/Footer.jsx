@@ -10,7 +10,7 @@ const Footer = () => {
       <footer className="flex justify-center">
         
         <Link to={"/"} className="logo" onClick={() => setmenu(false)}>
-            <img src="/lotoo.png" alt="" />
+            <img src="/logo.webp" alt="" />
         </Link>
       </footer>
     </>

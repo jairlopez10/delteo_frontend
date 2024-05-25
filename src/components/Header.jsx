@@ -28,7 +28,7 @@ const Header = () => {
                         </svg>
                         
                         <Link to={"/"} className="logo" onClick={() => setmenu(false)}>
-                            <img src="/lotoo.png" alt="" />
+                            <img src="/logo.webp" alt="" />
                         </Link>
 
                         <Link to="/checkout" onClick={() => setmenu(false)} className="md:hidden flex linkcheckout">

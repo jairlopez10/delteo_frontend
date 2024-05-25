@@ -260,7 +260,7 @@ const Catalogo = () => {
       </div>
       
       <img src="/wa.webp" alt="img WA" className="whatsapp" onClick={() => {
-        window.open("https://wa.me/573054392872?text=Hola%20Jammy,%20quisiera%20saber%20mas%20informacion%20por%20favor%20", '_blank');
+        window.open("https://wa.me/573054392872?text=Hola%20Delteo,%20quisiera%20saber%20mas%20informacion%20por%20favor%20sobre%20", '_blank');
       }}/>
       
     </>
