@@ -5,11 +5,14 @@ const Paginacontext = createContext();
 const Paginaprovider = ({children}) => {
 
     const [pagina, setpagina] = useState('inicio');
+    const [contador, setContador] = useState(0);
 
     return (
         <Paginacontext.Provider value={{
             pagina,
-            setpagina
+            setpagina,
+            contador,
+            setContador
         }} >
             {children}
         </Paginacontext.Provider>

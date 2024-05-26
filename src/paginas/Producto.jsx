@@ -7,7 +7,7 @@ import usePagina from "../hooks/usePagina";
 
 const Producto = () => {
   
-  const {setpagina} = usePagina()
+  const {setpagina, setContador, contador} = usePagina()
   const params = useParams();
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
@@ -77,8 +77,7 @@ const Producto = () => {
     const lanzatemporal = idlanzadoras.some(item => item === producto.id)
     
     lanzatemporal ? setLanzadoraBoolean(true) : setLanzadoraBoolean(false);
-
-
+    setContador(carrito.length || 0)
     
   }, [])
 
@@ -148,6 +147,7 @@ const Producto = () => {
     
     
     setCarrito(nuevocarrito);
+    setContador(nuevocarrito.length)
 
     notificacioncarrito()
   }

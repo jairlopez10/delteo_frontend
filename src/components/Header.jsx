@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react";
 import usePagina from "../hooks/usePagina"
-import Slogan from "./Slogan";
 
 const Header = () => {
 
-    const { pagina } = usePagina();
+    const { pagina, contador, setContador } = usePagina();
     const [menu, setmenu] = useState(false);
+
+    useEffect(() => {
+        const cont = JSON.parse(localStorage.getItem('carritojammy')) || []
+        setContador(cont.length)
+    }, [])
 
   return (
     <>
@@ -53,6 +57,7 @@ const Header = () => {
                                 <path d="M17 17h-11v-14h-2" />
                                 <path d="M6 5l14 1l-1 7h-13" />
                             </svg>
+                            <p className={`contador-carrito ${contador > 0 ? 'block' : 'hidden'}`}>{contador}</p>
                         </Link>
                     </nav>
 

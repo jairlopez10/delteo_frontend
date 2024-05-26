@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const Checkout = () => {
 
-    const { setpagina } = usePagina();
+    const { setpagina, setContador } = usePagina();
     const [nombres, setNombres] = useState('');
     const [apellidos, setApellidos] = useState('');
     const [telefono, setTelefono] = useState('');
@@ -62,7 +62,9 @@ const Checkout = () => {
         dataLayer.push({
             'event': `Checkout`
         })
-        document.title = 'Jammy | Checkout'
+        document.title = 'Delteo | Checkout'
+
+        
     }, [])
 
     useEffect(() => {

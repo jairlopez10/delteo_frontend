@@ -353,7 +353,7 @@ const productosdb = [
                 url: "/producto275a.webp" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+3", "+6", "+8"],
         edad2: "+3",
@@ -1251,7 +1251,7 @@ const productosdb = [
                 url: "/producto180a.webp" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+0", "+3"],
         edad2: "+3",
@@ -1351,7 +1351,7 @@ const productosdb = [
                 url: "/producto359a.webp" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+3", "+6", "+8"],
         edad2: "+3",
@@ -1579,7 +1579,7 @@ const productosdb = [
                 url: "/producto160a.webp" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+3", "+6", "+8"],
         edad2: "+3",
@@ -1801,7 +1801,7 @@ const productosdb = [
                 url: "/producto280b.webp" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+3", "+6", "+8"],
         edad2: "+3",

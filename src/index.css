@@ -128,6 +128,15 @@ body {
   display: none;
 }
 
+.contador-carrito{
+  position: absolute;
+  top: 2rem;
+  right: 2.4rem;
+  background-color: orange;
+  border-radius: 100%;
+  padding: .2rem .8rem;
+}
+
 @media(min-width:500px) {
   .logo {
     width: 20rem;
