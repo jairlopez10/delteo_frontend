@@ -63,7 +63,7 @@ const Checkout = () => {
             'event': `Checkout`
         })
         document.title = 'Delteo | Checkout'
-
+        window.scrollTo(0,0)
         
     }, [])
 

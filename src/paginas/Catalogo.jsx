@@ -150,21 +150,25 @@ const Catalogo = () => {
           <img className="banner" src={`banner${idbanner}.webp`} alt="" />
         </div>
         <h1 className="tituloproductos mb-8" ref={tituloproductosref}>Productos</h1>
-        <div className="flex items-center justify-center gap-2 md:hidden cursor-pointer w-min mb-4 filtrodiv" onClick={() => setseccionfiltro(!seccionfiltro)}>
-          <svg xmlns="http://www.w3.org/2000/svg" className=" icon icon-tabler icon-tabler-adjustments-horizontal" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#3d3d3d" fill="none" strokeLinecap="round" strokeLinejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M14 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-            <path d="M4 6l8 0" />
-            <path d="M16 6l4 0" />
-            <path d="M8 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-            <path d="M4 12l2 0" />
-            <path d="M10 12l10 0" />
-            <path d="M17 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-            <path d="M4 18l11 0" />
-            <path d="M19 18l1 0" />
-          </svg>
-          <p className="filtrotext">Filtrar</p>
+        <div className="divfiltronumpro">
+          <div className="flex items-center justify-center gap-2 md:hidden cursor-pointer mb-4 filtrodiv" onClick={() => setseccionfiltro(!seccionfiltro)}>
+            <svg xmlns="http://www.w3.org/2000/svg" className=" icon icon-tabler icon-tabler-adjustments-horizontal" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#3d3d3d" fill="none" strokeLinecap="round" strokeLinejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M14 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M4 6l8 0" />
+              <path d="M16 6l4 0" />
+              <path d="M8 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M4 12l2 0" />
+              <path d="M10 12l10 0" />
+              <path d="M17 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M4 18l11 0" />
+              <path d="M19 18l1 0" />
+            </svg>
+            <p className="filtrotext">Filtrar y ordenar</p>
+          </div>
+          <p className="filtrotext">15 productos</p>
         </div>
+        
         <div className="productos">
           <div className={`${seccionfiltro ? 'flex' : 'hidden'} md:flex seccionfiltros`}>
             <select name="genero" id="genero" onChange={(e) => setgenero(e.target.value)}>
@@ -193,7 +197,6 @@ const Catalogo = () => {
             </select>
             */
             }
-            
             <select name="edad" id="edad" onChange={e => setedad(e.target.value)}>
               <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
               <option value="+0">Entre 0-2 años</option>

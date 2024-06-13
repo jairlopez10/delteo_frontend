@@ -2,7 +2,7 @@
 const productosdb = [
     {
         id: 50,
-        titulo: "Lanzador Hidrogel MP5 Automatica Recargable con Gafas y 6.000 Orvis Hidrogel",
+        titulo: "Lanzador MP5 Recargable Hidrogel",
         preciomayorista: 71900,
         precio: 104900,
         descripcion: ['Lanzadora', 'Gafas de protección', 'Cable USB (la lanzadora se carga directamente en la parte inferior)', '2 paquetes de orvis = 6,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Tanque de munición', 'Culata', 'Gafas de protección'],
@@ -29,7 +29,7 @@ const productosdb = [
     },
     {
         id: 303,
-        titulo: "Lanzador Hidrogel AK47 Automatica Recargable con Gafas y 1.000 Orvis Hidrogel",
+        titulo: "Lanzador AK47 Recargable Hidrogel",
         preciomayorista: 69900,
         precio: 99900,
         descripcion: ['Lanzadora', 'Silenciador', 'Gafas de protección', 'Batería', 'Cargador USB', '1 paquete de Orvis = 1,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Tanque de munición', 'Manual de instrucciones'],
@@ -76,7 +76,7 @@ const productosdb = [
     },
     {
         id: 51,
-        titulo: "Pistola Hidrogel Automatica Recargable con 3.000 Orvis Hidrogel",
+        titulo: "Pistola Recargable Hidrogel",
         preciomayorista: 49900,
         precio: 89900,
         descripcion: ['Lanzadora', 'Batería recargable', 'Cargador USB', 'Silenciador', 'Tanque de munición', '1 paquete de Orvis = 3,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Manual de instrucciones' ],
@@ -103,7 +103,7 @@ const productosdb = [
     },
     {
         id: 2,
-        titulo: "Computador Interactivo con Pantalla y Mouse",
+        titulo: "Computador con Pantalla y Mouse",
         preciomayorista: 34900,
         precio: 39900,
         descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo Todo en Uno, equipado con mouse y pantalla digital! Diseñado para preescolares, este juguete cautivante es más que un juego.

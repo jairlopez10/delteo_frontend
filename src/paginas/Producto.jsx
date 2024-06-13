@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import productosdb from "../components/Productosdb"
 import Multimedia from "../components/Multimedia";
 import Accesoriosproducto from "../components/Accesoriosproducto";
@@ -11,6 +11,7 @@ const Producto = () => {
   const params = useParams();
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
+  const navigate = useNavigate()
   const idlanzadoras = [50, 303, 277, 51, 290]
 
   useEffect(() => {
@@ -199,7 +200,7 @@ const Producto = () => {
                   <path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
                   <path d="M3 9l4 0" />
                 </svg>
-                <p>Envio a tu dirección <span className=" text-green-600 font-bold">GRATIS</span></p>
+                <p>Envio <span className=" text-green-600 font-bold">CONTRA ENTREGA</span></p>
               </div>
               <div className="flex gap-2 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="icono-incluido icon icon-tabler icon-tabler-shield-check" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -238,12 +239,19 @@ const Producto = () => {
               <button onClick={() => cambiarcantidad('mas')}>+</button>
             </div>
             <button className="boton-agregar-carrito" onClick={() => agregaralcarrito()}>Agregar Carrito </button>
+            <button className="boton-comprar-ahora" onClick={() => {
+              agregaralcarrito();
+              setTimeout(() => {
+                navigate("/checkout")
+              }, 1000);
+              
+            }}>Comprar ahora</button>
             
             <div className="descripcion-promocion">
               <div className="descripcion">
                 <div className="boton-descripcion" onClick={() => setdescripcion(!descripcion)}>
                   <p>Caracteristicas</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-caret-down" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1" stroke="#3d3d3d" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-caret-down" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1" stroke="#555555" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M6 10l6 6l6 -6h-12" />
                   </svg>

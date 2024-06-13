@@ -26,7 +26,6 @@ h1, h2, h3, h4 {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  color: rgb(9, 255, 0);
   color: black
 }
 
@@ -87,10 +86,6 @@ header {
   width: 100%;
   top: 0;
   border-radius: 0 0 1rem 1rem;
-}
-
-body {
-  background-color: #f7f7f7;
 }
 
 .radiusnormal {
@@ -320,11 +315,16 @@ footer {
 }
 
 .filtrodiv {
-  background-color: #E9E9E9;
   padding: .5rem 1rem;
-  border-radius: 1rem;
   color: #3d3d3d;
   margin-bottom: 1.5rem;
+}
+
+.divfiltronumpro {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #3d3d3d;
 }
 
 .seccionfiltros select {
@@ -353,7 +353,7 @@ footer {
 }
 
 .filtrotext {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .productos {
@@ -672,8 +672,6 @@ footer {
 }
 
 .boton-agregar-carrito {
-  background-color: #25d366;
-  color: white;
   width: 100%;
   padding: 1rem;
   font-size: 2rem;
@@ -681,10 +679,23 @@ footer {
   margin-top: 2rem;
   border-radius: 1rem;
   font-weight: bold;
+  border: 1px solid #a5a5a5;
+  color: #555555;
 }
 
-.boton-agregar-carrito:hover {
-  background-color: #3f3f3f;
+.boton-comprar-ahora {
+  background-color: #25d366;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+}
+
+.boton-comprar-ahora:hover {
   background-color: #21a04f;
   transition: all .7s;
 }
@@ -702,7 +713,7 @@ footer {
   color: #3d3d3d;
   border-radius: 1rem;
   margin-top: 2rem;
-  border: 1px solid #a5a5a5;
+  
   cursor: pointer;
 }
 
