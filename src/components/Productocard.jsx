@@ -27,7 +27,7 @@ const Productocard = ({producto}) => {
     <>
         <div className="productocard cursor-pointer" onClick={() => window.open(`/${titulourl}/${tipocliente}`)}>
             <div className="div-imagen-prodcard">
-              <img src={imagenes[0].url} className="cursor-pointer" alt={`Imagen ${titulo}`} />
+              <img src={imagenes[0].url} className="cursor-pointer imagencard" alt={`Imagen ${titulo}`} />
             </div>
             <div className="contenidocard">
                 <p className="titulo cursor-pointer hover:underline" >{titulo}</p>

@@ -53,6 +53,7 @@ const Checkout = () => {
         })
 
         localStorage.setItem('carritojammy', JSON.stringify(carritomostrar));
+        setContador(carritomostrar.length);
 
 
     }, [carritomostrar])

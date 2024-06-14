@@ -35,7 +35,7 @@ const Header = () => {
                             <img src="/logo.webp" alt="" />
                         </Link>
 
-                        <Link to="/checkout" onClick={() => setmenu(false)} className="md:hidden flex linkcheckout">
+                        <Link to="/checkout" onClick={() => setmenu(false)} className="md:hidden flex">
                             <svg xmlns="http://www.w3.org/2000/svg" className="carrito icon icon-tabler icon-tabler-shopping-cart" width="84" height="84" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                 <circle cx="6" cy="19" r="2" />
@@ -43,6 +43,7 @@ const Header = () => {
                                 <path d="M17 17h-11v-14h-2" />
                                 <path d="M6 5l14 1l-1 7h-13" />
                             </svg>
+                            <p className={`contador-carrito ${contador > 0 ? 'block' : 'hidden'}`}>{contador}</p>
                         </Link>
                     </div>
                     

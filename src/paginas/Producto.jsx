@@ -70,10 +70,11 @@ const Producto = () => {
 
 
   useEffect(() => {
-
+    /*
     if(window.innerWidth <= 1024){
       setdescripcion(false);
     }
+    */
 
     const lanzatemporal = idlanzadoras.some(item => item === producto.id)
     

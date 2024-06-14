@@ -166,7 +166,7 @@ const Catalogo = () => {
             </svg>
             <p className="filtrotext">Filtrar y ordenar</p>
           </div>
-          <p className="filtrotext">15 productos</p>
+          <p className="filtrotext">{productosfiltrados.length + ' productos'}</p>
         </div>
         
         <div className="productos">
