@@ -17,13 +17,18 @@ const Checkout = () => {
     const [ciudad, setCiudad] = useState('');
     const [direccion, setDireccion] = useState('');
     const [alerta, setAlerta] = useState({});
-    const [total, setTotal] = useState(0);
     const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem('carritojammy')) || []);
     const [carritomostrar, setCarritoMostrar] = useState([]);
+    const [subtotal, setSubtotal] = useState(0);
+    const [descuento, setDescuento] = useState(0);
+    const [total, setTotal] = useState(0);
     const [cliente, setCliente] = useState('');
     const [spinner, setSpinner] = useState(false);
     const navegar = useNavigate()
-
+    const envios = {
+        pequeno: 10000,
+        grande: 20000
+    }
 
     useEffect(() => {
 
@@ -38,13 +43,16 @@ const Checkout = () => {
 
     }, [carrito])
 
+
     useEffect(() => {
         //Calcular total a pagar
         let totalcarrito = 0;
         carritomostrar.forEach(item => {
             totalcarrito+=(item.cantidad*item.precio)
         })
-        setTotal(totalcarrito);
+
+        calculardescuento();
+        setSubtotal(totalcarrito);
 
         fbq('track', 'InitiateCheckout', {
             contents: carritomostrar,
@@ -55,8 +63,12 @@ const Checkout = () => {
         localStorage.setItem('carritojammy', JSON.stringify(carritomostrar));
         setContador(carritomostrar.length);
 
-
     }, [carritomostrar])
+
+    useEffect(() => {
+        setTotal(subtotal - descuento);
+    }, [subtotal, descuento])
+
 
     useEffect(() => {
         setpagina('otra')
@@ -71,6 +83,65 @@ const Checkout = () => {
     useEffect(() => {
         setCliente(nombres + ' ' + apellidos)
     }, [nombres, apellidos]);
+
+    function calcularsubtotal () {
+        let totalcarrito = 0;
+        carritomostrar.forEach(item => {
+            totalcarrito+=(item.cantidad*item.precio)
+        })
+        return totalcarrito
+    }
+
+    const calculartotal = () => {
+
+    }
+
+    const calculardescuento = () => {
+
+        let conttempprodpeq = 0;
+        let conttempprodgde = 0;
+        let descuentoacum = 0;
+
+        //Contar cuantos productos hay de mas de $20.000
+        carritomostrar.forEach(prod => {
+            if(prod.precio >= 30000){
+                conttempprodgde+=prod.cantidad
+            } else {
+                conttempprodpeq+=prod.cantidad
+            }
+        })
+
+        if(conttempprodgde === 1 && conttempprodpeq === 0) {
+            setDescuento(0);
+        } else if (conttempprodgde >= 1) {
+            if(conttempprodgde > 1){
+                descuentoacum+=(conttempprodgde-1)*10000
+            }
+            if(conttempprodpeq >= 1){
+                descuentoacum+=(conttempprodpeq)*5000
+            }
+        } else if (conttempprodgde === 0 && conttempprodpeq > 2) {
+            descuentoacum+=(conttempprodpeq-2)*5000
+        }
+
+
+        //Colocar codigo de subtotal debe ser mayor a $45.000 
+
+        setDescuento(descuentoacum)
+
+        /*
+        Si hay solamente 1 producto de mas de $20.000 = NO DESCUENTO
+
+        Si hay 1 producto de mas de 20.000 
+            Si hay 1 o mas productos de mas de 20.000 = DESCUENTO DE 10.000
+            Si hay 1 producto o mas de menos de 20.000 = DESCUENTO DE 10.000
+        
+        Si hay mas de 1 producto de menos de 20.000
+            SUBTOTAL MINIMO DE $45.000
+                SI HAY MAS DE 2 PRODUCTOS DE MENOS 20.000 = DESCUENTO DE $5.000
+        */
+
+    }
 
     const handlesubmit = async (e) => {
         e.preventDefault();
@@ -88,8 +159,22 @@ const Checkout = () => {
             setTimeout(() => {
                 setAlerta({});
             }, 3500);
-            
+            return;
 
+        }
+
+        //Verifica que el subtotal sea mayor a $49.900
+        if(subtotal < 44900){
+            setAlerta({
+                msg: 'Pedido minimo de $44.900',
+                error: true
+            })
+
+            setSpinner(false);
+            
+            setTimeout(() => {
+                setAlerta({});
+            }, 4000);
             return;
 
         }
@@ -219,14 +304,26 @@ const Checkout = () => {
                             />
                         ))}
                     </div>
-
-                    <div className="flex justify-between mt-8">
+                    <div className="flex justify-between mt-3">
+                        <p className="asterisco">*Pedido minimo $45.000</p>
+                    </div>
+                    {/*
+                        <div className="flex justify-between mt-3">
+                            <p className=" font-bold">Subtotal</p>
+                            <p>{`$${subtotal.toLocaleString('es-CO')}`}</p>
+                        </div>
+                    */}
+                    <div className="flex justify-between mt-4">
+                        <p className=" font-bold">Descuento</p>
+                        <p className="colorgris">{`- $${descuento.toLocaleString('es-CO')}`}</p>
+                    </div>
+                    <div className="flex justify-between mt-5">
                         <p className=" font-bold">Envio Contra Entrega</p>
-                        <p>GRATIS</p>
+                        <p className="colorgris">{`GRATIS`}</p>
                     </div>
                     <div className="flex justify-between mt-8 seccion-total">
                         <p className=" font-bold">TOTAL</p>
-                        <p className=" text-3xl">{`$${total.toLocaleString('es-CO')}`}</p>
+                        <p className=" text-3xl font-bold">{`$${total.toLocaleString('es-CO')}`}</p>
                     </div>
 
                     <div>

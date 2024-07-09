@@ -13,6 +13,10 @@ const Producto = () => {
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
   const idlanzadoras = [50, 303, 277, 51, 290]
+  const envio = {
+    pequeno:  10000,
+    grande: 20000
+  }
 
   useEffect(() => {
     if(tipocliente === "m"){
@@ -70,11 +74,6 @@ const Producto = () => {
 
 
   useEffect(() => {
-    /*
-    if(window.innerWidth <= 1024){
-      setdescripcion(false);
-    }
-    */
 
     const lanzatemporal = idlanzadoras.some(item => item === producto.id)
     
@@ -106,7 +105,7 @@ const Producto = () => {
       id: producto.id,
       nombre: producto.titulo,
       cantidad,
-      precio: producto.precio,
+      precio: producto.precio >= 20000 ? producto.precio + envio.grande : producto.precio + envio.pequeno,
       imagen: producto.imagenes[0].url
     }
 
@@ -229,7 +228,7 @@ const Producto = () => {
               </>
             ) : (
               <>
-                <p className="precio-prod">{`$${producto.precio.toLocaleString('es-CO')}`}</p>
+                <p className="precio-prod">{`$${producto.precio >= 20000 ? (producto.precio + envio.grande).toLocaleString('es-CO') : (producto.precio + envio.pequeno).toLocaleString('es-CO')}`}</p>
               </>
             )}
             

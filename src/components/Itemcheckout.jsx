@@ -5,12 +5,9 @@ const Itemcheckout = ({item, carritomostrar, setCarritoMostrar}) => {
 
     const eliminaritem = () => {
         const nuevocarrito = carritomostrar.filter(item => item.id !== id)
-
         setCarritoMostrar(nuevocarrito);
 
     }
-
-
 
   return (
     <>

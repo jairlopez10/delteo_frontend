@@ -37,9 +37,9 @@ const Nosotros = () => {
             
             <div className="flex justify-around mt-12">
               <img className="imagenredsocial" src="/facebook.webp" alt="imagen-facebook" onClick={() => window.open("https://www.facebook.com/jugueteriajammy")} />
-              <img className="imagenredsocial" src="/instagram.webp" alt="imagen-instagram" onClick={() => window.open("https://www.instagram.com/jugueteria_jammy/")} />
-              <img className="imagenredsocial" src="/whatsapp.webp" alt="imagen-whatsapp" onClick={() => window.open("https://wa.me/573054392872?text=Hola%20Jugueteria%20Jammy,%20quisiera%20saber%20mas%20informacion%20por%20favor")} />
-              <img className="imagenredsocial" src="/tiktok.webp" alt="imagen-tiktok" onClick={() => window.open("https://www.tiktok.com/@jugueteria.jammy")} />
+              <img className="imagenredsocial" src="/instagram.webp" alt="imagen-instagram" onClick={() => window.open("https://www.instagram.com/delteocol")} />
+              <img className="imagenredsocial" src="/whatsapp.webp" alt="imagen-whatsapp" onClick={() => window.open("https://wa.me/573054392872?text=Hola%20Delteo!%20Quisiera%20saber%20mas%20informacion%20sobre%20..")} />
+              <img className="imagenredsocial" src="/tiktok.webp" alt="imagen-tiktok" onClick={() => window.open("https://www.tiktok.com/@delteocol")} />
             </div>
           </div>
           

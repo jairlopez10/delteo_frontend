@@ -4,17 +4,27 @@ import usePagina from "../hooks/usePagina";
 
 const Productocard = ({producto}) => {
 
-    const {titulo, precio, descripcion, imagenes, status, colores, edad, categoria, genero, preciomayorista} = producto;
+    const {titulo, precio, imagenes, preciomayorista} = producto;
 
     const { pagina } = usePagina();
     let tipocliente;
     let precioshow
+    const envios = {
+      pequeno: 10000,
+      grande: 20000
+    }
 
     if (pagina === "mayorista") {
       precioshow = preciomayorista
       tipocliente = "m";
     } else {
-      precioshow = precio
+      //Define el precio del articulo con envio segun su precio base
+      if(precio >= 20000){
+        precioshow = precio + envios.grande
+      } else {
+        precioshow = precio + envios.pequeno
+      }
+      
       tipocliente = "d"
     }
      

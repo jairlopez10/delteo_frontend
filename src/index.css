@@ -968,6 +968,10 @@ ul {
   gap: 4rem;
 }
 
+.colorgris{
+  color: #3a3a3a;
+}
+
 .grid-item:nth-child(1){
   order: 2;
 }
@@ -1012,6 +1016,11 @@ ul {
   box-shadow: 0px 5px 15px 0px rgba(107, 106, 107, 0.3);
 }
 
+.asterisco {
+  font-size: 1.5rem;
+  color: #3a3a3a;
+  font-style: italic;
+}
 
 .informacion-pedido {
   border: 1px solid #e7e7e7e7;
@@ -1065,7 +1074,7 @@ ul {
 }
 
 .resumen-productos {
-  border-bottom: 1px solid #727272;
+  border-bottom: 1px solid #d3d3d3;
   padding-bottom: 2rem;
 }
 
@@ -1161,7 +1170,7 @@ ul {
   border-radius: 2rem;
   padding: 3rem 2rem;
   margin-bottom: 4rem;
-  margin-top: 4rem;
+  margin-top: 0rem;
 }
 
 .icono-confirmacion {
@@ -1222,7 +1231,7 @@ ul {
     width: 80%;
     padding: 6rem 2rem;
     margin-bottom: 4rem;
-    margin-top: 4rem;
+    margin-top: 0rem;
   }
   .contacto-wa {
     margin-top: 10rem;

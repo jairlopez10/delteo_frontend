@@ -4,7 +4,7 @@ const productosdb = [
         id: 50,
         titulo: "Lanzador MP5 Recargable Hidrogel",
         preciomayorista: 71900,
-        precio: 104900,
+        precio: 84900,
         descripcion: ['Lanzadora', 'Gafas de protección', 'Cable USB (la lanzadora se carga directamente en la parte inferior)', '2 paquetes de orvis = 6,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Tanque de munición', 'Culata', 'Gafas de protección'],
         imagenes: [
             {
@@ -31,7 +31,7 @@ const productosdb = [
         id: 303,
         titulo: "Lanzador AK47 Recargable Hidrogel",
         preciomayorista: 69900,
-        precio: 99900,
+        precio: 79900,
         descripcion: ['Lanzadora', 'Silenciador', 'Gafas de protección', 'Batería', 'Cargador USB', '1 paquete de Orvis = 1,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Tanque de munición', 'Manual de instrucciones'],
         imagenes: [
             {
@@ -58,7 +58,7 @@ const productosdb = [
         id: 277,
         titulo: "Lanzadora Hidrogel Larga con Gafas y 1.500 Orvis",
         preciomayorista: 76900,
-        precio: 114900,
+        precio: 94900,
         referencia: "568C",
         descripcion: ['Lanzadora', 'Silenciador', 'Gafas de protección', 'Batería Recargable', 'Cargador USB', 'Tanque de munición', '1 paquete de Orvis = 1,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Bípode plegable', 'Correa para colgarse la lanzadora', 'Manual de instrucciones'],
         imagenes: [
@@ -78,7 +78,7 @@ const productosdb = [
         id: 51,
         titulo: "Pistola Recargable Hidrogel",
         preciomayorista: 49900,
-        precio: 89900,
+        precio: 69900,
         descripcion: ['Lanzadora', 'Batería recargable', 'Cargador USB', 'Silenciador', 'Tanque de munición', '1 paquete de Orvis = 3,000 bolitas de hidrogel (dejar mínimo 3 horas en agua)', 'Manual de instrucciones' ],
         imagenes: [
             {
@@ -790,7 +790,7 @@ const productosdb = [
                 url: "/producto33b.mp4" 
             }
         ],
-        status: "No Stock",
+        status: "disponible",
         colores: "Amarillo",
         edad: ["+3", "+6"],
         edad2: "+3",
