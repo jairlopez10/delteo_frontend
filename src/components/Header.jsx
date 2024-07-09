@@ -15,6 +15,9 @@ const Header = () => {
   return (
     <>
         <header className={`${['inicio', 'mayorista'].some(item => pagina === item) ? '' : 'radiusnormal fixed w-full top-0'}`}>
+            <div className="divanuncios">
+                <p>ENVIO GRATIS - PAGA EN CASA</p>
+            </div>
             <div className="divheader">
                 <div className="contenidoheader contenedor">
                     <div className="divbarra">

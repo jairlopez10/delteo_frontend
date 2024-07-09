@@ -79,7 +79,6 @@ img, picture {
 
 header {
   background-color: #004EBC;
-  padding: 1.3rem 1rem;
   margin-bottom: 2rem;
   box-shadow: 0px 5px 15px 0px rgba(107, 106, 107, 0.3);
   position: fixed;
@@ -88,8 +87,26 @@ header {
   border-radius: 0 0 1rem 1rem;
 }
 
+.divheader {
+  padding: 1.3rem 1rem;
+}
+
 .radiusnormal {
   border-radius: 0 0 1rem 1rem;
+}
+
+.divanuncios {
+  background-color: #AB03A8;
+  background: rgb(255,208,0);
+  background: linear-gradient(90deg, rgba(255,208,0,1) 0%, rgba(238,22,29,1) 50%, rgba(171,3,168,1) 100%);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.divanuncios p {
+  font-size: 2rem;
 }
 
 .contenidoheader {
@@ -312,7 +329,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 12rem;
+  padding-top: 17rem;
 }
 
 .seccionfiltros {
@@ -429,7 +446,7 @@ footer {
 }
 
 .imagencard:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all .5s;
 }
 
