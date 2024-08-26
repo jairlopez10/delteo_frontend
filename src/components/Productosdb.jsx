@@ -1,6 +1,58 @@
 
 const productosdb = [
     {
+        id: 371,
+        titulo: "Pistola de Agua Recargable",
+        preciomayorista: 59900,
+        precio: 79900,
+        descripcion: ['Lanzadora agua', 'Luz y sonido', 'Proveedor mediano', 'Proveedor grande', 'Bateria recargable', 'Cargador USB'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto371a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto371b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto371c.webp" 
+            },
+            
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 370,
+        titulo: "Fulsil de Agua Recargable",
+        preciomayorista: 99900,
+        precio: 109900,
+        descripcion: ['Lanzadora agua', 'Mira tactica', 'Proveedor mediano', 'Proveedor grande', 'Empuñadura', 'Culata', 'Sonido', 'Bateria recargable', 'Cargador USB'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto370a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto370b.webp" 
+            },
+            
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 50,
         titulo: "Lanzador MP5 Recargable Hidrogel",
         preciomayorista: 71900,
@@ -20,7 +72,7 @@ const productosdb = [
                 url: "/producto50b.mp4"
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -94,7 +146,7 @@ const productosdb = [
                 url: "/producto51c.mp4" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",

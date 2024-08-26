@@ -12,7 +12,7 @@ const Producto = () => {
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
-  const idlanzadoras = [50, 303, 277, 51, 290]
+  const idlanzadoras = [50, 303, 277, 51, 290, 370, 371]
   const envio = {
     pequeno:  10000,
     grande: 20000
@@ -200,7 +200,7 @@ const Producto = () => {
                   <path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
                   <path d="M3 9l4 0" />
                 </svg>
-                <p>Envio <span className=" text-green-600 font-bold">CONTRA ENTREGA</span></p>
+                <p>Envio <span className=" text-green-600 font-bold">CONTRA ENTREGA GRATIS</span></p>
               </div>
               <div className="flex gap-2 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="icono-incluido icon icon-tabler icon-tabler-shield-check" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
