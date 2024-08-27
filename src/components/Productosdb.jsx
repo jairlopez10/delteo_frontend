@@ -29,6 +29,34 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 372,
+        titulo: "Carro Control Terrenaitor Sensor",
+        preciomayorista: 100000,
+        precio: 119900,
+        descripcion: ['Carro control', 'Luces y sonido', 'Manilla sensor', 'Control remoto', 'Lanza vapor de agua','Bateria recargable', 'Cargador USB'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto372a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto372b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto372c.webp" 
+            },
+            
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+6", "+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 370,
         titulo: "Fulsil de Agua Recargable",
         preciomayorista: 99900,
