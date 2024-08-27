@@ -142,7 +142,7 @@ header {
 
 .contador-carrito{
   position: absolute;
-  top: 2rem;
+  top: 6rem;
   right: .5rem;
   background-color: orange;
   border-radius: 100%;
@@ -156,6 +156,9 @@ header {
   }
   .contador-carrito {
     right: 1.4rem;
+  }
+  .contador-carrito{
+    top: 7rem;
   }
 }
 
