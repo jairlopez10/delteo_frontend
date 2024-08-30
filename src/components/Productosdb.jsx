@@ -3,8 +3,8 @@ const productosdb = [
     {
         id: 371,
         titulo: "Pistola de Agua Recargable",
-        preciomayorista: 59900,
-        precio: 79900,
+        preciomayorista: 39900,
+        precio: 59900,
         descripcion: ['Lanzadora agua', 'Luz y sonido', 'Proveedor mediano', 'Proveedor grande', 'Bateria recargable', 'Cargador USB'],
         imagenes: [
             {
@@ -59,8 +59,8 @@ const productosdb = [
     {
         id: 370,
         titulo: "Fulsil de Agua Recargable",
-        preciomayorista: 99900,
-        precio: 109900,
+        preciomayorista: 59900,
+        precio: 79900,
         descripcion: ['Lanzadora agua', 'Mira tactica', 'Proveedor mediano', 'Proveedor grande', 'Empuñadura', 'Culata', 'Sonido', 'Bateria recargable', 'Cargador USB'],
         imagenes: [
             {
