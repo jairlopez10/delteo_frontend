@@ -19,6 +19,10 @@ const productosdb = [
                 tipo: "imagen",
                 url: "/producto371c.webp" 
             },
+            {
+                tipo: "video",
+                url: "/producto371d.mp4" 
+            },
             
         ],
         status: "disponible",
