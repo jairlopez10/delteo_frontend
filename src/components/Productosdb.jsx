@@ -1,6 +1,101 @@
 
 const productosdb = [
     {
+        id: 373,
+        titulo: "Subfusil Hidrogel Recargable",
+        preciomayorista: 74900,
+        precio: 104900,
+        descripcion: ['Laser', 'Luz en el cañon', 'Linterna', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto373a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 374,
+        titulo: "AK Hidrogel Recargable",
+        preciomayorista: 59900,
+        precio: 79900,
+        descripcion: ['Luz en el cañon', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto374a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 375,
+        titulo: "Minigun Hidrogel Recargable",
+        preciomayorista: 114900,
+        precio: 154900,
+        descripcion: ['Cañon giratorio', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto375a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 376,
+        titulo: "Fusil Hidrogel Recargable",
+        preciomayorista: 89900,
+        precio: 129900,
+        descripcion: ['Luz en el cañon', 'Mira telescopica', 'Proveedor extendido', 'Proveedor mediano' , 'Cañon corto' ,'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto376a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 377,
+        titulo: "PKM Hidrogel Recargable",
+        preciomayorista: 69900,
+        precio: 89900,
+        descripcion: ['Luz en el cañon', 'Tripode', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto377a.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 371,
         titulo: "Pistola de Agua Recargable",
         preciomayorista: 39900,

@@ -12,7 +12,7 @@ const Producto = () => {
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
-  const idlanzadoras = [50, 303, 277, 51, 290, 370, 371, 372]
+  const idlanzadoras = [50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377]
   const envio = {
     pequeno:  10000,
     grande: 20000
