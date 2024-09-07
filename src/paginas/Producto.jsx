@@ -309,14 +309,12 @@ const Producto = () => {
               <>
 
                 <div className="div-puntos">
-                  <img src="/banneruno.png" className="puntofuerte" alt="" />
-                  <img src="/bannerdos.png" className="puntofuertedos" alt="" />
+                  
                 </div>
 
                 <img src="/puntosfuertes.png" alt="" />
                 <img src="/puntosfuertes2.png" alt="" />
                 <img src="/puntosfuertes3.png" alt="" />
-                <img src="/puntosfuertes4.png" alt="" />
                 
                 
 
