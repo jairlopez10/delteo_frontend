@@ -1200,19 +1200,6 @@ ul {
   border-bottom: 1px solid #727272;
 }
 
-.envios-fotos {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  padding-top: 2rem;
-}
-
-.envios-fotos img {
-  width: 8rem;
-}
-
-
-
 @media(min-width: 768px) {
   .contenedor-checkout {
     width: 85%;

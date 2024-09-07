@@ -149,6 +149,14 @@ const productosdb = [
             {
                 tipo: "imagen",
                 url: "/producto372c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto372d.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto372e.mp4" 
             }
             
         ],

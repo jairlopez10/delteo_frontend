@@ -12,7 +12,7 @@ const Checkout = () => {
     const [nombres, setNombres] = useState('');
     const [apellidos, setApellidos] = useState('');
     const [telefono, setTelefono] = useState('');
-    const [email, setEmail] = useState('');
+    const [cedula, setCedula] = useState('');
     const [origen, setOrigen] = useState('');
     const [ciudad, setCiudad] = useState('');
     const [direccion, setDireccion] = useState('');
@@ -150,7 +150,7 @@ const Checkout = () => {
         setSpinner(true);
 
         //Revisar si algun campo esta vacio y generar alerta
-        if([nombres, apellidos, telefono, email, origen, ciudad, direccion].includes('')){
+        if([nombres, apellidos, telefono, cedula, origen, ciudad, direccion].includes('')){
             setAlerta({
                 msg: 'Todos los campos son obligatorios',
                 error: true
@@ -212,6 +212,7 @@ const Checkout = () => {
             ciudad,
             direccion,
             telefono,
+            cedula,
             total
         }
         
@@ -268,8 +269,8 @@ const Checkout = () => {
                                 <input type="tel" placeholder="Telefono" id="telefono" value={telefono} onChange={e => setTelefono(e.target.value)}/>
                             </div>
                             <div className="div-row-info">
-                                <label htmlFor="email">Email:</label>
-                                <input type="email" placeholder="Email" id="email" value={email} onChange={e => setEmail(e.target.value)}/>
+                                <label htmlFor="cedula">Cedula:</label>
+                                <input type="number" placeholder="794382312" id="cedula" value={cedula} onChange={e => setCedula(e.target.value)}/>
                             </div>
                         </div>
                         <div className="div-rows-info mt-4">
@@ -336,13 +337,13 @@ const Checkout = () => {
                             <p>{`$${subtotal.toLocaleString('es-CO')}`}</p>
                         </div>
                     */}
-                    <div className="flex justify-between mt-4">
+                    <div className={`${descuento > 0 ? 'flex justify-between mt-4' : 'hidden'}`}>
                         <p className=" font-bold">Descuento</p>
                         <p className="colorgris">{`- $${descuento.toLocaleString('es-CO')}`}</p>
                     </div>
                     <div className="flex justify-between mt-5">
                         <p className=" font-bold">Envio Contra Entrega</p>
-                        <p className="colorgris">{`GRATIS`}</p>
+                        <p className="text-blue-600 font-bold">{`GRATIS`}</p>
                     </div>
                     <div className="flex justify-between mt-8 seccion-total">
                         <p className=" font-bold">TOTAL</p>
@@ -350,12 +351,12 @@ const Checkout = () => {
                     </div>
 
                     <div>
-                        <h2 className="text-black mt-8">Formas de Pago</h2>
-                        <div className="envios-fotos">
-                            <img className="" src="./truck.png" alt="" />
-                            <img className="" src="./contraentrega.jpg" alt="" />
+                        <h2 className="text-black mt-8">Paga en casa</h2>
+                        <div className="flex justify-center mt-6">
+                            <img className=" w-64" src="./inter.webp" alt="" />
                         </div>
-                        <p className="  px-8 py-6 text-center"> <span className=" font-bold">PAGO CONTRA ENTREGA</span><span className=" font-bold text-green-600"> GRATIS</span> y recibe tu pedido entre 1-2 dias habiles (Pago en efectivo)</p>
+                        
+                        <p className="  px-8 py-6 text-center"> <span className=" font-bold">PAGO CONTRA ENTREGA</span><span className=" font-bold text-blue-600"> GRATIS</span> y recibe tu pedido entre 1-2 dias habiles (Pago en efectivo)</p>
                     </div>
 
                     <div className="ocultar-info-pedido">
