@@ -308,7 +308,12 @@ const Producto = () => {
             {productpage ? (
               <>
 
-                <img src="/puntosfuertes.png" className=" mt-6" alt="" />
+                <div className="div-puntos">
+                  <img src="/banneruno.png" className="puntofuerte" alt="" />
+                  <img src="/bannerdos.png" className="puntofuertedos" alt="" />
+                </div>
+                
+                
 
 
                 <Accesoriosproducto 
