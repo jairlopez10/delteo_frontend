@@ -4,6 +4,7 @@ import Multimedia from "../components/Multimedia";
 import Accesoriosproducto from "../components/Accesoriosproducto";
 import { useState, useEffect, useRef } from "react";
 import usePagina from "../hooks/usePagina";
+import Terrenaitor from "../components/productsection/Terrenaitor";
 
 const Producto = () => {
   
@@ -13,13 +14,15 @@ const Producto = () => {
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
   const idlanzadoras = [50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377]
+  const productsection = {
+    372: <Terrenaitor />
+  }
   const envio = {
     pequeno:  10000,
     grande: 20000
   }
   const [visiblecomprar, setVisiblecomprar] = useState(true);
   const botoncomprarref = useRef(null); //Referencia el boton
-  const [temporal, settemporal] = useState('')
 
   useEffect(() => {
     if(tipocliente === "m"){
@@ -49,13 +52,6 @@ const Producto = () => {
         observer.unobserve(botoncomprarref.current);
       }
     }
-    
-  }, [])
-
-
-  useEffect(() => {
-
-    
 
   }, [])
   
@@ -255,7 +251,7 @@ const Producto = () => {
                 <img src="/estrella.webp" alt="estrella" className="estrella"/>
                 <img src="/estrella.webp" alt="estrella" className="estrella"/>
                 <img src="/estrella.webp" alt="estrella" className="estrella"/>
-                <p> + 250 Vendidos</p>
+                <p> + {producto.id + 25} Vendidos</p>
               </div>
               
             </div>
@@ -295,30 +291,38 @@ const Producto = () => {
                 navigate("/checkout")
               }, 1000);
               
-            }}>Pagar en Casa</button>
+            }}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="icono-carrito-producto icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M17 17h-11v-14h-2" />
+                <path d="M6 5l14 1l-1 7h-13" />
+              </svg>
+              Pagar en Casa</button>
 
-            <button className={`${visiblecomprar ? 'hidden' : 'fijar-boton-comprar-ahora'} boton-comprar-ahora`} onClick={() => {
+            <button className={`${visiblecomprar ? 'hidden' : 'fijar-boton-comprar-ahora boton-comprar-ahora'}`} onClick={() => {
               agregaralcarrito();
               setTimeout(() => {
                 navigate("/checkout")
               }, 1000);
               
-            }}>Pagar en Casa</button>
+            }}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="icono-carrito-producto icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M17 17h-11v-14h-2" />
+                <path d="M6 5l14 1l-1 7h-13" />
+              </svg>
+              Pagar en Casa</button>
             
             {productpage ? (
               <>
+                <img src="/puntosfuertes.webp" className="puntosfuertes" alt="puntos fuertes" />
+                {productsection[producto.id]}
 
-                <div className="div-puntos">
-                  
-                </div>
-
-                <img src="/puntosfuertes.png" alt="" />
-                <img src="/puntosfuertes2.png" alt="" />
-                <img src="/puntosfuertes3.png" alt="" />
                 
-                
-
-
                 <Accesoriosproducto 
                   accesorios={producto.descripcion}
                 />

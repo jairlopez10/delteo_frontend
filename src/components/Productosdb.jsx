@@ -129,7 +129,7 @@ const productosdb = [
     },
     {
         id: 372,
-        titulo: "Carro Control Terrenaitor Sensor",
+        titulo: "Terrenaitor Carro Control Sensor",
         preciomayorista: 79900,
         precio: 99900,
         descripcion: ['Carro control', 'Luces y sonido', 'Manilla sensor', 'Control remoto', 'Lanza vapor de agua','Bateria recargable', 'Cargador USB'],
@@ -153,6 +153,7 @@ const productosdb = [
             
         ],
         status: "disponible",
+        seccion: 'Terrenaitor',
         colores: "Unicolor",
         edad: ["+6", "+8"],
         edad2: "+8",
