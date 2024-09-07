@@ -591,8 +591,22 @@ footer {
 .titulo-producto-final {
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   color: black;
+}
+
+.precio-prod-antes {
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-decoration: line-through;
+  color: #808080;
+}
+
+.oferta-text {
+  background-color: #004099;
+  padding: .5rem 1.5rem;
+  border-radius: 2rem;
+  color: white;
 }
 
 .carousel {
@@ -650,7 +664,7 @@ footer {
 }
 
 .precio-prod {
-  margin-top: 1rem;
+  margin-top: 0rem;
   font-size: 3rem;
 }
 
@@ -698,7 +712,7 @@ footer {
 }
 
 .botones-carrito button {
-  background-color: #72727257;
+  background-color: #80808057;
   font-size: 2rem;
   padding: 1rem 2rem;
   border-radius: 100%;
@@ -733,9 +747,13 @@ footer {
   padding: 1rem;
   font-size: 2rem;
   text-transform: uppercase;
-  margin-top: 1rem;
+  margin-top: 2rem;
   border-radius: 1rem;
   font-weight: bold;
+}
+
+.estrella {
+  width: 2.5rem;
 }
 
 .boton-comprar-ahora:hover {
@@ -1121,6 +1139,20 @@ ul {
 
 .imagen-checkout {
   border-radius: 1rem;
+}
+
+.texto-aceptar {
+  font-size: 1.7rem;
+}
+
+.fijar-boton-comprar-ahora {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.checkoutinput {
+  transform: scale(1.5);
 }
 
 .seccion-total {

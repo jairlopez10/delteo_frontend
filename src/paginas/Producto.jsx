@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import productosdb from "../components/Productosdb"
 import Multimedia from "../components/Multimedia";
 import Accesoriosproducto from "../components/Accesoriosproducto";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import usePagina from "../hooks/usePagina";
 
 const Producto = () => {
@@ -17,6 +17,9 @@ const Producto = () => {
     pequeno:  10000,
     grande: 20000
   }
+  const [visiblecomprar, setVisiblecomprar] = useState(true);
+  const botoncomprarref = useRef(null); //Referencia el boton
+  const [temporal, settemporal] = useState('')
 
   useEffect(() => {
     if(tipocliente === "m"){
@@ -28,12 +31,36 @@ const Producto = () => {
     }
     window.scrollTo(0,0);
     //Cambia el nombre del titulo de la pagina
+
+    const observer = new IntersectionObserver( entries => {
+      if(entries[0].isIntersecting){
+        setVisiblecomprar(true)
+      } else {
+        setVisiblecomprar(false)
+      }
+    })
+  
+    if(botoncomprarref.current){
+      observer.observe(botoncomprarref.current)
+    }
+
+    return () => {
+      if(botoncomprarref.current) {
+        observer.unobserve(botoncomprarref.current);
+      }
+    }
     
+  }, [])
+
+
+  useEffect(() => {
+
+    
+
   }, [])
   
   //Remplaza las - por espacios para buscar el titulo
   titulo = titulo.replace(/-/g, " ")
-  
 
   const imagenespr = document.querySelectorAll(".imagen-prod-pag");
 
@@ -54,7 +81,7 @@ const Producto = () => {
   const [cantidad, setCantidad] = useState(1);
   const [alertacarrito, setAlertaCarrito] = useState(false);
   const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem('carritojammy')) || []);
-  const [lanzadoraboolean, setLanzadoraBoolean] = useState(false);
+  const [productpage, setproductpage] = useState(false);
 
   useEffect(() => {
     const imagenprincipal = document.querySelector(".imagen-principal-producto")
@@ -77,7 +104,7 @@ const Producto = () => {
 
     const lanzatemporal = idlanzadoras.some(item => item === producto.id)
     
-    lanzatemporal ? setLanzadoraBoolean(true) : setLanzadoraBoolean(false);
+    lanzatemporal ? setproductpage(true) : setproductpage(false);
     setContador(carrito.length || 0)
     
   }, [])
@@ -192,7 +219,8 @@ const Producto = () => {
           <div className="contenido-producto-final">
             <p className="titulo-producto-final">{producto.titulo}</p>
             <div className="beneficios">
-              <div className="flex gap-2 items-center">
+              {/* 
+                <div className="flex gap-2 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="icono-incluido icon icon-tabler icon-tabler-truck-delivery" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
@@ -218,9 +246,20 @@ const Producto = () => {
                   <path d="M10 11v6" />
                   <path d="M13 13v4" />
                 </svg>
-                <p>Stock <span className=" text-green-600 font-bold">disponible</span></p>
+                <p>Stock <span className=" text-orange-500 font-bold">Ultimas Unidades</span></p>
               </div>
+                */}
+              <div className="flex gap-1 items-center">
+                <img src="/estrella.webp" alt="estrella" className="estrella"/>
+                <img src="/estrella.webp" alt="estrella" className="estrella"/>
+                <img src="/estrella.webp" alt="estrella" className="estrella"/>
+                <img src="/estrella.webp" alt="estrella" className="estrella"/>
+                <img src="/estrella.webp" alt="estrella" className="estrella"/>
+                <p> + 250 Vendidos</p>
+              </div>
+              
             </div>
+            
             {tipocliente === "m" ? (
               <>
                 <p className="precio-prod">{`Precio: $${producto.preciomayorista.toLocaleString('es-CO')} / Und`}</p>
@@ -228,9 +267,17 @@ const Producto = () => {
               </>
             ) : (
               <>
-                <p className="precio-prod">{`$${producto.precio >= 20000 ? (producto.precio + envio.grande).toLocaleString('es-CO') : (producto.precio + envio.pequeno).toLocaleString('es-CO')}`}</p>
+                <p className="precio-prod-antes">{`$${producto.precio >= 20000 ? ((producto.precio + envio.grande)*1.5).toLocaleString('es-CO') : ((producto.precio + envio.pequeno)*1.5).toLocaleString('es-CO')}`}</p>
+                <div className="flex items-center gap-3">
+                  <p className="precio-prod">{`$${producto.precio >= 20000 ? (producto.precio + envio.grande).toLocaleString('es-CO') : (producto.precio + envio.pequeno).toLocaleString('es-CO')}`}</p>
+                  <p className="oferta-text">Oferta</p>
+                </div>
+                
               </>
             )}
+            
+            
+            
             
             <p className="colores">Colores: <span>{producto.colores}</span></p>
             <div className="botones-carrito">
@@ -238,41 +285,70 @@ const Producto = () => {
               <input type="number" min="1" value={cantidad} onChange={e => setCantidad(e.target.value)} />
               <button onClick={() => cambiarcantidad('mas')}>+</button>
             </div>
-            <button className="boton-agregar-carrito" onClick={() => agregaralcarrito()}>Agregar Carrito </button>
-            <button className="boton-comprar-ahora" onClick={() => {
+            {/*
+              <button className="boton-agregar-carrito" onClick={() => agregaralcarrito()}>Agregar Carrito </button>
+            */}
+            
+            <button ref={botoncomprarref} className={`boton-comprar-ahora`} onClick={() => {
               agregaralcarrito();
               setTimeout(() => {
                 navigate("/checkout")
               }, 1000);
               
-            }}>Comprar ahora</button>
-            
-            <div className="descripcion-promocion">
-              <div className="descripcion">
-                <div className="boton-descripcion" onClick={() => setdescripcion(!descripcion)}>
-                  <p>Caracteristicas</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-caret-down" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1" stroke="#555555" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M6 10l6 6l6 -6h-12" />
-                  </svg>
-                </div>
-                <div className={`${descripcion ? 'block' : 'hidden'} descripcion-parrafo`}>
-                  {lanzadoraboolean ? (
-                    <>
-                      <Accesoriosproducto 
-                        accesorios={producto.descripcion}
-                      />
-                    </>
-                  ) : (
-                    <>
-                      <p>{producto.descripcion}</p>
-                    </>
-                  )}
-                </div>
-                
-              </div>
+            }}>Pagar en Casa</button>
+
+            <button className={`${visiblecomprar ? 'hidden' : 'fijar-boton-comprar-ahora'} boton-comprar-ahora`} onClick={() => {
+              agregaralcarrito();
+              setTimeout(() => {
+                navigate("/checkout")
+              }, 1000);
               
-            </div>
+            }}>Pagar en Casa</button>
+            
+            {productpage ? (
+              <>
+
+                <img src="/puntosfuertes.png" className=" mt-6" alt="" />
+
+
+                <Accesoriosproducto 
+                  accesorios={producto.descripcion}
+                />
+                <p>testeo</p>
+              </>
+            ) : (
+              <>
+                <div className="descripcion-promocion">
+                  <div className="descripcion">
+                    <div className="boton-descripcion" onClick={() => setdescripcion(!descripcion)}>
+                      <p>Caracteristicas</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-caret-down" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1" stroke="#555555" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 10l6 6l6 -6h-12" />
+                      </svg>
+                    </div>
+                    <div className={`${descripcion ? 'block' : 'hidden'} descripcion-parrafo`}>
+                    <p>{producto.descripcion}</p>
+                      {/*productpage ? (
+                        <>
+                          <Accesoriosproducto 
+                            accesorios={producto.descripcion}
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <p>{producto.descripcion}</p>
+                        </>
+                      )*/}
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </>
+            )}
+
+            
           </div>
         </div>
       </div>

@@ -24,6 +24,7 @@ const Checkout = () => {
     const [total, setTotal] = useState(0);
     const [cliente, setCliente] = useState('');
     const [spinner, setSpinner] = useState(false);
+    const [aceptarecibir, setAceptarecibir] = useState(false);
     const navegar = useNavigate()
     const envios = {
         pequeno: 10000,
@@ -163,6 +164,24 @@ const Checkout = () => {
 
         }
 
+        //Verifica si el checkbox de acepto que la informacion es correcta esta checkeado
+        if(aceptarecibir === false){
+            setAlerta({
+                msg: 'Debes confirmar que recibiras el pedido',
+                error: true
+            })
+            setSpinner(false);
+            
+            setTimeout(() => {
+                setAlerta({});
+            }, 3500);
+            return;
+        }
+
+        console.log('Enviando pedido')
+        setSpinner(false)
+        return
+
         //Verifica que el subtotal sea mayor a $49.900
         if(subtotal < 44900){
             setAlerta({
@@ -278,6 +297,14 @@ const Checkout = () => {
                             <div className="div-row-info">
                                 <label htmlFor="direccion">Dirección:</label>
                                 <input type="text" placeholder="Calle 23 #23-11 Barrio San Felipe Apto 330" id="direccion" value={direccion} onChange={e => setDireccion(e.target.value)} />
+                            </div>
+                        </div>
+                        <div className="div-rows-info mt-4">
+                            <div className="flex gap-4 div-texto-aceptar">
+                                <input type="checkbox" className="checkboxinput" value={aceptarecibir} onChange={e =>
+                                setAceptarecibir(!aceptarecibir)}
+                            />
+                                <p className="texto-aceptar">Confirmo que la información consignada es verdadera y voy a recibir mi pedido</p>
                             </div>
                         </div>
                     </div>
