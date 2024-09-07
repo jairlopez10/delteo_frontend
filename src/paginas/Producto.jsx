@@ -316,17 +316,12 @@ const Producto = () => {
                 <path d="M6 5l14 1l-1 7h-13" />
               </svg>
               Pagar en Casa</button>
-            
+            {/*Agrega la seccion del producto con sus gifts y estrategia AIDA */}
             {productpage ? (
               <>
                 <img src="/puntosfuertes.webp" className="puntosfuertes" alt="puntos fuertes" />
                 {productsection[producto.id]}
 
-                
-                <Accesoriosproducto 
-                  accesorios={producto.descripcion}
-                />
-                <p>testeo</p>
               </>
             ) : (
               <>

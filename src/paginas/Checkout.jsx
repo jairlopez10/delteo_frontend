@@ -178,10 +178,6 @@ const Checkout = () => {
             return;
         }
 
-        console.log('Enviando pedido')
-        setSpinner(false)
-        return
-
         //Verifica que el subtotal sea mayor a $49.900
         if(subtotal < 44900){
             setAlerta({

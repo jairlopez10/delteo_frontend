@@ -4,8 +4,8 @@ const Terrenaitor = () => {
     <>
         <div className="div-aida">
             <img src="/terrenaitor2.gif" alt="gif carro manilla" />
-            <h4 className=" mt-4">¿Quieres dominar cualquier terreno y horario?</h4>
-            <p className=" mt-4 text-center">¡El carro de control remoto más increíble con <span className=" font-bold">luces</span>, vapor de agua  y totalmente recargable!</p>
+            <h4 className=" mt-4">¿Buscas el carro más emocionante?</h4>
+            <p className=" mt-4 text-center">¡El Terrenaitor es el carro de control remoto más increíble con <span className=" font-bold">luces</span>, vapor de agua  y totalmente recargable!</p>
         </div>
         <div className="div-aida">
           <img src="/terrenaitor1.gif" alt="gif carro manilla" />
@@ -13,8 +13,14 @@ const Terrenaitor = () => {
           <p className=" mt-4 text-center">Manejalo con la manilla sensor o su control remoto para diversion pura todo el dia!</p>
         </div>
         <div className="div-aida">
-          
-          <iframe src="https://giphy.com/embed/3cRTDF4flJSxKmjFaw" className=" w-full" ></iframe>
+          <video src="/terrenaitor3.mp4" autoPlay loop muted className="video-terre"></video>
+          <h4 className=" mt-4">¡Desafia cualquier terreno y obstáculo!</h4>
+          <p className=" mt-4 text-center">No importa si es arena, barro o rocas llevalo a cualquier parte!</p>
+        </div>
+        <div className="div-aida">
+          <video src="/terrenaitor4.mp4" autoPlay loop muted className="video-terre"></video>
+          <h4 className=" mt-4">Stock limitado ¡Haz tu pedido ahora antes de que se agote!</h4>
+          <p className=" mt-4 text-center">¡No te quedes atrás! Adquiere el Terrenaitor y vive la experiencia de carreras más <span className="font-bold"> emocionante.</span></p>
         </div>
         
     </>
