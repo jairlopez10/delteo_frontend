@@ -19,8 +19,18 @@ const Terrenaitor = () => {
         </div>
         <div className="div-aida">
           <img src="/terrenaitor4.gif" alt="gif carro manilla" />
-          <h4 className=" mt-4">Stock limitado ¡Haz tu pedido ahora antes de que se agote!</h4>
-          <p className=" mt-4 text-center">¡No te quedes atrás! Adquiere el Terrenaitor y vive la experiencia de carreras más <span className="font-bold"> emocionante.</span></p>
+          <h4 className=" mt-4">¿Qué es lo que incluye?</h4>
+          <div className="lista-incluye">
+            <ul >
+              <li>Carro Terrenaitor</li>
+              <li>Manilla sensorial</li>
+              <li>Control remoto</li>
+              <li>Bateria Recargable</li>
+              <li>Cargador USB</li>
+              <li>Dispensador agua</li>
+            </ul>
+          </div>
+          
         </div>
         
     </>

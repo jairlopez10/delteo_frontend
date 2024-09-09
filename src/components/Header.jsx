@@ -6,17 +6,26 @@ const Header = () => {
 
     const { pagina, contador, setContador } = usePagina();
     const [menu, setmenu] = useState(false);
+    const [anuncio, setAnuncio] = useState(0);
+    const anuncios = ['ENVIO GRATIS - 1-3 DIAS', 'ORGULLASEMENTE COLOMBIANOS']
 
     useEffect(() => {
         const cont = JSON.parse(localStorage.getItem('carritojammy')) || []
         setContador(cont.length)
     }, [])
 
+    useEffect(() => {
+        setTimeout(() => {
+            anuncio === 0 ? setAnuncio(1) : setAnuncio(0)
+        }, 6000);
+    }, [anuncio])
+
+
   return (
     <>
         <header className={`${['inicio', 'mayorista'].some(item => pagina === item) ? '' : 'radiusnormal fixed w-full top-0'}`}>
             <div className="divanuncios">
-                <p>ENVIO GRATIS - PAGA EN CASA</p>
+                <p className="anuncio1">{anuncios[anuncio]}</p>
             </div>
             <div className="divheader">
                 <div className="contenidoheader contenedor">

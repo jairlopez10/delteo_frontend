@@ -139,10 +139,6 @@ const productosdb = [
                 url: "/producto372a.webp" 
             },
             {
-                tipo: "video",
-                url: "/producto372d.mp4" 
-            },
-            {
                 tipo: "imagen",
                 url: "/producto372b.webp" 
             },
@@ -153,6 +149,10 @@ const productosdb = [
             {
                 tipo: "imagen",
                 url: "/producto372d.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto372d.mp4" 
             },
             {
                 tipo: "video",

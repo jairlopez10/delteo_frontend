@@ -273,8 +273,6 @@ const Producto = () => {
             )}
             
             
-            
-            
             <p className="colores">Colores: <span>{producto.colores}</span></p>
             <div className="botones-carrito">
               <button onClick={() => cambiarcantidad('menos')}>-</button>
@@ -355,6 +353,7 @@ const Producto = () => {
               </>
             )}
 
+            <img src="/delta.webp" className=" mt-10" alt="imagen-delta" />
             
           </div>
         </div>

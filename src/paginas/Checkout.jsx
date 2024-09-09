@@ -270,7 +270,7 @@ const Checkout = () => {
                             </div>
                             <div className="div-row-info">
                                 <label htmlFor="cedula">Cedula:</label>
-                                <input type="number" placeholder="794382312" id="cedula" value={cedula} onChange={e => setCedula(e.target.value)}/>
+                                <input type="tel" placeholder="794382312" id="cedula" value={cedula} onChange={e => setCedula(e.target.value)}/>
                             </div>
                         </div>
                         <div className="div-rows-info mt-4">
@@ -298,10 +298,9 @@ const Checkout = () => {
                         </div>
                         <div className="div-rows-info mt-4">
                             <div className="flex gap-4 div-texto-aceptar">
-                                <input type="checkbox" className="checkboxinput" value={aceptarecibir} onChange={e =>
-                                setAceptarecibir(!aceptarecibir)}
-                            />
-                                <p className="texto-aceptar">Confirmo que la información consignada es verdadera y voy a recibir mi pedido</p>
+                                <input type="checkbox" name='aceptarrecibir' id='aceptarrecibir' className="checkboxinput" value={aceptarecibir} onChange={e =>
+                                setAceptarecibir(!aceptarecibir)}/>
+                                <label className="texto-aceptar" htmlFor='aceptarrecibir' >Confirmo que la información consignada es verdadera y voy a recibir mi pedido</label>
                             </div>
                         </div>
                     </div>
@@ -329,7 +328,7 @@ const Checkout = () => {
                         ))}
                     </div>
                     <div className="flex justify-between mt-3">
-                        <p className="asterisco">*Pedido minimo $45.000</p>
+                        <p className={`${subtotal > 45000 ? 'hidden' : 'asterisco' }`}>*Pedido minimo $45.000</p>
                     </div>
                     {/*
                         <div className="flex justify-between mt-3">
