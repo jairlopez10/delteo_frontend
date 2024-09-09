@@ -106,12 +106,12 @@ header {
   border-radius: 0 0 1rem 1rem;
 }
 
-@keyframes slideleft {
+@keyframes slideright {
   0% {
-    transform: translateX(-40rem);
+    transform: translateX(40rem);
   }
   100% {
-    transform: translateX(40rem);
+    transform: translateX(-40rem);
   }
 }
 
@@ -130,7 +130,7 @@ header {
 }
 
 .anuncio1 {
-  animation: slideleft 6s ease-in 0s infinite normal none;
+  animation: slideright 6s ease-in 0s infinite normal none;
 }
 
 .contenidoheader {
@@ -832,6 +832,20 @@ footer {
 
 .div-aida img {
   border-radius: 1.5rem;
+}
+
+.div-gif {
+  position: relative;
+  z-index: -100;
+}
+
+.marca-agua {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  opacity: 0.2;
 }
 
 .titulo-descripcion {

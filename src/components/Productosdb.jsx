@@ -29,7 +29,15 @@ const productosdb = [
             {
                 tipo: "imagen",
                 url: "/producto374a.webp" 
-            }
+            },
+            {
+                tipo: "imagen",
+                url: "/producto374b.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto374c.mp4" 
+            },
         ],
         status: "disponible",
         colores: "Unicolor",

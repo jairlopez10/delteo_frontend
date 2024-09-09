@@ -352,10 +352,10 @@ const Checkout = () => {
                     <div>
                         <h2 className="text-black mt-8">Paga en casa</h2>
                         <div className="flex justify-center mt-6">
-                            <img className=" w-64" src="./inter.webp" alt="" />
+                            <img className=" w-80" src="./inter.webp" alt="" />
                         </div>
                         
-                        <p className="  px-8 py-6 text-center"> <span className=" font-bold">PAGO CONTRA ENTREGA</span><span className=" font-bold text-blue-600"> GRATIS</span> y recibe tu pedido entre 1-2 dias habiles (Pago en efectivo)</p>
+                        <p className="  px-8 py-6 text-center"> <span className=" font-bold">ENVIO TOTALMENTE</span><span className=" font-bold text-blue-600"> GRATIS</span> y recibe tu pedido entre 1-2 dias habiles (Pago en efectivo)</p>
                     </div>
 
                     <div className="ocultar-info-pedido">

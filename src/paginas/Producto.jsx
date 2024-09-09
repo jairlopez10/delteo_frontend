@@ -5,6 +5,7 @@ import Accesoriosproducto from "../components/Accesoriosproducto";
 import { useState, useEffect, useRef } from "react";
 import usePagina from "../hooks/usePagina";
 import Terrenaitor from "../components/productsection/Terrenaitor";
+import Ak from "../components/productsection/Ak";
 
 const Producto = () => {
   
@@ -15,7 +16,8 @@ const Producto = () => {
   const navigate = useNavigate()
   const idlanzadoras = [50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377]
   const productsection = {
-    372: <Terrenaitor />
+    372: <Terrenaitor />,
+    374: <Ak />
   }
   const envio = {
     pequeno:  10000,
@@ -263,10 +265,10 @@ const Producto = () => {
               </>
             ) : (
               <>
-                <p className="precio-prod-antes">{`$${producto.precio >= 20000 ? ((producto.precio + envio.grande)*1.5).toLocaleString('es-CO') : ((producto.precio + envio.pequeno)*1.5).toLocaleString('es-CO')}`}</p>
+                <p className="precio-prod-antes">{`$${producto.precio >= 20000 ? ((producto.precio*1.5 + envio.grande)).toLocaleString('es-CO') : ((producto.precio + envio.pequeno)*1.5).toLocaleString('es-CO')}`}</p>
                 <div className="flex items-center gap-3">
                   <p className="precio-prod">{`$${producto.precio >= 20000 ? (producto.precio + envio.grande).toLocaleString('es-CO') : (producto.precio + envio.pequeno).toLocaleString('es-CO')}`}</p>
-                  <p className="oferta-text">Oferta</p>
+                  <p className="oferta-text">Oferta - 50%</p>
                 </div>
                 
               </>
