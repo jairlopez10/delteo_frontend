@@ -182,7 +182,7 @@ const Producto = () => {
     setAlertaCarrito(true);
     setTimeout(() => {
       setAlertaCarrito(false);
-    }, 3000);
+    }, 200);
   }
 
   return (
@@ -289,7 +289,7 @@ const Producto = () => {
               agregaralcarrito();
               setTimeout(() => {
                 navigate("/checkout")
-              }, 1000);
+              }, 200);
               
             }}>
               <svg xmlns="http://www.w3.org/2000/svg" className="icono-carrito-producto icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -305,7 +305,7 @@ const Producto = () => {
               agregaralcarrito();
               setTimeout(() => {
                 navigate("/checkout")
-              }, 1000);
+              }, 200);
               
             }}>
               <svg xmlns="http://www.w3.org/2000/svg" className="icono-carrito-producto icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
