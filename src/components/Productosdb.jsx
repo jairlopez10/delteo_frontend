@@ -20,6 +20,62 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 378,
+        titulo: "Tiburon Control Remoto",
+        preciomayorista: 74900,
+        precio: 99900,
+        descripcion: '',
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto378a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto378b.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto378c.mp4" 
+            }
+            
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
+        id: 379,
+        titulo: "Lancha Control Remoto",
+        preciomayorista: 74900,
+        precio: 114900,
+        descripcion: '',
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto379a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto379b.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto379c.mp4" 
+            }
+            
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
         id: 374,
         titulo: "AK Hidrogel Recargable",
         preciomayorista: 59900,
