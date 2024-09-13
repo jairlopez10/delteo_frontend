@@ -26,6 +26,8 @@ const Tiburon = () => {
               <li>Control remoto</li>
               <li>Bateria Recargable</li>
               <li>Cargador USB</li>
+              <li>Destornillador</li>
+              <li>2 Elices de repuesto</li>
             </ul>
           </div>
         </div>
