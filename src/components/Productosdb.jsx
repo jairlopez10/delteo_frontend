@@ -48,6 +48,34 @@ const productosdb = [
         genero: "unisex"
     },
     {
+        id: 380,
+        titulo: "Velociraptor Dinosaurio a Control y Vapor",
+        preciomayorista: 74900,
+        precio: 109900,
+        descripcion: '',
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto380a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto380b.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto380c.mp4" 
+            }
+            
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
         id: 379,
         titulo: "Drifter Lancha Control Remoto",
         preciomayorista: 74900,

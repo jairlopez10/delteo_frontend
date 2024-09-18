@@ -8,6 +8,7 @@ import Terrenaitor from "../components/productsection/Terrenaitor";
 import Ak from "../components/productsection/Ak";
 import Tiburon from "../components/productsection/Tiburon";
 import Lancha from "../components/productsection/Lancha";
+import Dinosauriocontrol from "../components/productsection/Dinosauriocontrol";
 
 const Producto = () => {
   
@@ -16,12 +17,13 @@ const Producto = () => {
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
-  const idlanzadoras = [50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379]
+  const idlanzadoras = [50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380]
   const productsection = {
     372: <Terrenaitor />,
     374: <Ak />,
     378: <Tiburon />,
-    379: <Lancha />
+    379: <Lancha />,
+    380: <Dinosauriocontrol />
   }
   const envio = {
     pequeno:  10000,

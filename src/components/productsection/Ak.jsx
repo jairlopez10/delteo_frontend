@@ -21,7 +21,7 @@ const Ak = () => {
         <div className="div-aida">
           <img src="/ak7.gif" alt="gif ak" />
           <h4 className=" mt-4">10.000 Orbis Hidrogel + ENVIO GRATIS</h4>
-          <p className=" mt-4 text-center">¡Aprovecha esta promoción que es valida <span className="font-bold">hasta el 13 Septiembre 2024!</span> Ultimas unidades disponibles</p>
+          <p className=" mt-4 text-center">¡Aprovecha esta promoción que es valida <span className="font-bold">hasta el 30 Septiembre 2024!</span> Ultimas unidades disponibles</p>
         </div>
         <div className="div-aida">
           <img src="/ak1.gif" alt="gif ak" />
