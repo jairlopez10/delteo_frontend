@@ -66,7 +66,6 @@ const productosdb = [
                 tipo: "video",
                 url: "/producto380c.mp4" 
             }
-            
         ],
         status: "disponible",
         colores: "Unicolor",
@@ -151,7 +150,7 @@ const productosdb = [
     },
     {
         id: 376,
-        titulo: "Fusil Hidrogel Recargable",
+        titulo: "M416 Hidrogel Recargable con Luces",
         preciomayorista: 89900,
         precio: 129900,
         descripcion: ['Luz en el cañon', 'Mira telescopica', 'Proveedor extendido', 'Proveedor mediano' , 'Cañon corto' ,'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],

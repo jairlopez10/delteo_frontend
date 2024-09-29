@@ -9,6 +9,7 @@ import Ak from "../components/productsection/Ak";
 import Tiburon from "../components/productsection/Tiburon";
 import Lancha from "../components/productsection/Lancha";
 import Dinosauriocontrol from "../components/productsection/Dinosauriocontrol";
+import M416 from "../components/productsection/M416";
 
 const Producto = () => {
   
@@ -23,7 +24,8 @@ const Producto = () => {
     374: <Ak />,
     378: <Tiburon />,
     379: <Lancha />,
-    380: <Dinosauriocontrol />
+    380: <Dinosauriocontrol />,
+    376: <M416 />
   }
   const envio = {
     pequeno:  10000,
