@@ -11,12 +11,12 @@ const Ak = () => {
         <div className="div-aida">
           <img src="/ak6.gif" alt="gif ak" />
           <h4 className=" mt-4">¡Ilumina las batallas de forma unica!</h4>
-          <p className=" mt-4 text-center">¡La AK alumbra con colores por cada disparo gracias a su <span className=" font-bold">silenciador con luces</span> que <span className=" font-bold">NO</span> requiere baterias adicionales!</p>
+          <p className=" mt-4 text-center">¡La AK ilumina cada disparo gracias a su <span className=" font-bold">silenciador con luces</span> que <span className=" font-bold">NO</span> requiere baterias adicionales!</p>
         </div>
         <div className="div-aida">
           <img src="/ak5.gif" alt="gif ak" />
-          <h4 className=" mt-4">¡Divierte de forma segura y amigable con el medio ambiente!</h4>
-          <p className=" mt-4 text-center">¡Colocalas en agua de <span className="font-bold">3-4 horas</span> y cualquier niño o adulto podra disfrutar de forma segura y sin dejar rastro!</p>
+          <h4 className=" mt-4">¡Diviertete de forma segura y amigable con el medio ambiente!</h4>
+          <p className=" mt-4 text-center">¡Coloca las orvis en agua de <span className="font-bold">3-4 horas</span> y cualquier niño o adulto podra disfrutar de forma segura y sin dejar rastro!</p>
         </div>
         <div className="div-aida">
           <img src="/ak7.gif" alt="gif ak" />
