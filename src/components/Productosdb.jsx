@@ -158,7 +158,12 @@ const productosdb = [
             {
                 tipo: "imagen",
                 url: "/producto376a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto376b.webp" 
             }
+            
         ],
         status: "disponible",
         colores: "Unicolor",
