@@ -10,6 +10,7 @@ import Tiburon from "../components/productsection/Tiburon";
 import Lancha from "../components/productsection/Lancha";
 import Dinosauriocontrol from "../components/productsection/Dinosauriocontrol";
 import M416 from "../components/productsection/M416";
+import Computadorpantalla from "../components/productsection/Computadorpantalla";
 
 const Producto = () => {
   
@@ -18,8 +19,9 @@ const Producto = () => {
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
-  const idlanzadoras = [50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380]
+  const idlanzadoras = [2, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380]
   const productsection = {
+    2: <Computadorpantalla />, 
     372: <Terrenaitor />,
     374: <Ak />,
     378: <Tiburon />,
