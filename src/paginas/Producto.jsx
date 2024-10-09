@@ -276,7 +276,7 @@ const Producto = () => {
               </>
             ) : (
               <>
-                <p className="precio-prod-antes">{`$${producto.precio >= 20000 ? ((producto.precio*1.5 + envio.grande)).toLocaleString('es-CO') : ((producto.precio + envio.pequeno)*1.5).toLocaleString('es-CO')}`}</p>
+                <p className="precio-prod-antes">{`$${producto.precio >= 20000 ? ((producto.precio + envio.grande)*2).toLocaleString('es-CO') : ((producto.precio + envio.pequeno)*2).toLocaleString('es-CO')}`}</p>
                 <div className="flex items-center gap-3">
                   <p className="precio-prod">{`$${producto.precio >= 20000 ? (producto.precio + envio.grande).toLocaleString('es-CO') : (producto.precio + envio.pequeno).toLocaleString('es-CO')}`}</p>
                   <p className="oferta-text">Oferta - 50%</p>
