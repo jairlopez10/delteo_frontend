@@ -227,7 +227,7 @@ const productosdb = [
         id: 372,
         titulo: "Terrenaitor Carro Control Sensor",
         preciomayorista: 79900,
-        precio: 99900,
+        precio: 124900,
         descripcion: ['Carro control', 'Luces y sonido', 'Manilla sensor', 'Control remoto', 'Lanza vapor de agua','Bateria recargable', 'Cargador USB'],
         imagenes: [
             {
@@ -3568,7 +3568,7 @@ const productosdb = [
             }
         ],
         status: "disponible",
-        colores: "Rosado, Azul, Rojo",
+        colores: "Spiderman y Princesas",
         edad: ["+3", "+6", "+8"],
         edad2: "+3",
         categoria: "educativo",
