@@ -293,47 +293,6 @@ const productosdb = [
         genero: "ninos"
     },
     {
-        id: 2,
-        titulo: "Computador con Pantalla y Mouse",
-        preciomayorista: 34900,
-        precio: 39900,
-        descripcion: `¡Descubre el emocionante mundo del aprendizaje con nuestro Computador Interactivo Todo en Uno, equipado con mouse y pantalla digital! Diseñado para preescolares, este juguete cautivante es más que un juego.
-
-        Explora números del 1 al 10, el abecedario y palabras esenciales con diversión interactiva. Con canciones animadas y actividades intuitivas de suma y resta, cada momento se convierte en una lección emocionante.
-        
-        Colores vibrantes y personajes adorables hacen que el aprendizaje sea divertido. Los botones grandes y el mouse fácil de usar garantizan una inmersión sin complicaciones.
-        
-        Este computador educativo es una herramienta valiosa que fomenta el desarrollo cognitivo. ¡Cada toque en las teclas crea un futuro de conocimiento!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto2a.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2b.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2c.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2e.webp"
-            },
-            {
-                tipo: "video",
-                url: "/producto2d.mp4"
-            }
-        ],
-        status: "disponible",
-        colores: "Rosado, Azul, Rojo",
-        edad: ["+3", "+6", "+8"],
-        edad2: "+3",
-        categoria: "educativo",
-        genero: "ninas"
-    },
-    {
         id: 50,
         titulo: "Lanzador MP5 Recargable Hidrogel",
         preciomayorista: 71900,
@@ -3536,6 +3495,84 @@ const productosdb = [
         edad2: "+3",
         categoria: "didacticos",
         genero: "unisex"
+    },
+    {
+        id: 2,
+        titulo: "Computador con Pantalla y Mouse",
+        preciomayorista: 34900,
+        precio: 49900,
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto2a.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2b.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2c.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2d.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2e.webp"
+            },
+            {
+                tipo: "video",
+                url: "/producto2f.mp4"
+            }
+        ],
+        status: "disponible",
+        colores: "Spiderman y Princesas",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
+        categoria: "educativo",
+        genero: "ninas"
+    },
+    {
+        id: 381,
+        titulo: "Computador con Pantalla y Mousee",
+        preciomayorista: 34900,
+        precio: 59900,
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto2a.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2b.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2c.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2d.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto2e.webp"
+            },
+            {
+                tipo: "video",
+                url: "/producto2f.mp4"
+            }
+        ],
+        status: "disponible",
+        colores: "Rosado, Azul, Rojo",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
+        categoria: "educativo",
+        genero: "ninas"
     },
     {
         id: 29,
