@@ -12,6 +12,7 @@ import Dinosauriocontrol from "../components/productsection/Dinosauriocontrol";
 import M416 from "../components/productsection/M416";
 import Computadorpantalla from "../components/productsection/Computadorpantalla";
 import Minigun from "../components/productsection/Minigun";
+import PKM from "../components/productsection/PKM";
 
 const Producto = () => {
   
@@ -26,6 +27,7 @@ const Producto = () => {
     372: <Terrenaitor />,
     374: <Ak />,
     375: <Minigun />,
+    377: <PKM />,
     378: <Tiburon />,
     379: <Lancha />,
     380: <Dinosauriocontrol />,

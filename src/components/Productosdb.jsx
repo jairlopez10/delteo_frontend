@@ -180,13 +180,17 @@ const productosdb = [
         id: 377,
         titulo: "PKM Hidrogel Recargable",
         preciomayorista: 69900,
-        precio: 89900,
+        precio: 99900,
         descripcion: ['Luz en el cañon', 'Tripode', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
         imagenes: [
             {
                 tipo: "imagen",
                 url: "/producto377a.webp" 
-            }
+            },
+            {
+                tipo: "video",
+                url: "/producto374c.mp4" 
+            },
         ],
         status: "disponible",
         colores: "Unicolor",
