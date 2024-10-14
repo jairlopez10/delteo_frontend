@@ -93,10 +93,6 @@ const Checkout = () => {
         return totalcarrito
     }
 
-    const calculartotal = () => {
-
-    }
-
     const calculardescuento = () => {
 
         let conttempprodpeq = 0;
@@ -115,14 +111,18 @@ const Checkout = () => {
         if(conttempprodgde === 1 && conttempprodpeq === 0) {
             setDescuento(0);
         } else if (conttempprodgde >= 1) {
+            /*
             if(conttempprodgde > 1){
                 descuentoacum+=(conttempprodgde-1)*10000
             }
             if(conttempprodpeq >= 1){
                 descuentoacum+=(conttempprodpeq)*5000
             }
+                */
+            setDescuento(0)
         } else if (conttempprodgde === 0 && conttempprodpeq > 2) {
-            descuentoacum+=(conttempprodpeq-2)*5000
+            setDescuento(0)
+            //descuentoacum+=(conttempprodpeq-2)*5000
         }
 
 
