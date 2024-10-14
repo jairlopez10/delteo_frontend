@@ -40,7 +40,7 @@ const productosdb = [
             }
             
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -133,12 +133,16 @@ const productosdb = [
         id: 375,
         titulo: "Minigun Hidrogel Recargable",
         preciomayorista: 114900,
-        precio: 154900,
+        precio: 159900,
         descripcion: ['Cañon giratorio', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
         imagenes: [
             {
                 tipo: "imagen",
                 url: "/producto375a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto375b.mp4" 
             }
         ],
         status: "disponible",

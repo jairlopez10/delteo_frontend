@@ -1,38 +1,38 @@
+import React from 'react'
 
-const Ak = () => {
+const Minigun = () => {
   return (
     <>
         <div className="div-aida">
-          <img src="/ak3.gif" alt="gif ak" />
+          <img src="/minigun.gif" alt="gif ak" />
           <h4 className=" mt-4">¡Lleva tu diversión al aire libre a otro nivel!</h4>
           <p className=" mt-4 text-center">¿Te has cansado de los mismos juegos repetitivos y monótonos que ya no generan emoción? 😔 </p>
         </div>
         <div className="div-aida">
-          <img src="/ak6.gif" alt="gif ak" />
-          <h4 className=" mt-4">¡Ilumina las batallas de forma unica!</h4>
-          <p className=" mt-4 text-center">¡La AK ilumina cada disparo gracias a su <span className=" font-bold">silenciador con luces</span> que <span className=" font-bold">NO</span> requiere baterias adicionales!</p>
+          <img src="/minigun3.gif" alt="gif ak" />
+          <h4 className=" mt-4">¡La lanzadora mas completa!</h4>
+          <p className=" mt-4 text-center">¡Todo su cañon gira completamente para disparar e incluye sus gafas de protección para proteger de las orvis!</p>
         </div>
         <div className="div-aida">
-          <img src="/ak5.gif" alt="gif ak" />
+          <img src="/minigun2.gif" alt="gif ak" />
           <h4 className=" mt-4">¡Diviertete de forma segura y amigable con el medio ambiente!</h4>
           <p className=" mt-4 text-center">¡Coloca las orvis en agua de <span className="font-bold">3-4 horas</span> y cualquier niño o adulto podra disfrutar de forma segura y sin dejar rastro!</p>
         </div>
         <div className="div-aida">
-          <img src="/ak7.gif" alt="gif ak" />
+          <img src="/minigun4.gif" alt="gif ak" />
           <h4 className=" mt-4">10.000 Orbis Hidrogel + ENVIO GRATIS</h4>
           <p className=" mt-4 text-center">¡Aprovecha esta promoción que es valida <span className="font-bold">hasta el 31 Octubre 2024!</span> Ultimas unidades disponibles</p>
         </div>
         <div className="div-aida">
-          <img src="/ak1.gif" alt="gif ak" />
           <h4 className=" mt-4">¿Qué es lo que incluye?</h4>
           <div className="lista-incluye">
             <ul >
-              <li>Lanzadora Hidrogel</li>
-              <li>Silenciador con luz</li>
-              <li>11.000 Orbis Hidrogel</li>
+              <li>Minigun Hidrogel</li>
+              <li>12.000 Orbis Hidrogel</li>
+              <li>Gafas de protección</li>
               <li>Bateria recargable</li>
               <li>Cargador USB</li>
-              <li>Proveedor granada</li>
+              <li>Proveedor superior</li>
             </ul>
           </div>
         </div>
@@ -40,4 +40,4 @@ const Ak = () => {
   )
 }
 
-export default Ak
+export default Minigun
