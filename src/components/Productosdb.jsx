@@ -51,7 +51,7 @@ const productosdb = [
         id: 380,
         titulo: "Velociraptor Dinosaurio a Control y Vapor",
         preciomayorista: 74900,
-        precio: 129900,
+        precio: 79900,
         descripcion: '',
         imagenes: [
             {
