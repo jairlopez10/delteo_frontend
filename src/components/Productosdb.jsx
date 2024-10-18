@@ -3535,7 +3535,7 @@ const productosdb = [
         id: 2,
         titulo: "Computador con Pantalla y Mouse",
         preciomayorista: 34900,
-        precio: 49900,
+        precio: 59900,
         descripcion: ``,
         imagenes: [
             {
