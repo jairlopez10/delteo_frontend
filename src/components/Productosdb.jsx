@@ -133,7 +133,7 @@ const productosdb = [
         id: 374,
         titulo: "AK Hidrogel Recargable",
         preciomayorista: 59900,
-        precio: 99900,
+        precio: 84900,
         descripcion: ['Luz en el cañon', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
         imagenes: [
             {
@@ -207,7 +207,7 @@ const productosdb = [
         id: 377,
         titulo: "PKM Hidrogel Recargable",
         preciomayorista: 69900,
-        precio: 99900,
+        precio: 84900,
         descripcion: ['Luz en el cañon', 'Tripode', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
         imagenes: [
             {
