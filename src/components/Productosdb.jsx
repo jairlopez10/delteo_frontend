@@ -133,7 +133,7 @@ const productosdb = [
         id: 374,
         titulo: "AK Hidrogel Recargable",
         preciomayorista: 59900,
-        precio: 89900,
+        precio: 99900,
         descripcion: ['Luz en el cañon', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
         imagenes: [
             {
