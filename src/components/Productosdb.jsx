@@ -105,7 +105,7 @@ const productosdb = [
         id: 379,
         titulo: "Drifter Lancha Control Remoto",
         preciomayorista: 74900,
-        precio: 114900,
+        precio: 109900,
         descripcion: '',
         imagenes: [
             {
