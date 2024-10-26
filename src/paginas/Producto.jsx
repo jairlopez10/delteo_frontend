@@ -14,6 +14,7 @@ import Computadorpantalla from "../components/productsection/Computadorpantalla"
 import Minigun from "../components/productsection/Minigun";
 import PKM from "../components/productsection/PKM";
 import Dinosauriozaza from "../components/productsection/Dinosauriozaza";
+import Mp5 from "../components/productsection/Mp5";
 
 const Producto = () => {
   
@@ -26,6 +27,7 @@ const Producto = () => {
   const productsection = {
     2: <Computadorpantalla />, 
     372: <Terrenaitor />,
+    373: <Mp5 />,
     374: <Ak />,
     375: <Minigun />,
     377: <PKM />,
