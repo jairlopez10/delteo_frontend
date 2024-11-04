@@ -147,7 +147,8 @@ const Catalogo = () => {
     <>
       <div className="seccionproductos contenedor">
         <div className="div-banner">
-          <img className="banner" src={`banner${idbanner}.webp`} alt="" />
+          {/*<img className="banner" src={`banner${idbanner}.webp`} alt="" />*/}
+          <img className="banner" src={`bfbanner.webp`} alt="" />
         </div>
         <h1 className="tituloproductos mb-8" ref={tituloproductosref}>Productos</h1>
         <div className="divfiltronumpro">

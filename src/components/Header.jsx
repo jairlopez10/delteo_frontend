@@ -7,7 +7,7 @@ const Header = () => {
     const { pagina, contador, setContador } = usePagina();
     const [menu, setmenu] = useState(false);
     const [anuncio, setAnuncio] = useState(0);
-    const anuncios = ['ENVÍO GRATIS - 1-3 DIAS HÁBILES', 'ORGULLOSAMENTE COLOMBIANOS']
+    const anuncios = ['ENVÍO GRATIS - 1-3 DIAS HÁBILES', 'BLACK FRIDAY - 60% DCTO']
 
     useEffect(() => {
         const cont = JSON.parse(localStorage.getItem('carritojammy')) || []

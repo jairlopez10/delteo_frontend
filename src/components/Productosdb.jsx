@@ -4,7 +4,7 @@ const productosdb = [
         id: 373,
         titulo: "Subfusil Hidrogel MP5 Recargable",
         preciomayorista: 74900,
-        precio: 104900,
+        precio: 99900,
         descripcion: ['Laser', 'Luz en el cañon', 'Linterna', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
         imagenes: [
             {
@@ -56,10 +56,107 @@ const productosdb = [
         genero: "unisex"
     },
     {
+        id: 374,
+        titulo: "AK Hidrogel Recargable",
+        preciomayorista: 59900,
+        precio: 79900,
+        descripcion: ['Luz en el cañon', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto374a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto374b.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto374c.mp4" 
+            },
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 377,
+        titulo: "PKM Hidrogel Recargable",
+        preciomayorista: 69900,
+        precio: 79900,
+        descripcion: ['Luz en el cañon', 'Tripode', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto377a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto374c.mp4" 
+            },
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 375,
+        titulo: "Minigun Hidrogel Recargable",
+        preciomayorista: 114900,
+        precio: 129900,
+        descripcion: ['Cañon giratorio', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto375a.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto375b.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 376,
+        titulo: "M416 Hidrogel Recargable con Luces",
+        preciomayorista: 89900,
+        precio: 129900,
+        descripcion: ['Luz en el cañon', 'Mira telescopica', 'Proveedor extendido', 'Proveedor mediano' , 'Cañon corto' ,'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto376a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto376b.webp" 
+            }
+            
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 380,
         titulo: "Velociraptor Dinosaurio a Control y Vapor",
         preciomayorista: 74900,
-        precio: 79900,
+        precio: 74900,
         descripcion: '',
         imagenes: [
             {
@@ -136,103 +233,6 @@ const productosdb = [
         edad2: "+8",
         categoria: "punteria",
         genero: "unisex"
-    },
-    {
-        id: 374,
-        titulo: "AK Hidrogel Recargable",
-        preciomayorista: 59900,
-        precio: 84900,
-        descripcion: ['Luz en el cañon', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto374a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto374b.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto374c.mp4" 
-            },
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: ["+8"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "ninos"
-    },
-    {
-        id: 375,
-        titulo: "Minigun Hidrogel Recargable",
-        preciomayorista: 114900,
-        precio: 134900,
-        descripcion: ['Cañon giratorio', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto375a.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto375b.mp4" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: ["+8"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "ninos"
-    },
-    {
-        id: 376,
-        titulo: "M416 Hidrogel Recargable con Luces",
-        preciomayorista: 89900,
-        precio: 129900,
-        descripcion: ['Luz en el cañon', 'Mira telescopica', 'Proveedor extendido', 'Proveedor mediano' , 'Cañon corto' ,'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto376a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto376b.webp" 
-            }
-            
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: ["+8"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "ninos"
-    },
-    {
-        id: 377,
-        titulo: "PKM Hidrogel Recargable",
-        preciomayorista: 69900,
-        precio: 84900,
-        descripcion: ['Luz en el cañon', 'Tripode', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto377a.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto374c.mp4" 
-            },
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: ["+8"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "ninos"
     },
     {
         id: 371,
