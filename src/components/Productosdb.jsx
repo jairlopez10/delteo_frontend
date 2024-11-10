@@ -179,33 +179,7 @@ const productosdb = [
         categoria: "punteria",
         genero: "unisex"
     },
-    {
-        id: 382,
-        titulo: "Dinosaurio Za Za",
-        preciomayorista: 74900,
-        precio: 49900,
-        descripcion: '',
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto382a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto382b.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto382c.mp4" 
-            }
-        ],
-        status: "No Stock",
-        colores: "Unicolor",
-        edad: ["+8"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "unisex"
-    },
+    
     {
         id: 379,
         titulo: "Drifter Lancha Control Remoto",
@@ -306,6 +280,33 @@ const productosdb = [
         edad2: "+8",
         categoria: "punteria",
         genero: "ninos"
+    },
+    {
+        id: 382,
+        titulo: "Dinosaurio Za Za",
+        preciomayorista: 74900,
+        precio: 49900,
+        descripcion: '',
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto382a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto382b.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto382c.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "unisex"
     },
     {
         id: 370,
