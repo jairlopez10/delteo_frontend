@@ -296,10 +296,6 @@ const productosdb = [
                 tipo: "imagen",
                 url: "/producto382b.webp" 
             },
-            {
-                tipo: "video",
-                url: "/producto382c.mp4" 
-            }
         ],
         status: "disponible",
         colores: "Unicolor",
