@@ -15,6 +15,7 @@ import Minigun from "../components/productsection/Minigun";
 import PKM from "../components/productsection/PKM";
 import Dinosauriozaza from "../components/productsection/Dinosauriozaza";
 import Mp5 from "../components/productsection/Mp5";
+import Lamparaluna from "../components/productsection/Lamparaluna";
 
 const Producto = () => {
   
@@ -23,7 +24,7 @@ const Producto = () => {
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
-  const idlanzadoras = [2, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382]
+  const idlanzadoras = [2, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383]
   const productsection = {
     2: <Computadorpantalla />, 
     372: <Terrenaitor />,
@@ -36,7 +37,8 @@ const Producto = () => {
     380: <Dinosauriocontrol />,
     376: <M416 />,
     381: <Computadorpantalla />,
-    382: <Dinosauriozaza />
+    382: <Dinosauriozaza />,
+    383: <Lamparaluna />
   }
   const envio = {
     pequeno:  10000,

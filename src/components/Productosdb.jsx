@@ -121,7 +121,7 @@ const productosdb = [
                 url: "/producto375b.mp4" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -483,6 +483,30 @@ const productosdb = [
         edad2: "+3",
         categoria: "educativo",
         genero: "unisex"
+    },
+    {
+        id: 383,
+        titulo: "Lámpara Luna Esfera",
+        preciomayorista: 89900,
+        precio: 44900,
+        descripcion: ['Luz en el cañon', 'Mira telescopica', 'Proveedor extendido', 'Proveedor mediano' , 'Cañon corto' ,'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto383a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto383b.webp" 
+            }
+            
+        ],
+        status: "disponible",
+        colores: "Luna",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
     },
     {
         id: 179,
