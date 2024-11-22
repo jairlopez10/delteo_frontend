@@ -24,6 +24,7 @@ const Lamparaluna = () => {
               <li>Lampara Luna</li>
               <li>Base de madera</li>
               <li>Cable USB </li>
+              <li>Dimensiones: 10cm alto</li>
             </ul>
           </div>
         </div>

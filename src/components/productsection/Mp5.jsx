@@ -9,7 +9,7 @@ const Mp5 = () => {
           <p className=" mt-4 text-center">¿Te has cansado de los mismos juegos repetitivos y monótonos que ya no generan emoción? 😔 </p>
         </div>
         <div className="div-aida">
-          <img src="/mp5a.gif" alt="gif ak" />
+          <img src="/mp5f.gif" alt="gif ak" />
           <h4 className=" mt-4">¡Ilumina las batallas de forma unica!</h4>
           <p className=" mt-4 text-center">¡La MP5 ilumina cada disparo gracias a su <span className=" font-bold">silenciador con luces, laser y linterna</span> incluidos!</p>
         </div>
