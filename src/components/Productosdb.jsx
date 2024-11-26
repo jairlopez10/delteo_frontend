@@ -106,6 +106,33 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 384,
+        titulo: "Nutria Relajante Respira",
+        preciomayorista: 69900,
+        precio: 69900,
+        descripcion: [''],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto384a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto384b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto384c.webp" 
+            },
+        ],
+        status: "disponible",
+        colores: "Rosada, Gris, Azul, Cafe",
+        edad: ["+0", "+3", "+6", "+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 375,
         titulo: "Minigun Hidrogel Recargable",
         preciomayorista: 114900,
