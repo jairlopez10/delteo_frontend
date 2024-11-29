@@ -31,7 +31,7 @@ const M416 = () => {
         <div className="div-aida">
           <img src="/m416g.gif" alt="gif m416" />
           <h4 className=" mt-4">10.000 Orbis Hidrogel + ENVÍO GRATIS</h4>
-          <p className=" mt-4 text-center">¡Aprovecha esta promoción que es válida hasta el <span className="font-bold">31 Octubre 2024!</span> Últimas unidades disponibles</p>
+          <p className=" mt-4 text-center">¡Aprovecha esta promoción que es válida hasta el <span className="font-bold">15 Diciembre 2024!</span> Últimas unidades disponibles</p>
           <h4 className=" mt-4">¿Qué es lo que incluye?</h4>
           <div className="lista-incluye">
             <ul >

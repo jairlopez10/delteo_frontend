@@ -21,7 +21,7 @@ const PKM = () => {
         <div className="div-aida">
           <img src="/pkm1.gif" alt="gif ak" />
           <h4 className=" mt-4">10.000 Orbis Hidrogel + ENVIO GRATIS</h4>
-          <p className=" mt-4 text-center">¡Aprovecha esta promoción que es valida <span className="font-bold">hasta el 31 Octubre 2024!</span> Ultimas unidades disponibles</p>
+          <p className=" mt-4 text-center">¡Aprovecha esta promoción que es valida <span className="font-bold">hasta el 15 Diciembre 2024!</span> Ultimas unidades disponibles</p>
         </div>
         <div className="div-aida">
           <img src="/ak1.gif" alt="gif ak" />

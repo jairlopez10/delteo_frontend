@@ -1,6 +1,30 @@
 
 const productosdb = [
     {
+        id: 376,
+        titulo: "M416 Hidrogel Recargable con Luces",
+        preciomayorista: 89900,
+        precio: 129900,
+        descripcion: ['Luz en el cañon', 'Mira telescopica', 'Proveedor extendido', 'Proveedor mediano' , 'Cañon corto' ,'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto376a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto376b.webp" 
+            }
+            
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 373,
         titulo: "Subfusil Hidrogel MP5 Recargable",
         preciomayorista: 74900,
@@ -149,30 +173,6 @@ const productosdb = [
             }
         ],
         status: "No Stock",
-        colores: "Unicolor",
-        edad: ["+8"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "ninos"
-    },
-    {
-        id: 376,
-        titulo: "M416 Hidrogel Recargable con Luces",
-        preciomayorista: 89900,
-        precio: 129900,
-        descripcion: ['Luz en el cañon', 'Mira telescopica', 'Proveedor extendido', 'Proveedor mediano' , 'Cañon corto' ,'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto376a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto376b.webp" 
-            }
-            
-        ],
-        status: "disponible",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
