@@ -157,6 +157,33 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 385,
+        titulo: "Consola Game Box Ultra Recargable",
+        preciomayorista: 69900,
+        precio: 64900,
+        descripcion: [''],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto385a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto385b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto385c.webp" 
+            },
+        ],
+        status: "disponible",
+        colores: "Roja, Negra, Gris, Azul, Amarilla",
+        edad: ["+3", "+6", "+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 375,
         titulo: "Minigun Hidrogel Recargable",
         preciomayorista: 114900,
