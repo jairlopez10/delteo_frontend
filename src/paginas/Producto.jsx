@@ -18,6 +18,7 @@ import Mp5 from "../components/productsection/Mp5";
 import Lamparaluna from "../components/productsection/Lamparaluna";
 import Nutriarelajante from "../components/productsection/Nutriarelajante";
 import Consola400en1 from "../components/productsection/Consola400en1";
+import Computadorpantallanomouse from "../components/productsection/Computadorpantallanomouse";
 
 const Producto = () => {
   
@@ -26,7 +27,7 @@ const Producto = () => {
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
-  const idlanzadoras = [2, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385]
+  const idlanzadoras = [2, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386]
   const productsection = {
     2: <Computadorpantalla />, 
     372: <Terrenaitor />,
@@ -42,7 +43,8 @@ const Producto = () => {
     382: <Dinosauriozaza />,
     383: <Lamparaluna />,
     384: <Nutriarelajante />,
-    385: <Consola400en1 />
+    385: <Consola400en1 />,
+    386: <Computadorpantallanomouse />
   }
   const envio = {
     pequeno:  10000,
@@ -293,7 +295,7 @@ const Producto = () => {
                 <p className="precio-prod-antes">{`$${producto.precio >= 20000 ? ((producto.precio + envio.grande)*2.5).toLocaleString('es-CO') : ((producto.precio + envio.pequeno)*2.5).toLocaleString('es-CO')}`}</p>
                 <div className="flex items-center gap-3">
                   <p className="precio-prod">{`$${producto.precio >= 20000 ? (producto.precio + envio.grande).toLocaleString('es-CO') : (producto.precio + envio.pequeno).toLocaleString('es-CO')}`}</p>
-                  <p className="oferta-text">BLACK FRIDAY - 60%</p>
+                  <p className="oferta-text">60% DESCTO</p>
                 </div>
                 
               </>
