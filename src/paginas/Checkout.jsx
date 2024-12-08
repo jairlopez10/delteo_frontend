@@ -55,12 +55,6 @@ const Checkout = () => {
         calculardescuento();
         setSubtotal(totalcarrito);
 
-        fbq('track', 'InitiateCheckout', {
-            contents: carritomostrar,
-            currency: 'COP',
-            value: total
-        })
-
         localStorage.setItem('carritojammy', JSON.stringify(carritomostrar));
         setContador(carritomostrar.length);
 
@@ -78,6 +72,11 @@ const Checkout = () => {
         })
         document.title = 'Delteo | Checkout'
         window.scrollTo(0,0)
+        fbq('track', 'InitiateCheckout', {
+            contents: carritomostrar,
+            currency: 'COP',
+            value: total
+        })
         
     }, [])
 

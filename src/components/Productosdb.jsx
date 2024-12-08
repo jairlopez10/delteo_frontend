@@ -28,7 +28,7 @@ const productosdb = [
         id: 373,
         titulo: "Subfusil Hidrogel MP5 Recargable",
         preciomayorista: 74900,
-        precio: 89900,
+        precio: 84900,
         descripcion: ['Laser', 'Luz en el cañon', 'Linterna', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
         imagenes: [
             {
