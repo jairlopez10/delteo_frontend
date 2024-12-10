@@ -1,45 +1,6 @@
 
 const productosdb = [
     {
-        id: 386,
-        titulo: "Computador con Pantalla Interactivo",
-        preciomayorista: 69900,
-        precio: 59900,
-        descripcion: [''],
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto386a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto386b.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto386c.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto386d.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto386e.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto2f.mp4"
-            }
-        ],
-        status: "disponible",
-        colores: "Rosada, Azul",
-        edad: ["+3"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "unisex"
-    },
-    {
         id: 376,
         titulo: "M416 Hidrogel Recargable con Luces",
         preciomayorista: 89900,
@@ -194,6 +155,33 @@ const productosdb = [
         edad2: "+8",
         categoria: "punteria",
         genero: "ninos"
+    },
+    {
+        id: 387,
+        titulo: "Perro Caminador y Repetidor",
+        preciomayorista: 69900,
+        precio: 109900,
+        descripcion: [''],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto387a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto387b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto387c.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Rosada, Azul",
+        edad: ["+3"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "unisex"
     },
     {
         id: 385,
@@ -373,6 +361,45 @@ const productosdb = [
         edad2: "+8",
         categoria: "punteria",
         genero: "ninos"
+    },
+    {
+        id: 386,
+        titulo: "Computador con Pantalla Interactivo",
+        preciomayorista: 69900,
+        precio: 59900,
+        descripcion: [''],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto386a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto386b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto386c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto386d.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto386e.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto2f.mp4"
+            }
+        ],
+        status: "disponible",
+        colores: "Rosada, Azul",
+        edad: ["+3"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "unisex"
     },
     {
         id: 382,
@@ -3685,7 +3712,7 @@ const productosdb = [
                 url: "/producto2f.mp4"
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Spiderman y Princesas",
         edad: ["+3", "+6", "+8"],
         edad2: "+3",
@@ -3724,7 +3751,7 @@ const productosdb = [
                 url: "/producto2f.mp4"
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Spiderman y Princesas",
         edad: ["+3", "+6", "+8"],
         edad2: "+3",
