@@ -253,7 +253,7 @@ const productosdb = [
                 url: "/producto380c.mp4" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
