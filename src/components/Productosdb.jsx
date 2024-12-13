@@ -322,6 +322,37 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 13,
+        titulo: "Gimnasio Musical Interactivo para Bebe",
+        preciomayorista: 69999,
+        precio: 109900,
+        descripcion: ``,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto13b.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto13c.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto13d.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto13e.webp"
+            },
+        ],
+        status: "disponible",
+        colores: "Azul, Rosado",
+        edad: ["+0"],
+        edad2: "+3",
+        categoria: "didacticos",
+        genero: "unisex"
+    },
+    {
         id: 372,
         titulo: "Terrenaitor Carro Control Sensor",
         preciomayorista: 79900,
@@ -1339,27 +1370,6 @@ const productosdb = [
         edad2: "+3",
         categoria: "maquillaje",
         genero: "ninas"
-    },
-    {
-        id: 13,
-        titulo: "Gimnasio de Actividades para Bebe",
-        preciomayorista: 69999,
-        precio: 74999,
-        descripcion: `¡Estimula el crecimiento y la diversión con nuestro Gimnasio de Bebés Sonidos y Juguetes! Este espacio de juego interactivo está diseñado para ofrecer a tu bebé una experiencia llena de aprendizaje y entretenimiento.
-
-        Con sonidos suaves y alegres, el gimnasio crea un ambiente envolvente que captura la atención y curiosidad de tu bebé. Además, el arco sobre la cabeza del bebé está decorado con juguetes colgantes que invitan a la exploración. Tu bebé podrá recostarse cómodamente mientras se sumerge en el mundo de los colores, formas y texturas!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto13a.webp"
-            }
-        ],
-        status: "disponible",
-        colores: "Verde",
-        edad: ["+0"],
-        edad2: "+3",
-        categoria: "didacticos",
-        genero: "unisex"
     },
     {
         id: 176,

@@ -20,6 +20,7 @@ import Nutriarelajante from "../components/productsection/Nutriarelajante";
 import Consola400en1 from "../components/productsection/Consola400en1";
 import Computadorpantallanomouse from "../components/productsection/Computadorpantallanomouse";
 import Perrorepetidor from "../components/productsection/Perrorepetidor";
+import Gimnasio from "../components/productsection/Gimnasio";
 
 const Producto = () => {
   
@@ -28,7 +29,7 @@ const Producto = () => {
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
-  const idlanzadoras = [2, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387]
+  const idlanzadoras = [2, 13, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387]
   const productsection = {
     2: <Computadorpantalla />, 
     372: <Terrenaitor />,
@@ -46,7 +47,8 @@ const Producto = () => {
     384: <Nutriarelajante />,
     385: <Consola400en1 />,
     386: <Computadorpantallanomouse />,
-    387: <Perrorepetidor />
+    387: <Perrorepetidor />,
+    13: <Gimnasio />
   }
   const envio = {
     pequeno:  10000,

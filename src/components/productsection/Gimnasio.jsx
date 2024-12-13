@@ -1,11 +1,10 @@
 import React from 'react'
 
-const Perrorepetidor = () => {
+const Gimnasio = () => {
   return (
     <>
-        <h4 className=" mt-8">¡Te escriberemos para confirmar el motivo! (Blanco o Cafe) 🐕</h4>
         <div className="div-aida">
-            <img src="/perrogif1.gif" alt="gif ak" />
+            <img src="/gimnasiogif1.webp" alt="gif ak" />
             <h4 className=" mt-4">¿Tus hij@s sueñan con tener una mascota?</h4>
             <p className=" mt-4 text-center">¡Una experiencia real por como <span className=' font-bold'>camina, saca la lengua y repite  </span>lo que dices!</p>
         </div>
@@ -36,4 +35,4 @@ const Perrorepetidor = () => {
   )
 }
 
-export default Perrorepetidor
+export default Gimnasio
