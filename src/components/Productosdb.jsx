@@ -160,7 +160,7 @@ const productosdb = [
         id: 387,
         titulo: "Perro Caminador y Repetidor",
         preciomayorista: 69900,
-        precio: 109900,
+        precio: 119900,
         descripcion: [''],
         imagenes: [
             {
