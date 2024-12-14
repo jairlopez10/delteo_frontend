@@ -325,7 +325,7 @@ const productosdb = [
         id: 13,
         titulo: "Gimnasio Musical Interactivo para Bebe",
         preciomayorista: 69999,
-        precio: 109900,
+        precio: 99900,
         descripcion: ``,
         imagenes: [
             {
