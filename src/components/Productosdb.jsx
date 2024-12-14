@@ -226,7 +226,7 @@ const productosdb = [
                 url: "/producto375b.mp4" 
             }
         ],
-        status: "No Stock",
+        status: "disponible",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
