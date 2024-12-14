@@ -72,7 +72,7 @@ const productosdb = [
             }
             
         ],
-        status: "No Stock",
+        status: "disponible",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
