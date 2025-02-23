@@ -3722,7 +3722,7 @@ const productosdb = [
                 url: "/producto2f.mp4"
             }
         ],
-        status: "No Stock",
+        status: "disponible",
         colores: "Spiderman y Princesas",
         edad: ["+3", "+6", "+8"],
         edad2: "+3",
@@ -3761,7 +3761,7 @@ const productosdb = [
                 url: "/producto2f.mp4"
             }
         ],
-        status: "No Stock",
+        status: "disponible",
         colores: "Spiderman y Princesas",
         edad: ["+3", "+6", "+8"],
         edad2: "+3",
