@@ -356,7 +356,7 @@ const productosdb = [
         id: 372,
         titulo: "Terrenaitor Carro Control Sensor",
         preciomayorista: 79900,
-        precio: 104900,
+        precio: 99900,
         descripcion: ['Carro control', 'Luces y sonido', 'Manilla sensor', 'Control remoto', 'Lanza vapor de agua','Bateria recargable', 'Cargador USB'],
         imagenes: [
             {

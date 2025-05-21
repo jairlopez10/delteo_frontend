@@ -227,6 +227,12 @@ const Checkout = () => {
             items: carritomostrar
         })
 
+        gtag('event', 'ads_conversion_Purchase_1', {
+            value: total,
+            currency: 'COP',
+            items: carritomostrar
+        })
+
         //Enviar pedido
         try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/clientes`;

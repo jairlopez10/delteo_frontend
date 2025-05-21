@@ -31,7 +31,7 @@ const Producto = () => {
   const navigate = useNavigate()
   const idlanzadoras = [2, 13, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387]
   const productsection = {
-    2: <Computadorpantalla />, 
+    2: <Computadorpantalla />,
     372: <Terrenaitor />,
     373: <Mp5 />,
     374: <Ak />,
