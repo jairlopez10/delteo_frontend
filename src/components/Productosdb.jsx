@@ -17,7 +17,7 @@ const productosdb = [
             }
             
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -44,7 +44,7 @@ const productosdb = [
                 url: "/producto373c.mp4" 
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -53,11 +53,15 @@ const productosdb = [
     },
     {
         id: 378,
-        titulo: "Tiburon Control Remoto",
+        titulo: "Tiburon o Delfin Control Remoto",
         preciomayorista: 74900,
         precio: 99900,
         descripcion: '',
         imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto378f.jpg" 
+            },
             {
                 tipo: "imagen",
                 url: "/producto378a.webp" 
@@ -67,9 +71,17 @@ const productosdb = [
                 url: "/producto378b.webp" 
             },
             {
+                tipo: "imagen",
+                url: "/producto378d.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto378e.webp" 
+            },
+            {
                 tipo: "video",
                 url: "/producto378c.mp4" 
-            }
+            },
             
         ],
         status: "disponible",
@@ -99,7 +111,7 @@ const productosdb = [
                 url: "/producto374c.mp4" 
             },
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -122,7 +134,7 @@ const productosdb = [
                 url: "/producto374c.mp4" 
             },
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -253,7 +265,7 @@ const productosdb = [
                 url: "/producto380c.mp4" 
             }
         ],
-        status: "No Stock",
+        status: "disponible",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -314,7 +326,7 @@ const productosdb = [
             },
             
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -476,7 +488,7 @@ const productosdb = [
             },
             
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -530,7 +542,7 @@ const productosdb = [
                 url: "/producto303b.mp4"
             }
         ],
-        status: "disponible",
+        status: "No Stock",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
