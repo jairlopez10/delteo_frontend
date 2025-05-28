@@ -25,6 +25,42 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 388,
+        titulo: "Lego de Minecraft y Luz de 239pcs",
+        preciomayorista: 89900,
+        precio: 59900,
+        descripcion: [''],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto388a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto388b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto388c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto388d.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto388e.webp" 
+            }
+            
+        ],
+        status: "disponible",
+        colores: "Morado, Rojo, Azul, Verde",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
         id: 373,
         titulo: "Subfusil Hidrogel MP5 Recargable",
         preciomayorista: 74900,

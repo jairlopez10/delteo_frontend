@@ -21,6 +21,7 @@ import Consola400en1 from "../components/productsection/Consola400en1";
 import Computadorpantallanomouse from "../components/productsection/Computadorpantallanomouse";
 import Perrorepetidor from "../components/productsection/Perrorepetidor";
 import Gimnasio from "../components/productsection/Gimnasio";
+import Minecraftlegopeq from "../components/productsection/Minecraftlegopeq";
 
 const Producto = () => {
   
@@ -29,7 +30,7 @@ const Producto = () => {
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
-  const idlanzadoras = [2, 13, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387]
+  const idlanzadoras = [2, 13, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388]
   const productsection = {
     2: <Computadorpantalla />,
     372: <Terrenaitor />,
@@ -48,6 +49,7 @@ const Producto = () => {
     385: <Consola400en1 />,
     386: <Computadorpantallanomouse />,
     387: <Perrorepetidor />,
+    388: <Minecraftlegopeq />,
     13: <Gimnasio />
   }
   const envio = {
