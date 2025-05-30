@@ -500,7 +500,16 @@ const productosdb = [
             }
         ],
         status: "disponible",
-        colores: "Rosada, Azul",
+        colores: [
+            {
+                id: 386,
+                texto: "Rosado"
+            },
+            {
+                id: 400,
+                texto: "Azul"
+            }
+        ],
         edad: ["+3"],
         edad2: "+8",
         categoria: "punteria",
