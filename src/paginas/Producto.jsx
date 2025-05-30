@@ -22,6 +22,7 @@ import Computadorpantallanomouse from "../components/productsection/Computadorpa
 import Perrorepetidor from "../components/productsection/Perrorepetidor";
 import Gimnasio from "../components/productsection/Gimnasio";
 import Minecraftlegopeq from "../components/productsection/Minecraftlegopeq";
+import Alerta from "../components/Alerta";
 
 const Producto = () => {
   
@@ -58,6 +59,7 @@ const Producto = () => {
   }
   const [visiblecomprar, setVisiblecomprar] = useState(true);
   const botoncomprarref = useRef(null); //Referencia el boton
+  const estrellasref = useRef(null)
 
   useEffect(() => {
     if(tipocliente === "m"){
@@ -112,7 +114,12 @@ const Producto = () => {
   const [cantidad, setCantidad] = useState(1);
   const [alertacarrito, setAlertaCarrito] = useState(false);
   const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem('carritojammy')) || []);
+  const [mostrarcolores, setMostrarcolores] = useState(false);
+  const [colorselected, setColorselected] = useState("")
+  const [idcolor, setIdcolor] = useState("")
   const [productpage, setproductpage] = useState(false);
+  const [alerta, setAlerta] = useState(false);
+  const [variante, setVariante] = useState(typeof producto.colores === "object" ? true : false)
 
   useEffect(() => {
     const imagenprincipal = document.querySelector(".imagen-principal-producto")
@@ -159,9 +166,25 @@ const Producto = () => {
 
   const agregaralcarrito = () => {
 
+    if(colorselected === "" && variante === true){
+      if(estrellasref.current){
+        estrellasref.current.scrollIntoView({behavior: 'smooth'})
+      }
+
+      setAlerta(true)
+      setTimeout(() => {
+        setAlerta(false)
+      }, 2000);
+      return;
+    }
+
+    //Se crean estos temps por si son productos que tienen variantes
+    const nombretemp = variante === true ? producto.titulo + ` (${colorselected})` : producto.titulo;
+    const idtemp = variante === true ? idcolor : producto.id
+
     const pedido = {
-      id: producto.id,
-      nombre: producto.titulo,
+      id: idtemp,
+      nombre: nombretemp,
       cantidad,
       precio: producto.precio >= 20000 ? producto.precio + envio.grande : producto.precio + envio.pequeno,
       imagen: producto.imagenes[0].url
@@ -169,11 +192,11 @@ const Producto = () => {
 
     let nuevocarrito = []
 
-    const existe = carrito.some(item => item.id === producto.id);
+    const existe = carrito.some(item => item.id === idtemp);
 
     if(existe){
       nuevocarrito = carrito.map(item => {
-        if(item.id === producto.id){
+        if(item.id === idtemp){
           item.cantidad = item.cantidad + cantidad;
           return item;
         } else {
@@ -209,6 +232,10 @@ const Producto = () => {
     setContador(nuevocarrito.length)
 
     notificacioncarrito()
+
+    setTimeout(() => {
+      navigate("/checkout")
+    }, 200);
   }
 
   const notificacioncarrito = () => {
@@ -250,37 +277,8 @@ const Producto = () => {
           <div className="contenido-producto-final">
             <p className="titulo-producto-final">{producto.titulo}</p>
             <div className="beneficios">
-              {/* 
-                <div className="flex gap-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="icono-incluido icon icon-tabler icon-tabler-truck-delivery" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                  <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                  <path d="M5 17h-2v-4m-1 -8h11v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
-                  <path d="M3 9l4 0" />
-                </svg>
-                <p>Envio <span className=" text-green-600 font-bold">CONTRA ENTREGA GRATIS</span></p>
-              </div>
-              <div className="flex gap-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="icono-incluido icon icon-tabler icon-tabler-shield-check" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" />
-                  <path d="M15 19l2 2l4 -4" />
-                </svg>
-                <p>Garantia de <span className=" text-green-600 font-bold">1 mes</span></p>
-              </div>
-              <div className="flex gap-2 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="icono-incluido icon icon-tabler icon-tabler-align-box-bottom-left" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-                  <path d="M7 15v2" />
-                  <path d="M10 11v6" />
-                  <path d="M13 13v4" />
-                </svg>
-                <p>Stock <span className=" text-orange-500 font-bold">Ultimas Unidades</span></p>
-              </div>
-                */}
-              <div className="flex gap-1 items-center">
+             
+              <div ref={estrellasref} className="flex gap-1 items-center">
                 <img src="/estrella.webp" alt="estrella" className="estrella"/>
                 <img src="/estrella.webp" alt="estrella" className="estrella"/>
                 <img src="/estrella.webp" alt="estrella" className="estrella"/>
@@ -307,8 +305,36 @@ const Producto = () => {
               </>
             )}
             
+            {typeof producto.colores === "object" ? (
+              <>
+                <div className="div-colores">
+                  <p className="font-bold">Colores:</p>
+                  <div className="relative">
+                    <p className="selector-color" onClick={() => setMostrarcolores(!mostrarcolores)}>{colorselected === "" ? "-- Selecciona -- " : colorselected}</p>
+                    <div className={`${mostrarcolores ? 'opciones-colores' : 'hidden'}`}>
+                      {producto.colores.map(color => (
+                        <p className=" cursor-pointer py-2" key={color.id} onClick={e => {
+                          setColorselected(color.texto)
+                          setIdcolor(color.id)
+                          setMostrarcolores(false);
+                        }}>{color.texto}</p>
+                      ))}
+                    </div>
+                  </div>
+                  
+                </div>
+                {alerta ? (
+                  <Alerta
+                  alerta={{msg: "Selecciona color"}}
+                />
+                ): ""}
+              </>
+            ) : (
+              <>
+                <p className="colores">Colores: <span>{producto.colores}</span></p>
+              </>
+            )}
             
-            <p className="colores">Colores: <span>{producto.colores}</span></p>
             <div className="botones-carrito">
               <button onClick={() => cambiarcantidad('menos')}>-</button>
               <input type="number" min="1" value={cantidad} onChange={e => setCantidad(e.target.value)} />
@@ -320,9 +346,6 @@ const Producto = () => {
             
             <button ref={botoncomprarref} className={`boton-comprar-ahora`} onClick={() => {
               agregaralcarrito();
-              setTimeout(() => {
-                navigate("/checkout")
-              }, 200);
               
             }}>
               <svg xmlns="http://www.w3.org/2000/svg" className="icono-carrito-producto icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -336,9 +359,6 @@ const Producto = () => {
 
             <button className={`${visiblecomprar ? 'hidden' : 'fijar-boton-comprar-ahora boton-comprar-ahora'}`} onClick={() => {
               agregaralcarrito();
-              setTimeout(() => {
-                navigate("/checkout")
-              }, 200);
               
             }}>
               <svg xmlns="http://www.w3.org/2000/svg" className="icono-carrito-producto icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">

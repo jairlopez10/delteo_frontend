@@ -33,12 +33,16 @@ const Checkout = () => {
 
     useEffect(() => {
 
-        //Verifica que los productos que estaban en el carrito sigan disponibles
+        //Verifica que los productos que estaban en el carrito sigan disponibles pero se deshabilita porque se agregaron variantes en los productos para seleccionar los colores
+
+        /*
         const carritotemporal = carrito.map(item => {
             if(productosdb.some(produ => produ.id === item.id && produ.status === 'disponible')){
                 return item;
             }
-        })
+        })*/
+
+        const carritotemporal = carrito
 
         setCarritoMostrar(carritotemporal);
 

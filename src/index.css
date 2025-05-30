@@ -604,6 +604,40 @@ footer {
   text-align: center;
 }
 
+.div-colores {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: .5rem;
+}
+
+.selector-color {
+  border: 1px solid #6d6d6d;
+  border-radius: 1rem;
+  text-align: center;
+  width: 100%;
+  padding: .7rem 3rem;
+  cursor: pointer;
+  color: #000000;
+}
+
+.opciones-colores {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #3d3d3d77;
+  border-radius: 1rem;
+}
+
+.opciones-colores p {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #3d3d3d77;
+}
+
 .titulo-producto-final {
   font-size: 2.5rem;
   font-weight: bold;

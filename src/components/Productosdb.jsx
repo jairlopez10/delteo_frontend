@@ -54,7 +54,24 @@ const productosdb = [
             
         ],
         status: "disponible",
-        colores: "Morado, Rojo, Azul, Verde",
+        colores: [
+            {
+                id: 388,
+                texto: "Morado"
+            },
+            {
+                id: 389,
+                texto: "Rojo"
+            },
+            {
+                id: 390,
+                texto: "Azul"
+            },
+            {
+                id: 391,
+                texto: "Verde"
+            }
+            ],
         edad: ["+8"],
         edad2: "+8",
         categoria: "punteria",
@@ -121,7 +138,16 @@ const productosdb = [
             
         ],
         status: "disponible",
-        colores: "Unicolor",
+        colores: [
+            {
+                id: 378,
+                texto: "Tiburon"
+            },
+            {
+                id: 399,
+                texto: "Delfin"
+            }
+        ],
         edad: ["+8"],
         edad2: "+8",
         categoria: "punteria",
