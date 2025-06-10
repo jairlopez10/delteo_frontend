@@ -308,7 +308,7 @@ const Producto = () => {
             {typeof producto.colores === "object" ? (
               <>
                 <div className="div-colores">
-                  <p className="font-bold">Colores:</p>
+                  <p className="font-bold">Modelo:</p>
                   <div className="relative">
                     <p className="selector-color" onClick={() => setMostrarcolores(!mostrarcolores)}>{colorselected === "" ? "-- Selecciona -- " : colorselected}</p>
                     <div className={`${mostrarcolores ? 'opciones-colores' : 'hidden'}`}>
@@ -325,7 +325,7 @@ const Producto = () => {
                 </div>
                 {alerta ? (
                   <Alerta
-                  alerta={{msg: "Selecciona color"}}
+                  alerta={{msg: "Selecciona modelo"}}
                 />
                 ): ""}
               </>
