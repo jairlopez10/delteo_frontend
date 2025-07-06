@@ -56,14 +56,6 @@ const productosdb = [
         status: "disponible",
         colores: [
             {
-                id: 388,
-                texto: "Morado"
-            },
-            {
-                id: 389,
-                texto: "Rojo"
-            },
-            {
                 id: 390,
                 texto: "Azul"
             },
