@@ -28,7 +28,7 @@ const productosdb = [
         id: 388,
         titulo: "Lego de Minecraft y Luz de 239pcs",
         preciomayorista: 89900,
-        precio: 59900,
+        precio: 69900,
         descripcion: [''],
         imagenes: [
             {
@@ -108,7 +108,7 @@ const productosdb = [
         id: 378,
         titulo: "Tiburon o Delfin Control Remoto",
         preciomayorista: 74900,
-        precio: 99900,
+        precio: 119900,
         descripcion: '',
         imagenes: [
             {
@@ -471,7 +471,7 @@ const productosdb = [
         id: 381,
         titulo: "Computador con Pantalla y Mousee",
         preciomayorista: 34900,
-        precio: 59900,
+        precio: 69900,
         descripcion: ``,
         imagenes: [
             {
