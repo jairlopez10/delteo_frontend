@@ -11,7 +11,7 @@ const M416 = () => {
         <div className="div-aida">
             <img src="/m416b.gif" alt="gif m416" />
             <h4 className=" mt-4">¡Ilumina las batallas de forma unica!</h4>
-            <p className=" mt-4 text-center">¡La M416 ilumina cada disparo gracias a su <span className=" font-bold">silenciador con luces</span> que <span className=" font-bold">NO</span> requiere baterias adicionales!</p>
+            <p className=" mt-4 text-center">¡La M416 ilumina cada disparo gracias a su <span className=" font-bold">silenciador con luces y humo</span> que <span className=" font-bold">NO</span> requiere baterias adicionales!</p>
         </div>
         <div className="div-aida">
           <img src="/m416d.gif" alt="gif m416" />
@@ -30,17 +30,17 @@ const M416 = () => {
         </div>
         <div className="div-aida">
           <img src="/m416g.gif" alt="gif m416" />
-          <h4 className=" mt-4">10.000 Orbis Hidrogel + ENVÍO GRATIS</h4>
-          <p className=" mt-4 text-center">¡Aprovecha esta promoción que es válida hasta el <span className="font-bold">15 Diciembre 2024!</span> Últimas unidades disponibles</p>
+          <h4 className=" mt-4">10.000 Orvis Hidrogel + ENVÍO GRATIS</h4>
+          <p className=" mt-4 text-center">¡Aprovecha esta promoción que es válida hasta el <span className="font-bold">1 Octubre 2025!</span> Últimas unidades disponibles</p>
           <h4 className=" mt-4">¿Qué es lo que incluye?</h4>
           <div className="lista-incluye">
             <ul >
               <li>Lanzadora Hidrogel M416</li>
-              <li>Silenciador con luz</li>
+              <li>Silenciador con luz y humo</li>
               <li>Mira telescopica</li>
               <li>Cargador extendido</li>
               <li>Cargador mediano</li>
-              <li>15.000 Orbis Hidrogel</li>
+              <li>15.000 Orvis Hidrogel</li>
               <li>Bateria recargable</li>
               <li>Cargador USB</li>
               <li>Gafas de protección</li>

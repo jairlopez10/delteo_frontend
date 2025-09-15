@@ -2,7 +2,7 @@
 const productosdb = [
     {
         id: 376,
-        titulo: "M416 Hidrogel Recargable con Luces",
+        titulo: "M416 Hidrogel Recargable con Luz y Humo",
         preciomayorista: 89900,
         precio: 129900,
         descripcion: ['Luz en el cañon', 'Mira telescopica', 'Proveedor extendido', 'Proveedor mediano' , 'Cañon corto' ,'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
@@ -17,7 +17,7 @@ const productosdb = [
             }
             
         ],
-        status: "No Stock",
+        status: "disponible",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
@@ -62,6 +62,14 @@ const productosdb = [
             {
                 id: 391,
                 texto: "Verde"
+            },
+            {
+                id: 388,
+                texto: "Morado"
+            },
+            {
+                id: 389,
+                texto: "Rojo"
             }
             ],
         edad: ["+8"],
@@ -460,31 +468,31 @@ const productosdb = [
         genero: "ninos"
     },
     {
-        id: 386,
-        titulo: "Computador con Pantalla Interactivo",
-        preciomayorista: 69900,
+        id: 381,
+        titulo: "Computador con Pantalla y Mousee",
+        preciomayorista: 34900,
         precio: 59900,
-        descripcion: [''],
+        descripcion: ``,
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto386a.webp" 
+                url: "/producto2a.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto386b.webp" 
+                url: "/producto2b.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto386c.webp" 
+                url: "/producto2c.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto386d.webp" 
+                url: "/producto2d.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto386e.webp" 
+                url: "/producto2e.webp"
             },
             {
                 tipo: "video",
@@ -495,17 +503,17 @@ const productosdb = [
         colores: [
             {
                 id: 386,
-                texto: "Rosado"
+                texto: "Princesas"
             },
             {
                 id: 400,
-                texto: "Azul"
+                texto: "Spiderman"
             }
         ],
-        edad: ["+3"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "unisex"
+        edad: ["+3", "+6", "+8"],
+        edad2: "+3",
+        categoria: "educativo",
+        genero: "ninas"
     },
     {
         id: 382,
@@ -2947,6 +2955,54 @@ const productosdb = [
         genero: "unisex"
     },
     {
+        id: 386,
+        titulo: "Computador con Pantalla Interactivo",
+        preciomayorista: 69900,
+        precio: 59900,
+        descripcion: [''],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto386a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto386b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto386c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto386d.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto386e.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto2f.mp4"
+            }
+        ],
+        status: "disponible",
+        colores: [
+            {
+                id: 386,
+                texto: "Rosado"
+            },
+            {
+                id: 400,
+                texto: "Azul"
+            }
+        ],
+        edad: ["+3"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "unisex"
+    },
+    {
         id: 193,
         titulo: "Dinosaurio Lanza Vapor y Pone Huevos",
         preciomayorista: 58900,
@@ -3768,45 +3824,6 @@ const productosdb = [
     {
         id: 2,
         titulo: "Computador con Pantalla y Mouse",
-        preciomayorista: 34900,
-        precio: 59900,
-        descripcion: ``,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto2a.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2b.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2c.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2d.webp"
-            },
-            {
-                tipo: "imagen",
-                url: "/producto2e.webp"
-            },
-            {
-                tipo: "video",
-                url: "/producto2f.mp4"
-            }
-        ],
-        status: "disponible",
-        colores: "Spiderman y Princesas",
-        edad: ["+3", "+6", "+8"],
-        edad2: "+3",
-        categoria: "educativo",
-        genero: "ninas"
-    },
-    {
-        id: 381,
-        titulo: "Computador con Pantalla y Mousee",
         preciomayorista: 34900,
         precio: 59900,
         descripcion: ``,
