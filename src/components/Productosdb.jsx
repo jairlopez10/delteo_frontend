@@ -64,10 +64,6 @@ const productosdb = [
                 texto: "Verde"
             },
             {
-                id: 388,
-                texto: "Morado"
-            },
-            {
                 id: 389,
                 texto: "Rojo"
             }
