@@ -4,14 +4,14 @@ const M416 = () => {
   return (
     <>
         <div className="div-aida">
-            <img src="/m416c.gif" alt="gif m416" />
-            <h4 className=" mt-4">¡Lleva tu diversión al aire libre a otro nivel!</h4>
-            <p className=" mt-4 text-center">¿Te has cansado de los mismos juegos repetitivos y monótonos que ya no generan emoción? 😔 </p>
-        </div>
-        <div className="div-aida">
             <img src="/m416b.gif" alt="gif m416" />
             <h4 className=" mt-4">¡Ilumina las batallas de forma unica!</h4>
             <p className=" mt-4 text-center">¡La M416 ilumina cada disparo gracias a su <span className=" font-bold">silenciador con luces y humo</span> que <span className=" font-bold">NO</span> requiere baterias adicionales!</p>
+        </div>
+        <div className="div-aida">
+            <img src="/m416c.gif" alt="gif m416" />
+            <h4 className=" mt-4">¡Lleva tu diversión al aire libre a otro nivel!</h4>
+            <p className=" mt-4 text-center">¿Te has cansado de los mismos juegos repetitivos y monótonos que ya no generan emoción? 😔 </p>
         </div>
         <div className="div-aida">
           <img src="/m416d.gif" alt="gif m416" />

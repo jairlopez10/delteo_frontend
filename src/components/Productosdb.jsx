@@ -9,16 +9,56 @@ const productosdb = [
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto376a.webp" 
+                url: "/producto376e.webp" 
             },
             {
                 tipo: "imagen",
-                url: "/producto376b.webp" 
-            }
+                url: "/producto376f.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto376g.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto376a.webp" 
+            },
             
         ],
         status: "disponible",
         colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 395,
+        titulo: "MP5 Hidrogel Recargable con Luz y Humo",
+        preciomayorista: 89900,
+        precio: 99900,
+        descripcion: ['Luz en el cañon', 'Humo en el cañon', 'Proveedor granada','Lanzadora', 'Bateria recargable', 'Cargador USB', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto395a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto395b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto395c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto395d.webp" 
+            }
+            
+        ],
+        status: "disponible",
+        colores: "Azul",
         edad: ["+8"],
         edad2: "+8",
         categoria: "punteria",
