@@ -65,6 +65,38 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 401,
+        titulo: "M16 Hidrogel Recargable con Luz y Humo",
+        preciomayorista: 89900,
+        precio: 119900,
+        descripcion: ['Luz en el cañon', 'Humo en el cañon', 'Proveedor granada','Lanzadora', 'Bateria recargable', 'Cargador USB', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto401a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto401b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto401c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto401d.webp" 
+            }
+            
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 388,
         titulo: "Lego de Minecraft y Luz de 239pcs",
         preciomayorista: 89900,
