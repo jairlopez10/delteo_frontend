@@ -361,7 +361,19 @@ const productosdb = [
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto375a.webp" 
+                url: "/producto375b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto375c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto375d.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto375e.webp" 
             },
             {
                 tipo: "video",
