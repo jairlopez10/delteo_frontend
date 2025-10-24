@@ -762,7 +762,7 @@ footer {
 .botones-carrito {
   display: flex;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .botones-carrito button {
@@ -780,6 +780,97 @@ footer {
   border-radius: 1rem;
 }
 
+.div-backpopup {
+  background-color: #d4d4d4c4;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.div-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 2rem;
+  width: 90%;
+  margin: 9rem auto;
+  padding: 2rem 1.5rem;
+  border: 1px solid #b8b8b8;
+  box-shadow: 0px 5px 15px 0px rgba(107,106,107,0.54);
+}
+
+.div-popup img {
+  width: 75%;
+}
+
+.div-text-pop {
+  padding: 1rem 1rem;
+}
+
+.tit-orvis-pop {
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+}
+
+.precioantes {
+  font-size: 2rem;
+  text-decoration: line-through;
+  color: #808080;
+  margin-top: .5rem;
+}
+
+.preciopoporvis {
+  font-size: 2.8rem;
+}
+
+.div-ahora-agregar {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.div-ahora-agregar button {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+
+.div-ahora-agregar button:nth-child(2) {
+  background-color: #25d366;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.div-ahora-agregar button:nth-child(1) {
+  border: 1px solid #a3a3a3;
+  color: #a3a3a3;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .div-popup {
+    width: 50%;
+  }
+
+  .div-popup img {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .div-popup {
+    width: 40%;
+  }
+}
+
+
 @keyframes jumpbutton {
   0%, 50%, 100% {
     transform: translateY(0);
@@ -794,10 +885,11 @@ footer {
   }
 
 }
-
+/*
 .boton-comprar-ahora {
   animation: jumpbutton 1s ease-in 3s 3 normal none;
 }
+*/
 
 .boton-agregar-carrito {
   width: 100%;

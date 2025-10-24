@@ -25,6 +25,7 @@ import Minecraftlegopeq from "../components/productsection/Minecraftlegopeq";
 import Mp52025 from "../components/productsection/Mp52025";
 import Arplanzadora from "../components/productsection/Arplanzadora";
 import Alerta from "../components/Alerta";
+import Popuporvis from "../components/Popuporvis";
 
 const Producto = () => {
   
@@ -34,6 +35,7 @@ const Producto = () => {
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
   const idlanzadoras = [2, 13, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 395, 401]
+  const idlanzadorashidrogel = [376, 395, 401, 375]
   const productsection = {
     2: <Computadorpantalla />,
     372: <Terrenaitor />,
@@ -62,6 +64,7 @@ const Producto = () => {
     grande: 20000
   }
   const [visiblecomprar, setVisiblecomprar] = useState(true);
+  const [vispoporvis, setVispoporvis] = useState(false);
   const botoncomprarref = useRef(null); //Referencia el boton
   const estrellasref = useRef(null)
 
@@ -95,7 +98,7 @@ const Producto = () => {
     }
 
   }, [])
-  
+
   //Remplaza las - por espacios para buscar el titulo
   titulo = titulo.replace(/-/g, " ")
 
@@ -168,7 +171,23 @@ const Producto = () => {
     }
   }
 
-  const agregaralcarrito = () => {
+  const agregarorvisono = () => {
+    
+    const lanzadorapop = idlanzadorashidrogel.some(item => item == producto.id)
+    lanzadorapop ? setVispoporvis(true) : ""
+
+    if(lanzadorapop){
+      setVispoporvis(true)
+    } else {
+      setTimeout(() => {
+        navigate("/checkout")
+      }, 200);
+    }
+    
+
+  }
+
+  const agregaralcarrito = async () => {
 
     if(colorselected === "" && variante === true){
       if(estrellasref.current){
@@ -199,6 +218,7 @@ const Producto = () => {
     const existe = carrito.some(item => item.id === idtemp);
 
     if(existe){
+
       nuevocarrito = carrito.map(item => {
         if(item.id === idtemp){
           item.cantidad = item.cantidad + cantidad;
@@ -232,14 +252,17 @@ const Producto = () => {
     })
     
     
-    setCarrito(nuevocarrito);
+    await setCarrito(nuevocarrito);
     setContador(nuevocarrito.length)
 
     notificacioncarrito()
 
+    agregarorvisono()
+    /*
     setTimeout(() => {
       navigate("/checkout")
     }, 200);
+    */
   }
 
   const notificacioncarrito = () => {
@@ -251,6 +274,7 @@ const Producto = () => {
 
   return (
     <>
+      {vispoporvis === true ? <Popuporvis /> : ""}
       <div className="contenedor2 pt-44">
         <div className={`${alertacarrito ? 'block' : 'hidden'} notificacion-carrito`}>
           Agregado Correctamente

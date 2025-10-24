@@ -403,9 +403,14 @@ const productosdb = [
                 url: "/producto380b.webp" 
             },
             {
+                tipo: "imagen",
+                url: "/producto380d.webp" 
+            },
+            {
                 tipo: "video",
                 url: "/producto380c.mp4" 
-            }
+            },
+            
         ],
         status: "disponible",
         colores: "Unicolor",
@@ -908,7 +913,7 @@ const productosdb = [
     },
     {
         id: 362,
-        titulo: "Orvis Hidrogel X 5.000 Unds",
+        titulo: "Orvis Hidrogel X 10.000 Unds",
         preciomayorista: 5900,
         precio: 7900,
         referencia: "",
@@ -916,7 +921,27 @@ const productosdb = [
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto362a.webp" 
+                url: "/orvishidro.webp" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+3",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
+        id: 402,
+        titulo: "Orvis Hidrogel Fluorescentes X 10.000 Unds",
+        preciomayorista: 5900,
+        precio: 8900,
+        referencia: "",
+        descripcion: `Orvis de hidrogel para lanzadoras, debes dejarlas minimo 3 horas en agua completamente sumergidas, luego las escurres y las agregas al cargador `,
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/orvishidro.webp" 
             }
         ],
         status: "disponible",
