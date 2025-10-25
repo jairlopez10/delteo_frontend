@@ -589,10 +589,6 @@ const productosdb = [
             {
                 id: 386,
                 texto: "Princesas"
-            },
-            {
-                id: 400,
-                texto: "Spiderman"
             }
         ],
         edad: ["+3", "+6", "+8"],
