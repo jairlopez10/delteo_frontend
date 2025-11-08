@@ -26,6 +26,7 @@ import Mp52025 from "../components/productsection/Mp52025";
 import Arplanzadora from "../components/productsection/Arplanzadora";
 import Alerta from "../components/Alerta";
 import Popuporvis from "../components/Popuporvis";
+import Pistolaagua371 from "../components/productsection/Pistolaagua371";
 
 const Producto = () => {
   
@@ -38,6 +39,7 @@ const Producto = () => {
   const idlanzadorashidrogel = [376, 395, 401, 375]
   const productsection = {
     2: <Computadorpantalla />,
+    371: <Pistolaagua371/>,
     372: <Terrenaitor />,
     373: <Mp5 />,
     374: <Ak />,
