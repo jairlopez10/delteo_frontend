@@ -304,11 +304,15 @@ const productosdb = [
     },
     {
         id: 387,
-        titulo: "Perro Caminador y Repetidor",
+        titulo: "Perro Caminador, Repetidor y de Sensor",
         preciomayorista: 69900,
         precio: 119900,
         descripcion: [''],
         imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto387d.webp" 
+            },
             {
                 tipo: "imagen",
                 url: "/producto387a.webp" 
@@ -323,7 +327,20 @@ const productosdb = [
             }
         ],
         status: "disponible",
-        colores: "Rosada, Azul",
+        colores: [
+            {
+                id: 406,
+                texto: "Husky"
+            },
+            {
+                id: 407,
+                texto: "Cafe"
+            },
+            {
+                id: 408,
+                texto: "Blanco"
+            }
+            ],
         edad: ["+3"],
         edad2: "+8",
         categoria: "punteria",
@@ -477,7 +494,7 @@ const productosdb = [
             },
             
         ],
-        status: "No Stock",
+        status: "disponible",
         colores: "Unicolor",
         edad: ["+8"],
         edad2: "+8",
