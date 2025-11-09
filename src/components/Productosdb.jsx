@@ -177,6 +177,42 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 409,
+        titulo: "Combo Basta y Uno Flip GRATIS",
+        preciomayorista: 74900,
+        precio: 79900,
+        descripcion: ['Laser', 'Luz en el cañon', 'Linterna', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/pro409a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/pro409e.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/pro409c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/pro409b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/pro409d.webp" 
+            },
+            
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 378,
         titulo: "Tiburon o Delfin Control Remoto",
         preciomayorista: 74900,

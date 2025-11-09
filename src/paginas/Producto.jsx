@@ -27,6 +27,7 @@ import Arplanzadora from "../components/productsection/Arplanzadora";
 import Alerta from "../components/Alerta";
 import Popuporvis from "../components/Popuporvis";
 import Pistolaagua371 from "../components/productsection/Pistolaagua371";
+import Combobastauno409 from "../components/productsection/Combobastauno409";
 
 const Producto = () => {
   
@@ -35,7 +36,7 @@ const Producto = () => {
   let titulo = params.titulo;
   let tipocliente = params.tipocliente;
   const navigate = useNavigate()
-  const idlanzadoras = [2, 13, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 395, 401]
+  const idlanzadoras = [2, 13, 50, 303, 277, 51, 290, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 395, 401, 409]
   const idlanzadorashidrogel = [376, 395, 401, 375]
   const productsection = {
     2: <Computadorpantalla />,
@@ -59,7 +60,8 @@ const Producto = () => {
     388: <Minecraftlegopeq />,
     395: <Mp52025 />,
     401: <Arplanzadora />,
-    13: <Gimnasio />
+    13: <Gimnasio />,
+    409: <Combobastauno409 />
   }
   const envio = {
     pequeno:  10000,

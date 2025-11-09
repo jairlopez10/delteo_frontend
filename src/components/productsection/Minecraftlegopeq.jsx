@@ -4,7 +4,6 @@ const Minecraftlegopeq = () => {
 
   return (
     <>
-        <h4 className=" mt-8">Te escriberemos para confirmar el motivo 🟣🔴🔵🟢</h4>
         <div className="div-aida">
           <img src="/gif388c.gif" alt="gif minecraft" />
           <h4 className=" mt-4">¡Imagina a tu hijo construir su propio mundo! 🙌</h4>
