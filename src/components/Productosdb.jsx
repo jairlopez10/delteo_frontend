@@ -178,9 +178,9 @@ const productosdb = [
     },
     {
         id: 409,
-        titulo: "Combo Basta y Uno Flip GRATIS",
+        titulo: "Juego Basta y Uno Flip GRATIS",
         preciomayorista: 74900,
-        precio: 79900,
+        precio: 64900,
         descripcion: ['Laser', 'Luz en el cañon', 'Linterna', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
         imagenes: [
             {
