@@ -100,7 +100,7 @@ const productosdb = [
         id: 388,
         titulo: "Lego de Minecraft y Luz de 239pcs",
         preciomayorista: 89900,
-        precio: 69900,
+        precio: 74900,
         descripcion: [''],
         imagenes: [
             {
