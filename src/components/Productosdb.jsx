@@ -65,6 +65,41 @@ const productosdb = [
         genero: "ninos"
     },
     {
+        id: 375,
+        titulo: "Minigun Hidrogel Recargable",
+        preciomayorista: 114900,
+        precio: 129900,
+        descripcion: ['Cañon giratorio', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
+        imagenes: [
+            {
+                tipo: "imagen",
+                url: "/producto375b.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto375c.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto375d.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto375e.webp" 
+            },
+            {
+                tipo: "video",
+                url: "/producto375b.mp4" 
+            }
+        ],
+        status: "disponible",
+        colores: "Unicolor",
+        edad: ["+8"],
+        edad2: "+8",
+        categoria: "punteria",
+        genero: "ninos"
+    },
+    {
         id: 401,
         titulo: "M16 Hidrogel Recargable con Luz y Humo",
         preciomayorista: 89900,
@@ -405,41 +440,6 @@ const productosdb = [
         status: "disponible",
         colores: "Roja, Negra, Gris, Azul, Amarilla",
         edad: ["+3", "+6", "+8"],
-        edad2: "+8",
-        categoria: "punteria",
-        genero: "ninos"
-    },
-    {
-        id: 375,
-        titulo: "Minigun Hidrogel Recargable",
-        preciomayorista: 114900,
-        precio: 129900,
-        descripcion: ['Cañon giratorio', 'Lanzadora', 'Bateria recargable', 'Cargador USB', 'Proveedor', 'Duracion bateria: 2h'],
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto375b.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto375c.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto375d.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto375e.webp" 
-            },
-            {
-                tipo: "video",
-                url: "/producto375b.mp4" 
-            }
-        ],
-        status: "disponible",
-        colores: "Unicolor",
-        edad: ["+8"],
         edad2: "+8",
         categoria: "punteria",
         genero: "ninos"
