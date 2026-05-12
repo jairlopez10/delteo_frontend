@@ -400,16 +400,8 @@ const productosdb = [
         status: "disponible",
         colores: [
             {
-                id: 406,
-                texto: "Husky"
-            },
-            {
                 id: 407,
                 texto: "Cafe"
-            },
-            {
-                id: 408,
-                texto: "Blanco"
             }
             ],
         edad: ["+3"],
