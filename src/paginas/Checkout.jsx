@@ -74,7 +74,7 @@ const Checkout = () => {
         dataLayer.push({
             'event': `Checkout`
         })
-        document.title = 'Delteo | Checkout'
+        document.title = 'Delteo | Confirmar Pedido'
         window.scrollTo(0,0)
         fbq('track', 'InitiateCheckout', {
             contents: carritomostrar,
@@ -152,8 +152,8 @@ const Checkout = () => {
 
         setSpinner(true);
 
-        //Revisar si algun campo esta vacio y generar alerta
-        if([nombres, apellidos, telefono, cedula, origen, ciudad, direccion].includes('')){
+        //Revisar si algun campo esta vacio y generar alerta excepto apellidos y origen
+        if([nombres, telefono, cedula, ciudad, direccion].includes('')){
             setAlerta({
                 msg: 'Todos los campos son obligatorios',
                 error: true
@@ -264,29 +264,34 @@ const Checkout = () => {
                     <div className="formulario-datos">
                         <div className="div-rows-info">
                             <div className="div-row-info">
-                                <label htmlFor="nombres">Nombres:</label>
-                                <input type="text" placeholder="Nombres" id="nombres" value={nombres} onChange={e => setNombres(e.target.value)} />
+                                <label htmlFor="nombres">Nombres y Apellidos:</label>
+                                <input type="text" placeholder="Camilo Torres Murcia" id="nombres" value={nombres} onChange={e => setNombres(e.target.value)} />
                             </div>
+                            <div className="div-row-info">
+                                <label htmlFor="telefono">Telefono:</label>
+                                <input type="tel" placeholder="3246574382" id="telefono" value={telefono} onChange={e => setTelefono(e.target.value)}/>
+                            </div>
+                            {/*
                             <div className="div-row-info">
                                 <label htmlFor="apellidos">Apellidos:</label>
                                 <input type="text" placeholder="Apellidos" id="apellidos" value={apellidos} onChange={e => setApellidos(e.target.value)} />
                             </div>
+                            */}
                         </div>
                         <div className="div-rows-info mt-4">
+                            
                             <div className="div-row-info">
-                                <label htmlFor="telefono">Telefono:</label>
-                                <input type="tel" placeholder="Telefono" id="telefono" value={telefono} onChange={e => setTelefono(e.target.value)}/>
-                            </div>
-                            <div className="div-row-info">
-                                <label htmlFor="cedula">Cedula:</label>
+                                <label htmlFor="cedula">Cedula (Quien recibe):</label>
                                 <input type="tel" placeholder="794382312" id="cedula" value={cedula} onChange={e => setCedula(e.target.value)}/>
                             </div>
-                        </div>
-                        <div className="div-rows-info mt-4">
                             <div className="div-row-info">
                                 <label htmlFor="ciudad">Ciudad/Departamento:</label>
-                                <input type="text" placeholder="Ciudad/Departamento" id="ciudad" value={ciudad} onChange={e => setCiudad(e.target.value)}/>
+                                <input type="text" placeholder="Cartagena, Magdalena" id="ciudad" value={ciudad} onChange={e => setCiudad(e.target.value)}/>
                             </div>
+                        </div>
+                        <div className="div-rows-info mt-4">
+                            
+                            {/*
                             <div className="div-row-info">
                                 <label>¿Como nos conociste?</label>
                                 <select onChange={e => setOrigen(e.target.value)} value={origen}>
@@ -295,9 +300,8 @@ const Checkout = () => {
                                     <option value="Instagram Ads">Instagram</option>
                                     <option value="Voz a Voz">Voz a Voz</option>
                                 </select>
-                            
-                                
                             </div>
+                            */}
                         </div>
                         <div className="div-rows-info mt-4">
                             <div className="div-row-info">

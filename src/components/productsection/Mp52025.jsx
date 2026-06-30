@@ -3,7 +3,7 @@ const Mp52025 = () => {
   return (
     <>
         <div className="div-aida">
-            <img src="/m416b.gif" alt="gif m416" />
+            <img src="/mp52025gifa.gif" alt="gif m416" />
             <h4 className=" mt-4">¡Ilumina las batallas de forma unica!</h4>
             <p className=" mt-4 text-center">¡La MP5 ilumina cada disparo gracias a su <span className=" font-bold">silenciador con luces y humo</span> que <span className=" font-bold">NO</span> requiere baterias adicionales!</p>
         </div>
@@ -18,7 +18,7 @@ const Mp52025 = () => {
           <p className=" mt-4 text-center">¡Coloca las orvis en agua de <span className="font-bold">3-4 horas</span> y cualquier niño o adulto podra disfrutar de forma segura y sin dejar rastro!</p>
         </div>
         <div className="div-aida">
-          <img src="/mp52025gifa.gif" alt="gif m416" />
+          <img src="/m416b.gif" alt="gif m416" />
           <h4 className=" mt-4">¿Buscas tener la mejor precisión?</h4>
           <p className=" mt-4 text-center">Dispara a distancias de hasta <span className='font-bold'>25 metros</span> gracias a su gran potencia 🎯!</p>
         </div>

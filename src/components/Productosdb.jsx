@@ -36,12 +36,16 @@ const productosdb = [
         id: 395,
         titulo: "MP5 Hidrogel Recargable con Luz y Humo",
         preciomayorista: 89900,
-        precio: 99900,
+        precio: 89900,
         descripcion: ['Luz en el cañon', 'Humo en el cañon', 'Proveedor granada','Lanzadora', 'Bateria recargable', 'Cargador USB', 'Duracion bateria: 2h'],
         imagenes: [
             {
                 tipo: "imagen",
                 url: "/producto395a.webp" 
+            },
+            {
+                tipo: "imagen",
+                url: "/producto395e.webp" 
             },
             {
                 tipo: "imagen",
