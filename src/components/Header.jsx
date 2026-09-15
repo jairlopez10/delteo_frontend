@@ -8,11 +8,29 @@ const Header = () => {
     const [menu, setmenu] = useState(false);
     const [anuncio, setAnuncio] = useState(0);
     const anuncios = ['ENVIOS GRATIS TODO COLOMBIA', 'TODA LA TIENDA - 30% DCTO']
+    // En la página de producto no hay barra de anuncio y el header se esconde al bajar
+    const esPaginaProducto = ['producto', 'mayoristaproducto'].includes(pagina)
+    const [oculto, setOculto] = useState(false)
 
     useEffect(() => {
         const cont = JSON.parse(localStorage.getItem('carritojammy')) || []
         setContador(cont.length)
     }, [])
+
+    useEffect(() => {
+        setOculto(false)
+        if (!esPaginaProducto) return
+
+        let ultimoY = window.scrollY
+        const alHacerScroll = () => {
+            const y = window.scrollY
+            if (Math.abs(y - ultimoY) < 8) return
+            setOculto(y > ultimoY && y > 80)
+            ultimoY = y
+        }
+        window.addEventListener('scroll', alHacerScroll, { passive: true })
+        return () => window.removeEventListener('scroll', alHacerScroll)
+    }, [esPaginaProducto])
 
     useEffect(() => {
         setTimeout(() => {
@@ -23,10 +41,12 @@ const Header = () => {
 
   return (
     <>
-        <header className={`${['inicio', 'mayorista'].some(item => pagina === item) ? '' : 'radiusnormal fixed w-full top-0'}`}>
-            <div className="divanuncios">
-                <p className="anuncio1">{anuncios[anuncio]}</p>
-            </div>
+        <header className={`${['inicio', 'mayorista'].some(item => pagina === item) ? '' : 'radiusnormal fixed w-full top-0'} ${esPaginaProducto ? 'header-producto' : ''} ${esPaginaProducto && oculto && !menu ? 'header-oculto' : ''}`}>
+            {!esPaginaProducto && (
+                <div className="divanuncios">
+                    <p className="anuncio1">{anuncios[anuncio]}</p>
+                </div>
+            )}
             <div className="divheader">
                 <div className="contenidoheader contenedor">
                     <div className="divbarra">

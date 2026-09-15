@@ -5,6 +5,7 @@ import Alerta from "../components/Alerta";
 import Itemcheckout from "../components/Itemcheckout";
 import productosdb from "../components/Productosdb";
 import axios from 'axios';
+import { ciudadParaCheckout } from "../helpers/entregas";
 
 const Checkout = () => {
 
@@ -14,7 +15,7 @@ const Checkout = () => {
     const [telefono, setTelefono] = useState('');
     const [cedula, setCedula] = useState('');
     const [origen, setOrigen] = useState('');
-    const [ciudad, setCiudad] = useState('');
+    const [ciudad, setCiudad] = useState(ciudadParaCheckout); //Ciudad elegida en la pagina de producto
     const [direccion, setDireccion] = useState('');
     const [alerta, setAlerta] = useState({});
     const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem('carritojammy')) || []);
