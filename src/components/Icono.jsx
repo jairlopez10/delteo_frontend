@@ -1,4 +1,4 @@
-// Íconos Tabler (outline) usados en la página de producto
+// Íconos Tabler (outline) usados en la página de producto y el checkout
 const trazos = {
   pin: <><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.66 16.66l-4.25 4.24a2 2 0 0 1 -2.82 0l-4.25 -4.24a8 8 0 1 1 11.32 0z" /></>,
   efectivo: <><rect x="7" y="9" width="14" height="10" rx="2" /><circle cx="14" cy="14" r="2" /><path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2" /></>,
@@ -14,6 +14,8 @@ const trazos = {
   play: <path d="M8 5v14l11 -7z" fill="currentColor" stroke="none" />,
   estrella: <path fill="currentColor" stroke="none" d="M12 17.75l-6.17 3.25l1.18 -6.88l-5 -4.87l6.9 -1l3.09 -6.25l3.09 6.25l6.9 1l-5 4.87l1.18 6.88z" />,
   whatsapp: <><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></>,
+  alerta: <><circle cx="12" cy="12" r="9" /><path d="M12 8v4M12 16h.01" /></>,
+  candado: <><rect x="5" y="11" width="14" height="10" rx="2" /><circle cx="12" cy="16" r="1" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /></>,
   compartir: <><circle cx="6" cy="12" r="3" /><circle cx="18" cy="6" r="3" /><circle cx="18" cy="18" r="3" /><path d="M8.7 10.7l6.6 -3.4M8.7 13.3l6.6 3.4" /></>
 }
 

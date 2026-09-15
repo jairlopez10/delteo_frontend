@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
 import usePagina from "../hooks/usePagina"
 
@@ -10,6 +10,9 @@ const Header = () => {
     const anuncios = ['ENVIOS GRATIS TODO COLOMBIA', 'TODA LA TIENDA - 30% DCTO']
     // En la página de producto no hay barra de anuncio y el header se esconde al bajar
     const esPaginaProducto = ['producto', 'mayoristaproducto'].includes(pagina)
+    // En el checkout el header solo tiene volver, logo y "Compra segura"
+    const esCheckout = pagina === 'checkout'
+    const navigate = useNavigate()
     const [oculto, setOculto] = useState(false)
 
     useEffect(() => {
@@ -42,11 +45,35 @@ const Header = () => {
   return (
     <>
         <header className={`${['inicio', 'mayorista'].some(item => pagina === item) ? '' : 'radiusnormal fixed w-full top-0'} ${esPaginaProducto ? 'header-producto' : ''} ${esPaginaProducto && oculto && !menu ? 'header-oculto' : ''}`}>
-            {!esPaginaProducto && (
+            {!esPaginaProducto && !esCheckout && (
                 <div className="divanuncios">
                     <p className="anuncio1">{anuncios[anuncio]}</p>
                 </div>
             )}
+            {esCheckout ? (
+            <div className="divheader">
+                <div className="contenidoheader contenedor">
+                    <div className="divbarra header-checkout">
+                        <button type="button" className="header-volver" aria-label="Volver" onClick={() => (window.history.length > 1 ? navigate(-1) : navigate('/'))}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" strokeWidth="2" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <path d="M15 6l-6 6l6 6" />
+                            </svg>
+                        </button>
+                        <Link to={"/"} className="logo">
+                            <img src="/logo.webp" alt="Delteo" />
+                        </Link>
+                        <span className="header-seguro">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <rect x="5" y="11" width="14" height="10" rx="2" />
+                                <circle cx="12" cy="16" r="1" />
+                                <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
+                            </svg>
+                            Compra segura
+                        </span>
+                    </div>
+                </div>
+            </div>
+            ) : (
             <div className="divheader">
                 <div className="contenidoheader contenedor">
                     <div className="divbarra">
@@ -99,6 +126,7 @@ const Header = () => {
                 </div>
                 
             </div>
+            )}
         </header>
     </>
   )

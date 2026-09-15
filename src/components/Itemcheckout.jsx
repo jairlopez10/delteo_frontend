@@ -18,24 +18,21 @@ const Itemcheckout = ({item, carritomostrar, setCarritoMostrar}) => {
     }
 
   return (
-    <>
-        <div className="producto-checkout">
-            <img src={imagen} className="imagen-checkout" alt={`Imagen ${nombre}`} />
-            <div>
-                <p className="nombre-checkout">{nombre}</p>
-                <div className="flex gap-8 items-center">
-                    <div className="cantidad-stepper" aria-label={`Cantidad de ${nombre}`}>
-                        <button type="button" onClick={() => cambiarcantidad(-1)} disabled={Number(cantidad) <= 1} aria-label="Quitar una unidad">−</button>
-                        <span>{cantidad}</span>
-                        <button type="button" onClick={() => cambiarcantidad(1)} aria-label="Agregar una unidad">+</button>
-                    </div>
-                    <p className="text-red-600 cursor-pointer" onClick={() => eliminaritem()}>Eliminar</p>
+    <li className="chk-item">
+        <img src={imagen} className="chk-item-imagen" alt="" />
+        <div className="chk-item-texto">
+            <p className="chk-item-nombre">{nombre}</p>
+            <div className="chk-item-acciones">
+                <div className="cantidad-stepper" role="group" aria-label={`Cantidad de ${nombre}`}>
+                    <button type="button" onClick={() => cambiarcantidad(-1)} disabled={Number(cantidad) <= 1} aria-label="Quitar una unidad">−</button>
+                    <span aria-live="polite">{cantidad}</span>
+                    <button type="button" onClick={() => cambiarcantidad(1)} aria-label="Agregar una unidad">+</button>
                 </div>
-                
+                <button type="button" className="chk-item-eliminar" onClick={() => eliminaritem()}>Eliminar</button>
             </div>
-            <p className=" text-end">{`$${(precio*cantidad).toLocaleString('es-CO')}`}</p>
         </div>
-    </>
+        <p className="chk-item-precio">{`$${(precio*cantidad).toLocaleString('es-CO', { maximumFractionDigits: 0 })}`}</p>
+    </li>
   )
 }
 

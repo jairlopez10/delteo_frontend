@@ -8,6 +8,7 @@ import Bottomsheet from "../components/Bottomsheet"
 import Estimadorentrega from "../components/Estimadorentrega"
 import Relacionados from "../components/Relacionados"
 import Icono from "../components/Icono"
+import Videodestacado from "../components/Videodestacado"
 
 const envio = {
   pequeno: 10000,
@@ -352,7 +353,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
                 <article key={destacado.titulo} className="pdp-destacado">
                   {destacado.media && (
                     destacado.media.endsWith('.mp4')
-                      ? <video src={destacado.media} muted loop playsInline autoPlay preload="none" />
+                      ? <Videodestacado src={destacado.media} poster={destacado.media.replace(/\.mp4$/, '-poster.jpg')} />
                       : <img src={destacado.media} alt="" loading="lazy" decoding="async" />
                   )}
                   <h3>{destacado.titulo}</h3>

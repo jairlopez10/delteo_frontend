@@ -14,25 +14,29 @@ export const configEntrega = {
 
 // PROVISIONAL: lista de ciudades que llegan en 2–3 días hábiles
 export const ciudadesEntrega = [
-  { nombre: 'Bogotá', departamento: 'Cundinamarca', zona: 'bogota' },
-  { nombre: 'Medellín', departamento: 'Antioquia', zona: 'principal' },
-  { nombre: 'Cali', departamento: 'Valle del Cauca', zona: 'principal' },
-  { nombre: 'Barranquilla', departamento: 'Atlántico', zona: 'principal' },
-  { nombre: 'Cartagena', departamento: 'Bolívar', zona: 'principal' },
-  { nombre: 'Bucaramanga', departamento: 'Santander', zona: 'principal' },
-  { nombre: 'Pereira', departamento: 'Risaralda', zona: 'principal' },
-  { nombre: 'Manizales', departamento: 'Caldas', zona: 'principal' },
-  { nombre: 'Armenia', departamento: 'Quindío', zona: 'principal' },
-  { nombre: 'Ibagué', departamento: 'Tolima', zona: 'principal' },
-  { nombre: 'Santa Marta', departamento: 'Magdalena', zona: 'principal' },
-  { nombre: 'Villavicencio', departamento: 'Meta', zona: 'principal' },
-  { nombre: 'Cúcuta', departamento: 'Norte de Santander', zona: 'principal' },
-  { nombre: 'Neiva', departamento: 'Huila', zona: 'principal' },
-  { nombre: 'Pasto', departamento: 'Nariño', zona: 'principal' },
-  { nombre: 'Montería', departamento: 'Córdoba', zona: 'principal' }
+  { codigo: '11001', nombre: 'Bogotá', departamento: 'Cundinamarca', zona: 'bogota' },
+  { codigo: '05001', nombre: 'Medellín', departamento: 'Antioquia', zona: 'principal' },
+  { codigo: '76001', nombre: 'Cali', departamento: 'Valle del Cauca', zona: 'principal' },
+  { codigo: '08001', nombre: 'Barranquilla', departamento: 'Atlántico', zona: 'principal' },
+  { codigo: '13001', nombre: 'Cartagena', departamento: 'Bolívar', zona: 'principal' },
+  { codigo: '68001', nombre: 'Bucaramanga', departamento: 'Santander', zona: 'principal' },
+  { codigo: '66001', nombre: 'Pereira', departamento: 'Risaralda', zona: 'principal' },
+  { codigo: '17001', nombre: 'Manizales', departamento: 'Caldas', zona: 'principal' },
+  { codigo: '63001', nombre: 'Armenia', departamento: 'Quindío', zona: 'principal' },
+  { codigo: '73001', nombre: 'Ibagué', departamento: 'Tolima', zona: 'principal' },
+  { codigo: '47001', nombre: 'Santa Marta', departamento: 'Magdalena', zona: 'principal' },
+  { codigo: '50001', nombre: 'Villavicencio', departamento: 'Meta', zona: 'principal' },
+  { codigo: '54001', nombre: 'Cúcuta', departamento: 'Norte de Santander', zona: 'principal' },
+  { codigo: '41001', nombre: 'Neiva', departamento: 'Huila', zona: 'principal' },
+  { codigo: '52001', nombre: 'Pasto', departamento: 'Nariño', zona: 'principal' },
+  { codigo: '23001', nombre: 'Montería', departamento: 'Córdoba', zona: 'principal' }
 ]
 
 export const otraCiudad = { nombre: 'Otra ciudad o municipio', departamento: '', zona: 'nacional' }
+
+// Zona de entrega de un municipio según su código DANE (DIVIPOLA)
+export const zonaPorCodigo = (codigo) =>
+  ciudadesEntrega.find(ciudad => ciudad.codigo === codigo)?.zona || 'nacional'
 
 // Festivos de Colombia (fecha en que se descansa). Revisar cada año.
 const festivos = new Set([
@@ -100,10 +104,4 @@ export const guardarCiudad = (ciudad) => {
   } catch {
     // Sin localStorage (modo privado): la ciudad solo vive en esta visita
   }
-}
-
-// Texto para precargar el campo de ciudad del checkout ("Medellín, Antioquia")
-export const ciudadParaCheckout = () => {
-  const ciudad = leerCiudadGuardada()
-  return ciudad && ciudad.departamento ? `${ciudad.nombre}, ${ciudad.departamento}` : ''
 }
