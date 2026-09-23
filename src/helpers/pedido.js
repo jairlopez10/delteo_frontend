@@ -13,12 +13,14 @@ export const enlaceWhatsapp = texto =>
   `https://wa.me/${WHATSAPP_DELTEO}?text=${encodeURIComponent(texto)}`
 
 // Mensaje con el pedido completo, para confirmar o para enviarlo por WhatsApp si la web falla
+// notaPago distingue un pedido ya pagado de uno contraentrega
 export const textoPedido = (intro, pedido) => {
+  const notaPago = pedido.notaPago || '(pago al recibir)'
   const lineas = [
     intro,
     '',
     ...pedido.productos.map(item => `• ${item.cantidad} x ${item.nombre}`),
-    `Total: ${formatoPrecio(pedido.total)} (pago al recibir)`,
+    `Total: ${formatoPrecio(pedido.total)} ${notaPago}`,
     '',
     pedido.nombre && `Nombre: ${pedido.nombre}`,
     pedido.telefono && `Celular: ${formatoCelular(pedido.telefono)}`,

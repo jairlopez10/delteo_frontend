@@ -7,6 +7,7 @@ import Selectormunicipio from "../components/Selectormunicipio";
 import Icono from "../components/Icono";
 import { calcularEntrega, ciudadesEntrega, formatearFecha, guardarCiudad, leerCiudadGuardada } from "../helpers/entregas";
 import { enlaceWhatsapp, formatoCelular, formatoPrecio, guardarUltimoPedido, textoPedido } from "../helpers/pedido";
+import { guardarPagoPendiente, itemsParaBackend, METODO_CONTRAENTREGA, METODO_WOMPI } from "../helpers/pagos";
 
 const PEDIDO_MINIMO = 44900
 const CLAVE_BORRADOR = 'delteo_checkout_borrador'
@@ -68,10 +69,16 @@ const Checkout = () => {
     const [tocados, setTocados] = useState({});
     const [intentoEnvio, setIntentoEnvio] = useState(false);
     const [estado, setEstado] = useState('listo'); // listo | enviando | error
+    const [metodoPago, setMetodoPago] = useState(borrador.metodoPago || METODO_CONTRAENTREGA);
+    // Si el backend recalcula un total distinto al del carrito, se muestra antes de cobrar
+    const [avisoTotal, setAvisoTotal] = useState(null);
+    const [erroresPago, setErroresPago] = useState([]);
     const [ctaVisible, setCtaVisible] = useState(true);
     const referencias = useRef({});
     const ctaRef = useRef(null);
     const minimoRef = useRef(null);
+    //Total que el backend corrigió y que el cliente ya vio: al reintentar, se cobra este
+    const totalConfirmadoRef = useRef(null);
 
     //Calcular total a pagar
     const subtotal = carrito.reduce((acumulado, item) => acumulado + item.cantidad * item.precio, 0)
@@ -94,7 +101,12 @@ const Checkout = () => {
     const entrega = municipio ? calcularEntrega(municipio) : null
     const enviando = estado === 'enviando'
     const hayProductos = carrito.length > 0
-    const textoBoton = enviando ? 'Enviando pedido…' : `Confirmar pedido · ${formatoPrecio(total)}`
+    const pagaEnLinea = metodoPago === METODO_WOMPI
+    //Si el backend corrigió el total, el botón muestra el valor que se va a cobrar
+    const totalACobrar = avisoTotal !== null ? avisoTotal : total
+    const textoBoton = enviando
+        ? (pagaEnLinea ? 'Llevándote a pagar…' : 'Enviando pedido…')
+        : `${pagaEnLinea ? 'Ir a pagar' : 'Confirmar pedido'} · ${formatoPrecio(totalACobrar)}`
 
     useEffect(() => {
         setpagina('checkout')
@@ -134,6 +146,10 @@ const Checkout = () => {
     useEffect(() => {
         localStorage.setItem('carritojammy', JSON.stringify(carrito));
         setContador(carrito.length);
+        //Si cambia el carrito hay que volver a pedirle el total al backend
+        totalConfirmadoRef.current = null;
+        setAvisoTotal(null);
+        setErroresPago([]);
     }, [carrito, setContador])
 
     // Borrador para quien sale a Instagram y vuelve. La cédula no se guarda.
@@ -144,12 +160,13 @@ const Checkout = () => {
                 nombre: datos.nombre,
                 direccion: datos.direccion,
                 indicaciones: datos.indicaciones,
-                codigoMunicipio: municipio?.codigo
+                codigoMunicipio: municipio?.codigo,
+                metodoPago
             }))
         } catch {
             // Sin localStorage el formulario funciona igual, solo no queda borrador
         }
-    }, [datos.telefono, datos.nombre, datos.direccion, datos.indicaciones, municipio])
+    }, [datos.telefono, datos.nombre, datos.direccion, datos.indicaciones, municipio, metodoPago])
 
     // La barra fija del botón se oculta mientras el botón después del total está en pantalla
     useEffect(() => {
@@ -205,6 +222,59 @@ const Checkout = () => {
         cedula: soloDigitos(datos.cedula)
     })
 
+    //Pago en línea: el backend calcula el total, firma la transacción y devuelve la URL de Wompi
+    const pagarconwompi = async () => {
+        setEstado('enviando');
+        setErroresPago([]);
+        setAvisoTotal(null);
+
+        try {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/api/ordenes`;
+            const { data } = await axios.post(url, {
+                items: itemsParaBackend(carrito),
+                cliente: {
+                    nombre: datos.nombre.trim(),
+                    telefono: soloDigitos(datos.telefono),
+                    cedula: soloDigitos(datos.cedula),
+                    ciudad: municipio.etiqueta,
+                    region: municipio.departamento,
+                    direccion: direccionCompleta(),
+                    zona: municipio.zona
+                }
+            })
+
+            //El backend manda sobre el precio: si no coincide, se le muestra al cliente
+            //antes de cobrar. Al volver a tocar el botón ya se acepta ese total.
+            if (data.total !== total && totalConfirmadoRef.current !== data.total) {
+                totalConfirmadoRef.current = data.total
+                setAvisoTotal(data.total)
+                setEstado('listo')
+                return
+            }
+
+            //Para que la página de resultado pueda mostrar la entrega estimada
+            guardarPagoPendiente({
+                referencia: data.referencia,
+                zona: municipio.zona,
+                creado: Date.now()
+            })
+
+            //El carrito NO se vacía aquí: si el pago falla, el cliente lo conserva
+            window.location.href = data.urlpago
+
+        } catch (error) {
+            const respuesta = error?.response?.data
+            if (respuesta?.errores?.length) {
+                setErroresPago(respuesta.errores)
+                if (typeof respuesta.total === 'number' && respuesta.total !== total) setAvisoTotal(respuesta.total)
+            } else {
+                setEstado('error')
+                return
+            }
+            setEstado('listo')
+        }
+    }
+
     const handlesubmit = async (e) => {
         e.preventDefault();
         if (enviando) return;
@@ -222,6 +292,12 @@ const Checkout = () => {
         //Verifica que el subtotal sea mayor al pedido minimo
         if (subtotal < PEDIDO_MINIMO) {
             minimoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            return;
+        }
+
+        //Pago en línea: se va a Wompi. El pedido se registra cuando el pago se aprueba.
+        if (pagaEnLinea) {
+            await pagarconwompi()
             return;
         }
 
@@ -385,14 +461,39 @@ const Checkout = () => {
 
             <section className="chk-card chk-pago" aria-labelledby="chk-pago-titulo">
                 <h2 id="chk-pago-titulo" className="chk-h2">¿Cómo quieres pagar?</h2>
-                <label className="chk-metodo activo">
-                    <input type="radio" name="pago" value="contraentrega" checked readOnly />
-                    <span className="chk-radio" aria-hidden="true" />
-                    <span>
-                        <strong><Icono nombre="efectivo" />Pagar al recibir</strong>
-                        Pagas en efectivo al transportador. Antes de despacharlo te confirmamos por WhatsApp.
-                    </span>
-                </label>
+
+                <div className="chk-metodos">
+                    <label className={`chk-metodo ${!pagaEnLinea ? 'activo' : ''}`}>
+                        <input
+                            type="radio"
+                            name="pago"
+                            value={METODO_CONTRAENTREGA}
+                            checked={!pagaEnLinea}
+                            onChange={() => { setMetodoPago(METODO_CONTRAENTREGA); setAvisoTotal(null); setErroresPago([]) }}
+                        />
+                        <span className="chk-radio" aria-hidden="true" />
+                        <span>
+                            <strong><Icono nombre="efectivo" />Pagar al recibir</strong>
+                            Pagas en efectivo al transportador. Antes de despacharlo te confirmamos por WhatsApp.
+                        </span>
+                    </label>
+
+                    <label className={`chk-metodo ${pagaEnLinea ? 'activo' : ''}`}>
+                        <input
+                            type="radio"
+                            name="pago"
+                            value={METODO_WOMPI}
+                            checked={pagaEnLinea}
+                            onChange={() => { setMetodoPago(METODO_WOMPI); setEstado('listo') }}
+                        />
+                        <span className="chk-radio" aria-hidden="true" />
+                        <span>
+                            <strong><Icono nombre="tarjeta" />Pagar ahora</strong>
+                            Tarjeta, PSE, Nequi o Bancolombia. Pago seguro con Wompi; despachamos apenas se aprueba.
+                        </span>
+                    </label>
+                </div>
+
                 <p className="chk-transportadora">
                     Enviamos con <img src="/inter.webp" alt="Inter Rapidísimo" loading="lazy" />
                 </p>
@@ -412,6 +513,24 @@ const Checkout = () => {
                         Te faltan <strong>{formatoPrecio(faltaParaMinimo)}</strong> para el pedido mínimo de {formatoPrecio(PEDIDO_MINIMO)}.{' '}
                         <Link to="/">Agregar otro juguete</Link>
                     </p>
+                )}
+
+                {avisoTotal !== null && (
+                    <div className="chk-fallo" role="alert">
+                        <p>
+                            <strong>El total de tu pedido cambió a {formatoPrecio(avisoTotal)}.</strong>{' '}
+                            Revisamos los precios antes de cobrarte. Vuelve a tocar el botón para continuar con este valor.
+                        </p>
+                    </div>
+                )}
+
+                {erroresPago.length > 0 && (
+                    <div className="chk-fallo" role="alert">
+                        <p><strong>Revisa tu pedido antes de pagar:</strong></p>
+                        <ul className="chk-errores-pago">
+                            {erroresPago.map((mensaje, i) => <li key={i}>{mensaje}</li>)}
+                        </ul>
+                    </div>
                 )}
 
                 {estado === 'error' && (
@@ -435,7 +554,12 @@ const Checkout = () => {
                     {enviando && <span className="chk-spinner" aria-hidden="true" />}
                     {textoBoton}
                 </button>
-                <p className="chk-micro"><Icono nombre="candado" />No pagas nada ahora. Te confirmamos por WhatsApp antes de despacharlo.</p>
+                <p className="chk-micro">
+                    <Icono nombre="candado" />
+                    {pagaEnLinea
+                        ? 'Te llevamos al pago seguro de Wompi. Delteo nunca ve los datos de tu tarjeta.'
+                        : 'No pagas nada ahora. Te confirmamos por WhatsApp antes de despacharlo.'}
+                </p>
                 <p className="chk-privacidad">Usamos tus datos solo para entregar tu pedido y contactarte sobre él.</p>
             </section>
         </form>

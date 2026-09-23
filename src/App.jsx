@@ -7,6 +7,7 @@ import Producto from './paginas/Producto'
 import Catalogomayorista from './paginas/Catalogomayorista'
 import Checkout from './paginas/Checkout'
 import PedidoConfirmado from './paginas/PedidoConfirmado'
+import PagoResultado from './paginas/PagoResultado'
 
 function App() {
   
@@ -17,6 +18,8 @@ function App() {
           <Route path='/' element={<Layout />}>
             <Route index element={<Catalogo />} />
             <Route path='/nosotros' element={<Nosotros />}/>
+            {/* Va antes de la ruta dinámica de producto, que también encajaría con dos segmentos */}
+            <Route path='/pago/resultado' element={<PagoResultado />}/>
             <Route path='/:titulo/:tipocliente' element={<Producto />}/>
             <Route path='/mayorista' element={<Catalogomayorista />}/>
             <Route path='/checkout' element={<Checkout />}/>

@@ -6,6 +6,8 @@ const trazos = {
   camion: <><circle cx="7" cy="17" r="2" /><circle cx="17" cy="17" r="2" /><path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" /></>,
   cambio: <><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" /><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" /></>,
   check: <path d="M5 12l5 5l10 -10" />,
+  tarjeta: <><rect x="3" y="5" width="18" height="14" rx="3" /><path d="M3 10h18M7 15h.01M11 15h2" /></>,
+  reloj: <><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 3" /></>,
   abajo: <path d="M6 9l6 6l6 -6" />,
   izquierda: <path d="M15 6l-6 6l6 6" />,
   derecha: <path d="M9 6l6 6l-6 6" />,

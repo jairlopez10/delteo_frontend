@@ -2877,6 +2877,56 @@ ul {
   }
 }
 
+/* ---------- Pago en línea con Wompi ---------- */
+
+/* Las dos opciones de pago, una debajo de otra también en desktop */
+.chk-metodos {
+  display: grid;
+  gap: 10px;
+}
+
+.chk-metodo {
+  cursor: pointer;
+}
+
+/* Foco visible al navegar con teclado */
+.chk-metodo:focus-within {
+  outline: 2px solid var(--azul);
+  outline-offset: 2px;
+}
+
+.chk-errores-pago {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.chk-errores-pago li + li {
+  margin-top: 4px;
+}
+
+/* Estado de la página de resultado del pago */
+.chk-spinner-grande {
+  width: 42px;
+  height: 42px;
+  border-width: 4px;
+  margin: 0 auto 4px;
+  display: block;
+}
+
+.chk-icono-grande {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 4px;
+  display: block;
+  color: var(--azul);
+}
+
+.chk-confirmacion-cabecera .chk-micro {
+  justify-content: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .pdp *,
   .pdp-sheet-fondo,
