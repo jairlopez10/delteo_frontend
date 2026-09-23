@@ -2787,27 +2787,6 @@ const productosdb = [
         genero: "unisex"
     },
     {
-        id: 4,
-        titulo: "Barbie +10 Vestidos con Hija, Bicicleta y Accesorios",
-        preciomayorista: 1000,
-        precio: 23000,
-        descripcion: `¡Diversión sin fin espera con este set único de Barbie con 10 vestidos impresionantes, para que ella pueda deslumbrar en cualquier ocasión. Pero eso no es todo, ¡también viene con su hija lista para un emocionante paseo en bicicleta!
-
-        Explora un mundo de moda y creatividad mientras vistes a Barbie en los vestidos más elegantes y a la moda. Cada vestido está diseñado para reflejar su estilo único y personalidad. Además, el set incluye accesorios esenciales como cepillos y espejos, ¡para que Barbie y su hija estén siempre listas para el día!`,
-        imagenes: [
-            {
-                tipo: "imagen",
-                url: "/producto4a.webp"
-            }
-        ],
-        status: "Out Stock",
-        colores: "Rosado",
-        edad: ["+3"],
-        edad2: "+3",
-        categoria: "munecas",
-        genero: "ninas"
-    },
-    {
         id: 5,
         titulo: "Pistola de Burbujas Dinosaurio Rex",
         preciomayorista: 59999,
