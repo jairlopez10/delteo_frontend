@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import usePagina from "../hooks/usePagina";
+import { itemDesdeProducto, track } from "../helpers/analytics";
 
-const Productocard = ({producto}) => {
+// lista e indice: solo los listados que se miden (el catálogo mayorista no los pasa)
+const Productocard = ({producto, lista, indice}) => {
 
     const {titulo, precio, imagenes, preciomayorista} = producto;
 
@@ -33,9 +35,20 @@ const Productocard = ({producto}) => {
     //Reemplaza el espacio por un - para que la url se pueda compartir
     const titulourl = titulo.replace(/ /g, "-");
 
+    const abrir = () => {
+      if (lista) {
+        track('select_item', {
+          item_list_id: lista.id,
+          item_list_name: lista.nombre,
+          items: [itemDesdeProducto(producto, { index: indice, item_list_id: lista.id, item_list_name: lista.nombre })]
+        })
+      }
+      window.open(`/${titulourl}/${tipocliente}`)
+    }
+
   return (
     <>
-        <div className="productocard cursor-pointer" onClick={() => window.open(`/${titulourl}/${tipocliente}`)}>
+        <div className="productocard cursor-pointer" onClick={abrir}>
             <div className="div-imagen-prodcard">
               <img src={imagenes[0].url} className="cursor-pointer imagencard" alt={`Imagen ${titulo}`} />
             </div>

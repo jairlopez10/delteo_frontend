@@ -9,6 +9,7 @@ import Estimadorentrega from "../components/Estimadorentrega"
 import Relacionados from "../components/Relacionados"
 import Icono from "../components/Icono"
 import Videodestacado from "../components/Videodestacado"
+import { datosMeta, itemDesdeProducto, track } from "../helpers/analytics"
 
 const envio = {
   pequeno: 10000,
@@ -55,6 +56,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
   const [agregarBump, setAgregarBump] = useState(false)
   const [ctaVisible, setCtaVisible] = useState(true)
   const ctaRef = useRef(null)
+  const vistaReportada = useRef(false)
 
   const cerrarSheetVariante = useCallback(() => {
     setSheetVariante(false)
@@ -66,6 +68,20 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
     document.title = esMayorista ? `${titulo} (${tipocliente})` : titulo
     window.scrollTo(0, 0)
     setContador(leerCarrito().length)
+
+    /*
+    view_item / ViewContent: una vez por visualización. La página se vuelve a montar al
+    cambiar de producto (key en Producto), así que entrar de nuevo al mismo producto más
+    tarde sí genera otro evento; un re-render no, por el ref.
+    */
+    if (producto && !vistaReportada.current) {
+      vistaReportada.current = true
+      const item = itemDesdeProducto(producto)
+      track('view_item', { value: item.price, items: [item] }, {
+        nombre: 'ViewContent',
+        datos: { ...datosMeta([item]), content_name: producto.titulo, value: item.price }
+      })
+    }
     // Solo al montar la página
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -126,46 +142,41 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
       ? carrito.map(item => item.id === idtemp ? { ...item, cantidad: Number(item.cantidad) + cantidad } : item)
       : [...carrito, {
           id: idtemp,
+          // idproducto y variante: para reportar el producto (no la variante) en GA4 y Meta
+          idproducto: producto.id,
+          variante: opcion?.texto,
           nombre: nombretemp,
           cantidad,
           precio: precioConEnvio,
           imagen: producto.imagenes[0].url
         }]
 
+    // Items del evento: el producto (con su variante) y el bump si se agrega ahora.
+    // price es el precio que se cobra en el carrito, con el envío incluido.
+    const itemsEvento = [itemDesdeProducto(producto, {
+      price: precioConEnvio,
+      quantity: cantidad,
+      ...(opcion ? { item_variant: opcion.texto } : {})
+    })]
+
     // Order bump de orvis (reemplaza el popup): se agrega una vez si no estaba en el carrito
     if (bump && agregarBump && !nuevocarrito.some(item => item.id === bump.id)) {
       nuevocarrito.push({
         id: bump.id,
+        idproducto: bump.id,
         nombre: bump.titulo,
         cantidad: 1,
         precio: bump.precio,
         imagen: bump.imagenes[0].url
       })
+      itemsEvento.push(itemDesdeProducto(bump, { price: bump.precio }))
     }
 
-    //Enviar evento al Pixel de Facebook (si el script está bloqueado, la compra sigue)
-    if (typeof window.fbq === 'function') {
-      window.fbq('track', 'AddToCart', {
-        content_ids: producto.id,
-        content_name: producto.titulo,
-        currency: 'COP',
-        value: producto.precio * cantidad
-      })
-    }
-
-    //Enviar evento a Google Analytics
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'add_to_cart', {
-        currency: 'COP',
-        value: producto.precio * cantidad,
-        items: [{
-          item_id: producto.id,
-          item_name: producto.titulo,
-          quantity: cantidad,
-          price: producto.precio
-        }]
-      })
-    }
+    const valor = itemsEvento.reduce((suma, item) => suma + item.price * item.quantity, 0)
+    track('add_to_cart', { value: valor, items: itemsEvento }, {
+      nombre: 'AddToCart',
+      datos: { ...datosMeta(itemsEvento), content_name: producto.titulo, value: valor }
+    })
 
     localStorage.setItem('carritojammy', JSON.stringify(nuevocarrito))
     setContador(nuevocarrito.length)
@@ -193,14 +204,17 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
   const compartir = async () => {
     const url = window.location.href
     const texto = `Mira este juguete de Delteo: ${nombre}`
+    const reportar = metodo => track('share', { method: metodo, content_type: 'product', item_id: String(producto.id) })
     if (navigator.share) {
       try {
         await navigator.share({ title: nombre, text: texto, url })
+        reportar('web_share')
         return
       } catch (error) {
         if (error?.name === 'AbortError') return
       }
     }
+    reportar('whatsapp')
     window.open(`https://wa.me/?text=${encodeURIComponent(`${texto} ${url}`)}`, '_blank', 'noopener')
   }
 
@@ -280,7 +294,14 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
           {contenido.nota && <p className="pdp-nota">{contenido.nota}</p>}
 
           <div className="pdp-filas">
-            <Estimadorentrega />
+            <Estimadorentrega
+              onElegir={ciudad => track('delivery_estimate_pdp', {
+                item_id: String(producto.id),
+                shipping_tier: ciudad.zona,
+                // Solo ciudades de la lista fija (u "otra"): no identifica a nadie
+                delivery_city: ciudad.codigo ? ciudad.nombre : 'otra'
+              })}
+            />
             <div className="pdp-fila">
               <Icono nombre="efectivo" />
               <div>
@@ -405,6 +426,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
               href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`Hola Delteo, tengo una pregunta sobre: ${nombre}`)}`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => track('whatsapp_click', { location: 'pdp_dudas', item_id: String(producto.id) })}
             >
               <Icono nombre="whatsapp" />¿Dudas? Escríbenos
             </a>

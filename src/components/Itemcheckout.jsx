@@ -1,3 +1,10 @@
+import { itemDesdeCarrito, track } from "../helpers/analytics"
+
+// Solo GA4: en Meta, AddToCart queda para la intención de compra en la página de producto
+const reportarCambio = (evento, item, unidades) => {
+    const itemGA4 = { ...itemDesdeCarrito(item), quantity: unidades }
+    track(evento, { value: itemGA4.price * unidades, items: [itemGA4] })
+}
 
 const Itemcheckout = ({item, carritomostrar, setCarritoMostrar}) => {
 
@@ -6,6 +13,7 @@ const Itemcheckout = ({item, carritomostrar, setCarritoMostrar}) => {
     const eliminaritem = () => {
         const nuevocarrito = carritomostrar.filter(item => item.id !== id)
         setCarritoMostrar(nuevocarrito);
+        reportarCambio('remove_from_cart', item, Number(cantidad))
 
     }
 
@@ -15,6 +23,7 @@ const Itemcheckout = ({item, carritomostrar, setCarritoMostrar}) => {
         if (nuevacantidad < 1) return
         const nuevocarrito = carritomostrar.map(producto => producto.id === id ? { ...producto, cantidad: nuevacantidad } : producto)
         setCarritoMostrar(nuevocarrito);
+        reportarCambio(cambio > 0 ? 'add_to_cart' : 'remove_from_cart', item, Math.abs(cambio))
     }
 
   return (

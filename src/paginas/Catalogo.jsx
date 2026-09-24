@@ -2,6 +2,9 @@ import { useEffect, useState, useRef } from "react"
 import usePagina from "../hooks/usePagina"
 import productosdb from "../components/Productosdb";
 import Productocard from "../components/Productocard";
+import { itemDesdeProducto, track } from "../helpers/analytics";
+
+const LISTA_CATALOGO = { id: 'catalogo', nombre: 'Catálogo' }
 
 const Catalogo = () => {
 
@@ -23,6 +26,8 @@ const Catalogo = () => {
   const [numpagina, setnumpagina] = useState(1);
   const [idbanner, setIdbanner] = useState(1);
   const tituloproductosref = useRef(null);
+  // Último listado reportado: al montar, los efectos arman la misma página 2 veces
+  const listaReportadaRef = useRef('');
   const bannersid = [1, 2, 3]
  
   const MIN = 5000;
@@ -59,6 +64,17 @@ const Catalogo = () => {
     }
 
     setproductosmostrar(nuevolistado);
+
+    // view_item_list con los productos visibles; se repite solo si cambian (página o filtros)
+    const firma = nuevolistado.map(producto => producto.id).join(',');
+    if (nuevolistado.length > 0 && firma !== listaReportadaRef.current) {
+      listaReportadaRef.current = firma;
+      track('view_item_list', {
+        item_list_id: LISTA_CATALOGO.id,
+        item_list_name: LISTA_CATALOGO.nombre,
+        items: nuevolistado.map((producto, i) => itemDesdeProducto(producto, { index: iteradormin + i }))
+      });
+    }
 
     definirpaginadores();
 
@@ -223,12 +239,14 @@ const Catalogo = () => {
             <>
               <div className="">
                 <div className="productoscards">
-                  {productosmostrar.map(producto => {
+                  {productosmostrar.map((producto, i) => {
                     if(producto.status === "disponible"){
                       return ((
                         <Productocard 
                           key={producto.id}
                           producto={producto} 
+                          lista={LISTA_CATALOGO}
+                          indice={(numpagina - 1) * numproductospag + i}
                         />
                       ))
                     }
@@ -264,6 +282,7 @@ const Catalogo = () => {
       </div>
       
       <img src="/wa.webp" alt="img WA" className="whatsapp" onClick={() => {
+        track('whatsapp_click', { location: 'catalogo_flotante' });
         window.open("https://wa.me/573054392872?text=Hola%20Delteo,%20quisiera%20saber%20mas%20informacion%20por%20favor%20sobre%20", '_blank');
       }}/>
       

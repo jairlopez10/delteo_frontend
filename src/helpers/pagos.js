@@ -23,6 +23,39 @@ export const esEstadoFinal = estado =>
 export const itemsParaBackend = carrito =>
   carrito.map(({ id, nombre, cantidad }) => ({ id, nombre, cantidad: Number(cantidad) }))
 
+/*
+Id del intento de compra. Se conserva en la pestaña mientras no se complete el pedido:
+los reintentos de contra entrega mandan el mismo (el backend no duplica la fila) y es el
+event_id del Purchase que comparten el Pixel y CAPI. También evita repetir
+begin_checkout al recargar. Se olvida cuando el pedido queda registrado o pagado.
+*/
+const CLAVE_PEDIDO_ID = 'delteo_pedido_id'
+
+// randomUUID no existe en navegadores viejos (algunos in-app): respaldo con Math.random
+const nuevoPedidoId = () =>
+  window.crypto?.randomUUID?.() ||
+  `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}-${Math.random().toString(36).slice(2, 10)}`
+
+export const leerPedidoId = () => {
+  try {
+    const guardado = sessionStorage.getItem(CLAVE_PEDIDO_ID)
+    if (guardado) return guardado
+    const nuevo = nuevoPedidoId()
+    sessionStorage.setItem(CLAVE_PEDIDO_ID, nuevo)
+    return nuevo
+  } catch {
+    return nuevoPedidoId()
+  }
+}
+
+export const olvidarPedidoId = () => {
+  try {
+    sessionStorage.removeItem(CLAVE_PEDIDO_ID)
+  } catch {
+    // no pasa nada
+  }
+}
+
 export const guardarPagoPendiente = datos => {
   try {
     sessionStorage.setItem(CLAVE_PAGO_PENDIENTE, JSON.stringify(datos))

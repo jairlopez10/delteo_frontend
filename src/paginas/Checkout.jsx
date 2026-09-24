@@ -7,11 +7,14 @@ import Selectormunicipio from "../components/Selectormunicipio";
 import Icono from "../components/Icono";
 import { calcularEntrega, ciudadesEntrega, formatearFecha, guardarCiudad, leerCiudadGuardada } from "../helpers/entregas";
 import { enlaceWhatsapp, formatoCelular, formatoPrecio, guardarUltimoPedido, textoPedido } from "../helpers/pedido";
-import { guardarPagoPendiente, itemsParaBackend, METODO_CONTRAENTREGA, METODO_WOMPI } from "../helpers/pagos";
+import { guardarPagoPendiente, itemsParaBackend, leerPedidoId, METODO_CONTRAENTREGA, METODO_WOMPI, olvidarPedidoId } from "../helpers/pagos";
+import { datosMeta, eventIdPurchase, itemsDesdeCarrito, leerAtribucion, marcarOcurrido, track, yaOcurrio } from "../helpers/analytics";
 
 const PEDIDO_MINIMO = 44900
 const CLAVE_BORRADOR = 'delteo_checkout_borrador'
 const ORDEN_CAMPOS = ['telefono', 'nombre', 'ciudad', 'direccion', 'cedula']
+// begin_checkout / InitiateCheckout: el primero de estos campos que la persona deja completo
+const CAMPOS_INICIO = ['telefono', 'nombre', 'ciudad', 'cedula']
 
 const leerJSON = (clave, respaldo) => {
     try {
@@ -74,6 +77,13 @@ const Checkout = () => {
     const [avisoTotal, setAvisoTotal] = useState(null);
     const [erroresPago, setErroresPago] = useState([]);
     const [ctaVisible, setCtaVisible] = useState(true);
+    const [pedidoId] = useState(leerPedidoId);
+    // Campos de CAMPOS_INICIO que la persona editó (un borrador precargado no cuenta)
+    const [editados, setEditados] = useState({});
+    const checkoutReportadoRef = useRef(false);
+    // `enviando` (estado) no alcanza a bloquear un doble toque: los dos clics llegan
+    // antes del siguiente render. El ref sí, y evita pedidos y compras duplicados.
+    const enviandoRef = useRef(false);
     const referencias = useRef({});
     const ctaRef = useRef(null);
     const minimoRef = useRef(null);
@@ -113,19 +123,12 @@ const Checkout = () => {
         document.title = 'Delteo | Confirmar Pedido'
         window.scrollTo(0,0)
 
+        // view_cart: el checkout es también el carrito. Una vez por montaje, solo con productos.
         const carritoInicial = leerJSON('carritojammy', [])
-        const valorInicial = carritoInicial.reduce((acumulado, item) => acumulado + item.cantidad * item.precio, 0)
-        if (Array.isArray(window.dataLayer)) {
-            window.dataLayer.push({
-                'event': `Checkout`
-            })
-        }
-        if (typeof window.fbq === 'function') {
-            window.fbq('track', 'InitiateCheckout', {
-                contents: carritoInicial,
-                currency: 'COP',
-                value: valorInicial
-            })
+        if (carritoInicial.length > 0) {
+            const items = itemsDesdeCarrito(carritoInicial)
+            const valor = carritoInicial.reduce((acumulado, item) => acumulado + item.cantidad * item.precio, 0)
+            track('view_cart', { value: valor, items })
         }
 
         // La lista de municipios (~28 KB) se descarga solo cuando alguien llega al checkout
@@ -177,6 +180,33 @@ const Checkout = () => {
         return () => observer.disconnect()
     }, [hayProductos])
 
+    /*
+    begin_checkout (GA4) + InitiateCheckout (Pixel), una sola vez por intento de compra:
+    cuando la persona completa el primero de celular, nombre, ciudad o cédula. El guard
+    usa el pedidoId, así que tampoco se repite al recargar o al volver de Instagram.
+    */
+    const reportarInicioCheckout = () => {
+        if (checkoutReportadoRef.current || yaOcurrio(`begin_checkout_${pedidoId}`)) return
+        checkoutReportadoRef.current = true
+        marcarOcurrido(`begin_checkout_${pedidoId}`)
+        const items = itemsDesdeCarrito(carrito)
+        track('begin_checkout', { value: total, items }, {
+            nombre: 'InitiateCheckout',
+            datos: { ...datosMeta(items), value: total }
+        })
+    }
+
+    const inicioCompleto = CAMPOS_INICIO.some(campo => editados[campo] && !errores[campo])
+    useEffect(() => {
+        if (inicioCompleto && hayProductos) reportarInicioCheckout()
+        // reportarInicioCheckout lee el carrito actual; solo importa cuándo se completa el campo
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [inicioCompleto, hayProductos])
+
+    const marcarEditado = campo => {
+        if (CAMPOS_INICIO.includes(campo) && !editados[campo]) setEditados(actual => ({ ...actual, [campo]: true }))
+    }
+
     const cambiar = campo => e => {
         let valor = e.target.value
         if (campo === 'telefono') {
@@ -186,6 +216,7 @@ const Checkout = () => {
         }
         if (campo === 'cedula') valor = soloDigitos(valor).slice(0, 10)
         setDatos(actual => ({ ...actual, [campo]: valor }))
+        marcarEditado(campo)
         if (estado === 'error') setEstado('listo')
     }
 
@@ -193,6 +224,7 @@ const Checkout = () => {
 
     const elegirMunicipio = opcion => {
         setMunicipio(opcion)
+        marcarEditado('ciudad')
         if (opcion) {
             guardarCiudad({ codigo: opcion.codigo, nombre: opcion.nombre, departamento: opcion.departamento, zona: opcion.zona })
         }
@@ -232,6 +264,8 @@ const Checkout = () => {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/ordenes`;
             const { data } = await axios.post(url, {
                 items: itemsParaBackend(carrito),
+                // fbp/fbc de esta visita: el Purchase de CAPI sale del webhook, sin navegador
+                atribucion: leerAtribucion(),
                 cliente: {
                     nombre: datos.nombre.trim(),
                     telefono: soloDigitos(datos.telefono),
@@ -261,6 +295,7 @@ const Checkout = () => {
 
             //El carrito NO se vacía aquí: si el pago falla, el cliente lo conserva
             window.location.href = data.urlpago
+            return true
 
         } catch (error) {
             const respuesta = error?.response?.data
@@ -277,10 +312,14 @@ const Checkout = () => {
 
     const handlesubmit = async (e) => {
         e.preventDefault();
-        if (enviando) return;
+        if (enviando || enviandoRef.current) return;
         setIntentoEnvio(true);
 
         //Revisar los campos y llevar al primero con error
+        // Quien llega con el borrador lleno no edita nada: si tiene alguno de los
+        // campos de inicio completo, el checkout empezó con este clic
+        if (CAMPOS_INICIO.some(campo => !errores[campo])) reportarInicioCheckout()
+
         const primerError = ORDEN_CAMPOS.find(campo => errores[campo])
         if (primerError) {
             const elemento = referencias.current[primerError]
@@ -295,9 +334,19 @@ const Checkout = () => {
             return;
         }
 
+        enviandoRef.current = true;
+
         //Pago en línea: se va a Wompi. El pedido se registra cuando el pago se aprueba.
         if (pagaEnLinea) {
-            await pagarconwompi()
+            // payment_started: un evento por clic válido en "Ir a pagar" (el ref bloquea el doble toque)
+            track('payment_started', {
+                value: totalACobrar,
+                payment_type: METODO_WOMPI,
+                items: itemsDesdeCarrito(carrito)
+            })
+            const redirigio = await pagarconwompi()
+            // Si no se fue a Wompi (total corregido o error) se puede volver a intentar
+            if (!redirigio) enviandoRef.current = false
             return;
         }
 
@@ -316,7 +365,10 @@ const Checkout = () => {
             direccion: direccionCompleta(),
             telefono: soloDigitos(datos.telefono),
             cedula: soloDigitos(datos.cedula),
-            total
+            total,
+            // Mismo id en cada reintento: el backend no duplica el pedido y es el event_id de CAPI
+            pedidoid: pedidoId,
+            atribucion: leerAtribucion()
         }
 
         setEstado('enviando');
@@ -324,27 +376,24 @@ const Checkout = () => {
         //Enviar pedido
         try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/clientes`;
-            await axios.post(url, pedido)
+            const { data } = await axios.post(url, pedido)
+            const idPedido = data?.pedidoid || pedidoId
 
-            //Eventos de compra: SOLO cuando el pedido llegó al backend (antes se enviaban aunque fallara)
-            if (typeof window.fbq === 'function') {
-                window.fbq('track', 'Purchase', {
-                    currency: "COP",
-                    value: total
-                })
-            }
-            if (typeof window.gtag === 'function') {
-                window.gtag('event', 'purchase', {
-                    value: total,
-                    currency: 'COP',
-                    items: carrito
-                })
-                window.gtag('event', 'ads_conversion_Purchase_1', {
-                    value: total,
-                    currency: 'COP',
-                    items: carrito
-                })
-            }
+            /*
+            Eventos de compra: SOLO cuando el pedido llegó al backend.
+            transaction_id deja que GA4 descarte un purchase repetido; el eventID es el
+            mismo del Purchase que manda el backend por CAPI, y Meta se queda con uno.
+            */
+            const items = itemsDesdeCarrito(carrito)
+            const compra = { transaction_id: idPedido, value: total, payment_type: METODO_CONTRAENTREGA, items }
+            track('purchase', compra, {
+                nombre: 'Purchase',
+                eventID: eventIdPurchase(idPedido),
+                datos: { ...datosMeta(items), value: total }
+            })
+            // Conversión de Google Ads importada desde GA4: se conserva igual que antes
+            track('ads_conversion_Purchase_1', compra)
+            olvidarPedidoId()
 
             const resumen = {
                 nombre: pedido.cliente,
@@ -352,6 +401,7 @@ const Checkout = () => {
                 zona: municipio.zona,
                 productos: carrito,
                 total,
+                pedidoid: idPedido,
                 creado: Date.now()
             }
             guardarUltimoPedido(resumen)
@@ -362,6 +412,7 @@ const Checkout = () => {
 
         } catch (error) {
             console.log(error);
+            enviandoRef.current = false;
             setEstado('error');
         }
     }
@@ -543,6 +594,7 @@ const Checkout = () => {
                                 href={enlaceWhatsapp(textoPedido('Hola Delteo, quiero hacer este pedido:', pedidoParaWhatsapp()))}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={() => track('whatsapp_click', { location: 'checkout_error' })}
                             >
                                 <Icono nombre="whatsapp" />Enviar por WhatsApp
                             </a>

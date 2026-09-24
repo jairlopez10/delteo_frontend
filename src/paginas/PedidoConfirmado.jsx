@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 import Icono from "../components/Icono";
 import { calcularEntrega, formatearFecha } from "../helpers/entregas";
 import { enlaceWhatsapp, formatoPrecio, leerUltimoPedido, textoPedido } from "../helpers/pedido";
+import { METODO_CONTRAENTREGA } from "../helpers/pagos";
+import { track } from "../helpers/analytics";
 
 const PedidoConfirmado = () => {
 
@@ -58,7 +60,11 @@ const PedidoConfirmado = () => {
                 </li>
             </ol>
 
-            <a className="pdp-boton-wa chk-boton-ancho" href={enlaceWhatsapp(mensajeConfirmacion)} target="_blank" rel="noopener noreferrer">
+            <a className="pdp-boton-wa chk-boton-ancho" href={enlaceWhatsapp(mensajeConfirmacion)} target="_blank" rel="noopener noreferrer"
+                onClick={() => track('whatsapp_confirmation', {
+                    payment_type: METODO_CONTRAENTREGA,
+                    ...(pedido?.pedidoid ? { transaction_id: pedido.pedidoid } : {})
+                })}>
                 <Icono nombre="whatsapp" />Confirmar ahora por WhatsApp
             </a>
             <p className="chk-micro">Si nos escribes tú primero, confirmamos más rápido.</p>

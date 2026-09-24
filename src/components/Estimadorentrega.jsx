@@ -7,7 +7,8 @@ import {
 } from "../helpers/entregas"
 
 // Fila "Envío a [ciudad] · Llega [fecha]" del bloque de decisión
-const Estimadorentrega = () => {
+// onElegir: se llama solo cuando la persona elige una ciudad (no al cargar la guardada)
+const Estimadorentrega = ({ onElegir }) => {
 
   const [ciudad, setCiudad] = useState(leerCiudadGuardada)
   const [abierto, setAbierto] = useState(false)
@@ -17,6 +18,7 @@ const Estimadorentrega = () => {
     setCiudad(opcion)
     guardarCiudad(opcion)
     setAbierto(false)
+    onElegir?.(opcion)
   }
 
   const entrega = ciudad ? calcularEntrega(ciudad) : null

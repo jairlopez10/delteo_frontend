@@ -5,9 +5,10 @@ import axios from "axios"
 import Icono from "../components/Icono"
 import { calcularEntrega, formatearFecha } from "../helpers/entregas"
 import { enlaceWhatsapp, formatoPrecio, textoPedido } from "../helpers/pedido"
+import { datosMeta, eventIdPurchase, itemsDesdeBackend, track } from "../helpers/analytics"
 import {
     ESTADOS, esEstadoFinal, leerPagoPendiente, marcarPurchaseEnviado,
-    olvidarPagoPendiente, yaSeEnvioPurchase
+    METODO_WOMPI, olvidarPagoPendiente, olvidarPedidoId, yaSeEnvioPurchase
 } from "../helpers/pagos"
 
 /*
@@ -100,17 +101,28 @@ const PagoResultado = () => {
         localStorage.setItem('carritojammy', JSON.stringify([]))
         setContador(0)
         olvidarPagoPendiente()
+        // La próxima compra en esta pestaña es un checkout nuevo
+        olvidarPedidoId()
 
         if (yaSeEnvioPurchase(pago.referencia)) return
         marcarPurchaseEnviado(pago.referencia)
 
-        if (typeof window.fbq === 'function') {
-            window.fbq('track', 'Purchase', { currency: 'COP', value: pago.total })
-        }
-        if (typeof window.gtag === 'function') {
-            window.gtag('event', 'purchase', { value: pago.total, currency: 'COP', items: pago.items })
-            window.gtag('event', 'ads_conversion_Purchase_1', { value: pago.total, currency: 'COP', items: pago.items })
-        }
+        /*
+        El ordenid lo genera el backend: es el transaction_id de GA4 y el event_id que el
+        backend usa en el Purchase de CAPI (enviado desde el webhook o desde la consulta
+        de esta página). Si este mismo Purchase llega desde otro dispositivo, GA4 y Meta
+        lo descartan por el id.
+        */
+        const idPedido = pago.ordenid || pago.referencia
+        const items = itemsDesdeBackend(pago.items || [])
+        const compra = { transaction_id: idPedido, value: pago.total, payment_type: METODO_WOMPI, items }
+        track('purchase', compra, {
+            nombre: 'Purchase',
+            eventID: pago.ordenid ? eventIdPurchase(pago.ordenid) : undefined,
+            datos: { ...datosMeta(items), value: pago.total }
+        })
+        // Conversión de Google Ads importada desde GA4: se conserva igual que antes
+        track('ads_conversion_Purchase_1', compra)
     }, [pago, setContador])
 
     const zona = pago?.zona || pendiente?.zona
@@ -160,7 +172,8 @@ const PagoResultado = () => {
                     <p>Tu dinero está seguro. Si el pago salió, lo vamos a ver igual y te escribimos por WhatsApp.</p>
                 </div>
                 <section className="chk-card">
-                    <a className="pdp-boton-wa chk-boton-ancho" href={enlaceWhatsapp('Hola Delteo, acabo de pagar en la página y quiero confirmar mi pedido.')} target="_blank" rel="noopener noreferrer">
+                    <a className="pdp-boton-wa chk-boton-ancho" href={enlaceWhatsapp('Hola Delteo, acabo de pagar en la página y quiero confirmar mi pedido.')} target="_blank" rel="noopener noreferrer"
+                        onClick={() => track('whatsapp_click', { location: 'pago_sin_confirmar' })}>
                         <Icono nombre="whatsapp" />Escríbenos por WhatsApp
                     </a>
                     <p className="chk-volver"><Link to="/">Volver a la tienda</Link></p>
@@ -220,7 +233,8 @@ const PagoResultado = () => {
                             Lo enviamos con Inter Rapidísimo a {pago.ciudad || 'tu ciudad'}.
                         </li>
                     </ol>
-                    <a className="pdp-boton-wa chk-boton-ancho" href={enlaceWhatsapp(textoPedido('Hola Delteo, acabo de pagar mi pedido en la página:', pedidoParaWhatsapp))} target="_blank" rel="noopener noreferrer">
+                    <a className="pdp-boton-wa chk-boton-ancho" href={enlaceWhatsapp(textoPedido('Hola Delteo, acabo de pagar mi pedido en la página:', pedidoParaWhatsapp))} target="_blank" rel="noopener noreferrer"
+                        onClick={() => track('whatsapp_confirmation', { payment_type: METODO_WOMPI, transaction_id: pago.ordenid || pago.referencia })}>
                         <Icono nombre="whatsapp" />Confirmar por WhatsApp
                     </a>
                 </section>
@@ -229,7 +243,8 @@ const PagoResultado = () => {
             {enProceso && (
                 <section className="chk-card">
                     <p className="chk-micro"><Icono nombre="reloj" />Esta página se actualiza sola. Si cierras, te escribimos igual.</p>
-                    <a className="pdp-boton-wa chk-boton-ancho" href={enlaceWhatsapp('Hola Delteo, acabo de pagar y quiero saber cómo va mi pedido.')} target="_blank" rel="noopener noreferrer">
+                    <a className="pdp-boton-wa chk-boton-ancho" href={enlaceWhatsapp('Hola Delteo, acabo de pagar y quiero saber cómo va mi pedido.')} target="_blank" rel="noopener noreferrer"
+                        onClick={() => track('whatsapp_click', { location: 'pago_en_proceso' })}>
                         <Icono nombre="whatsapp" />Escríbenos por WhatsApp
                     </a>
                 </section>
@@ -238,7 +253,8 @@ const PagoResultado = () => {
             {rechazado && (
                 <section className="chk-card">
                     <Link to="/checkout" className="pdp-boton chk-boton-ancho">Intentar de nuevo</Link>
-                    <a className="pdp-boton-wa chk-boton-ancho" href={enlaceWhatsapp('Hola Delteo, mi pago fue rechazado y quiero hacer el pedido de otra forma.')} target="_blank" rel="noopener noreferrer">
+                    <a className="pdp-boton-wa chk-boton-ancho" href={enlaceWhatsapp('Hola Delteo, mi pago fue rechazado y quiero hacer el pedido de otra forma.')} target="_blank" rel="noopener noreferrer"
+                        onClick={() => track('whatsapp_click', { location: 'pago_rechazado' })}>
                         <Icono nombre="whatsapp" />Pedir por WhatsApp
                     </a>
                 </section>
