@@ -2191,7 +2191,8 @@ ul {
   transition: background-color .15s ease-out, transform .15s ease-out;
 }
 
-.pdp .pdp-boton {
+.pdp .pdp-boton,
+.home .pdp-boton {
   font-size: 17px;
 }
 
@@ -2389,7 +2390,8 @@ ul {
   transform: rotate(180deg);
 }
 
-.pdp .pdp-faq details p {
+.pdp .pdp-faq details p,
+.home .pdp-faq details p {
   padding: 0 0 14px;
 }
 
@@ -2408,7 +2410,8 @@ ul {
   display: none;
 }
 
-.pdp .pdp-card {
+.pdp .pdp-card,
+.home .pdp-card {
   flex: 0 0 44%;
   max-width: 200px;
   scroll-snap-align: start;
@@ -2438,7 +2441,8 @@ ul {
   padding: 10px 10px 12px;
 }
 
-.pdp .pdp-card-nombre {
+.pdp .pdp-card-nombre,
+.home .pdp-card-nombre {
   font-size: 14px;
   line-height: 1.25;
   display: -webkit-box;
@@ -2448,7 +2452,8 @@ ul {
   margin-bottom: 6px;
 }
 
-.pdp .pdp-card-precio {
+.pdp .pdp-card-precio,
+.home .pdp-card-precio {
   font-family: var(--fuente-display);
   font-weight: 800;
   font-size: 17px;
@@ -2487,6 +2492,7 @@ ul {
 }
 
 .pdp .pdp-boton-wa,
+.home .pdp-boton-wa,
 .pdp-boton-secundario {
   display: inline-flex;
   align-items: center;
@@ -2859,7 +2865,8 @@ ul {
     padding-inline: 0;
   }
 
-  .pdp .pdp-card {
+  .pdp .pdp-card,
+  .home .pdp-card {
     flex-basis: 200px;
   }
 
@@ -3705,5 +3712,565 @@ header {
 
   .chk-spinner {
     animation-duration: 2s;
+  }
+}
+
+/* ------------------------------ HOME · REDISEÑO FASE 4 ------------------------------ */
+
+/* Barra de anuncio: un solo mensaje fijo, sin gradiente ni animación */
+.divanuncios {
+  background: var(--noche);
+  padding: .6rem 1rem;
+}
+
+.divanuncios p {
+  font-family: var(--fuente-texto);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.home {
+  font-family: var(--fuente-texto);
+  color: var(--tinta);
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+  padding-top: 112px; /* alto del header fijo + barra de anuncio */
+  padding-bottom: 32px;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.home p,
+.home li,
+.home a,
+.home summary {
+  font-size: inherit;
+}
+
+.home h1,
+.home h2,
+.home h3 {
+  text-align: left;
+  text-transform: none;
+  color: var(--noche);
+  font-family: var(--fuente-display);
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+
+.home ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home .home-h1 {
+  font-size: 30px;
+  line-height: 1.06;
+  margin: 14px 0 8px;
+}
+
+.home .home-h2 {
+  font-size: 21px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+.home .home-lede {
+  color: #4A5875;
+  margin-bottom: 14px;
+}
+
+.home-enlace {
+  color: var(--azul);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+/* Hero */
+.home-hero {
+  padding: 16px 16px 0;
+}
+
+.home-hero-media {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--azul);
+  /* Máx. 70% de la pantalla para que asome el bloque siguiente */
+  max-height: 70vh;
+}
+
+.home-hero-media video {
+  width: 100%;
+  height: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+  display: block;
+}
+
+.home-collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  padding: 6px;
+  aspect-ratio: 4 / 3;
+}
+
+.home-collage div {
+  background: var(--niebla);
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-collage div:first-child {
+  grid-row: span 2;
+}
+
+.home-collage img {
+  width: 92%;
+  height: 92%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.home-hero-cta {
+  margin-top: 4px;
+}
+
+/* Fila de confianza */
+.home .home-confianza {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 20px 0 8px;
+  padding: 12px 16px;
+  border-block: 1px solid #EEF2F8;
+}
+
+.home .home-confianza li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--tinta);
+  line-height: 1.2;
+}
+
+.home-confianza .pdp-icono {
+  width: 18px;
+  height: 18px;
+  color: var(--azul);
+}
+
+/* Secciones */
+.home-seccion {
+  padding: 28px 16px 0;
+  scroll-margin-top: 112px; /* el header fijo no tapa el bloque al que se ancla */
+}
+
+.home-seccion-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.home-seccion-cabecera .home-h2 {
+  margin: 0;
+}
+
+.home-carrusel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  margin-inline: -16px;
+  padding-inline: 16px;
+  scroll-padding-inline: 16px;
+}
+
+.home-carrusel::-webkit-scrollbar {
+  display: none;
+}
+
+.home .pdp-card {
+  flex: 0 0 46%;
+  text-decoration: none;
+}
+
+/* Promo (solo con campaña real) */
+.home-promo {
+  background: var(--azul-50);
+  border-radius: 16px;
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.home-promo .home-h2 {
+  margin: 0;
+}
+
+/* Familias */
+.home-familias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.home-familias a {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  min-height: 86px;
+  padding: 12px 12px 10px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--noche);
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+}
+
+.home-familias a span {
+  max-width: 70%;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.home-familias img {
+  position: absolute;
+  right: -8px;
+  bottom: -8px;
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.home-familia-todos {
+  background: var(--superficie);
+  align-items: center !important;
+  justify-content: space-between;
+  color: var(--azul) !important;
+}
+
+.home-familia-todos .pdp-icono {
+  color: var(--azul);
+}
+
+/* Edad */
+.home-edades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.home-edades a {
+  flex: 1 1 30%;
+  text-align: center;
+  border: 1.5px solid var(--linea);
+  border-radius: 999px;
+  padding: 11px 10px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--noche);
+  text-decoration: none;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (hover: hover) {
+  .home-edades a:hover,
+  .home-familias a:hover {
+    outline: 2px solid var(--azul);
+    outline-offset: 2px;
+  }
+}
+
+/* Por qué Delteo */
+.home-razones {
+  display: grid;
+  gap: 16px;
+}
+
+.home .home-razones li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.home-razones .pdp-icono {
+  width: 24px;
+  height: 24px;
+  color: var(--azul);
+  margin-top: 2px;
+}
+
+.home .home-razones h3 {
+  font-size: 16.5px;
+  margin: 0 0 2px;
+}
+
+.home .home-razones p {
+  font-size: 14.5px;
+}
+
+/* Quiénes somos */
+.home-nosotros {
+  display: grid;
+  gap: 14px;
+}
+
+.home-nosotros-fotos {
+  display: flex;
+  gap: 8px;
+}
+
+.home-nosotros-fotos img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--niebla);
+}
+
+.home-nosotros p {
+  margin-bottom: 10px;
+}
+
+.home-wa {
+  margin-top: 16px;
+  width: 100%;
+}
+
+/* Footer */
+footer.pie {
+  background: var(--noche);
+  border-radius: 2rem 2rem 0 0;
+  margin-top: 3rem;
+  padding: 24px 16px 20px;
+  font-family: var(--fuente-texto);
+  color: #C5D0E6;
+}
+
+.pie-contenido {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.pie .logo {
+  width: 15rem;
+  margin-bottom: 10px;
+}
+
+.pie p,
+.pie a {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.pie-marca p {
+  max-width: 34ch;
+}
+
+.pie-enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pie a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pie-enlaces a {
+  width: fit-content;
+}
+
+@media (hover: hover) {
+  .pie a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.pie-contacto {
+  display: grid;
+  gap: 6px;
+}
+
+.pie-contacto a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.pie-contacto .pdp-icono {
+  color: var(--whatsapp);
+}
+
+.pie-pagos {
+  color: #8F9DBD;
+}
+
+.pie-legal {
+  max-width: 1120px;
+  margin: 18px auto 0;
+  padding-top: 14px;
+  border-top: 1px solid #243562;
+  font-size: 12.5px;
+  color: #8F9DBD;
+}
+
+/* Checkout: descuento por pagar en línea */
+.chk-ahorro {
+  margin-left: 8px;
+  background: var(--menta);
+  color: #fff;
+  font-family: var(--fuente-texto);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.chk .chk-metodo-ahorro {
+  display: block;
+  margin-top: 4px;
+  color: var(--menta);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .home {
+    padding-top: 132px;
+  }
+
+  .home-seccion {
+    scroll-margin-top: 132px;
+  }
+
+  .home-hero {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 32px;
+    align-items: center;
+  }
+
+  .home-hero-media {
+    grid-row: span 3;
+  }
+
+  .home-collage {
+    aspect-ratio: 1;
+  }
+
+  .home .home-h1 {
+    font-size: 42px;
+    align-self: end;
+    margin-top: 0;
+  }
+
+  .home-hero-cta {
+    width: fit-content;
+    padding-inline: 32px;
+    align-self: start;
+  }
+
+  .home .home-confianza,
+  .home-seccion {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  .home .home-confianza {
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 48px;
+  }
+
+  .home .home-confianza li {
+    font-size: 14.5px;
+  }
+
+  .home-familias {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home-familias a {
+    min-height: 110px;
+    font-size: 15px;
+  }
+
+  .home-familias img {
+    width: 92px;
+    height: 92px;
+  }
+
+  .home-razones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 32px;
+  }
+
+  .home-carrusel {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  .home .pdp-card {
+    flex-basis: 220px;
+  }
+
+  .home-nosotros {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+  }
+
+  .home-wa {
+    width: fit-content;
+  }
+
+  .pie-contenido {
+    grid-template-columns: 1.4fr 1fr 1.2fr;
+    gap: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home * {
+    animation: none !important;
+    transition: none !important;
   }
 }

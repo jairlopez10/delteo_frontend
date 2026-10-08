@@ -6,6 +6,15 @@ export const METODO_WOMPI = 'wompi'
 
 export const CLAVE_PAGO_PENDIENTE = 'delteo_pago_pendiente'
 
+/*
+Descuento por pagar en línea (prepago). El backend aplica exactamente la misma fórmula
+y es él quien manda sobre el total: esto solo sirve para mostrarlo antes de cobrar.
+Se redondea a los $100 más cercanos para no mostrar valores con cifras sueltas.
+*/
+export const PORCENTAJE_PREPAGO = 0.05
+
+export const descuentoPrepago = subtotal => Math.round(subtotal * PORCENTAJE_PREPAGO / 100) * 100
+
 // Estados de pedido que devuelve el backend
 export const ESTADOS = {
   PENDIENTE: 'PENDIENTE_PAGO',

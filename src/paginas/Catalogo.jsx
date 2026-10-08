@@ -1,8 +1,10 @@
 import { useEffect, useState, useRef } from "react"
+import { useSearchParams } from "react-router-dom"
 import usePagina from "../hooks/usePagina"
 import productosdb from "../components/Productosdb";
 import Productocard from "../components/Productocard";
 import { itemDesdeProducto, track } from "../helpers/analytics";
+import { familiaPorSlug } from "../helpers/home";
 
 const LISTA_CATALOGO = { id: 'catalogo', nombre: 'Catálogo' }
 
@@ -15,10 +17,13 @@ const Catalogo = () => {
   })
 
   const { pagina, setpagina } = usePagina();
+  // La home enlaza aquí con ?familia= y ?edad=
+  const [parametrosurl] = useSearchParams();
+  const familia = familiaPorSlug(parametrosurl.get('familia'));
   const [seccionfiltro, setseccionfiltro] = useState(false);
   const [categoria, setcategoria] = useState('');
   const [genero, setgenero] = useState('');
-  const [edad, setedad] = useState('');
+  const [edad, setedad] = useState(parametrosurl.get('edad') || '');
   const [ordenar, setordenar] = useState('');
   const [preciomax, setpreciomax] = useState(190000);
   const [productosmostrar, setproductosmostrar] = useState(productosavailable);
@@ -80,6 +85,12 @@ const Catalogo = () => {
 
   }
 
+  // Familia elegida en la home (ids definidos en src/helpers/home.js)
+  const filtrarfamilia = (product) => {
+    if (!familia) return product;
+    if (familia.ids.includes(product.id)) return product;
+  }
+
   const filtrarcategoria = (product) => {
     if (categoria === "") return product
     if(product.categoria === categoria){
@@ -131,7 +142,7 @@ const Catalogo = () => {
 
   useEffect(() => {
     setpagina('inicio');
-    document.title = "Delteo | Jugueteria"
+    document.title = familia ? `Delteo | ${familia.nombre}` : "Delteo | Juguetería"
     window.scrollTo(0,0)
     cambiarbanners()
     
@@ -140,7 +151,7 @@ const Catalogo = () => {
 
 
   useEffect(() => {
-    let newlist = productosavailable.filter(filtrarcategoria).filter(filtrargenero).filter(filtraredad).filter(filtrarpreciomax);
+    let newlist = productosavailable.filter(filtrarfamilia).filter(filtrarcategoria).filter(filtrargenero).filter(filtraredad).filter(filtrarpreciomax);
 
     if(ordenar !== ""){
       if (ordenar === 'asc'){
@@ -151,7 +162,8 @@ const Catalogo = () => {
     }
     setproductosfiltrados(newlist);
     setnumpagina(1);
-  }, [categoria, genero, edad, preciomax, ordenar])
+    // familia?.slug: al cambiar de familia desde la home la URL cambia sin remontar la página
+  }, [categoria, genero, edad, preciomax, ordenar, familia?.slug])
 
   useEffect(() => {
     definirproductospagina();
@@ -166,7 +178,7 @@ const Catalogo = () => {
           {/*<img className="banner" src={`banner${idbanner}.webp`} alt="" />*/}
           <img className="banner" src={`banner2.webp`} alt="" />
         </div>
-        <h1 className="tituloproductos mb-8" ref={tituloproductosref}>Productos</h1>
+        <h1 className="tituloproductos mb-8" ref={tituloproductosref}>{familia ? familia.nombre : 'Productos'}</h1>
         <div className="divfiltronumpro">
           <div className="flex items-center justify-center gap-2 md:hidden cursor-pointer mb-4 filtrodiv" onClick={() => setseccionfiltro(!seccionfiltro)}>
             <svg xmlns="http://www.w3.org/2000/svg" className=" icon icon-tabler icon-tabler-adjustments-horizontal" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#3d3d3d" fill="none" strokeLinecap="round" strokeLinejoin="round">

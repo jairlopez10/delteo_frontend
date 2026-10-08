@@ -7,7 +7,7 @@ import Selectormunicipio from "../components/Selectormunicipio";
 import Icono from "../components/Icono";
 import { calcularEntrega, ciudadesEntrega, formatearFecha, guardarCiudad, leerCiudadGuardada } from "../helpers/entregas";
 import { enlaceWhatsapp, formatoCelular, formatoPrecio, guardarUltimoPedido, textoPedido } from "../helpers/pedido";
-import { guardarPagoPendiente, itemsParaBackend, leerPedidoId, METODO_CONTRAENTREGA, METODO_WOMPI, olvidarPedidoId } from "../helpers/pagos";
+import { descuentoPrepago, guardarPagoPendiente, itemsParaBackend, leerPedidoId, METODO_CONTRAENTREGA, METODO_WOMPI, olvidarPedidoId, PORCENTAJE_PREPAGO } from "../helpers/pagos";
 import { datosMeta, eventIdPurchase, itemsDesdeCarrito, leerAtribucion, marcarOcurrido, track, yaOcurrio } from "../helpers/analytics";
 
 const PEDIDO_MINIMO = 44900
@@ -72,7 +72,8 @@ const Checkout = () => {
     const [tocados, setTocados] = useState({});
     const [intentoEnvio, setIntentoEnvio] = useState(false);
     const [estado, setEstado] = useState('listo'); // listo | enviando | error
-    const [metodoPago, setMetodoPago] = useState(borrador.metodoPago || METODO_CONTRAENTREGA);
+    //Por defecto se ofrece el pago en línea, que trae descuento y evita rechazos en la entrega
+    const [metodoPago, setMetodoPago] = useState(borrador.metodoPago || METODO_WOMPI);
     // Si el backend recalcula un total distinto al del carrito, se muestra antes de cobrar
     const [avisoTotal, setAvisoTotal] = useState(null);
     const [erroresPago, setErroresPago] = useState([]);
@@ -102,8 +103,11 @@ const Checkout = () => {
         SUBTOTAL MINIMO DE $45.000
             SI HAY MAS DE 2 PRODUCTOS DE MENOS 20.000 = DESCUENTO DE $5.000
     */
-    const descuento = 0
+    const pagaEnLinea = metodoPago === METODO_WOMPI
+    //5% de descuento por pagar ahora. El backend aplica la misma regla y es el que manda.
+    const descuento = pagaEnLinea ? descuentoPrepago(subtotal) : 0
     const total = subtotal - descuento
+    const ahorroPrepago = descuentoPrepago(subtotal)
     const faltaParaMinimo = PEDIDO_MINIMO - subtotal
     const unidades = carrito.reduce((acumulado, item) => acumulado + Number(item.cantidad), 0)
     const errores = validar(datos, municipio)
@@ -111,7 +115,6 @@ const Checkout = () => {
     const entrega = municipio ? calcularEntrega(municipio) : null
     const enviando = estado === 'enviando'
     const hayProductos = carrito.length > 0
-    const pagaEnLinea = metodoPago === METODO_WOMPI
     //Si el backend corrigió el total, el botón muestra el valor que se va a cobrar
     const totalACobrar = avisoTotal !== null ? avisoTotal : total
     const textoBoton = enviando
@@ -514,33 +517,37 @@ const Checkout = () => {
                 <h2 id="chk-pago-titulo" className="chk-h2">¿Cómo quieres pagar?</h2>
 
                 <div className="chk-metodos">
-                    <label className={`chk-metodo ${!pagaEnLinea ? 'activo' : ''}`}>
-                        <input
-                            type="radio"
-                            name="pago"
-                            value={METODO_CONTRAENTREGA}
-                            checked={!pagaEnLinea}
-                            onChange={() => { setMetodoPago(METODO_CONTRAENTREGA); setAvisoTotal(null); setErroresPago([]) }}
-                        />
-                        <span className="chk-radio" aria-hidden="true" />
-                        <span>
-                            <strong><Icono nombre="efectivo" />Pagar al recibir</strong>
-                            Pagas en efectivo al transportador. Antes de despacharlo te confirmamos por WhatsApp.
-                        </span>
-                    </label>
-
                     <label className={`chk-metodo ${pagaEnLinea ? 'activo' : ''}`}>
                         <input
                             type="radio"
                             name="pago"
                             value={METODO_WOMPI}
                             checked={pagaEnLinea}
-                            onChange={() => { setMetodoPago(METODO_WOMPI); setEstado('listo') }}
+                            onChange={() => { setMetodoPago(METODO_WOMPI); setEstado('listo'); setAvisoTotal(null); setErroresPago([]); totalConfirmadoRef.current = null }}
                         />
                         <span className="chk-radio" aria-hidden="true" />
                         <span>
-                            <strong><Icono nombre="tarjeta" />Pagar ahora</strong>
+                            <strong>
+                                <Icono nombre="tarjeta" />Pagar ahora
+                                <span className="chk-ahorro">{Math.round(PORCENTAJE_PREPAGO * 100)}% de descuento</span>
+                            </strong>
                             Tarjeta, PSE, Nequi o Bancolombia. Pago seguro con Wompi; despachamos apenas se aprueba.
+                            {ahorroPrepago > 0 && <span className="chk-metodo-ahorro">Ahorras {formatoPrecio(ahorroPrepago)} en este pedido.</span>}
+                        </span>
+                    </label>
+
+                    <label className={`chk-metodo ${!pagaEnLinea ? 'activo' : ''}`}>
+                        <input
+                            type="radio"
+                            name="pago"
+                            value={METODO_CONTRAENTREGA}
+                            checked={!pagaEnLinea}
+                            onChange={() => { setMetodoPago(METODO_CONTRAENTREGA); setAvisoTotal(null); setErroresPago([]); totalConfirmadoRef.current = null }}
+                        />
+                        <span className="chk-radio" aria-hidden="true" />
+                        <span>
+                            <strong><Icono nombre="efectivo" />Pagar al recibir</strong>
+                            Pagas en efectivo al transportador. Antes de despacharlo te confirmamos por WhatsApp.
                         </span>
                     </label>
                 </div>
@@ -554,7 +561,10 @@ const Checkout = () => {
                 <h2 id="chk-total-titulo" className="sr-only">Total del pedido</h2>
                 <div className="chk-fila"><span>Subtotal</span><span>{formatoPrecio(subtotal)}</span></div>
                 {descuento > 0 && (
-                    <div className="chk-fila"><span>Descuento</span><span>- {formatoPrecio(descuento)}</span></div>
+                    <div className="chk-fila">
+                        <span>Descuento por pagar ahora ({Math.round(PORCENTAJE_PREPAGO * 100)}%)</span>
+                        <span className="chk-verde">- {formatoPrecio(descuento)}</span>
+                    </div>
                 )}
                 <div className="chk-fila"><span>Envío</span><span className="chk-verde">Gratis</span></div>
                 <div className="chk-fila chk-total"><span>Total</span><span>{formatoPrecio(total)}</span></div>
