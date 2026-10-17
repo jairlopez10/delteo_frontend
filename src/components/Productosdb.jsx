@@ -406,6 +406,14 @@ const productosdb = [
             {
                 id: 407,
                 texto: "Cafe"
+            },
+            {
+                id: 408,
+                texto: "Blanco"
+            },
+            {
+                id: 406,
+                texto: "Blanco con Negro"
             }
             ],
         edad: ["+3"],
