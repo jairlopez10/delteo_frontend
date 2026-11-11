@@ -243,7 +243,7 @@ const productoscontenido = {
   },
   395: {
     nombre: 'Lanzadora de hidrogel MP5 con luz y humo',
-    subtitulo: 'Silenciador con luz y humo, proveedor tipo granada y 10.000 orvis.',
+    subtitulo: 'Silenciador con luz y humo, proveedor tipo granada y 10.000 orvis fluorescentes.',
     destacados: [
       { titulo: 'Luz y humo en cada disparo', texto: 'El silenciador ilumina y echa humo sin pilas adicionales.', media: '/mp52025gifa.mp4' },
       { ...aireLibre, media: '/ak3.mp4' },
@@ -251,7 +251,7 @@ const productoscontenido = {
       // REVISAR: este GIF es de la M416 (venía así en Mp52025.jsx)
       { titulo: 'Alcance de hasta 25 metros', texto: 'Potencia para jugar en espacios abiertos.', media: '/m416b.mp4' }
     ],
-    incluye: ['Lanzadora de hidrogel MP5', 'Silenciador con luz y humo', 'Proveedor tipo granada', '10.000 orvis de hidrogel', 'Batería recargable', 'Cargador USB'],
+    incluye: ['Lanzadora de hidrogel MP5', 'Silenciador con luz y humo', 'Proveedor tipo granada', '10.000 orvis fluorescentes de hidrogel', 'Laser', 'Batería recargable', 'Cargador USB'],
     relacionados: [374, 375, 376, 377, 395, 401]
   },
   401: {

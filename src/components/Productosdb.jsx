@@ -40,25 +40,21 @@ const productosdb = [
         descripcion: ['Luz en el cañon', 'Humo en el cañon', 'Proveedor granada','Lanzadora', 'Bateria recargable', 'Cargador USB', 'Duracion bateria: 2h'],
         imagenes: [
             {
-                tipo: "imagen",
-                url: "/producto395a.webp" 
+                tipo: "video",
+                url: "/producto395f.mp4" 
             },
             {
                 tipo: "imagen",
-                url: "/producto395e.webp" 
+                url: "/producto395h.webp" 
             },
             {
                 tipo: "imagen",
-                url: "/producto395b.webp" 
+                url: "/producto395g.webp" 
             },
             {
                 tipo: "imagen",
-                url: "/producto395c.webp" 
+                url: "/producto395i.webp" 
             },
-            {
-                tipo: "imagen",
-                url: "/producto395d.webp" 
-            }
             
         ],
         status: "disponible",
