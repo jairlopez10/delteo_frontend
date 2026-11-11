@@ -245,11 +245,11 @@ const productoscontenido = {
     nombre: 'Lanzadora de hidrogel MP5 con luz y humo',
     subtitulo: 'Silenciador con luz y humo, proveedor tipo granada y 10.000 orvis fluorescentes.',
     destacados: [
-      { titulo: 'Luz y humo en cada disparo', texto: 'El silenciador ilumina y echa humo sin pilas adicionales.', media: '/mp52025gifa.mp4' },
-      { ...aireLibre, media: '/ak3.mp4' },
-      { ...orvisSinRastro, media: '/ak5.mp4' },
-      // REVISAR: este GIF es de la M416 (venía así en Mp52025.jsx)
-      { titulo: 'Alcance de hasta 25 metros', texto: 'Potencia para jugar en espacios abiertos.', media: '/m416b.mp4' }
+      // Videos propios del producto (clips de MP5LuzHumo/Raw_Footage, 3 s en bucle)
+      { titulo: 'Orvis que brillan en la oscuridad', texto: 'Vienen de regalo. Se hidratan en agua de 3 a 4 horas y quedan listas.', media: '/mp5395a.mp4' },
+      { titulo: 'Luz y humo en cada disparo', texto: 'El silenciador ilumina y echa humo sin pilas adicionales.', media: '/mp5395b.mp4' },
+      { titulo: 'Proveedor tipo granada', texto: 'Se llena de un solo golpe y se recarga en segundos.', media: '/mp5395c.mp4' },
+      { titulo: 'Alcance de hasta 25 metros', texto: 'La orvi se revienta al impactar y solo queda agua.', media: '/mp5395d.mp4' }
     ],
     incluye: ['Lanzadora de hidrogel MP5', 'Silenciador con luz y humo', 'Proveedor tipo granada', '10.000 orvis fluorescentes de hidrogel', 'Laser', 'Batería recargable', 'Cargador USB'],
     relacionados: [374, 375, 376, 377, 395, 401]
