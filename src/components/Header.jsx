@@ -1,11 +1,14 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react";
 import usePagina from "../hooks/usePagina"
+import useBlackfriday from "../hooks/useBlackfriday"
+import { campana } from "../helpers/blackfriday"
 
 const Header = () => {
 
     const { pagina, contador, setContador } = usePagina();
     const [menu, setmenu] = useState(false);
+    const blackfriday = useBlackfriday();
     // Un solo mensaje fijo: el descuento permanente de "toda la tienda" ya no existe
     const ANUNCIO = 'Envío gratis a toda Colombia · Pagas al recibir'
     // En la página de producto no hay barra de anuncio y el header se esconde al bajar
@@ -19,6 +22,15 @@ const Header = () => {
         const cont = JSON.parse(localStorage.getItem('carritojammy')) || []
         setContador(cont.length)
     }, [])
+
+    /*
+    La barra de Black Friday también se muestra en la página de producto, que normalmente
+    no lleva barra de anuncio. La clase en el <html> deja que el CSS ajuste el espacio
+    superior de cada página sin que los componentes se pasen la campaña entre ellos.
+    */
+    useEffect(() => {
+        document.documentElement.classList.toggle('bf-activo', blackfriday.activo)
+    }, [blackfriday.activo])
 
     useEffect(() => {
         setOculto(false)
@@ -39,10 +51,18 @@ const Header = () => {
   return (
     <>
         <header className={`${['inicio', 'mayorista'].some(item => pagina === item) ? '' : 'radiusnormal fixed w-full top-0'} ${esPaginaProducto ? 'header-producto' : ''} ${esPaginaProducto && oculto && !menu ? 'header-oculto' : ''}`}>
-            {!esPaginaProducto && !esCheckout && (
-                <div className="divanuncios">
-                    <p>{ANUNCIO}</p>
-                </div>
+            {blackfriday.activo ? (
+                !esCheckout && (
+                    <div className="divanuncios divanuncios-bf">
+                        <p>{campana.barra} <b>{blackfriday.texto}</b></p>
+                    </div>
+                )
+            ) : (
+                !esPaginaProducto && !esCheckout && (
+                    <div className="divanuncios">
+                        <p>{ANUNCIO}</p>
+                    </div>
+                )
             )}
             {esCheckout ? (
             <div className="divheader">

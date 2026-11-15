@@ -10,6 +10,8 @@ import Relacionados from "../components/Relacionados"
 import Icono from "../components/Icono"
 import Videodestacado from "../components/Videodestacado"
 import { datosMeta, itemDesdeProducto, track } from "../helpers/analytics"
+import useBlackfriday from "../hooks/useBlackfriday"
+import { campana, precioAntes, textoPorcentaje } from "../helpers/blackfriday"
 
 const envio = {
   pequeno: 10000,
@@ -41,6 +43,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
 
   const { setpagina, setContador } = usePagina()
   const navigate = useNavigate()
+  const blackfriday = useBlackfriday()
 
   //Remplaza las - por espacios para buscar el titulo
   const titulo = tituloUrl.replace(/-/g, " ")
@@ -112,6 +115,12 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
   const mostrarRating = contenido.rating && contenido.rating.total >= 5
   const finPromo = contenido.promoHasta ? new Date(`${contenido.promoHasta}T23:59:59-05:00`) : null
   const promoActiva = !esMayorista && contenido.precioAnterior > precioConEnvio && finPromo && finPromo >= new Date()
+  /*
+  Black Friday: el precio de hoy ya trae el descuento, así que el tachado se calcula
+  hacia arriba. Un precioAnterior escrito a mano en Productoscontenido manda sobre el cálculo.
+  */
+  const bfActivo = blackfriday.activo && !esMayorista
+  const antesBf = bfActivo ? (contenido.precioAnterior || precioAntes(precioConEnvio)) : null
   const bump = idlanzadorashidrogel.includes(producto.id)
     ? productosdb.find(item => item.id === ID_ORVIS && item.status === 'disponible')
     : null
@@ -242,8 +251,9 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
 
         <div className="pdp-info">
           {/* ZONA A: primer pantallazo */}
-          {(badges.length > 0 || edad) && (
+          {(bfActivo || badges.length > 0 || edad) && (
             <div className="pdp-badges">
+              {bfActivo && <span className="pdp-badge pdp-badge-bf">{campana.etiqueta}</span>}
               {badges.map(badge => <span key={badge} className="pdp-badge">{etiquetasBadge[badge]}</span>)}
               {edad && <span className="pdp-chip-edad">{edad}+ años</span>}
             </div>
@@ -266,7 +276,13 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
             ) : (
               <>
                 <p className="pdp-precio-actual">{formatoPrecio(precioConEnvio)}</p>
-                {promoActiva ? (
+                {bfActivo ? (
+                  <>
+                    <s className="pdp-precio-anterior">{formatoPrecio(antesBf)}</s>
+                    <span className="pdp-pct">{textoPorcentaje}</span>
+                    <span className="pdp-verde pdp-linea-llena">Envío gratis incluido</span>
+                  </>
+                ) : promoActiva ? (
                   <>
                     <s className="pdp-precio-anterior">{formatoPrecio(contenido.precioAnterior)}</s>
                     <span className="pdp-ahorro">
@@ -279,6 +295,13 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
               </>
             )}
           </div>
+
+          {bfActivo && (
+            <div className="pdp-reloj">
+              <Icono nombre="reloj" />
+              <span>La promoción se acaba en <b>{blackfriday.texto}</b></span>
+            </div>
+          )}
 
           {/* ZONA B: bloque de decisión */}
           {variantes ? (
@@ -327,7 +350,6 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
           <button ref={ctaRef} type="button" className="pdp-boton pdp-boton-cta" onClick={comprar}>
             Comprar ahora
           </button>
-          <p className="pdp-micro">Te confirmamos por WhatsApp antes de despacharlo</p>
 
           {contenido.regalo && (
             <div className="pdp-regalo">
@@ -444,8 +466,16 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
 
       <div className={`pdp-sticky ${ctaVisible ? 'oculto' : ''}`} aria-hidden={ctaVisible}>
         <div className="pdp-sticky-precio">
-          <strong>{formatoPrecio(precioVisible)}</strong>
-          <span>Pagas al recibir</span>
+          <span className="pdp-sticky-linea">
+            <strong>{formatoPrecio(precioVisible)}</strong>
+            {bfActivo && (
+              <>
+                <s>{formatoPrecio(antesBf)}</s>
+                <span className="pdp-pct">{textoPorcentaje}</span>
+              </>
+            )}
+          </span>
+          <span className="pdp-sticky-nota">Pagas al recibir</span>
         </div>
         <button type="button" className="pdp-boton" onClick={comprar} tabIndex={ctaVisible ? -1 : 0}>
           Comprar ahora

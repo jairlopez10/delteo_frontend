@@ -251,7 +251,7 @@ const productosdb = [
         id: 378,
         titulo: "Tiburon o Delfin Control Remoto",
         preciomayorista: 74900,
-        precio: 119900,
+        precio: 99900,
         descripcion: '',
         imagenes: [
             {

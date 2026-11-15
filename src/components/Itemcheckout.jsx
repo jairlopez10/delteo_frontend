@@ -1,4 +1,6 @@
 import { itemDesdeCarrito, track } from "../helpers/analytics"
+import useBlackfriday from "../hooks/useBlackfriday"
+import { precioAntes, textoPorcentaje } from "../helpers/blackfriday"
 
 // Solo GA4: en Meta, AddToCart queda para la intención de compra en la página de producto
 const reportarCambio = (evento, item, unidades) => {
@@ -9,6 +11,7 @@ const reportarCambio = (evento, item, unidades) => {
 const Itemcheckout = ({item, carritomostrar, setCarritoMostrar}) => {
 
     const { id, nombre, imagen, cantidad, precio } = item
+    const blackfriday = useBlackfriday()
 
     const eliminaritem = () => {
         const nuevocarrito = carritomostrar.filter(item => item.id !== id)
@@ -31,6 +34,7 @@ const Itemcheckout = ({item, carritomostrar, setCarritoMostrar}) => {
         <img src={imagen} className="chk-item-imagen" alt="" />
         <div className="chk-item-texto">
             <p className="chk-item-nombre">{nombre}</p>
+            {blackfriday.activo && <span className="card-pct chk-item-pct">{textoPorcentaje}</span>}
             <div className="chk-item-acciones">
                 <div className="cantidad-stepper" role="group" aria-label={`Cantidad de ${nombre}`}>
                     <button type="button" onClick={() => cambiarcantidad(-1)} disabled={Number(cantidad) <= 1} aria-label="Quitar una unidad">−</button>
@@ -40,7 +44,12 @@ const Itemcheckout = ({item, carritomostrar, setCarritoMostrar}) => {
                 <button type="button" className="chk-item-eliminar" onClick={() => eliminaritem()}>Eliminar</button>
             </div>
         </div>
-        <p className="chk-item-precio">{`$${(precio*cantidad).toLocaleString('es-CO', { maximumFractionDigits: 0 })}`}</p>
+        <p className="chk-item-precio">
+            {`$${(precio*cantidad).toLocaleString('es-CO', { maximumFractionDigits: 0 })}`}
+            {blackfriday.activo && (
+                <s>{`$${(precioAntes(precio)*cantidad).toLocaleString('es-CO')}`}</s>
+            )}
+        </p>
     </li>
   )
 }

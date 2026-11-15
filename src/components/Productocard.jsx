@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import usePagina from "../hooks/usePagina";
 import { itemDesdeProducto, track } from "../helpers/analytics";
+import useBlackfriday from "../hooks/useBlackfriday";
+import { precioAntes, textoPorcentaje } from "../helpers/blackfriday";
 
 // lista e indice: solo los listados que se miden (el catálogo mayorista no los pasa)
 const Productocard = ({producto, lista, indice}) => {
@@ -9,6 +11,7 @@ const Productocard = ({producto, lista, indice}) => {
     const {titulo, precio, imagenes, preciomayorista} = producto;
 
     const { pagina } = usePagina();
+    const blackfriday = useBlackfriday();
     let tipocliente;
     let precioshow
     const envios = {
@@ -50,11 +53,17 @@ const Productocard = ({producto, lista, indice}) => {
     <>
         <div className="productocard cursor-pointer" onClick={abrir}>
             <div className="div-imagen-prodcard">
+              {/* El mayorista no entra en la campaña */}
+              {blackfriday.activo && tipocliente === "d" && <span className="card-pct">{textoPorcentaje}</span>}
               <img src={imagenes[0].url} className="cursor-pointer imagencard" alt={`Imagen ${titulo}`} />
             </div>
             <div className="contenidocard">
                 <p className="titulo cursor-pointer hover:underline" >{titulo}</p>
-                <p className="precio cursor-pointer" >{tipocliente === "d" ? "" : "Precio Mayorista:"} <span className={`${tipocliente === "d" ? "" : "preciocard"}`}>{`$${precioshow.toLocaleString('es-CO')}`}</span></p>
+                <p className="precio cursor-pointer" >{tipocliente === "d" ? "" : "Precio Mayorista:"} <span className={`${tipocliente === "d" ? "" : "preciocard"}`}>{`$${precioshow.toLocaleString('es-CO')}`}</span>
+                  {blackfriday.activo && tipocliente === "d" && (
+                    <s className="card-antes">{`$${precioAntes(precioshow).toLocaleString('es-CO')}`}</s>
+                  )}
+                </p>
                 {tipocliente === "m" ? (
                   <>
                     <p className="precio cursor-pointer" >Precio Sugerido: <span className="preciocard">{`$${precio.toLocaleString('es-CO')}`}</span></p>

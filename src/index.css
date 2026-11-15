@@ -453,6 +453,7 @@ footer {
 .div-imagen-prodcard {
   background-color: white;
   border-radius: 1rem;
+  position: relative;
 }
 
 .contenidocard {
@@ -2423,6 +2424,7 @@ ul {
 }
 
 .pdp-card-imagen {
+  position: relative;
   aspect-ratio: 1;
   background: var(--niebla);
   display: flex;
@@ -2571,10 +2573,16 @@ ul {
   color: var(--noche);
 }
 
-.pdp-sticky-precio span {
+.pdp-sticky-nota {
   font-size: 12px;
   font-weight: 700;
   color: var(--menta);
+}
+
+.pdp-sticky-linea {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
 }
 
 .pdp-sticky .pdp-boton {
@@ -4273,4 +4281,234 @@ footer.pie {
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* ------------------------------ BLACK FRIDAY (campaña temporal) ------------------------------ */
+/* Todo lo de abajo solo se ve con la campaña encendida (src/helpers/blackfriday.js).
+   Regla: el negro marca la oferta, el amarillo sigue siendo el botón de comprar. */
+
+:root {
+  --bf-negro: #0A0A0A;
+}
+
+/* Barra superior: negra, con el contador en amarillo */
+.divanuncios-bf {
+  background: var(--bf-negro);
+}
+
+.divanuncios-bf p {
+  letter-spacing: .06em;
+}
+
+.divanuncios-bf b {
+  font-family: var(--fuente-texto);
+  color: var(--chispa);
+  margin-left: .6rem;
+  white-space: nowrap;
+}
+
+/* La página de producto normalmente no lleva barra: con campaña sí, y necesita ese espacio */
+.bf-activo .pdp {
+  padding-top: 118px;
+}
+
+@media (min-width: 768px) {
+  .bf-activo .pdp {
+    padding-top: 138px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bf-activo .pdp-galeria {
+    top: 130px;
+  }
+}
+
+/* Porcentaje: el mismo sello en la ficha, las tarjetas y el carrito */
+.pdp-pct,
+.card-pct {
+  display: inline-block;
+  background: var(--bf-negro);
+  color: #fff;
+  font-family: var(--fuente-texto);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .01em;
+  padding: 3px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+  line-height: 1.25;
+}
+
+.pdp-sticky .pdp-pct {
+  font-size: 11.5px;
+  padding: 2px 7px;
+}
+
+.card-pct {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: 1;
+  font-size: 11px;
+  padding: 3px 8px;
+}
+
+.pdp-badge-bf {
+  background: var(--bf-negro);
+}
+
+/* "Envío gratis incluido" baja a su propia línea, debajo del precio */
+.pdp-linea-llena {
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Contador de la ficha de producto */
+.pdp-reloj {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bf-negro);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.pdp-reloj .pdp-icono {
+  color: var(--chispa);
+}
+
+.pdp-reloj b {
+  color: var(--chispa);
+  white-space: nowrap;
+}
+
+/* Precio anterior en las tarjetas */
+.card-antes {
+  color: var(--tinta-muted);
+  font-family: var(--fuente-texto);
+  font-weight: 500;
+  font-size: 13px;
+  margin-left: 7px;
+}
+
+.pdp-sticky-precio s {
+  font-size: 12.5px;
+  color: var(--tinta-muted);
+  font-weight: 500;
+}
+
+/* El catálogo viejo tiene su propia escala de rem */
+.productocard .card-antes {
+  font-size: 1.4rem;
+}
+
+/* Bloque de ofertas de la home */
+.home-seccion.home-bf {
+  background: var(--bf-negro);
+  color: #D7DEEC;
+  padding-block: 24px 26px;
+  margin-top: 28px;
+  border-radius: 18px;
+  margin-inline: 16px;
+}
+
+.home .home-bf .home-h2 {
+  color: #fff;
+}
+
+.home-bf-dato {
+  font-family: var(--fuente-texto);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--chispa);
+  white-space: nowrap;
+}
+
+.home-bf .home-carrusel {
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
+.home-bf-todos {
+  display: inline-block;
+  margin-top: 16px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Botón del hero durante la campaña */
+.pdp-boton-bf {
+  background: var(--bf-negro);
+  color: #fff;
+  box-shadow: none;
+}
+
+.pdp-boton-bf:active {
+  background: #262626;
+}
+
+@media (hover: hover) {
+  .pdp-boton-bf:hover {
+    background: #262626;
+  }
+}
+
+/* Checkout */
+.chk-item-pct {
+  position: static;
+  margin-top: 4px;
+  font-size: 10.5px;
+  padding: 2px 7px;
+}
+
+.chk .chk-item-precio s {
+  display: block;
+  font-family: var(--fuente-texto);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--tinta-muted);
+  margin-top: 2px;
+}
+
+.chk-rojo {
+  color: var(--coral);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .home-seccion.home-bf {
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+}
+
+/* Con el tachado y el −30%, la barra fija necesita apretar un poco el precio
+   para que "Comprar ahora" no se parta en dos líneas */
+.bf-activo .pdp-sticky-precio strong {
+  font-size: 17px;
+}
+
+.bf-activo .pdp-sticky-precio s {
+  font-size: 11.5px;
+}
+
+.bf-activo .pdp-sticky .pdp-pct {
+  font-size: 10.5px;
+  padding: 2px 6px;
+}
+
+.bf-activo .pdp-sticky-linea {
+  gap: 5px;
+}
+
+.bf-activo .pdp-sticky .pdp-boton {
+  white-space: nowrap;
+  padding-inline: 12px;
 }

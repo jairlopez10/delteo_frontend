@@ -7,6 +7,8 @@ import Icono from "../components/Icono"
 import { edades, familias, hero, masPedidos, preguntas, promo, razones } from "../helpers/home"
 import { itemDesdeProducto, track } from "../helpers/analytics"
 import { WHATSAPP_DELTEO } from "../helpers/pedido"
+import useBlackfriday from "../hooks/useBlackfriday"
+import { campana, precioAntes, textoPorcentaje } from "../helpers/blackfriday"
 
 const LISTA = { item_list_id: 'mas_pedidos', item_list_name: 'Los más pedidos' }
 const envio = { pequeno: 10000, grande: 20000 }
@@ -58,6 +60,7 @@ const Heromedia = () => {
 const Home = () => {
 
   const { setpagina } = usePagina()
+  const blackfriday = useBlackfriday()
   const carruselRef = useRef(null)
 
   const destacados = masPedidos
@@ -97,8 +100,10 @@ const Home = () => {
       <section className="home-hero">
         <Heromedia />
         <h1 className="home-h1">{hero.titulo}</h1>
-        <p className="home-lede">{hero.texto}</p>
-        <a href="#mas-pedidos" className="pdp-boton home-hero-cta">{hero.cta}</a>
+        <p className="home-lede">{blackfriday.activo ? campana.subtituloHero : hero.texto}</p>
+        <a href="#mas-pedidos" className={`pdp-boton home-hero-cta ${blackfriday.activo ? 'pdp-boton-bf' : ''}`}>
+          {blackfriday.activo ? campana.ctaHero : hero.cta}
+        </a>
       </section>
 
       {/* CONFIANZA */}
@@ -109,14 +114,18 @@ const Home = () => {
       </ul>
 
       {/* LOS MÁS PEDIDOS */}
-      <section className="home-seccion" id="mas-pedidos">
+      {/* Durante la campaña este mismo bloque se vuelve el de ofertas, sobre fondo negro */}
+      <section className={`home-seccion ${blackfriday.activo ? 'home-bf' : ''}`} id="mas-pedidos">
         <div className="home-seccion-cabecera">
-          <h2 className="home-h2">Los más pedidos</h2>
-          <Link to="/juguetes" className="home-enlace">Ver todos</Link>
+          <h2 className="home-h2">{blackfriday.activo ? campana.tituloOfertas : 'Los más pedidos'}</h2>
+          {blackfriday.activo
+            ? <span className="home-bf-dato">{textoPorcentaje} en todo</span>
+            : <Link to="/juguetes" className="home-enlace">Ver todos</Link>}
         </div>
         <div className="home-carrusel" ref={carruselRef}>
           {destacados.map((producto, i) => {
             const edad = producto.edad2?.replace(/\D/g, '')
+            const precio = precioConEnvio(producto.precio)
             return (
               <Link
                 key={producto.id}
@@ -125,17 +134,24 @@ const Home = () => {
                 onClick={() => track('select_item', { ...LISTA, items: [itemDesdeProducto(producto, { index: i, ...LISTA })] })}
               >
                 <div className="pdp-card-imagen">
+                  {blackfriday.activo && <span className="card-pct">{textoPorcentaje}</span>}
                   <img src={producto.imagenes[0].url} alt="" loading="lazy" decoding="async" />
                 </div>
                 <div className="pdp-card-texto">
                   <p className="pdp-card-nombre">{productoscontenido[producto.id]?.nombre || producto.titulo}</p>
                   {edad && <span className="pdp-chip-edad">{edad}+ años</span>}
-                  <p className="pdp-card-precio">{formatoPrecio(precioConEnvio(producto.precio))}</p>
+                  <p className="pdp-card-precio">
+                    {formatoPrecio(precio)}
+                    {blackfriday.activo && <s className="card-antes">{formatoPrecio(precioAntes(precio))}</s>}
+                  </p>
                 </div>
               </Link>
             )
           })}
         </div>
+        {blackfriday.activo && (
+          <Link to="/juguetes" className="home-bf-todos">Ver todos los juguetes</Link>
+        )}
       </section>
 
       {/* PROMO (solo cuando hay campaña real) */}

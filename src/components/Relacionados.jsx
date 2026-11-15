@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import productosdb from "./Productosdb"
 import productoscontenido from "./Productoscontenido"
 import { itemDesdeProducto, track } from "../helpers/analytics"
+import useBlackfriday from "../hooks/useBlackfriday"
+import { precioAntes, textoPorcentaje } from "../helpers/blackfriday"
 
 const LISTA = { item_list_id: 'relacionados', item_list_name: 'También les encanta' }
 
@@ -12,6 +14,7 @@ const envio = { pequeno: 10000, grande: 20000 }
 // si no, productos con página nueva y disponibles, primero los de la misma edad
 const Relacionados = ({ producto, tipocliente }) => {
 
+  const blackfriday = useBlackfriday()
   const nombresActual = [producto.titulo, productoscontenido[producto.id]?.nombre]
   const elegidos = productoscontenido[producto.id]?.relacionados
   const candidatos = elegidos
@@ -63,12 +66,18 @@ const Relacionados = ({ producto, tipocliente }) => {
               onClick={() => track('select_item', { ...LISTA, items: [itemDesdeProducto(item, { index: i, ...LISTA })] })}
             >
               <div className="pdp-card-imagen">
+                {blackfriday.activo && tipocliente !== 'm' && <span className="card-pct">{textoPorcentaje}</span>}
                 <img src={item.imagenes[0].url} alt="" loading="lazy" decoding="async" />
               </div>
               <div className="pdp-card-texto">
                 <p className="pdp-card-nombre">{productoscontenido[item.id]?.nombre || item.titulo}</p>
                 {edad && <span className="pdp-chip-edad">{edad}+ años</span>}
-                <p className="pdp-card-precio">${precio.toLocaleString('es-CO', { maximumFractionDigits: 0 })}</p>
+                <p className="pdp-card-precio">
+                  ${precio.toLocaleString('es-CO', { maximumFractionDigits: 0 })}
+                  {blackfriday.activo && tipocliente !== 'm' && (
+                    <s className="card-antes">${precioAntes(precio).toLocaleString('es-CO')}</s>
+                  )}
+                </p>
               </div>
             </Link>
           )

@@ -9,6 +9,8 @@ import { calcularEntrega, ciudadesEntrega, formatearFecha, guardarCiudad, leerCi
 import { enlaceWhatsapp, formatoCelular, formatoPrecio, guardarUltimoPedido, textoPedido } from "../helpers/pedido";
 import { descuentoPrepago, guardarPagoPendiente, itemsParaBackend, leerPedidoId, METODO_CONTRAENTREGA, METODO_WOMPI, olvidarPedidoId, PORCENTAJE_PREPAGO } from "../helpers/pagos";
 import { datosMeta, eventIdPurchase, itemsDesdeCarrito, leerAtribucion, marcarOcurrido, track, yaOcurrio } from "../helpers/analytics";
+import useBlackfriday from "../hooks/useBlackfriday";
+import { precioAntes, textoPorcentaje } from "../helpers/blackfriday";
 
 const PEDIDO_MINIMO = 44900
 const CLAVE_BORRADOR = 'delteo_checkout_borrador'
@@ -56,6 +58,7 @@ const Checkout = () => {
 
     const { setpagina, setContador } = usePagina();
     const navegar = useNavigate()
+    const blackfriday = useBlackfriday();
 
     const [carrito, setCarrito] = useState(() => leerJSON('carritojammy', []));
     const [borrador] = useState(() => leerJSON(CLAVE_BORRADOR, {}));
@@ -109,6 +112,9 @@ const Checkout = () => {
     const total = subtotal - descuento
     const ahorroPrepago = descuentoPrepago(subtotal)
     const faltaParaMinimo = PEDIDO_MINIMO - subtotal
+    //Suma de los precios "antes" de Black Friday, solo para mostrar el desglose
+    const precioNormal = carrito.reduce((acumulado, item) => acumulado + item.cantidad * precioAntes(item.precio), 0)
+    const descuentoBf = blackfriday.activo ? precioNormal - subtotal : 0
     const unidades = carrito.reduce((acumulado, item) => acumulado + Number(item.cantidad), 0)
     const errores = validar(datos, municipio)
     const errorVisible = campo => (intentoEnvio || tocados[campo]) ? errores[campo] : undefined
@@ -559,11 +565,21 @@ const Checkout = () => {
 
             <section className="chk-card chk-totales" aria-labelledby="chk-total-titulo">
                 <h2 id="chk-total-titulo" className="sr-only">Total del pedido</h2>
-                <div className="chk-fila"><span>Subtotal</span><span>{formatoPrecio(subtotal)}</span></div>
+                {descuentoBf > 0 ? (
+                    <>
+                        <div className="chk-fila"><span>Precio normal</span><span>{formatoPrecio(precioNormal)}</span></div>
+                        <div className="chk-fila">
+                            <span>Black Friday ({textoPorcentaje})</span>
+                            <span className="chk-rojo">− {formatoPrecio(descuentoBf)}</span>
+                        </div>
+                    </>
+                ) : (
+                    <div className="chk-fila"><span>Subtotal</span><span>{formatoPrecio(subtotal)}</span></div>
+                )}
                 {descuento > 0 && (
                     <div className="chk-fila">
                         <span>Descuento por pagar ahora ({Math.round(PORCENTAJE_PREPAGO * 100)}%)</span>
-                        <span className="chk-verde">- {formatoPrecio(descuento)}</span>
+                        <span className="chk-rojo">− {formatoPrecio(descuento)}</span>
                     </div>
                 )}
                 <div className="chk-fila"><span>Envío</span><span className="chk-verde">Gratis</span></div>
