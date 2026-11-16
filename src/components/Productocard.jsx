@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import usePagina from "../hooks/usePagina";
 import { itemDesdeProducto, track } from "../helpers/analytics";
 import useBlackfriday from "../hooks/useBlackfriday";
+import { imagenPrincipal } from "../helpers/imagenes"
 import { precioAntes, textoPorcentaje } from "../helpers/blackfriday";
 
 // lista e indice: solo los listados que se miden (el catálogo mayorista no los pasa)
 const Productocard = ({producto, lista, indice}) => {
 
-    const {titulo, precio, imagenes, preciomayorista} = producto;
+    const {titulo, precio, preciomayorista, edad2} = producto;
 
     const { pagina } = usePagina();
     const blackfriday = useBlackfriday();
@@ -46,7 +46,7 @@ const Productocard = ({producto, lista, indice}) => {
           items: [itemDesdeProducto(producto, { index: indice, item_list_id: lista.id, item_list_name: lista.nombre })]
         })
       }
-      window.open(`/${titulourl}/${tipocliente}`)
+      navegar(`/${titulourl}/${tipocliente}`)
     }
 
   return (
@@ -55,10 +55,11 @@ const Productocard = ({producto, lista, indice}) => {
             <div className="div-imagen-prodcard">
               {/* El mayorista no entra en la campaña */}
               {blackfriday.activo && tipocliente === "d" && <span className="card-pct">{textoPorcentaje}</span>}
-              <img src={imagenes[0].url} className="cursor-pointer imagencard" alt={`Imagen ${titulo}`} />
+              <img src={imagenPrincipal(producto)} className="cursor-pointer imagencard" alt={`Imagen ${titulo}`} />
             </div>
             <div className="contenidocard">
                 <p className="titulo cursor-pointer hover:underline" >{titulo}</p>
+                {edad2 && tipocliente === "d" && <span className="card-edad">{edad2.replace(/\D/g, '')}+ años</span>}
                 <p className="precio cursor-pointer" >{tipocliente === "d" ? "" : "Precio Mayorista:"} <span className={`${tipocliente === "d" ? "" : "preciocard"}`}>{`$${precioshow.toLocaleString('es-CO')}`}</span>
                   {blackfriday.activo && tipocliente === "d" && (
                     <s className="card-antes">{`$${precioAntes(precioshow).toLocaleString('es-CO')}`}</s>

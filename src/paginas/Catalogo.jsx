@@ -3,10 +3,36 @@ import { useSearchParams } from "react-router-dom"
 import usePagina from "../hooks/usePagina"
 import productosdb from "../components/Productosdb";
 import Productocard from "../components/Productocard";
+import Bottomsheet from "../components/Bottomsheet";
 import { itemDesdeProducto, track } from "../helpers/analytics";
-import { familiaPorSlug } from "../helpers/home";
+import { familiaPorSlug, familias } from "../helpers/home";
 
 const LISTA_CATALOGO = { id: 'catalogo', nombre: 'Catálogo' }
+
+/*
+Todos los filtros viven dentro de la hoja "Filtrar y ordenar": tipo de juguete
+(las familias de helpers/home.js), para quién, edad, precio y orden.
+*/
+const OPCIONES_GENERO = [
+  { valor: '', etiqueta: 'Todos' },
+  { valor: 'ninas', etiqueta: 'Niñas' },
+  { valor: 'ninos', etiqueta: 'Niños' },
+  { valor: 'unisex', etiqueta: 'Unisex' }
+]
+
+const OPCIONES_EDAD = [
+  { valor: '', etiqueta: 'Todas' },
+  { valor: '+0', etiqueta: '0 a 2' },
+  { valor: '+3', etiqueta: '3 a 5' },
+  { valor: '+6', etiqueta: '6 a 8' },
+  { valor: '+8', etiqueta: '8 o más' }
+]
+
+const OPCIONES_ORDEN = [
+  { valor: '', etiqueta: 'Más pedidos' },
+  { valor: 'asc', etiqueta: 'Menor precio' },
+  { valor: 'des', etiqueta: 'Mayor precio' }
+]
 
 const Catalogo = () => {
 
@@ -16,12 +42,11 @@ const Catalogo = () => {
     }
   })
 
-  const { pagina, setpagina } = usePagina();
-  // La home enlaza aquí con ?familia= y ?edad=
-  const [parametrosurl] = useSearchParams();
+  const { setpagina } = usePagina();
+  // La home enlaza aquí con ?familia= y ?edad=; la hoja de filtros también escribe aquí
+  const [parametrosurl, setParametrosurl] = useSearchParams();
   const familia = familiaPorSlug(parametrosurl.get('familia'));
   const [seccionfiltro, setseccionfiltro] = useState(false);
-  const [categoria, setcategoria] = useState('');
   const [genero, setgenero] = useState('');
   const [edad, setedad] = useState(parametrosurl.get('edad') || '');
   const [ordenar, setordenar] = useState('');
@@ -29,59 +54,53 @@ const Catalogo = () => {
   const [productosmostrar, setproductosmostrar] = useState(productosavailable);
   const [productosfiltrados, setproductosfiltrados] = useState(productosavailable);
   const [numpagina, setnumpagina] = useState(1);
-  const [idbanner, setIdbanner] = useState(1);
   const tituloproductosref = useRef(null);
   // Último listado reportado: al montar, los efectos arman la misma página 2 veces
   const listaReportadaRef = useRef('');
-  const bannersid = [1, 2, 3]
  
   const MIN = 5000;
   const MAX = 190000;
   const STEP = 5000;
   const numproductospag = 12;
 
-  const definirpaginadores = () => {
+  // Cuántos filtros hay puestos: es el número del botón "Filtrar y ordenar"
+  const filtrosActivos = [familia, genero, edad, ordenar, preciomax < MAX].filter(Boolean).length
 
-    const numpaginadores = Math.ceil(productosfiltrados.length / numproductospag);
-    
-    let arraypaginas = []
-
-    for(let i=1; i<=numpaginadores; i++){
-      arraypaginas.push(i);
-    }
-
-    return arraypaginas;
-
+  const elegirFamilia = (slug) => {
+    const parametros = {}
+    if (slug) parametros.familia = slug
+    if (edad) parametros.edad = edad
+    setParametrosurl(parametros, { replace: true })
   }
 
+  const limpiarFiltros = () => {
+    setgenero('')
+    setedad('')
+    setordenar('')
+    setpreciomax(MAX)
+    setParametrosurl({}, { replace: true })
+  }
+
+  /*
+  Sin paginación: la grilla arranca con 12 y "Ver más" agrega otros 12 sin recargar
+  ni perder el scroll. `numpagina` es cuántos bloques de 12 están visibles.
+  */
   const definirproductospagina = () => {
 
-    let iteradormax = numpagina * numproductospag;
-    let iteradormin = iteradormax - numproductospag;
-
-    //Define si el listado de productos es menor que el iteradormayor definido inicial
-    if (productosfiltrados.length <= iteradormax) iteradormax = productosfiltrados.length;
-
-    let nuevolistado = [];
-
-    for (let i=iteradormin; i<iteradormax; i++){
-      nuevolistado.push(productosfiltrados[i]);
-    }
+    const nuevolistado = productosfiltrados.slice(0, numpagina * numproductospag);
 
     setproductosmostrar(nuevolistado);
 
-    // view_item_list con los productos visibles; se repite solo si cambian (página o filtros)
+    // view_item_list con los productos visibles; se repite solo si cambian (ver más o filtros)
     const firma = nuevolistado.map(producto => producto.id).join(',');
     if (nuevolistado.length > 0 && firma !== listaReportadaRef.current) {
       listaReportadaRef.current = firma;
       track('view_item_list', {
         item_list_id: LISTA_CATALOGO.id,
         item_list_name: LISTA_CATALOGO.nombre,
-        items: nuevolistado.map((producto, i) => itemDesdeProducto(producto, { index: iteradormin + i }))
+        items: nuevolistado.map((producto, i) => itemDesdeProducto(producto, { index: i }))
       });
     }
-
-    definirpaginadores();
 
   }
 
@@ -89,13 +108,6 @@ const Catalogo = () => {
   const filtrarfamilia = (product) => {
     if (!familia) return product;
     if (familia.ids.includes(product.id)) return product;
-  }
-
-  const filtrarcategoria = (product) => {
-    if (categoria === "") return product
-    if(product.categoria === categoria){
-      return product;
-    }
   }
 
   const filtrargenero = (product) => {
@@ -126,32 +138,16 @@ const Catalogo = () => {
     if (product.precio <= preciomax) return product;
   }
 
-  const cambiarbanners = () => {
-    setTimeout(() => {
-      if(idbanner === 2){
-        setIdbanner(1)
-      } else {
-        setIdbanner(idbanner+1)
-      }
-    }, 4000);
-  }
-
-  useEffect(() => {
-    cambiarbanners()
-  }, [idbanner])
-
   useEffect(() => {
     setpagina('inicio');
     document.title = familia ? `Delteo | ${familia.nombre}` : "Delteo | Juguetería"
     window.scrollTo(0,0)
-    cambiarbanners()
-    
   },[])
 
 
 
   useEffect(() => {
-    let newlist = productosavailable.filter(filtrarfamilia).filter(filtrarcategoria).filter(filtrargenero).filter(filtraredad).filter(filtrarpreciomax);
+    let newlist = productosavailable.filter(filtrarfamilia).filter(filtrargenero).filter(filtraredad).filter(filtrarpreciomax);
 
     if(ordenar !== ""){
       if (ordenar === 'asc'){
@@ -163,7 +159,7 @@ const Catalogo = () => {
     setproductosfiltrados(newlist);
     setnumpagina(1);
     // familia?.slug: al cambiar de familia desde la home la URL cambia sin remontar la página
-  }, [categoria, genero, edad, preciomax, ordenar, familia?.slug])
+  }, [genero, edad, preciomax, ordenar, familia?.slug])
 
   useEffect(() => {
     definirproductospagina();
@@ -174,79 +170,108 @@ const Catalogo = () => {
   return (
     <>
       <div className="seccionproductos contenedor">
-        <div className="div-banner">
-          {/*<img className="banner" src={`banner${idbanner}.webp`} alt="" />*/}
-          <img className="banner" src={`banner2.webp`} alt="" />
+        <div className="cat-encabezado" ref={tituloproductosref}>
+          <h1 className="cat-titulo">{familia ? familia.nombre : 'Juguetería'}</h1>
+          <p className="cat-lede">{familia ? 'Todo lo que tenemos de esta familia, con envío gratis.' : 'Juguetes elegidos uno por uno. Si no esta el que quieres escribe un comentario'}</p>
         </div>
-        <h1 className="tituloproductos mb-8" ref={tituloproductosref}>{familia ? familia.nombre : 'Productos'}</h1>
-        <div className="divfiltronumpro">
-          <div className="flex items-center justify-center gap-2 md:hidden cursor-pointer mb-4 filtrodiv" onClick={() => setseccionfiltro(!seccionfiltro)}>
-            <svg xmlns="http://www.w3.org/2000/svg" className=" icon icon-tabler icon-tabler-adjustments-horizontal" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#3d3d3d" fill="none" strokeLinecap="round" strokeLinejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-              <path d="M14 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-              <path d="M4 6l8 0" />
-              <path d="M16 6l4 0" />
-              <path d="M8 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-              <path d="M4 12l2 0" />
-              <path d="M10 12l10 0" />
-              <path d="M17 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-              <path d="M4 18l11 0" />
-              <path d="M19 18l1 0" />
+        <div className="cat-barra-filtros">
+          <button type="button" className="cat-boton-filtros" onClick={() => setseccionfiltro(true)}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" strokeWidth="1.9" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M4 6h16M4 12h10M4 18h5" />
             </svg>
-            <p className="filtrotext">Filtrar y ordenar</p>
-          </div>
-          <p className="filtrotext">{productosfiltrados.length + ' productos'}</p>
+            Filtrar y ordenar
+            {filtrosActivos > 0 && <span className="cat-filtros-badge">{filtrosActivos}</span>}
+          </button>
+          <p className="cat-cuenta">{productosfiltrados.length} {productosfiltrados.length === 1 ? 'juguete' : 'juguetes'}</p>
         </div>
-        
-        <div className="productos">
-          <div className={`${seccionfiltro ? 'flex' : 'hidden'} md:flex seccionfiltros`}>
-            <select name="genero" id="genero" onChange={(e) => setgenero(e.target.value)}>
-              <option value="">{genero === "" ? "Genero" : "Todos los generos"}</option>
-              <option value="unisex">Unisex</option>
-              <option value="ninas">Niñas</option>
-              <option value="ninos">Niños</option>
-            </select>
-            {/*
-            <select name="categoria" id="categoria" onChange={(e) => setcategoria(e.target.value)}>
-              <option value="" >{categoria === "" ? "Categoria" : "Todas las categorias"}</option>
-              <option value="carros-impulso">Carros de Pila e Impulso</option>
-              <option value="carros-control">Carros de Control Remoto</option>
-              <option value="didacticos">Didacticos</option>
-              <option value="mascotas">Mascotas y Animales</option>
-              <option value="munecas">Muñecas & Bebes</option>
-              <option value="munecos">Muñecos & Figuras de Acción</option>
-              <option value="punteria">Punteria</option>
-              <option value="maquillaje">Maquillaje y Belleza</option>
-              <option value="doctor-cocina">Doctor y Cocina</option>
-              <option value="educativo">Interactivo y Educativo</option>
-              <option value="peluches">Peluches</option>
-              <option value="dinosaurios">Dinosaurios</option>
-              <option value="organetas-guitarras">Organetas & Guitarras</option>
-              <option value="legos">Legos & Armables</option>
-            </select>
-            */
-            }
-            <select name="edad" id="edad" onChange={e => setedad(e.target.value)}>
-              <option value="">{edad === "" ? "Edad" : "Todas las edades"}</option>
-              <option value="+0">Entre 0-2 años</option>
-              <option value="+3">Entre 2-5 años</option>
-              <option value="+6">Entre 6-8 Años</option>
-              <option value="+8">Mas de 8 Años</option>
-            </select>
-            <select name="ordenar" id="ordenar" onChange={e => setordenar(e.target.value)}>
-              <option value="">{ordenar === "" ? "Ordenar" : "Mayor Relevancia"}</option>
-              <option value="asc">Precio menor a mayor</option>
-              <option value="des">Precio mayor a menor</option>
-            </select>
-            <div className="preciosrange">
-              <p>Rango Precios</p>
-              <input type="range" defaultValue={MAX} onChange={e => setpreciomax(+e.target.value)} min={MIN} max={MAX} step={STEP} className="range"/>
-              <div className="rangeprices">
-                <p>{`$${MIN.toLocaleString('es-CO')}`}</p>
-                <p>{`$${preciomax.toLocaleString('es-CO')}`}</p>
+
+        <Bottomsheet abierto={seccionfiltro} onCerrar={() => setseccionfiltro(false)} titulo="Filtrar y ordenar">
+          <div className="cat-filtros">
+            <div className="cat-filtro-grupo">
+              <p className="cat-filtro-titulo">Tipo de juguete</p>
+              <div className="cat-chips">
+                <button type="button" className={`cat-chip ${!familia ? 'activo' : ''}`} onClick={() => elegirFamilia(null)}>Todos</button>
+                {familias.map(item => (
+                  <button
+                    type="button"
+                    key={item.slug}
+                    className={`cat-chip ${familia?.slug === item.slug ? 'activo' : ''}`}
+                    onClick={() => elegirFamilia(item.slug)}
+                  >{item.nombre}</button>
+                ))}
               </div>
             </div>
+
+            <div className="cat-filtro-grupo">
+              <p className="cat-filtro-titulo">Para quién</p>
+              <div className="cat-chips">
+                {OPCIONES_GENERO.map(opcion => (
+                  <button
+                    type="button"
+                    key={opcion.valor || 'todos'}
+                    className={`cat-chip ${genero === opcion.valor ? 'activo' : ''}`}
+                    onClick={() => setgenero(opcion.valor)}
+                  >{opcion.etiqueta}</button>
+                ))}
+              </div>
+            </div>
+
+            <div className="cat-filtro-grupo">
+              <p className="cat-filtro-titulo">Edad</p>
+              <div className="cat-chips">
+                {OPCIONES_EDAD.map(opcion => (
+                  <button
+                    type="button"
+                    key={opcion.valor || 'todas'}
+                    className={`cat-chip ${edad === opcion.valor ? 'activo' : ''}`}
+                    onClick={() => setedad(opcion.valor)}
+                  >{opcion.etiqueta}</button>
+                ))}
+              </div>
+            </div>
+
+            <div className="cat-filtro-grupo">
+              <p className="cat-filtro-titulo">Precio hasta</p>
+              <input
+                type="range"
+                value={preciomax}
+                onChange={e => setpreciomax(+e.target.value)}
+                min={MIN}
+                max={MAX}
+                step={STEP}
+                className="range"
+                aria-label="Precio máximo"
+              />
+              <div className="cat-rango">
+                <span>{`$${MIN.toLocaleString('es-CO')}`}</span>
+                <strong>{preciomax >= MAX ? 'Sin límite' : `$${preciomax.toLocaleString('es-CO')}`}</strong>
+              </div>
+            </div>
+
+            <div className="cat-filtro-grupo">
+              <p className="cat-filtro-titulo">Ordenar</p>
+              <div className="cat-chips">
+                {OPCIONES_ORDEN.map(opcion => (
+                  <button
+                    type="button"
+                    key={opcion.valor || 'relevancia'}
+                    className={`cat-chip ${ordenar === opcion.valor ? 'activo' : ''}`}
+                    onClick={() => setordenar(opcion.valor)}
+                  >{opcion.etiqueta}</button>
+                ))}
+              </div>
+            </div>
+
+            <div className="cat-filtros-pie">
+              <button type="button" className="cat-boton-limpiar" onClick={limpiarFiltros} disabled={filtrosActivos === 0}>Limpiar</button>
+              <button type="button" className="pdp-boton" onClick={() => setseccionfiltro(false)}>
+                Ver {productosfiltrados.length} {productosfiltrados.length === 1 ? 'juguete' : 'juguetes'}
+              </button>
+            </div>
           </div>
+        </Bottomsheet>
+
+        <div className="productos">
           {productosfiltrados.length === 0 ? (<div className={`bg-red-500 h-min text-3xl text-white rounded-2xl p-4 text-center uppercase md:ml-4 w-full`}>Lo sentimos, intenta con otros filtros!</div>) : (
             <>
               <div className="">
@@ -264,25 +289,14 @@ const Catalogo = () => {
                     }
                   })}
                 </div>
-                <div className="divpaginador">
-                  {definirpaginadores().map(pag => (
-                    <button key={pag} className={`${pag === 1 ? 'paginador-activo' : ''} paginador`} onClick={(e) => {
-                      //Cambiar la pagina
-                      setnumpagina(pag);
-
-                      //Hacer scroll al inicio de los productos
-                      if(tituloproductosref.current){
-                        tituloproductosref.current.scrollIntoView({ behavior: 'smooth'})
-                      }
-                      
-                      //Cambiar el color del paginador
-                      const paginadores = document.querySelectorAll('.paginador');
-                      paginadores.forEach(pagin => pagin.classList.remove('paginador-activo'))
-                      e.target.classList.add('paginador-activo');
-                      
-                    }}>{pag}</button>
-                  ))}
-                </div>
+                {productosmostrar.length < productosfiltrados.length && (
+                  <div className="cat-vermas">
+                    <button type="button" className="cat-boton-vermas" onClick={() => setnumpagina(numpagina + 1)}>
+                      Ver más juguetes
+                    </button>
+                    <p className="cat-contador">Viendo {productosmostrar.length} de {productosfiltrados.length}</p>
+                  </div>
+                )}
               </div>
               
             </>
@@ -292,12 +306,6 @@ const Catalogo = () => {
           
         </div>
       </div>
-      
-      <img src="/wa.webp" alt="img WA" className="whatsapp" onClick={() => {
-        track('whatsapp_click', { location: 'catalogo_flotante' });
-        window.open("https://wa.me/573054392872?text=Hola%20Delteo,%20quisiera%20saber%20mas%20informacion%20por%20favor%20sobre%20", '_blank');
-      }}/>
-      
     </>
   )
 }

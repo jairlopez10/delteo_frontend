@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
+import { imagenPrincipal } from "../helpers/imagenes"
 import productosdb from "./Productosdb"
 import productoscontenido from "./Productoscontenido"
 import { itemDesdeProducto, track } from "../helpers/analytics"
@@ -67,7 +68,7 @@ const Relacionados = ({ producto, tipocliente }) => {
             >
               <div className="pdp-card-imagen">
                 {blackfriday.activo && tipocliente !== 'm' && <span className="card-pct">{textoPorcentaje}</span>}
-                <img src={item.imagenes[0].url} alt="" loading="lazy" decoding="async" />
+                <img src={imagenPrincipal(item)} alt="" loading="lazy" decoding="async" />
               </div>
               <div className="pdp-card-texto">
                 <p className="pdp-card-nombre">{productoscontenido[item.id]?.nombre || item.titulo}</p>

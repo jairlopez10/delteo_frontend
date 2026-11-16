@@ -8,7 +8,10 @@ import Bottomsheet from "../components/Bottomsheet"
 import Estimadorentrega from "../components/Estimadorentrega"
 import Relacionados from "../components/Relacionados"
 import Icono from "../components/Icono"
+import { imagenPrincipal } from "../helpers/imagenes"
 import Videodestacado from "../components/Videodestacado"
+import Opiniones from "../components/Opiniones"
+import Bumporvis from "../components/Bumporvis"
 import { datosMeta, itemDesdeProducto, track } from "../helpers/analytics"
 import useBlackfriday from "../hooks/useBlackfriday"
 import { campana, precioAntes, textoPorcentaje } from "../helpers/blackfriday"
@@ -19,9 +22,13 @@ const envio = {
 }
 const idlanzadorashidrogel = [376, 395, 401, 375]
 const ID_ORVIS = 362
-const WHATSAPP = '573054392872'
 const etiquetasBadge = { 'mas-pedido': 'Más pedido', nuevo: 'Nuevo' }
 const MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']
+/*
+Bloque "Envío a tu municipio" + "Pagas al recibir" de la ficha: oculto a pedido de Jair.
+El código se queda; para volver a mostrarlo basta con poner esto en true.
+*/
+const MOSTRAR_ENTREGA_Y_PAGO = false
 
 const formatoPrecio = valor => `$${Number(valor).toLocaleString('es-CO', { maximumFractionDigits: 0 })}`
 
@@ -56,7 +63,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
   const [variante, setVariante] = useState(variantes?.length === 1 ? variantes[0] : null)
   const [sheetVariante, setSheetVariante] = useState(false)
   const [compraPendiente, setCompraPendiente] = useState(false)
-  const [agregarBump, setAgregarBump] = useState(false)
+  const [popupOrvis, setPopupOrvis] = useState(false)
   const [ctaVisible, setCtaVisible] = useState(true)
   const ctaRef = useRef(null)
   const vistaReportada = useRef(false)
@@ -124,6 +131,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
   const bump = idlanzadorashidrogel.includes(producto.id)
     ? productosdb.find(item => item.id === ID_ORVIS && item.status === 'disponible')
     : null
+  const orvisEnCarrito = bump ? leerCarrito().some(item => item.id === bump.id) : false
   const caracteristicas = Array.isArray(producto.descripcion)
     ? producto.descripcion.filter(item => item.trim() !== '')
     : []
@@ -137,7 +145,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
     edad && { pregunta: '¿Para qué edad es?', respuesta: `Lo recomendamos a partir de los ${edad} años.` }
   ].filter(Boolean)
 
-  const agregaralcarrito = (opcion) => {
+  const agregaralcarrito = (opcion, cantidadBump = 0) => {
 
     //Se crean estos temps por si son productos que tienen variantes
     const nombretemp = opcion ? `${producto.titulo} (${opcion.texto})` : producto.titulo
@@ -157,7 +165,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
           nombre: nombretemp,
           cantidad,
           precio: precioConEnvio,
-          imagen: producto.imagenes[0].url
+          imagen: imagenPrincipal(producto)
         }]
 
     // Items del evento: el producto (con su variante) y el bump si se agrega ahora.
@@ -168,17 +176,17 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
       ...(opcion ? { item_variant: opcion.texto } : {})
     })]
 
-    // Order bump de orvis (reemplaza el popup): se agrega una vez si no estaba en el carrito
-    if (bump && agregarBump && !nuevocarrito.some(item => item.id === bump.id)) {
+    // Orvis del pop-up: se agregan si la persona tocó "Agregar" y no estaban ya en el carrito
+    if (bump && cantidadBump > 0 && !nuevocarrito.some(item => item.id === bump.id)) {
       nuevocarrito.push({
         id: bump.id,
         idproducto: bump.id,
         nombre: bump.titulo,
-        cantidad: 1,
+        cantidad: cantidadBump,
         precio: bump.precio,
-        imagen: bump.imagenes[0].url
+        imagen: imagenPrincipal(bump)
       })
-      itemsEvento.push(itemDesdeProducto(bump, { price: bump.precio }))
+      itemsEvento.push(itemDesdeProducto(bump, { price: bump.precio, quantity: cantidadBump }))
     }
 
     const valor = itemsEvento.reduce((suma, item) => suma + item.price * item.quantity, 0)
@@ -192,13 +200,21 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
     navigate("/checkout")
   }
 
-  const comprar = () => {
-    if (variantes && !variante) {
+  /*
+  Al tocar comprar: primero el modelo (si hace falta), después las orvis.
+  Si el pop-up de orvis se cierra de cualquier forma, el pedido sigue al checkout.
+  */
+  const comprar = (opcion = variante) => {
+    if (variantes && !opcion) {
       setCompraPendiente(true)
       setSheetVariante(true)
       return
     }
-    agregaralcarrito(variante)
+    if (bump && !orvisEnCarrito) {
+      setPopupOrvis(true)
+      return
+    }
+    agregaralcarrito(opcion)
   }
 
   const elegirVarianteEnSheet = (opcion) => {
@@ -206,25 +222,8 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
     setSheetVariante(false)
     if (compraPendiente) {
       setCompraPendiente(false)
-      agregaralcarrito(opcion)
+      comprar(opcion)
     }
-  }
-
-  const compartir = async () => {
-    const url = window.location.href
-    const texto = `Mira este juguete de Delteo: ${nombre}`
-    const reportar = metodo => track('share', { method: metodo, content_type: 'product', item_id: String(producto.id) })
-    if (navigator.share) {
-      try {
-        await navigator.share({ title: nombre, text: texto, url })
-        reportar('web_share')
-        return
-      } catch (error) {
-        if (error?.name === 'AbortError') return
-      }
-    }
-    reportar('whatsapp')
-    window.open(`https://wa.me/?text=${encodeURIComponent(`${texto} ${url}`)}`, '_blank', 'noopener')
   }
 
   const botonesVariante = (onElegir) => (
@@ -299,7 +298,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
           {bfActivo && (
             <div className="pdp-reloj">
               <Icono nombre="reloj" />
-              <span>La promoción se acaba en <b>{blackfriday.texto}</b></span>
+              <span>Promoción termina <b>{blackfriday.texto}</b></span>
             </div>
           )}
 
@@ -316,6 +315,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
           )}
           {contenido.nota && <p className="pdp-nota">{contenido.nota}</p>}
 
+          {MOSTRAR_ENTREGA_Y_PAGO && (
           <div className="pdp-filas">
             <Estimadorentrega
               onElegir={ciudad => track('delivery_estimate_pdp', {
@@ -333,21 +333,9 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
               </div>
             </div>
           </div>
-
-          {bump && (
-            <label className={`pdp-bump ${agregarBump ? 'activo' : ''}`}>
-              <input type="checkbox" checked={agregarBump} onChange={e => setAgregarBump(e.target.checked)} />
-              <span className="pdp-bump-check"><Icono nombre="check" /></span>
-              <img src={bump.imagenes[0].url} alt="" loading="lazy" />
-              <span className="pdp-bump-texto">
-                <strong>Agrega orvis de hidrogel x10.000</strong>
-                <span>Para tener repuesto desde el primer día</span>
-              </span>
-              <span className="pdp-bump-precio">+{formatoPrecio(bump.precio)}</span>
-            </label>
           )}
 
-          <button ref={ctaRef} type="button" className="pdp-boton pdp-boton-cta" onClick={comprar}>
+          <button ref={ctaRef} type="button" className="pdp-boton pdp-boton-cta" onClick={() => comprar()}>
             Comprar ahora
           </button>
 
@@ -363,6 +351,8 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
             <li><Icono nombre="escudo" />Garantía de 1 mes</li>
             <li><Icono nombre="cambio" />Cambio si llega con falla</li>
           </ul>
+
+          <Opiniones opiniones={contenido.opiniones} />
         </div>
       </div>
 
@@ -443,27 +433,12 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
           <h2 className="pdp-h2">Detrás de Delteo</h2>
           <p className="pdp-texto">Somos dos ingenieros industriales de la Pontificia Universidad Javeriana. Buscamos juguetes innovadores que no se ven en cualquier juguetería.</p>
           <div className="pdp-nosotros-acciones">
-            <a
-              className="pdp-boton-wa"
-              href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`Hola Delteo, tengo una pregunta sobre: ${nombre}`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => track('whatsapp_click', { location: 'pdp_dudas', item_id: String(producto.id) })}
-            >
-              <Icono nombre="whatsapp" />¿Dudas? Escríbenos
-            </a>
-            <Link to="/nosotros" className="pdp-enlace">Conoce la historia</Link>
+            <Link to="/nosotros" className="pdp-enlace-gris">Conoce la historia</Link>
           </div>
         </div>
       </section>
 
-      <section className="pdp-seccion pdp-compartir">
-        <p>¿Lo quieres consultar con alguien antes de comprar?</p>
-        <button type="button" className="pdp-boton-secundario" onClick={compartir}>
-          <Icono nombre="compartir" />Enviar a alguien por WhatsApp
-        </button>
-      </section>
-
+      
       <div className={`pdp-sticky ${ctaVisible ? 'oculto' : ''}`} aria-hidden={ctaVisible}>
         <div className="pdp-sticky-precio">
           <span className="pdp-sticky-linea">
@@ -477,10 +452,17 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
           </span>
           <span className="pdp-sticky-nota">Pagas al recibir</span>
         </div>
-        <button type="button" className="pdp-boton" onClick={comprar} tabIndex={ctaVisible ? -1 : 0}>
+        <button type="button" className="pdp-boton" onClick={() => comprar()} tabIndex={ctaVisible ? -1 : 0}>
           Comprar ahora
         </button>
       </div>
+
+      <Bumporvis
+        abierto={popupOrvis}
+        producto={bump}
+        onAgregar={cantidad => { setPopupOrvis(false); agregaralcarrito(variante, cantidad) }}
+        onOmitir={() => { setPopupOrvis(false); agregaralcarrito(variante, 0) }}
+      />
 
       {variantes && (
         <Bottomsheet abierto={sheetVariante} onCerrar={cerrarSheetVariante} titulo="Elige el modelo">

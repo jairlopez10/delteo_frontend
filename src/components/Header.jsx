@@ -74,7 +74,7 @@ const Header = () => {
                             </svg>
                         </button>
                         <Link to={"/"} className="logo">
-                            <img src="/logo.webp" alt="Delteo" />
+                            <img src="/delteologowhite.webp" alt="Delteo" />
                         </Link>
                         <span className="header-seguro">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -105,10 +105,10 @@ const Header = () => {
                         </svg>
                         
                         <Link to={"/"} className="logo" onClick={() => setmenu(false)}>
-                            <img src="/logo.webp" alt="" />
+                            <img src="/delteologowhite.webp" alt="Delteo" />
                         </Link>
 
-                        <Link to="/checkout" onClick={() => setmenu(false)} className="md:hidden flex">
+                        <Link to="/checkout" onClick={() => setmenu(false)} className="carrito-link md:hidden flex">
                             <svg xmlns="http://www.w3.org/2000/svg" className="carrito icon icon-tabler icon-tabler-shopping-cart" width="84" height="84" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                 <circle cx="6" cy="19" r="2" />
@@ -123,7 +123,7 @@ const Header = () => {
                     <nav className={`navegacion ${menu ? 'flex' : 'hidden'} md:flex`}>
                         <Link to={"/juguetes"} className="links" onClick={() => setmenu(false)}>Juguetería</Link>
                         <Link to="/nosotros" className={`links`} onClick={() => setmenu(false)}>Nosotros</Link>
-                        <Link to="/checkout" onClick={() => setmenu(false)} className="carrito-ocultar">
+                        <Link to="/checkout" onClick={() => setmenu(false)} className="carrito-link carrito-ocultar">
                             <svg xmlns="http://www.w3.org/2000/svg" className="carrito icon icon-tabler icon-tabler-shopping-cart" width="84" height="84" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                 <circle cx="6" cy="19" r="2" />

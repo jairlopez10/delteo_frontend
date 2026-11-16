@@ -4,6 +4,7 @@ import usePagina from "../hooks/usePagina"
 import productosdb from "../components/Productosdb"
 import productoscontenido from "../components/Productoscontenido"
 import Icono from "../components/Icono"
+import { imagenPrincipal } from "../helpers/imagenes"
 import { edades, familias, hero, masPedidos, preguntas, promo, razones } from "../helpers/home"
 import { itemDesdeProducto, track } from "../helpers/analytics"
 import { WHATSAPP_DELTEO } from "../helpers/pedido"
@@ -135,7 +136,7 @@ const Home = () => {
               >
                 <div className="pdp-card-imagen">
                   {blackfriday.activo && <span className="card-pct">{textoPorcentaje}</span>}
-                  <img src={producto.imagenes[0].url} alt="" loading="lazy" decoding="async" />
+                  <img src={imagenPrincipal(producto)} alt="" loading="lazy" decoding="async" />
                 </div>
                 <div className="pdp-card-texto">
                   <p className="pdp-card-nombre">{productoscontenido[producto.id]?.nombre || producto.titulo}</p>

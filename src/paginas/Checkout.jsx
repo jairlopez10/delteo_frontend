@@ -75,8 +75,8 @@ const Checkout = () => {
     const [tocados, setTocados] = useState({});
     const [intentoEnvio, setIntentoEnvio] = useState(false);
     const [estado, setEstado] = useState('listo'); // listo | enviando | error
-    //Por defecto se ofrece el pago en línea, que trae descuento y evita rechazos en la entrega
-    const [metodoPago, setMetodoPago] = useState(borrador.metodoPago || METODO_WOMPI);
+    //Por defecto, pagar al recibir: es la forma que la mayoría elige y la que menos fricción tiene
+    const [metodoPago, setMetodoPago] = useState(borrador.metodoPago || METODO_CONTRAENTREGA);
     // Si el backend recalcula un total distinto al del carrito, se muestra antes de cobrar
     const [avisoTotal, setAvisoTotal] = useState(null);
     const [erroresPago, setErroresPago] = useState([]);
@@ -523,6 +523,21 @@ const Checkout = () => {
                 <h2 id="chk-pago-titulo" className="chk-h2">¿Cómo quieres pagar?</h2>
 
                 <div className="chk-metodos">
+                    <label className={`chk-metodo ${!pagaEnLinea ? 'activo' : ''}`}>
+                        <input
+                            type="radio"
+                            name="pago"
+                            value={METODO_CONTRAENTREGA}
+                            checked={!pagaEnLinea}
+                            onChange={() => { setMetodoPago(METODO_CONTRAENTREGA); setAvisoTotal(null); setErroresPago([]); totalConfirmadoRef.current = null }}
+                        />
+                        <span className="chk-radio" aria-hidden="true" />
+                        <span>
+                            <strong><Icono nombre="efectivo" />Pagar al recibir</strong>
+                            Pagas en efectivo al transportador.
+                        </span>
+                    </label>
+
                     <label className={`chk-metodo ${pagaEnLinea ? 'activo' : ''}`}>
                         <input
                             type="radio"
@@ -537,23 +552,8 @@ const Checkout = () => {
                                 <Icono nombre="tarjeta" />Pagar ahora
                                 <span className="chk-ahorro">{Math.round(PORCENTAJE_PREPAGO * 100)}% de descuento</span>
                             </strong>
-                            Tarjeta, PSE, Nequi o Bancolombia. Pago seguro con Wompi; despachamos apenas se aprueba.
+                            Tarjeta, PSE, Nequi o Bancolombia.
                             {ahorroPrepago > 0 && <span className="chk-metodo-ahorro">Ahorras {formatoPrecio(ahorroPrepago)} en este pedido.</span>}
-                        </span>
-                    </label>
-
-                    <label className={`chk-metodo ${!pagaEnLinea ? 'activo' : ''}`}>
-                        <input
-                            type="radio"
-                            name="pago"
-                            value={METODO_CONTRAENTREGA}
-                            checked={!pagaEnLinea}
-                            onChange={() => { setMetodoPago(METODO_CONTRAENTREGA); setAvisoTotal(null); setErroresPago([]); totalConfirmadoRef.current = null }}
-                        />
-                        <span className="chk-radio" aria-hidden="true" />
-                        <span>
-                            <strong><Icono nombre="efectivo" />Pagar al recibir</strong>
-                            Pagas en efectivo al transportador. Antes de despacharlo te confirmamos por WhatsApp.
                         </span>
                     </label>
                 </div>

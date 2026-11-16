@@ -13,6 +13,7 @@
 //   destacados    [{ titulo, texto, media }]
 //   ficha         { 'Dato': 'valor' }
 //   faq           [{ pregunta, respuesta }]
+//   opiniones     [{ nombre, estrellas (1-5), texto }] — opiniones reales, se ven bajo el botón de comprar
 //   relacionados  [ids] en orden; si no está, se eligen solos (misma edad primero)
 
 const aireLibre = { titulo: 'Para jugar al aire libre', texto: 'Partidas en equipo en el patio o el parque.' }
@@ -151,6 +152,12 @@ const productoscontenido = {
     incluye: ['Lanzadora de hidrogel', 'Silenciador con luz', '11.000 orvis de hidrogel', 'Trípode', 'Batería recargable', 'Cargador USB', 'Proveedor tipo granada']
   },
   378: {
+    /* OPINIONES DE CLIENTES · quita las dos líneas de comentario y pon las reales.
+    opiniones: [
+      { nombre: 'Andrea P.', estrellas: 5, texto: 'El comentario, tal como te lo dejaron.' },
+      { nombre: 'Carlos M.', estrellas: 5, texto: 'Otro comentario.' }
+    ],
+    */
     nombre: 'Tiburón o delfín a control remoto',
     subtitulo: 'Nada en la piscina y solo se activa cuando toca el agua.',
     destacados: [
@@ -231,6 +238,12 @@ const productoscontenido = {
     incluye: ['Perro interactivo con sensor', 'Lazo', 'Batería recargable', 'Cable USB', 'Collar o pañuelo']
   },
   388: {
+    /* OPINIONES DE CLIENTES · quita las dos líneas de comentario y pon las reales.
+    opiniones: [
+      { nombre: 'Andrea P.', estrellas: 5, texto: 'El comentario, tal como te lo dejaron.' },
+      { nombre: 'Carlos M.', estrellas: 5, texto: 'Otro comentario.' }
+    ],
+    */
     nombre: 'Lego de Minecraft con luz, 239 piezas',
     subtitulo: 'Set armable de 239 piezas con luz incorporada.',
     destacados: [
@@ -242,6 +255,12 @@ const productoscontenido = {
     incluye: ['239 piezas', 'Luz interna', 'Manual guía']
   },
   395: {
+    /* OPINIONES DE CLIENTES · quita las dos líneas de comentario y pon las reales.
+    opiniones: [
+      { nombre: 'Andrea P.', estrellas: 5, texto: 'El comentario, tal como te lo dejaron.' },
+      { nombre: 'Carlos M.', estrellas: 5, texto: 'Otro comentario.' }
+    ],
+    */
     nombre: 'Lanzadora de hidrogel MP5 con luz y humo',
     subtitulo: 'Silenciador con luz y humo, proveedor tipo granada y 10.000 orvis fluorescentes.',
     destacados: [

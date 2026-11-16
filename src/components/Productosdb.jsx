@@ -181,7 +181,7 @@ const productosdb = [
             ],
         edad: ["+8"],
         edad2: "+8",
-        categoria: "punteria",
+        categoria: "armables",
         genero: "unisex"
     },
     {

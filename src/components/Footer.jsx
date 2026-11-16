@@ -8,12 +8,9 @@ const Footer = () => {
   return (
     <footer className="pie">
       <div className="pie-contenido">
-        <div className="pie-marca">
-          <Link to={"/"} className="logo">
-            <img src="/logo.webp" alt="Delteo" />
-          </Link>
-          <p>Juguetes que no se ven en cualquier juguetería. Envíos a toda Colombia.</p>
-        </div>
+        <Link to={"/"} className="logo pie-logo">
+          <img src="/delteologowhite.webp" alt="Delteo" />
+        </Link>
 
         <nav className="pie-enlaces" aria-label="Enlaces del sitio">
           <Link to="/juguetes">Juguetería</Link>
@@ -21,18 +18,15 @@ const Footer = () => {
           <Link to="/checkout">Tu pedido</Link>
         </nav>
 
-        <div className="pie-contacto">
-          <a
-            href={`https://wa.me/${WHATSAPP_DELTEO}?text=${encodeURIComponent('Hola Delteo, tengo una pregunta.')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => track('whatsapp_click', { location: 'footer' })}
-          >
-            <Icono nombre="whatsapp" />305 439 2872
-          </a>
-          <p>Escribimos de lunes a sábado, de 8 a.m. a 7 p.m.</p>
-          <p className="pie-pagos">Pago contra entrega o en línea con tarjeta, PSE y Nequi.</p>
-        </div>
+        <a
+          className="pie-wa"
+          href={`https://wa.me/${WHATSAPP_DELTEO}?text=${encodeURIComponent('Hola Delteo, tengo una pregunta.')}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => track('whatsapp_click', { location: 'footer' })}
+        >
+          <Icono nombre="whatsapp" />305 439 2872
+        </a>
       </div>
 
       <p className="pie-legal">© {new Date().getFullYear()} Delteo</p>

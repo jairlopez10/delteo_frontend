@@ -19,7 +19,11 @@ El video se reproduce en bucle, sin sonido y sin controles; si el celular está 
 "reducir movimiento" se queda en el poster.
 */
 export const hero = {
-  video: null,
+  video: {
+    src: '/hero-movil.mp4',           // 1080×1350 (4:5), para celular
+    srcAncho: '/hero-escritorio.mp4', // 1920×1080 (16:9), desde 768 px
+    poster: '/hero-poster.jpg'
+  },
   collage: [
     { src: '/producto378f.jpg', alt: 'Tiburón a control remoto' },
     { src: '/producto376e.webp', alt: 'Lanzadora de hidrogel M416' },
