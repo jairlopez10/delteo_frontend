@@ -553,7 +553,7 @@ const Checkout = () => {
                                 <span className="chk-ahorro">{Math.round(PORCENTAJE_PREPAGO * 100)}% de descuento</span>
                             </strong>
                             Tarjeta, PSE, Nequi o Bancolombia.
-                            {ahorroPrepago > 0 && <span className="chk-metodo-ahorro">Ahorras {formatoPrecio(ahorroPrepago)} en este pedido.</span>}
+                            
                         </span>
                     </label>
                 </div>
@@ -578,7 +578,7 @@ const Checkout = () => {
                 )}
                 {descuento > 0 && (
                     <div className="chk-fila">
-                        <span>Descuento por pagar ahora ({Math.round(PORCENTAJE_PREPAGO * 100)}%)</span>
+                        <span>Pago anticipado ({-Math.round(PORCENTAJE_PREPAGO * 100)}%)</span>
                         <span className="chk-rojo">− {formatoPrecio(descuento)}</span>
                     </div>
                 )}
@@ -635,8 +635,8 @@ const Checkout = () => {
                 <p className="chk-micro">
                     <Icono nombre="candado" />
                     {pagaEnLinea
-                        ? 'Te llevamos al pago seguro de Wompi. Delteo nunca ve los datos de tu tarjeta.'
-                        : 'No pagas nada ahora. Te confirmamos por WhatsApp antes de despacharlo.'}
+                        ? 'Pago seguro con tarjeta, PSE, Nequi o Bancolombia'
+                        : 'Pagas al recibir'}
                 </p>
                 <p className="chk-privacidad">Usamos tus datos solo para entregar tu pedido y contactarte sobre él.</p>
             </section>
