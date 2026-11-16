@@ -140,26 +140,52 @@ const productosdb = [
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto388a.webp" 
+                url: "/producto388-todos.webp"
+            },
+            {
+                tipo: "video",
+                url: "/producto388-video.mp4"
             },
             {
                 tipo: "imagen",
-                url: "/producto388b.webp" 
+                url: "/producto388-azul1.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto388c.webp" 
+                url: "/producto388-azul2.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto388d.webp" 
+                url: "/producto388-rojo1.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto388e.webp" 
+                url: "/producto388-rojo2.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto388-verde1.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto388-verde2.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto388-morado1.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto388-morado2.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto388-instrucciones.webp"
             }
-            
         ],
+        // El carrusel sale en este orden tal cual (el video va de segundo). Sin esta
+        // bandera la galería sube el video al primer puesto, como en el resto del catálogo.
+        ordenfijo: true,
         status: "disponible",
         colores: [
             {

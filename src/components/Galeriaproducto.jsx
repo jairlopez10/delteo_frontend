@@ -2,12 +2,14 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import Icono from "./Icono"
 
 // Galería con swipe (scroll-snap). El video va primero y usa la primera foto como poster.
-const Galeriaproducto = ({ imagenes, nombre }) => {
+const Galeriaproducto = ({ imagenes, nombre, ordenfijo }) => {
 
-  const medios = useMemo(() => [
+  // Por defecto el video se sube al primer puesto. Con `ordenfijo` manda el producto:
+  // los medios salen en el orden del array (el Lego 388 lleva el video de segundo).
+  const medios = useMemo(() => ordenfijo ? imagenes : [
     ...imagenes.filter(medio => medio.tipo === 'video'),
     ...imagenes.filter(medio => medio.tipo !== 'video')
-  ], [imagenes])
+  ], [imagenes, ordenfijo])
   const poster = imagenes.find(medio => medio.tipo !== 'video')?.url
 
   const [actual, setActual] = useState(0)

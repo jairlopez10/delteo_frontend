@@ -255,7 +255,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
   return (
     <div className="pdp">
       <div className="pdp-principal">
-        <Galeriaproducto imagenes={producto.imagenes} nombre={nombre} />
+        <Galeriaproducto imagenes={producto.imagenes} nombre={nombre} ordenfijo={producto.ordenfijo} />
 
         <div className="pdp-info">
           {/* ZONA A: primer pantallazo */}

@@ -256,10 +256,10 @@ const productoscontenido = {
     nombre: 'Lego de Minecraft con luz, 239 piezas',
     subtitulo: 'Set armable de 239 piezas con luz incorporada.',
     destacados: [
-      { titulo: 'Construye su propio mundo', texto: 'También sirve como lámpara decorativa.', media: '/gif388c.mp4' },
-      { titulo: '239 piezas', texto: 'Para los que aman Minecraft.', media: '/gif388b.mp4' },
-      { titulo: 'Con luz incorporada', texto: 'Decora el cuarto y trabaja la motricidad y la creatividad.', media: '/gif388a.mp4' },
-      { titulo: 'Listo para armar', texto: 'Trae manual guía.', media: '/gif388d.mp4' }
+      { titulo: 'Construye su propio mundo', texto: 'También sirve como lámpara decorativa.', media: '/clip388-mundo.mp4' },
+      { titulo: '238 piezas', texto: 'Para los que aman Minecraft.', media: '/clip388-piezas.mp4' },
+      { titulo: 'Con luz incorporada', texto: 'Decora el cuarto y trabaja la motricidad y la creatividad.', media: '/clip388-luz.mp4' },
+      { titulo: 'Listo para armar', texto: 'Trae manual guía.', media: '/clip388-armar.mp4' }
     ],
     incluye: ['239 piezas', 'Luz interna', 'Manual guía']
   },
