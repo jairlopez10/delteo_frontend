@@ -9,12 +9,19 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  /*
+  La pagina nunca se desplaza en horizontal. Un carrusel que se pasa de ancho
+  se desliza dentro de su propia caja, no empuja la pagina.
+  `clip` (y no `hidden`) para no romper los elementos sticky.
+  */
+  overflow-x: clip;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 body {
+  overflow-x: clip;
   /* La tienda es solo tema claro: sin esto, el fondo detrás del footer se ve negro
      en los navegadores que están en modo oscuro */
   background-color: #fff;
@@ -4534,6 +4541,9 @@ footer.pie {
 
 .pdp-opiniones {
   margin-top: 28px;
+  /* El carrusel de abajo no debe empujar el ancho de la pagina */
+  min-width: 0;
+  overflow: hidden;
 }
 
 .pdp-opiniones-cabecera {
@@ -4566,9 +4576,6 @@ footer.pie {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 6px;
-  /* Que las tarjetas lleguen hasta el borde de la pantalla al deslizar */
-  margin-inline: -16px;
-  padding-inline: 16px;
   scrollbar-width: thin;
   -webkit-overflow-scrolling: touch;
 }
@@ -4617,6 +4624,9 @@ footer.pie {
 }
 
 .pdp .pdp-opinion-estrellas {
+  /* El texto .sr-only de adentro es absolute: sin esto se sale del carrusel
+     y estira el ancho de toda la pagina */
+  position: relative;
   margin: 2px 0 0;
   display: flex;
   align-items: center;
@@ -4643,11 +4653,6 @@ footer.pie {
 }
 
 @media (min-width: 768px) {
-  .pdp .pdp-opiniones-lista {
-    margin-inline: 0;
-    padding-inline: 0;
-  }
-
   .pdp .pdp-opinion {
     width: 270px;
   }
