@@ -166,11 +166,11 @@ const productoscontenido = {
     nombre: 'Tiburón o delfín a control remoto',
     subtitulo: 'Nada en la piscina y solo se activa cuando toca el agua.',
     destacados: [
-      { titulo: 'Se desliza por el agua', texto: 'Para jugar en la piscina o el lago con amigos o en familia.', media: '/tiburon2.mp4' },
-      { titulo: 'Para niños y adultos', texto: 'Cualquiera puede manejarlo y divertirse.', media: '/tiburon3.mp4' },
-      { titulo: 'Solo se activa en el agua', texto: 'Se enciende únicamente cuando está en contacto con el agua.', media: '/delfingif1a.mp4' },
-      { titulo: 'Batería recargable', texto: 'Se carga por USB, sin pilas desechables.', media: '/tiburon1.mp4' },
-      { titulo: 'Listo para la piscina', texto: 'Carga la batería, ponlo en el agua y a jugar.', media: '/tiburon4.mp4' }
+      { titulo: 'Se desliza por el agua', texto: 'Para jugar en la piscina o el lago con amigos o en familia.', media: '/clip378-desliza.mp4' },
+      { titulo: 'Para niños y adultos', texto: 'Cualquiera puede manejarlo y divertirse.', media: '/clip378-todos.mp4' },
+      { titulo: 'Solo se activa en el agua', texto: 'Se enciende únicamente cuando está en contacto con el agua.', media: '/clip378-agua.mp4' },
+      { titulo: 'Batería recargable', texto: 'Se carga por USB, sin pilas desechables.', media: '/clip378-bateria.mp4' },
+      { titulo: 'Listo para la piscina', texto: 'Carga la batería, ponlo en el agua y a jugar.', media: '/clip378-piscina.mp4' }
     ],
     incluye: ['Tiburón o delfín, según el modelo', 'Control remoto', 'Batería recargable', 'Cargador USB', 'Destornillador', '2 hélices de repuesto']
   },

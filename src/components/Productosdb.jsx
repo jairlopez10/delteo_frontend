@@ -282,30 +282,36 @@ const productosdb = [
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto378f.jpg" 
+                url: "/producto378-tiburon1.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto378a.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto378b.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto378d.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto378e.webp" 
+                url: "/producto378-delfin1.webp"
             },
             {
                 tipo: "video",
-                url: "/producto378c.mp4" 
+                url: "/producto378-video.mp4"
             },
-            
+            {
+                tipo: "imagen",
+                url: "/producto378-tiburon2.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto378-tiburon3.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto378-pasos.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto378-letra.webp"
+            }
         ],
+        // El carrusel sale en este orden tal cual (el video va de tercero). Sin esta
+        // bandera la galería sube el video al primer puesto, como en el resto del catálogo.
+        ordenfijo: true,
         status: "disponible",
         colores: [
             {
