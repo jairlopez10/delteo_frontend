@@ -4561,9 +4561,7 @@ footer.pie {
 }
 
 .pdp .pdp-opiniones-lista {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 78%;
+  display: flex;
   gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -4576,10 +4574,13 @@ footer.pie {
 }
 
 .pdp .pdp-opinion {
+  /* Ancho fijo: sin esto las tarjetas se encogen hasta volverse ilegibles */
+  flex: 0 0 auto;
+  width: 250px;
   scroll-snap-align: start;
   border: 1px solid var(--linea);
   border-radius: 14px;
-  padding: 14px;
+  padding: 14px 12px;
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -4643,9 +4644,12 @@ footer.pie {
 
 @media (min-width: 768px) {
   .pdp .pdp-opiniones-lista {
-    grid-auto-columns: minmax(0, 300px);
     margin-inline: 0;
     padding-inline: 0;
+  }
+
+  .pdp .pdp-opinion {
+    width: 270px;
   }
 }
 

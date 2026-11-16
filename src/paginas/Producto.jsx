@@ -119,7 +119,16 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
   const precioVisible = esMayorista ? producto.preciomayorista : precioConEnvio
   const edad = producto.edad2?.replace(/\D/g, '')
   const badges = (contenido.badges || []).filter(badge => etiquetasBadge[badge]).slice(0, 2)
-  const mostrarRating = contenido.rating && contenido.rating.total >= 5
+  /*
+  Estrellas bajo el titulo: salen de las opiniones de Productoscontenido.jsx.
+  Un `rating` escrito a mano manda sobre ellas. Sin opiniones no se muestra nada.
+  */
+  const opiniones = Array.isArray(contenido.opiniones) ? contenido.opiniones : []
+  const rating = contenido.rating || (opiniones.length > 0 ? {
+    total: opiniones.length,
+    promedio: Math.round((opiniones.reduce((suma, item) => suma + Number(item.estrellas || 0), 0) / opiniones.length) * 10) / 10
+  } : null)
+  const mostrarRating = Boolean(rating)
   const finPromo = contenido.promoHasta ? new Date(`${contenido.promoHasta}T23:59:59-05:00`) : null
   const promoActiva = !esMayorista && contenido.precioAnterior > precioConEnvio && finPromo && finPromo >= new Date()
   /*
@@ -258,11 +267,10 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
             </div>
           )}
           <h1 className="pdp-titulo">{nombre}</h1>
-          {contenido.subtitulo && <p className="pdp-subtitulo">{contenido.subtitulo}</p>}
           {mostrarRating && (
             <p className="pdp-rating">
               <span className="pdp-estrellas">{[1, 2, 3, 4, 5].map(n => <Icono key={n} nombre="estrella" />)}</span>
-              {contenido.rating.promedio.toLocaleString('es-CO')} · {contenido.rating.total} opiniones
+              {rating.promedio.toLocaleString('es-CO')} · {rating.total} {rating.total === 1 ? 'opinión' : 'opiniones'}
             </p>
           )}
 
@@ -279,7 +287,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
                   <>
                     <s className="pdp-precio-anterior">{formatoPrecio(antesBf)}</s>
                     <span className="pdp-pct">{textoPorcentaje}</span>
-                    <span className="pdp-verde pdp-linea-llena">Envío gratis incluido</span>
+                    <span className="pdp-verde pdp-linea-llena">Envío gratis</span>
                   </>
                 ) : promoActiva ? (
                   <>
@@ -289,7 +297,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
                     </span>
                   </>
                 ) : (
-                  <span className="pdp-verde">Envío gratis incluido</span>
+                  <span className="pdp-verde">Envío gratis</span>
                 )}
               </>
             )}
@@ -352,7 +360,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
             <li><Icono nombre="cambio" />Cambio si llega con falla</li>
           </ul>
 
-          <Opiniones opiniones={contenido.opiniones} />
+          <Opiniones opiniones={opiniones} />
         </div>
       </div>
 

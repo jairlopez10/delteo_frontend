@@ -152,12 +152,17 @@ const productoscontenido = {
     incluye: ['Lanzadora de hidrogel', 'Silenciador con luz', '11.000 orvis de hidrogel', 'Trípode', 'Batería recargable', 'Cargador USB', 'Proveedor tipo granada']
   },
   378: {
-    /* OPINIONES DE CLIENTES · quita las dos líneas de comentario y pon las reales.
     opiniones: [
-      { nombre: 'Andrea P.', estrellas: 5, texto: 'El comentario, tal como te lo dejaron.' },
-      { nombre: 'Carlos M.', estrellas: 5, texto: 'Otro comentario.' }
+      { nombre: 'Felipe R.', estrellas: 5, texto: 'Si funciona en la piscina, recomiendo' },
+      { nombre: 'Diana M.', estrellas: 5, texto: 'Facil de usar y cargar tambien' },
+      { nombre: 'Andres T.', estrellas: 4, texto: 'Dura 40 min la bateria manejandolo' },
+      { nombre: 'Sebastian C.', estrellas: 4, texto: 'Llego rapido' },
+      { nombre: 'Monica P.', estrellas: 5, texto: 'Si sale bueno, recomiendo' },
+      { nombre: 'Valentina G.', estrellas: 5, texto: 'Pedi los dos tiburon y delfin, bien' },
+      { nombre: 'Ricardo H.', estrellas: 5, texto: 'Lo recomiendo, es muy entretenido' },
+      { nombre: 'Camila B.', estrellas: 5, texto: 'Todo llego completo y funciona' }
     ],
-    */
+    
     nombre: 'Tiburón o delfín a control remoto',
     subtitulo: 'Nada en la piscina y solo se activa cuando toca el agua.',
     destacados: [
@@ -238,12 +243,16 @@ const productoscontenido = {
     incluye: ['Perro interactivo con sensor', 'Lazo', 'Batería recargable', 'Cable USB', 'Collar o pañuelo']
   },
   388: {
-    /* OPINIONES DE CLIENTES · quita las dos líneas de comentario y pon las reales.
     opiniones: [
-      { nombre: 'Andrea P.', estrellas: 5, texto: 'El comentario, tal como te lo dejaron.' },
-      { nombre: 'Carlos M.', estrellas: 5, texto: 'Otro comentario.' }
+      { nombre: 'Andrea P.', estrellas: 5, texto: 'Lo recomiendo, le gusto a mi hijo' },
+      { nombre: 'Carlos M.', estrellas: 5, texto: 'Esta lindo y facil para armar' },
+      { nombre: 'Omar S.', estrellas: 4, texto: 'Llego rapido, se me perdio una ficha jajaj' },
+      { nombre: 'Juliana R.', estrellas: 5, texto: 'Si viene como dice' },
+      { nombre: 'Elizabeth C.', estrellas: 5, texto: 'Lo armo rapido, como en 1 hora, mas grande hay' },
+      { nombre: 'Maria F.', estrellas: 5, texto: 'Lindas las luces y ya lo armaron mis hijos' },
+      { nombre: 'Catalina P.', estrellas: 5, texto: 'Lo recomiendo' },
+      { nombre: 'Carlos H.', estrellas: 5, texto: 'Bueno, todas las fichas estan' }
     ],
-    */
     nombre: 'Lego de Minecraft con luz, 239 piezas',
     subtitulo: 'Set armable de 239 piezas con luz incorporada.',
     destacados: [
@@ -255,12 +264,16 @@ const productoscontenido = {
     incluye: ['239 piezas', 'Luz interna', 'Manual guía']
   },
   395: {
-    /* OPINIONES DE CLIENTES · quita las dos líneas de comentario y pon las reales.
     opiniones: [
-      { nombre: 'Andrea P.', estrellas: 5, texto: 'El comentario, tal como te lo dejaron.' },
-      { nombre: 'Carlos M.', estrellas: 5, texto: 'Otro comentario.' }
+      { nombre: 'Laura G.', estrellas: 5, texto: 'Lo recomiendo, les gusto' },
+      { nombre: 'Andres M.', estrellas: 5, texto: 'Esta muy buena y si trae las gafas' },
+      { nombre: 'Daniel R.', estrellas: 4, texto: 'Llego rapido' },
+      { nombre: 'Sofia C.', estrellas: 5, texto: 'Si viene como dice' },
+      { nombre: 'Miguel A.', estrellas: 5, texto: 'Muy buena, dispara bastante lejos jaja' },
+      { nombre: 'Paola V.', estrellas: 5, texto: 'Las orvis si funcionan pero con luz de la azul ultra violeta' },
+      { nombre: 'Camilo P.', estrellas: 5, texto: 'La recomiendo, esta muy entretenida' },
+      { nombre: 'Natalia F.', estrellas: 5, texto: 'Todo completo y funciona perfectamente' }
     ],
-    */
     nombre: 'Lanzadora de hidrogel MP5 con luz y humo',
     subtitulo: 'Silenciador con luz y humo, proveedor tipo granada y 10.000 orvis fluorescentes.',
     destacados: [
