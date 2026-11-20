@@ -409,7 +409,7 @@ const productosdb = [
         id: 387,
         titulo: "Perro Caminador, Repetidor y de Sensor",
         preciomayorista: 69900,
-        precio: 119900,
+        precio: 79900,
         descripcion: [''],
         imagenes: [
             {
