@@ -240,7 +240,7 @@ const productoscontenido = {
       { titulo: 'Reacciona a las caricias', texto: 'Acarícialo en la cabeza o el cuerpo: camina y ladra.', media: '/perrogif2.mp4' },
       { titulo: 'Repite lo que le cuentas', texto: 'Háblale y te responde con tus palabras. Batería recargable.', media: '/perrogif3.mp4' }
     ],
-    incluye: ['Perro interactivo con sensor', 'Lazo', 'Batería recargable', 'Cable USB', 'Collar o pañuelo']
+    incluye: ['Perro interactivo con sensor', 'Lazo', 'Batería recargable (Solo modelo Cafe)', 'Cable USB (Solo modelo Cafe)', 'Collar o pañuelo']
   },
   388: {
     opiniones: [
