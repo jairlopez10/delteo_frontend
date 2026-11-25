@@ -11,7 +11,7 @@ import { descuentoPrepago, guardarPagoPendiente, itemsParaBackend, leerPedidoId,
 import { datosMeta, eventIdPurchase, itemsDesdeCarrito, leerAtribucion, marcarOcurrido, track, yaOcurrio } from "../helpers/analytics";
 import useBlackfriday from "../hooks/useBlackfriday";
 import { precioAntes, textoPorcentaje } from "../helpers/blackfriday";
-import { buscarCupon, descuentoCupon, regaloCupon, textoRegalo } from "../helpers/cupones";
+import { buscarCupon, descuentoCupon, leerCuponDelEnlace, olvidarCuponDelEnlace, regaloCupon, textoRegalo } from "../helpers/cupones";
 
 const PEDIDO_MINIMO = 44900
 const CLAVE_BORRADOR = 'delteo_checkout_borrador'
@@ -78,10 +78,14 @@ const Checkout = () => {
     const [estado, setEstado] = useState('listo'); // listo | enviando | error
     //Por defecto, pagar al recibir: es la forma que la mayoría elige y la que menos fricción tiene
     const [metodoPago, setMetodoPago] = useState(borrador.metodoPago || METODO_CONTRAENTREGA);
-    // Cupón de descuento: uno por pedido. El borrador lo recuerda para quien vuelve de Instagram.
-    const [cupon, setCupon] = useState(() => buscarCupon(borrador.cupon));
+    /*
+    Cupón de descuento: uno por pedido. Llega escrito a mano, guardado en el borrador
+    (quien sale a Instagram y vuelve) o dentro del enlace compartido (?cupon=...).
+    El del enlace manda sobre el del borrador: es el último que la persona abrió.
+    */
+    const [cupon, setCupon] = useState(() => buscarCupon(leerCuponDelEnlace() || borrador.cupon));
     const [codigoCupon, setCodigoCupon] = useState('');
-    const [verCupon, setVerCupon] = useState(() => Boolean(buscarCupon(borrador.cupon)));
+    const [verCupon, setVerCupon] = useState(() => Boolean(buscarCupon(leerCuponDelEnlace() || borrador.cupon)));
     const [errorCupon, setErrorCupon] = useState(null);
     // Si el backend recalcula un total distinto al del carrito, se muestra antes de cobrar
     const [avisoTotal, setAvisoTotal] = useState(null);
@@ -118,6 +122,8 @@ const Checkout = () => {
     //Cupón: el de monto baja el total; el de regalo suma un producto gratis sin tocar el precio
     const descuentoDelCupon = descuentoCupon(cupon)
     const regalo = regaloCupon(cupon)
+    // GA4 trae su propio campo `coupon` en los eventos de ecommerce
+    const cuponGA4 = cupon ? { coupon: cupon.codigo } : {}
     const total = Math.max(0, subtotal - descuento - descuentoDelCupon)
     const ahorroPrepago = descuentoPrepago(subtotal)
     const faltaParaMinimo = PEDIDO_MINIMO - subtotal
@@ -209,7 +215,7 @@ const Checkout = () => {
         checkoutReportadoRef.current = true
         marcarOcurrido(`begin_checkout_${pedidoId}`)
         const items = itemsDesdeCarrito(carrito)
-        track('begin_checkout', { value: total, items }, {
+        track('begin_checkout', { value: total, items, ...cuponGA4 }, {
             nombre: 'InitiateCheckout',
             datos: { ...datosMeta(items), value: total }
         })
@@ -265,6 +271,8 @@ const Checkout = () => {
     }
 
     const quitarCupon = () => {
+        // Si vino en un enlace hay que olvidarlo, o volvería solo en la siguiente visita
+        olvidarCuponDelEnlace()
         setCupon(null)
         setErrorCupon(null)
         setVerCupon(false)
@@ -396,7 +404,8 @@ const Checkout = () => {
             track('payment_started', {
                 value: totalACobrar,
                 payment_type: METODO_WOMPI,
-                items: itemsDesdeCarrito(carrito)
+                items: itemsDesdeCarrito(carrito),
+                ...cuponGA4
             })
             const redirigio = await pagarconwompi()
             // Si no se fue a Wompi (total corregido o error) se puede volver a intentar
@@ -442,7 +451,7 @@ const Checkout = () => {
             mismo del Purchase que manda el backend por CAPI, y Meta se queda con uno.
             */
             const items = itemsDesdeCarrito(carrito)
-            const compra = { transaction_id: idPedido, value: total, payment_type: METODO_CONTRAENTREGA, items }
+            const compra = { transaction_id: idPedido, value: total, payment_type: METODO_CONTRAENTREGA, items, ...cuponGA4 }
             track('purchase', compra, {
                 nombre: 'Purchase',
                 eventID: eventIdPurchase(idPedido),
@@ -466,6 +475,8 @@ const Checkout = () => {
             guardarUltimoPedido(resumen)
             localStorage.setItem('carritojammy', JSON.stringify([]));
             localStorage.removeItem(CLAVE_BORRADOR);
+            // El cupón del enlace ya se usó en este pedido
+            olvidarCuponDelEnlace();
             setContador(0);
             navegar('/pedidoconfirmado', { state: resumen, replace: true })
 

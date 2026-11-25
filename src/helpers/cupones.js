@@ -46,3 +46,49 @@ export const regaloCupon = cupon => (cupon?.tipo === 'regalo' ? cupon.regalo : n
 
 // Línea del regalo para el texto del pedido (Sheet y WhatsApp)
 export const textoRegalo = (regalo, codigo) => `+ ${regalo} (gratis, cupón ${codigo})`
+
+// ------------------------------------------- cupón que llega dentro de un enlace
+
+/*
+Enlace para compartir: delteocol.com/juguetes?cupon=BASTA26
+
+Layout lo lee en cualquier página (hooks/useCuponUrl.jsx), lo guarda aquí y el
+checkout lo aplica solo, así la persona recorre la tienda y lo encuentra puesto.
+Un código que no exista se ignora sin avisar: el enlace sigue siendo un enlace normal.
+*/
+export const PARAM_CUPON = 'cupon'
+
+const CLAVE_ENLACE = 'delteo_cupon_enlace'
+
+// Después de este tiempo el cupón del enlace deja de aplicarse solo
+const DIAS_VIGENCIA = 30
+
+export const guardarCuponDelEnlace = codigo => {
+    try {
+        localStorage.setItem(CLAVE_ENLACE, JSON.stringify({ codigo, guardado: Date.now() }))
+    } catch {
+        // Sin localStorage el cupón vale solo mientras la pestaña siga abierta
+    }
+}
+
+export const olvidarCuponDelEnlace = () => {
+    try {
+        localStorage.removeItem(CLAVE_ENLACE)
+    } catch {
+        // No había nada guardado
+    }
+}
+
+export const leerCuponDelEnlace = () => {
+    try {
+        const guardado = JSON.parse(localStorage.getItem(CLAVE_ENLACE))
+        if (!guardado?.codigo) return null
+        if (Date.now() - guardado.guardado > DIAS_VIGENCIA * 24 * 60 * 60 * 1000) {
+            olvidarCuponDelEnlace()
+            return null
+        }
+        return guardado.codigo
+    } catch {
+        return null
+    }
+}
