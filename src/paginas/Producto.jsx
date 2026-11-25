@@ -287,7 +287,7 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
                   <>
                     <s className="pdp-precio-anterior">{formatoPrecio(antesBf)}</s>
                     <span className="pdp-pct">{textoPorcentaje}</span>
-                    <span className="pdp-verde pdp-linea-llena">Envío gratis</span>
+                    <span className="pdp-verde pdp-linea-llena">Envío GRATIS</span>
                   </>
                 ) : promoActiva ? (
                   <>
@@ -355,9 +355,9 @@ const Paginaproducto = ({ tituloUrl, tipocliente }) => {
           )}
 
           <ul className="pdp-confianza">
+            <li><Icono nombre="efectivo" />Pago contra entrega</li>
             <li><Icono nombre="camion" />Envío gratis</li>
             <li><Icono nombre="escudo" />Garantía de 1 mes</li>
-            <li><Icono nombre="cambio" />Cambio si llega con falla</li>
           </ul>
 
           <Opiniones opiniones={opiniones} />

@@ -40,23 +40,25 @@ const productosdb = [
         descripcion: ['Luz en el cañon', 'Humo en el cañon', 'Proveedor granada','Lanzadora', 'Bateria recargable', 'Cargador USB', 'Duracion bateria: 2h'],
         imagenes: [
             {
+                tipo: "imagen",
+                url: "/producto395i.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto395h.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto395g.webp"
+            },
+            {
                 tipo: "video",
-                url: "/producto395f.mp4" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto395h.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto395g.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto395i.webp" 
-            },
-            
+                url: "/producto395f.mp4"
+            }
         ],
+        // El carrusel sale en este orden tal cual. Sin esta bandera la galeria
+        // sube el video al primer puesto, como en el resto del catalogo.
+        ordenfijo: true,
         status: "disponible",
         colores: "Azul",
         edad: ["+8"],
@@ -143,10 +145,6 @@ const productosdb = [
                 url: "/producto388-todos.webp"
             },
             {
-                tipo: "video",
-                url: "/producto388-video.mp4"
-            },
-            {
                 tipo: "imagen",
                 url: "/producto388-azul1.webp"
             },
@@ -181,6 +179,10 @@ const productosdb = [
             {
                 tipo: "imagen",
                 url: "/producto388-instrucciones.webp"
+            },
+            {
+                tipo: "video",
+                url: "/producto388-video.mp4"
             }
         ],
         // El carrusel sale en este orden tal cual (el video va de segundo). Sin esta
@@ -414,19 +416,27 @@ const productosdb = [
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto387d.webp" 
+                url: "/producto387-1.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto387a.webp" 
+                url: "/producto387-2.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto387b.webp" 
+                url: "/producto387-3.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto387c.webp" 
+                url: "/producto387-4.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto387-5.webp"
+            },
+            {
+                tipo: "imagen",
+                url: "/producto387-6.webp"
             }
         ],
         status: "disponible",
@@ -485,22 +495,24 @@ const productosdb = [
         imagenes: [
             {
                 tipo: "imagen",
-                url: "/producto380a.webp" 
+                url: "/producto380b.webp"
             },
             {
                 tipo: "imagen",
-                url: "/producto380b.webp" 
-            },
-            {
-                tipo: "imagen",
-                url: "/producto380d.webp" 
+                url: "/producto380a.webp"
             },
             {
                 tipo: "video",
-                url: "/producto380c.mp4" 
+                url: "/producto380c.mp4"
             },
-            
+            {
+                tipo: "imagen",
+                url: "/producto380d.webp"
+            }
         ],
+        // El carrusel sale en este orden tal cual. Sin esta bandera la galeria
+        // sube el video al primer puesto, como en el resto del catalogo.
+        ordenfijo: true,
         status: "disponible",
         colores: "Unicolor",
         edad: ["+8"],
@@ -673,11 +685,18 @@ const productosdb = [
                 url: "/producto2f.mp4"
             }
         ],
+        // El carrusel sale en este orden tal cual. Sin esta bandera la galeria
+        // sube el video al primer puesto, como en el resto del catalogo.
+        ordenfijo: true,
         status: "disponible",
         colores: [
             {
                 id: 386,
                 texto: "Princesas"
+            },
+            {
+                id: 400,
+                texto: "Spiderman"
             }
         ],
         edad: ["+3", "+6", "+8"],
@@ -4022,6 +4041,9 @@ const productosdb = [
                 url: "/producto2f.mp4"
             }
         ],
+        // El carrusel sale en este orden tal cual. Sin esta bandera la galeria
+        // sube el video al primer puesto, como en el resto del catalogo.
+        ordenfijo: true,
         status: "disponible",
         colores: "Spiderman y Princesas",
         edad: ["+3", "+6", "+8"],
