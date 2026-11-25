@@ -5297,3 +5297,81 @@ footer.pie {
     max-width: 520px;
   }
 }
+
+/* Checkout: cupón de descuento (fase 6) */
+.chk-cupon {
+  margin-bottom: 12px;
+}
+
+.chk .chk-cupon-abrir {
+  margin: 0;
+}
+
+.chk-cupon-fila {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.chk-cupon-fila .chk-input {
+  flex: 1;
+  min-width: 0;
+  text-transform: uppercase;
+}
+
+.chk .chk-cupon-boton {
+  flex: 0 0 auto;
+  width: auto;
+  padding: 0 20px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.chk .chk-cupon-boton:disabled {
+  opacity: .5;
+}
+
+.chk .chk-cupon-error {
+  margin-top: 6px;
+}
+
+.chk-cupon-aplicado {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #E3F4EA;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.chk .chk-cupon-aplicado p {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.35;
+  color: #0B6A3C;
+}
+
+.chk-cupon-aplicado strong {
+  color: #0B6A3C;
+  font-weight: 700;
+}
+
+.chk-cupon-aplicado .pdp-icono {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin-top: 1px;
+}
+
+.chk-cupon-quitar {
+  flex: none;
+  min-height: 32px;
+  color: #0B6A3C;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+}

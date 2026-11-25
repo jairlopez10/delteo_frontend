@@ -132,7 +132,11 @@ const PagoResultado = () => {
     const primerNombre = pago?.nombre?.split(' ')[0]
 
     const pedidoParaWhatsapp = pago && {
-        productos: (pago.items || []).map(item => ({ ...item, precio: item.preciounitario })),
+        productos: [
+            ...(pago.items || []).map(item => ({ ...item, precio: item.preciounitario })),
+            //El regalo del cupón va como una línea más: es gratis y se despacha con el pedido
+            ...(pago.regalo ? [{ cantidad: 1, nombre: `+ ${pago.regalo} (gratis, cupón ${pago.cupon})` }] : [])
+        ],
         total: pago.total,
         nombre: pago.nombre,
         ciudad: pago.ciudad,
@@ -274,6 +278,12 @@ const PagoResultado = () => {
                             </li>
                         ))}
                     </ul>
+                    {pago.regalo && (
+                        <div className="chk-fila">
+                            <span>Cupón {pago.cupon}</span>
+                            <span className="chk-verde">{pago.regalo} gratis</span>
+                        </div>
+                    )}
                     <div className="chk-fila"><span>Envío</span><span className="chk-verde">Gratis</span></div>
                     <div className="chk-fila chk-total">
                         <span>{aprobado ? 'Total pagado' : 'Total'}</span>

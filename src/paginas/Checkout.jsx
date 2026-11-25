@@ -11,6 +11,7 @@ import { descuentoPrepago, guardarPagoPendiente, itemsParaBackend, leerPedidoId,
 import { datosMeta, eventIdPurchase, itemsDesdeCarrito, leerAtribucion, marcarOcurrido, track, yaOcurrio } from "../helpers/analytics";
 import useBlackfriday from "../hooks/useBlackfriday";
 import { precioAntes, textoPorcentaje } from "../helpers/blackfriday";
+import { buscarCupon, descuentoCupon, regaloCupon, textoRegalo } from "../helpers/cupones";
 
 const PEDIDO_MINIMO = 44900
 const CLAVE_BORRADOR = 'delteo_checkout_borrador'
@@ -77,6 +78,11 @@ const Checkout = () => {
     const [estado, setEstado] = useState('listo'); // listo | enviando | error
     //Por defecto, pagar al recibir: es la forma que la mayoría elige y la que menos fricción tiene
     const [metodoPago, setMetodoPago] = useState(borrador.metodoPago || METODO_CONTRAENTREGA);
+    // Cupón de descuento: uno por pedido. El borrador lo recuerda para quien vuelve de Instagram.
+    const [cupon, setCupon] = useState(() => buscarCupon(borrador.cupon));
+    const [codigoCupon, setCodigoCupon] = useState('');
+    const [verCupon, setVerCupon] = useState(() => Boolean(buscarCupon(borrador.cupon)));
+    const [errorCupon, setErrorCupon] = useState(null);
     // Si el backend recalcula un total distinto al del carrito, se muestra antes de cobrar
     const [avisoTotal, setAvisoTotal] = useState(null);
     const [erroresPago, setErroresPago] = useState([]);
@@ -109,7 +115,10 @@ const Checkout = () => {
     const pagaEnLinea = metodoPago === METODO_WOMPI
     //5% de descuento por pagar ahora. El backend aplica la misma regla y es el que manda.
     const descuento = pagaEnLinea ? descuentoPrepago(subtotal) : 0
-    const total = subtotal - descuento
+    //Cupón: el de monto baja el total; el de regalo suma un producto gratis sin tocar el precio
+    const descuentoDelCupon = descuentoCupon(cupon)
+    const regalo = regaloCupon(cupon)
+    const total = Math.max(0, subtotal - descuento - descuentoDelCupon)
     const ahorroPrepago = descuentoPrepago(subtotal)
     const faltaParaMinimo = PEDIDO_MINIMO - subtotal
     //Suma de los precios "antes" de Black Friday, solo para mostrar el desglose
@@ -173,12 +182,13 @@ const Checkout = () => {
                 direccion: datos.direccion,
                 indicaciones: datos.indicaciones,
                 codigoMunicipio: municipio?.codigo,
-                metodoPago
+                metodoPago,
+                cupon: cupon?.codigo || ''
             }))
         } catch {
             // Sin localStorage el formulario funciona igual, solo no queda borrador
         }
-    }, [datos.telefono, datos.nombre, datos.direccion, datos.indicaciones, municipio, metodoPago])
+    }, [datos.telefono, datos.nombre, datos.direccion, datos.indicaciones, municipio, metodoPago, cupon])
 
     // La barra fija del botón se oculta mientras el botón después del total está en pantalla
     useEffect(() => {
@@ -231,6 +241,36 @@ const Checkout = () => {
 
     const tocar = campo => () => setTocados(actual => ({ ...actual, [campo]: true }))
 
+    /*
+    Cupón. La lista vive en helpers/cupones.js y el backend tiene la misma: el total lo
+    recalcula el servidor, aquí solo se muestra. Al aplicarlo o quitarlo hay que olvidar el
+    total que el backend ya había confirmado, porque el pedido cambió de valor.
+    */
+    const olvidarTotalDelBackend = () => {
+        totalConfirmadoRef.current = null
+        setAvisoTotal(null)
+        setErroresPago([])
+    }
+
+    const aplicarCupon = () => {
+        const encontrado = buscarCupon(codigoCupon)
+        if (!encontrado) {
+            setErrorCupon('Este cupón no existe o ya no está activo. Revisa cómo está escrito.')
+            return
+        }
+        setCupon(encontrado)
+        setCodigoCupon('')
+        setErrorCupon(null)
+        olvidarTotalDelBackend()
+    }
+
+    const quitarCupon = () => {
+        setCupon(null)
+        setErrorCupon(null)
+        setVerCupon(false)
+        olvidarTotalDelBackend()
+    }
+
     const elegirMunicipio = opcion => {
         setMunicipio(opcion)
         marcarEditado('ciudad')
@@ -254,7 +294,10 @@ const Checkout = () => {
     const direccionCompleta = () => [datos.direccion.trim(), datos.indicaciones.trim()].filter(Boolean).join(' · ')
 
     const pedidoParaWhatsapp = () => ({
-        productos: carrito,
+        //El regalo del cupón va como una línea más: es gratis y se despacha con el pedido
+        productos: regalo
+            ? [...carrito, { cantidad: 1, nombre: textoRegalo(regalo, cupon.codigo) }]
+            : carrito,
         total,
         nombre: datos.nombre.trim(),
         telefono: soloDigitos(datos.telefono),
@@ -273,6 +316,8 @@ const Checkout = () => {
             const url = `${import.meta.env.VITE_BACKEND_URL}/api/ordenes`;
             const { data } = await axios.post(url, {
                 items: itemsParaBackend(carrito),
+                // Solo el código: el descuento y el regalo los resuelve el backend con su lista
+                cupon: cupon?.codigo || '',
                 // fbp/fbc de esta visita: el Purchase de CAPI sale del webhook, sin navegador
                 atribucion: leerAtribucion(),
                 cliente: {
@@ -360,6 +405,8 @@ const Checkout = () => {
         }
 
         const productostext = carrito.map(item => item.cantidad + ' - ' + item.nombre + " || ").join('')
+            //El regalo del cupón se suma al texto del pedido como un producto más
+            + (regalo ? textoRegalo(regalo, cupon.codigo) + ' || ' : '')
         const fechahoy = new Date();
         const fecha = (fechahoy.getMonth()+1)+"/"+fechahoy.getDate()+"/"+fechahoy.getFullYear()
 
@@ -375,6 +422,7 @@ const Checkout = () => {
             telefono: soloDigitos(datos.telefono),
             cedula: soloDigitos(datos.cedula),
             total,
+            cupon: cupon?.codigo || '',
             // Mismo id en cada reintento: el backend no duplica el pedido y es el event_id de CAPI
             pedidoid: pedidoId,
             atribucion: leerAtribucion()
@@ -410,6 +458,8 @@ const Checkout = () => {
                 zona: municipio.zona,
                 productos: carrito,
                 total,
+                regalo,
+                cupon: cupon?.codigo || null,
                 pedidoid: idPedido,
                 creado: Date.now()
             }
@@ -565,6 +615,55 @@ const Checkout = () => {
 
             <section className="chk-card chk-totales" aria-labelledby="chk-total-titulo">
                 <h2 id="chk-total-titulo" className="sr-only">Total del pedido</h2>
+
+                {/* Cupón escondido detrás de un enlace: un campo abierto invita a salir a buscar códigos */}
+                <div className="chk-cupon">
+                    {cupon ? (
+                        <div className="chk-cupon-aplicado">
+                            <p>
+                                <Icono nombre={regalo ? 'regalo' : 'check'} />
+                                <span><strong>{cupon.codigo} aplicado.</strong> {cupon.mensaje}</span>
+                            </p>
+                            <button type="button" className="chk-cupon-quitar" onClick={quitarCupon}>Quitar</button>
+                        </div>
+                    ) : verCupon ? (
+                        <>
+                            <div className="chk-cupon-fila">
+                                <input
+                                    id="cupon"
+                                    name="cupon"
+                                    className={`chk-input ${errorCupon ? 'con-error' : ''}`}
+                                    type="text"
+                                    autoComplete="off"
+                                    autoCapitalize="characters"
+                                    spellCheck="false"
+                                    placeholder="Tu código"
+                                    aria-label="Código del cupón"
+                                    aria-describedby="cupon-mensaje"
+                                    aria-invalid={Boolean(errorCupon)}
+                                    value={codigoCupon}
+                                    onChange={e => { setCodigoCupon(e.target.value.toUpperCase()); setErrorCupon(null) }}
+                                    onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); aplicarCupon() } }}
+                                />
+                                <button
+                                    type="button"
+                                    className="pdp-boton-secundario chk-cupon-boton"
+                                    onClick={aplicarCupon}
+                                    disabled={!codigoCupon.trim()}
+                                >
+                                    Aplicar
+                                </button>
+                            </div>
+                            {errorCupon && (
+                                <p id="cupon-mensaje" className="chk-error chk-cupon-error"><Icono nombre="alerta" />{errorCupon}</p>
+                            )}
+                        </>
+                    ) : (
+                        <button type="button" className="chk-enlace chk-cupon-abrir" onClick={() => setVerCupon(true)}>
+                            ¿Tienes un cupón?
+                        </button>
+                    )}
+                </div>
                 {descuentoBf > 0 ? (
                     <>
                         <div className="chk-fila"><span>Precio normal</span><span>{formatoPrecio(precioNormal)}</span></div>
@@ -580,6 +679,14 @@ const Checkout = () => {
                     <div className="chk-fila">
                         <span>Pago anticipado ({-Math.round(PORCENTAJE_PREPAGO * 100)}%)</span>
                         <span className="chk-rojo">− {formatoPrecio(descuento)}</span>
+                    </div>
+                )}
+                {cupon && (
+                    <div className="chk-fila">
+                        <span>Cupón {cupon.codigo}</span>
+                        {descuentoDelCupon > 0
+                            ? <span className="chk-rojo">− {formatoPrecio(descuentoDelCupon)}</span>
+                            : <span className="chk-verde">{regalo} gratis</span>}
                     </div>
                 )}
                 <div className="chk-fila"><span>Envío</span><span className="chk-verde">Gratis</span></div>

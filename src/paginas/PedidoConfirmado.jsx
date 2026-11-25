@@ -85,6 +85,12 @@ const PedidoConfirmado = () => {
                         </li>
                     ))}
                 </ul>
+                {pedido.regalo && (
+                    <div className="chk-fila">
+                        <span>Cupón {pedido.cupon}</span>
+                        <span className="chk-verde">{pedido.regalo} gratis</span>
+                    </div>
+                )}
                 <div className="chk-fila"><span>Envío</span><span className="chk-verde">Gratis</span></div>
                 <div className="chk-fila chk-total"><span>Total a pagar al recibir</span><span>{formatoPrecio(pedido.total)}</span></div>
             </section>
